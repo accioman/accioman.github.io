@@ -1,0 +1,45 @@
+{
+  "title": "Percorso Formativo e Competenze",
+  "intro": "Questa repository raccoglie il mio percorso Coursera con focus su IT Project Management, Software Engineering e DevOps. Il README viene generato automaticamente a partire dalle cartelle e dai file presenti nel repository.",
+  "profileHighlights": [
+    "Sto costruendo un profilo trasversale tra area gestionale e area tecnica.",
+    "I certificati mostrano i moduli conclusi, mentre cartelle ed elaborati aiutano a tracciare lo stato reale del percorso."
+  ],
+  "skillSections": [
+    {
+      "title": "Project Management",
+      "items": [
+        "Avvio e pianificazione di progetto",
+        "Stakeholder management",
+        "WBS, rete attivita e allocazione risorse",
+        "Comunicazione di progetto e reportistica",
+        "Risk management e project lifecycle"
+      ]
+    },
+    {
+      "title": "Software e IT",
+      "items": [
+        "Fondamenti di tecnologia dell'informazione",
+        "Basi di software engineering",
+        "Linguaggio comune tra team tecnici e di business"
+      ]
+    },
+    {
+      "title": "Focus in crescita",
+      "items": [
+        "Agile e Scrum",
+        "Git e GitHub",
+        "Linux e shell scripting",
+        "Cloud, container e CI/CD",
+        "Python, Flask e microservizi",
+        "Security, monitoring e osservabilita"
+      ]
+    }
+  ],
+  "targetRoles": [
+    "IT Project Management",
+    "Project Coordinator / Junior Project Manager",
+    "Scrum e Agile team support",
+    "DevOps e software engineering entry-level"
+  ]
+}

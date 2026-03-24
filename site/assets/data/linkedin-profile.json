@@ -1,50 +1,50 @@
-﻿{
-    "status":  "static",
-    "source":  "manual-profile",
-    "profileUrl":  "https://www.linkedin.com/in/marco-accinno-214978276/",
-    "fullName":  "Marco Accinno",
-    "headline":  "Software Development Engineer",
-    "photoUrl":  "./assets/images/linkedin-profile.jpg",
-    "location":  "Monsummano Terme, Toscana, Italia",
-    "education":  "Universita degli Studi di Firenze",
-    "availability":  "Disponibile per lavorare",
-    "profileLanguage":  "Italiano",
-    "summary":  "Sviluppatore software motivato dalla crescita continua, con approccio pratico e forte interesse per il miglioramento delle competenze tecniche e professionali.",
-    "experience":  [
-                       {
-                           "title":  "Software Development Engineer",
-                           "company":  "SIS INFORMATICA S.R.L. - SERVIZI INFORMATICI E SISTEMI",
-                           "employmentType":  "Full-time",
-                           "period":  "Nov 2023 - Presente",
-                           "duration":  "2 anni e 5 mesi",
-                           "skills":  [
-                                          "Git",
-                                          "Flutter"
-                                      ]
-                       }
-                   ],
-    "educationHistory":  [
-                             {
-                                 "institution":  "Universita degli Studi di Firenze",
-                                 "period":  "2021 - 2026",
-                                 "skills":  [
-                                                "Git",
-                                                "Lingua inglese"
-                                            ]
-                             },
-                             {
-                                 "institution":  "ITCS Filippo Pacini",
-                                 "degree":  "Diploma, Scienze Applicate",
-                                 "period":  "Set 2017 - Presente"
-                             }
-                         ],
-    "featuredSkills":  [
-                           "Sviluppo di software",
-                           "Scrum",
-                           "Python",
-                           "JavaScript",
-                           "Web Services API"
-                       ],
-    "updatedAt":  "2026-03-24T09:39:11.7088770Z",
-    "note":  "Profilo LinkedIn gestito in modo statico nel repository."
+{
+  "status": "static",
+  "source": "manual-profile",
+  "profileUrl": "https://www.linkedin.com/in/marco-accinno-214978276/",
+  "fullName": "Marco Accinno",
+  "headline": "Software Development Engineer",
+  "photoUrl": "./assets/images/linkedin-profile.jpg",
+  "location": "Monsummano Terme, Toscana, Italia",
+  "education": "Universita degli Studi di Firenze",
+  "availability": "Disponibile per lavorare",
+  "profileLanguage": "Italiano",
+  "summary": "Sviluppatore software motivato dalla crescita continua, con approccio pratico e forte interesse per il miglioramento delle competenze tecniche e professionali.",
+  "experience": [
+    {
+      "title": "Software Development Engineer",
+      "company": "SIS INFORMATICA S.R.L. - SERVIZI INFORMATICI E SISTEMI",
+      "employmentType": "Full-time",
+      "period": "Nov 2023 - Presente",
+      "duration": "2 anni e 5 mesi",
+      "skills": [
+        "Git",
+        "Flutter"
+      ]
+    }
+  ],
+  "educationHistory": [
+    {
+      "institution": "Universita degli Studi di Firenze",
+      "period": "2021 - 2026",
+      "skills": [
+        "Git",
+        "Lingua inglese"
+      ]
+    },
+    {
+      "institution": "ITCS Filippo Pacini",
+      "degree": "Diploma, Scienze Applicate",
+      "period": "Set 2017 - Presente"
+    }
+  ],
+  "featuredSkills": [
+    "Sviluppo di software",
+    "Scrum",
+    "Python",
+    "JavaScript",
+    "Web Services API"
+  ],
+  "updatedAt": "2026-03-24T09:42:29.9559801Z",
+  "note": "Profilo LinkedIn gestito in modo statico nel repository."
 }

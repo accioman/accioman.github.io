@@ -152,8 +152,8 @@ function Get-RelativePath {
         [string]$TargetPath
     )
 
-    $resolvedBase = (Resolve-Path -LiteralPath $BasePath).Path
-    $resolvedTarget = (Resolve-Path -LiteralPath $TargetPath).Path
+    $resolvedBase = (Resolve-Path -LiteralPath $BasePath).ProviderPath
+    $resolvedTarget = (Resolve-Path -LiteralPath $TargetPath).ProviderPath
 
     $baseDirectory = if (Test-Path -LiteralPath $resolvedBase -PathType Container) {
         $resolvedBase
@@ -162,11 +162,8 @@ function Get-RelativePath {
         Split-Path -Path $resolvedBase -Parent
     }
 
-    $baseUri = [System.Uri]((($baseDirectory -replace "\\", "/").TrimEnd("/")) + "/")
-    $targetUri = [System.Uri]($resolvedTarget -replace "\\", "/")
-    $relativeUri = $baseUri.MakeRelativeUri($targetUri)
-
-    return [System.Uri]::UnescapeDataString($relativeUri.ToString()) -replace "/", "\"
+    $relativePath = [System.IO.Path]::GetRelativePath($baseDirectory, $resolvedTarget)
+    return $relativePath -replace "/", "\"
 }
 
 function Get-ProgramDirectories {

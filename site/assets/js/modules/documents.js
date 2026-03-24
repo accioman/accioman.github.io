@@ -6,7 +6,7 @@ import {
 } from "./utils.js";
 
 const defaultDocumentActionConfig = Object.freeze({
-  openViewerLabel: "Apri viewer",
+  openViewerLabel: "Apri percorsi",
   openFileLabel: "Apri file"
 });
 
@@ -19,12 +19,14 @@ export function configureDocumentActions(config = {}) {
   };
 }
 
-export function documentActions(file) {
-  const viewerHref = `./viewer.html?file=${encodeURIComponent(file.relativePath)}`;
+export function documentActions(file, options = {}) {
+  const compactClass = options.compact ? " button-compact" : "";
+  const showOpenFile = options.showOpenFile !== false;
+  const detailsHref = options.detailsHref || "./percorsi.html";
   return `
     <div class="file-actions">
-      <a class="button button-primary" href="${viewerHref}">${escapeHtml(documentActionConfig.openViewerLabel)}</a>
-      <a class="button button-secondary" href="${file.webPath}" target="_blank" rel="noreferrer">${escapeHtml(documentActionConfig.openFileLabel)}</a>
+      <a class="button button-primary${compactClass}" href="${detailsHref}">${escapeHtml(documentActionConfig.openViewerLabel)}</a>
+      ${showOpenFile ? `<a class="button button-secondary${compactClass}" href="${file.webPath}" target="_blank" rel="noreferrer">${escapeHtml(documentActionConfig.openFileLabel)}</a>` : ""}
     </div>
   `;
 }

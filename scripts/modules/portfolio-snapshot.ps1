@@ -169,6 +169,14 @@ function Get-PortfolioSnapshot {
 
     $projects = foreach ($program in $programs) {
         foreach ($course in $program.Courses | Where-Object { $_.WorkFileCount -gt 0 }) {
+            $primaryFileName = Get-ObjectPropertyValue -InputObject $course.CaseStudy -Name "PrimaryFile"
+            $projectFiles = @(
+                $course.Files |
+                    Where-Object { $_.IsCertificate -eq $false } |
+                    Sort-Object @{ Expression = { if ($primaryFileName -and $_.Name -eq $primaryFileName) { 0 } else { 1 } } }, Name
+            )
+            $primaryFile = if ($projectFiles.Count -gt 0) { $projectFiles[0] } else { $null }
+
             [PSCustomObject]@{
                 Id = $course.Id
                 Name = $course.Name
@@ -186,7 +194,9 @@ function Get-PortfolioSnapshot {
                 ProgramId = $program.Id
                 ProgramName = $program.Name
                 ProgramTags = $program.Tags
-                Files = @($course.Files | Where-Object { $_.IsCertificate -eq $false })
+                CaseStudy = $course.CaseStudy
+                PrimaryFileRelativePath = $(if ($null -ne $primaryFile) { $primaryFile.RelativePath } else { "" })
+                Files = $projectFiles
             }
         }
     }

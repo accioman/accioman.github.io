@@ -217,6 +217,7 @@ async function main() {
   const summary = resume.summary || linkedin?.resumeSummary || linkedin?.summary || portfolio.config.intro || "";
   const portfolioUrl = "./index.html";
   const linkedinUrl = linkedin?.profileUrl || portfolio.config.linkedin?.profileUrl || "https://www.linkedin.com/";
+  const pdfPath = page.pdfPath || "./assets/files/cv-marco-accinno.pdf";
   const primarySkills = uniquePreserveOrder([
     ...asArray(linkedin?.featuredSkills),
     ...asArray(portfolio.config.skillSections).flatMap((section) => asArray(section.items))
@@ -240,6 +241,7 @@ async function main() {
   setElementText("cv-lead", summary, portfolio.config.intro || "");
   setElementLink("cv-portfolio-link", { label: page.portfolioLabel, href: portfolioUrl }, "Apri portfolio", portfolioUrl);
   setElementLink("cv-linkedin-link", { label: page.linkedinLabel, href: linkedinUrl }, "Profilo LinkedIn", linkedinUrl);
+  setElementLink("cv-pdf-link", { label: page.pdfDownloadLabel, href: pdfPath }, "Apri PDF diretto", pdfPath);
 
   setElementText("cv-contact-title", page.contactTitle, "Dati personali");
   setElementText("cv-languages-title", page.languagesTitle, "Lingue");
@@ -297,6 +299,16 @@ async function main() {
 
   document.getElementById("cv-download-button").textContent = page.downloadLabel || "Scarica PDF";
   document.getElementById("cv-download-button").addEventListener("click", () => window.print());
+
+  const pdfLink = document.getElementById("cv-pdf-link");
+  if (pdfLink) {
+    try {
+      const response = await fetch(pdfPath, { method: "HEAD" });
+      pdfLink.classList.toggle("hidden", !response.ok);
+    } catch {
+      pdfLink.classList.add("hidden");
+    }
+  }
 }
 
 main().catch((error) => {

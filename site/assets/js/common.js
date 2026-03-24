@@ -6,6 +6,7 @@ export {
   renderStatus,
   metricCard,
   uniqueValues,
+  asArray,
   formatTemplate,
   setElementText,
   setElementPlaceholder,

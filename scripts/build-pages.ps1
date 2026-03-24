@@ -14,6 +14,7 @@ if (-not (Test-Path -LiteralPath $SiteSource)) {
 & (Join-Path $PSScriptRoot "render-site-pages.ps1")
 & (Join-Path $PSScriptRoot "generate-site-data.ps1")
 & (Join-Path $PSScriptRoot "sync-linkedin-profile.ps1")
+& (Join-Path $PSScriptRoot "generate-seo-assets.ps1")
 
 if (Test-Path -LiteralPath $OutputDir) {
     Remove-Item -LiteralPath $OutputDir -Recurse -Force
@@ -35,4 +36,15 @@ foreach ($directory in $programDirectories) {
 }
 
 Set-Content -LiteralPath (Join-Path $OutputDir ".nojekyll") -Value "" -Encoding utf8
+
+$nodeCommand = Get-Command node -ErrorAction SilentlyContinue
+if ($null -ne $nodeCommand) {
+    try {
+        & $nodeCommand.Source (Join-Path $PSScriptRoot "export-cv-pdf.mjs")
+    }
+    catch {
+        Write-Warning "CV PDF export skipped: $($_.Exception.Message)"
+    }
+}
+
 Write-Host "Pages build created at $OutputDir"

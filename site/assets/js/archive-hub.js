@@ -19,35 +19,35 @@ async function main() {
   const archivePage = portfolio.config.site.archivePage || {};
   const stats = portfolio.stats;
   document.title = "Archivio | Portfolio formativo";
-  setElementText("archive-eyebrow", archivePage.eyebrow, "Archivio separato");
-  setElementText("archive-title", archivePage.title, "Certificati e progetti");
-  setElementLink("archive-primary-cta", archivePage.primaryCta, "Apri certificati", "./certificati.html");
-  setElementLink("archive-secondary-cta", archivePage.secondaryCta, "Apri progetti", "./progetti.html");
-  document.getElementById("archive-summary").textContent = `L'archivio e stato separato in due percorsi distinti: ${stats.totalCertificates} certificati completati e ${portfolio.library.projects.length} aree progetto con materiali pratici esplorabili.`;
+  setElementText("archive-eyebrow", archivePage.eyebrow, "Hub legacy");
+  setElementText("archive-title", archivePage.title, "Percorsi come hub unico");
+  setElementLink("archive-primary-cta", archivePage.primaryCta, "Apri percorsi", "./percorsi.html");
+  setElementLink("archive-secondary-cta", archivePage.secondaryCta, "Apri CV", "./cv.html");
+  document.getElementById("archive-summary").textContent = `Certificati e materiali pratici sono ora centralizzati nei dettagli del corso dentro Percorsi: ${stats.totalCertificates} certificati completati e ${stats.totalWorkFiles} materiali gia consultabili.`;
   document.getElementById("archive-metrics").innerHTML = [
     metricCard("Certificati", stats.totalCertificates),
-    metricCard("Progetti", portfolio.library.projects.length),
-    metricCard("PDF", portfolio.library.pdfs.length),
-    metricCard("Elaborati", stats.totalWorkFiles)
+    metricCard("Corsi", stats.totalCourses),
+    metricCard("Percorsi", stats.totalPrograms),
+    metricCard("Materiali", stats.totalWorkFiles)
   ].join("");
 
   const portalCards = Array.isArray(archivePage.portalCards) && archivePage.portalCards.length
     ? archivePage.portalCards
     : [
       {
-        eyebrow: "Certificati",
-        title: "Miniature PDF e preview",
-        description: "Raccoglie tutti i certificati Coursera completati, con anteprima inline e accesso diretto al viewer dedicato.",
-        buttonLabel: "Vai ai certificati",
-        buttonHref: "./certificati.html",
+        eyebrow: "Percorsi",
+        title: "Dettagli corso centralizzati",
+        description: "Certificati, materiali e anteprime sono ora raccolti nei dettagli del corso dentro Percorsi.",
+        buttonLabel: "Apri percorsi",
+        buttonHref: "./percorsi.html",
         buttonVariant: "primary"
       },
       {
-        eyebrow: "Progetti",
-        title: "Materiali di lavoro e deliverable",
-        description: "Mostra PDF, fogli Excel e documenti di progetto esplorabili senza dover partire dal download manuale.",
-        buttonLabel: "Vai ai progetti",
-        buttonHref: "./progetti.html",
+        eyebrow: "Curriculum",
+        title: "Profilo professionale",
+        description: "Il CV resta la vista sintetica del profilo, scaricabile in PDF e coerente con i dati del portfolio.",
+        buttonLabel: "Apri CV",
+        buttonHref: "./cv.html",
         buttonVariant: "secondary"
       }
     ];

@@ -94,20 +94,93 @@
       "path": "IBM IT Project Manager/Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
       "summary": "Obiettivi, scope e pianificazione nelle fasi iniziali.",
       "category": "Planning",
-      "priority": 20
+      "priority": 20,
+      "featured": true,
+      "caseStudy": {
+        "title": "UrbanPulse: avvio e pianificazione",
+        "lead": "Caso pratico di project initiation con charter, WBS, stakeholder register e pianificazione delle attivita.",
+        "context": "Simulazione di avvio progetto per UrbanPulse, con deliverable di impostazione iniziale e coordinamento.",
+        "objective": "Tradurre obiettivi e scope iniziali in un pacchetto di pianificazione strutturato e verificabile.",
+        "role": "Pianificazione iniziale, scomposizione del lavoro, rete attivita e mappatura stakeholder.",
+        "outcome": "Set coerente di artefatti per kickoff, allineamento team e monitoraggio iniziale.",
+        "skills": [
+          "Project charter",
+          "WBS",
+          "Stakeholder management",
+          "Network diagram",
+          "Resource planning"
+        ],
+        "deliverables": [
+          "Carta di progetto",
+          "WBS",
+          "Diagramma di rete",
+          "Registro parti interessate",
+          "Ripartizione risorse"
+        ],
+        "primaryFile": "Carta_del_progetto_UrbanPulse.docx"
+      }
     },
     {
       "path": "IBM IT Project Manager/Gestione del progetto Comunicazione, parti interessate e leadership",
       "summary": "Stakeholder, comunicazione e leadership operativa di team.",
       "category": "Stakeholders",
-      "priority": 30
+      "priority": 30,
+      "featured": true,
+      "caseStudy": {
+        "title": "Workshop delivery: comunicazione e stakeholder",
+        "lead": "Pacchetto operativo per definire governance della comunicazione, responsabilita e reporting di progetto.",
+        "context": "Esercitazione focalizzata sul coordinamento di team e stakeholder durante l'esecuzione del progetto.",
+        "objective": "Impostare flussi di comunicazione chiari, responsabilita e visibilita sull'avanzamento.",
+        "role": "Definizione RACI, comunicazioni, allocazione risorse e reporting di stato.",
+        "outcome": "Modello di comunicazione piu leggibile, con responsabilita esplicite e strumenti di allineamento.",
+        "skills": [
+          "Stakeholder communication",
+          "RACI matrix",
+          "Status reporting",
+          "Leadership",
+          "Resource coordination"
+        ],
+        "deliverables": [
+          "Piano comunicazioni",
+          "Matrice RACI",
+          "Ripartizione risorse",
+          "Stato progetto"
+        ],
+        "primaryFile": "Stato_Progetto_Workshop.pdf"
+      }
     },
     {
       "path": "IBM IT Project Manager/Project Lifecycle, Information Sharing, and Risk Management",
       "summary": "Lifecycle, rischio e controllo operativo del progetto.",
       "category": "Risk Management",
       "priority": 40,
-      "featured": true
+      "featured": true,
+      "caseStudy": {
+        "title": "Off-site initiative: analisi dei rischi",
+        "lead": "Valutazione strutturata dei rischi lungo il lifecycle di progetto, con documento completo e versione PDF condivisibile.",
+        "context": "Caso pratico incentrato su information sharing e risk management per una iniziativa off-site.",
+        "objective": "Identificare, valutare e documentare i rischi principali con un formato leggibile e riusabile.",
+        "role": "Analisi del rischio, documentazione, prioritizzazione e formalizzazione delle evidenze.",
+        "outcome": "Documento di valutazione rischi pronto alla condivisione e al follow-up operativo.",
+        "skills": [
+          "Risk assessment",
+          "Project lifecycle",
+          "Information sharing",
+          "Documentation",
+          "Mitigation planning"
+        ],
+        "deliverables": [
+          "Documento di valutazione rischi",
+          "Versione PDF condivisibile"
+        ],
+        "primaryFile": "Valutazione_rischi_Off_Site_completa.pdf"
+      }
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Introduzione allo sviluppo Agile e a Scrum",
+      "summary": "Principi agile, Scrum e gestione iterativa del lavoro.",
+      "category": "Agile",
+      "priority": 60
     },
     {
       "path": "IBM IT Project Manager/Introduzione alla professione di Scrum Master",
@@ -145,10 +218,8 @@
     "IBM IT Project Manager/Introduction to Software Engineering"
   ],
   "featuredProjects": [
-    "IBM DevOps and Software Engineering/Progetto DevOps Capstone",
-    "IBM DevOps and Software Engineering/Introduzione pratica ai comandi Linux e allo Shell Scripting",
-    "IBM DevOps and Software Engineering/Sviluppo di applicazioni con Microservizi e Serverless",
-    "IBM IT Project Manager/Capstone di gestione del progetto",
-    "IBM IT Project Manager/Fondamenti di gestione del progetto, avvio e pianificazione (progetto)"
+    "IBM IT Project Manager/Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
+    "IBM IT Project Manager/Gestione del progetto Comunicazione, parti interessate e leadership",
+    "IBM IT Project Manager/Project Lifecycle, Information Sharing, and Risk Management"
   ]
 }

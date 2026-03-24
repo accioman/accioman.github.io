@@ -3,13 +3,32 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio Formativo</title>
-  <meta name="description" content="Portfolio multipagina con certificati Coursera, PDF, materiali di progetto e avanzamento reale dei percorsi.">
+  <title>Marco Accinno | Software Development Engineer</title>
+  <meta name="description" content="Portfolio professionale con esperienza, case study, certificati IBM e materiali di progetto consultabili online.">
+  <meta name="keywords" content="Marco Accinno, Software Development Engineer, Portfolio professionale, Project management, IBM certificates, GitHub Pages, Marco Accinno | Software Development Engineer">
+  <meta name="author" content="Marco Accinno">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0c131c">
+  <link rel="canonical" href="https://accioman.github.io/Corsi-coursera/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Marco Accinno">
+  <meta property="og:title" content="Marco Accinno | Software Development Engineer">
+  <meta property="og:description" content="Portfolio professionale con esperienza, case study, certificati IBM e materiali di progetto consultabili online.">
+  <meta property="og:url" content="https://accioman.github.io/Corsi-coursera/">
+  <meta property="og:image" content="https://accioman.github.io/Corsi-coursera/assets/images/linkedin-profile.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Marco Accinno | Software Development Engineer">
+  <meta name="twitter:description" content="Portfolio professionale con esperienza, case study, certificati IBM e materiali di progetto consultabili online.">
+  <meta name="twitter:image" content="https://accioman.github.io/Corsi-coursera/assets/images/linkedin-profile.jpg">
   <link rel="icon" type="image/jpeg" href="./assets/images/linkedin-profile.jpg">
+  <link rel="manifest" href="./site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/styles.css">
+  <script type="application/ld+json">{"isPartOf":{"url":"https://accioman.github.io/Corsi-coursera/","name":"Marco Accinno","@type":"WebSite"},"name":"Marco Accinno | Software Development Engineer","@context":"https://schema.org","description":"Portfolio professionale con esperienza, case study, certificati IBM e materiali di progetto consultabili online.","about":{"jobTitle":"Software Development Engineer","name":"Marco Accinno","@type":"Person","image":"https://accioman.github.io/Corsi-coursera/assets/images/linkedin-profile.jpg"},"@type":"ProfilePage","url":"https://accioman.github.io/Corsi-coursera/"}</script>
+  
 </head>
 <body>
   <div class="page-shell">
@@ -19,9 +38,6 @@
         <a href="./index.html" data-nav="home">Home</a>
     <a href="./percorsi.html" data-nav="percorsi">Percorsi</a>
     <a href="./cv.html" data-nav="cv">CV</a>
-    <a href="./certificati.html" data-nav="certificati">Certificati</a>
-    <a href="./progetti.html" data-nav="progetti">Progetti</a>
-    <a href="./viewer.html" data-nav="viewer">Viewer</a>
   </nav>
   <a class="header-link" id="header-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
 </header>
@@ -38,60 +54,60 @@
       <p class="hero-lead" id="hero-summary"></p>
       <ul class="home-highlight-list" id="home-highlights"></ul>
       <div class="hero-actions">
-        <a class="button button-primary" id="home-primary-cta" href="./certificati.html">Apri i certificati</a>
-        <a class="button button-secondary" id="home-secondary-cta" href="./progetti.html">Esplora i progetti</a>
+        <a class="button button-primary" id="home-primary-cta" href="./percorsi.html">Apri percorsi</a>
+        <a class="button button-secondary" id="home-secondary-cta" href="./cv.html">Apri CV</a>
       </div>
     </div>
-    <aside class="hero-panel home-summary-panel">
+    <aside class="hero-panel home-summary-panel home-experience-panel">
       <div class="home-summary-copy">
-        <p class="panel-label">Profilo</p>
-        <h2 id="home-profile-title">Sintesi professionale</h2>
-        <p class="home-summary-text" id="home-profile-summary"></p>
+        <p class="panel-label" id="home-experience-kicker">Esperienza attuale</p>
+        <h2 id="home-experience-title">Software Development Engineer</h2>
+        <p class="home-experience-company" id="home-experience-company"></p>
+        <p class="home-experience-meta" id="home-experience-meta"></p>
+        <p class="home-summary-text" id="home-experience-summary"></p>
       </div>
-      <div class="metric-grid compact home-metric-grid" id="hero-metrics"></div>
+      <div class="home-fact-list" id="hero-metrics"></div>
+      <div class="home-hero-support">
+        <div class="home-support-actions">
+          <a class="button button-secondary button-compact" id="home-linkedin-cta" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">Profilo LinkedIn</a>
+          <a class="button button-secondary button-compact" id="home-cv-cta" href="./cv.html">Apri CV</a>
+        </div>
+        <ul class="chip-list home-key-skill-list" id="home-key-skills"></ul>
+      </div>
     </aside>
   </section>
 
-  <section class="section-grid section-split home-insight-grid">
-    <div class="panel panel-home-overview">
-      <div class="section-head">
-        <h2 id="home-program-title">Percorso</h2>
-        <a class="text-link" id="home-program-link" href="./percorsi.html">Dettaglio completo</a>
-      </div>
-      <div class="stack-list home-program-list" id="program-overview"></div>
-    </div>
-
-    <div class="panel panel-home-profile panel-accent" id="linkedin-panel"></div>
-  </section>
-
-  <section class="section-grid section-split home-curated-grid">
-    <div class="panel panel-home-curated">
-      <div class="section-head">
-        <h2 id="home-certificates-title">Certificati in evidenza</h2>
-        <a class="text-link" id="home-certificates-link" href="./certificati.html">Apri certificati</a>
-      </div>
-      <div class="home-curated-list" id="featured-certificates"></div>
-    </div>
-
-    <div class="panel panel-home-curated">
-      <div class="section-head">
-        <h2 id="home-projects-title">Progetti esplorabili</h2>
-        <a class="text-link" id="home-projects-link" href="./progetti.html">Vai ai progetti</a>
-      </div>
-      <div class="home-curated-list" id="featured-projects"></div>
-    </div>
-  </section>
-
-  <section class="panel panel-home-skills">
+  <section class="panel panel-home-overview panel-home-programs">
     <div class="section-head">
-      <h2 id="home-skills-title">Competenze e obiettivi</h2>
+      <h2 id="home-program-title">Percorsi principali</h2>
+      <a class="text-link" id="home-program-link" href="./percorsi.html">Apri percorsi</a>
     </div>
-    <div class="skills-layout home-skills-layout">
-      <div class="skills-columns" id="skills-sections"></div>
-      <div class="target-box home-focus-box">
-        <p class="panel-label" id="home-focus-label">Focus</p>
-        <ul class="chip-list" id="target-roles"></ul>
+    <div class="stack-list home-program-list" id="program-overview"></div>
+  </section>
+
+  <section class="panel panel-home-portfolio">
+    <div class="section-head home-portfolio-head">
+      <div>
+        <p class="panel-label">Dal portfolio</p>
+        <h2 id="home-portfolio-title">Certificati e materiali in evidenza</h2>
       </div>
+      <a class="text-link" id="home-portfolio-link" href="./percorsi.html">Apri percorsi</a>
+    </div>
+    <div class="home-portfolio-grid">
+      <section class="home-portfolio-column">
+        <div class="home-column-head">
+          <h3 id="home-projects-title">Corsi con materiali pratici</h3>
+          <a class="text-link" id="home-projects-link" href="./percorsi.html">Apri percorsi</a>
+        </div>
+        <div class="home-evidence-list" id="featured-projects"></div>
+      </section>
+      <section class="home-portfolio-column">
+        <div class="home-column-head">
+          <h3 id="home-certificates-title">Certificati recenti</h3>
+          <a class="text-link" id="home-certificates-link" href="./percorsi.html">Apri percorsi</a>
+        </div>
+        <div class="home-evidence-list" id="featured-certificates"></div>
+      </section>
     </div>
   </section>
 </main>

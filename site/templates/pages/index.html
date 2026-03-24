@@ -10,60 +10,60 @@
       <p class="hero-lead" id="hero-summary"></p>
       <ul class="home-highlight-list" id="home-highlights"></ul>
       <div class="hero-actions">
-        <a class="button button-primary" id="home-primary-cta" href="./certificati.html">Apri i certificati</a>
-        <a class="button button-secondary" id="home-secondary-cta" href="./progetti.html">Esplora i progetti</a>
+        <a class="button button-primary" id="home-primary-cta" href="./percorsi.html">Apri percorsi</a>
+        <a class="button button-secondary" id="home-secondary-cta" href="./cv.html">Apri CV</a>
       </div>
     </div>
-    <aside class="hero-panel home-summary-panel">
+    <aside class="hero-panel home-summary-panel home-experience-panel">
       <div class="home-summary-copy">
-        <p class="panel-label">Profilo</p>
-        <h2 id="home-profile-title">Sintesi professionale</h2>
-        <p class="home-summary-text" id="home-profile-summary"></p>
+        <p class="panel-label" id="home-experience-kicker">Esperienza attuale</p>
+        <h2 id="home-experience-title">Software Development Engineer</h2>
+        <p class="home-experience-company" id="home-experience-company"></p>
+        <p class="home-experience-meta" id="home-experience-meta"></p>
+        <p class="home-summary-text" id="home-experience-summary"></p>
       </div>
-      <div class="metric-grid compact home-metric-grid" id="hero-metrics"></div>
+      <div class="home-fact-list" id="hero-metrics"></div>
+      <div class="home-hero-support">
+        <div class="home-support-actions">
+          <a class="button button-secondary button-compact" id="home-linkedin-cta" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">Profilo LinkedIn</a>
+          <a class="button button-secondary button-compact" id="home-cv-cta" href="./cv.html">Apri CV</a>
+        </div>
+        <ul class="chip-list home-key-skill-list" id="home-key-skills"></ul>
+      </div>
     </aside>
   </section>
 
-  <section class="section-grid section-split home-insight-grid">
-    <div class="panel panel-home-overview">
-      <div class="section-head">
-        <h2 id="home-program-title">Percorso</h2>
-        <a class="text-link" id="home-program-link" href="./percorsi.html">Dettaglio completo</a>
-      </div>
-      <div class="stack-list home-program-list" id="program-overview"></div>
-    </div>
-
-    <div class="panel panel-home-profile panel-accent" id="linkedin-panel"></div>
-  </section>
-
-  <section class="section-grid section-split home-curated-grid">
-    <div class="panel panel-home-curated">
-      <div class="section-head">
-        <h2 id="home-certificates-title">Certificati in evidenza</h2>
-        <a class="text-link" id="home-certificates-link" href="./certificati.html">Apri certificati</a>
-      </div>
-      <div class="home-curated-list" id="featured-certificates"></div>
-    </div>
-
-    <div class="panel panel-home-curated">
-      <div class="section-head">
-        <h2 id="home-projects-title">Progetti esplorabili</h2>
-        <a class="text-link" id="home-projects-link" href="./progetti.html">Vai ai progetti</a>
-      </div>
-      <div class="home-curated-list" id="featured-projects"></div>
-    </div>
-  </section>
-
-  <section class="panel panel-home-skills">
+  <section class="panel panel-home-overview panel-home-programs">
     <div class="section-head">
-      <h2 id="home-skills-title">Competenze e obiettivi</h2>
+      <h2 id="home-program-title">Percorsi principali</h2>
+      <a class="text-link" id="home-program-link" href="./percorsi.html">Apri percorsi</a>
     </div>
-    <div class="skills-layout home-skills-layout">
-      <div class="skills-columns" id="skills-sections"></div>
-      <div class="target-box home-focus-box">
-        <p class="panel-label" id="home-focus-label">Focus</p>
-        <ul class="chip-list" id="target-roles"></ul>
+    <div class="stack-list home-program-list" id="program-overview"></div>
+  </section>
+
+  <section class="panel panel-home-portfolio">
+    <div class="section-head home-portfolio-head">
+      <div>
+        <p class="panel-label">Dal portfolio</p>
+        <h2 id="home-portfolio-title">Certificati e materiali in evidenza</h2>
       </div>
+      <a class="text-link" id="home-portfolio-link" href="./percorsi.html">Apri percorsi</a>
+    </div>
+    <div class="home-portfolio-grid">
+      <section class="home-portfolio-column">
+        <div class="home-column-head">
+          <h3 id="home-projects-title">Corsi con materiali pratici</h3>
+          <a class="text-link" id="home-projects-link" href="./percorsi.html">Apri percorsi</a>
+        </div>
+        <div class="home-evidence-list" id="featured-projects"></div>
+      </section>
+      <section class="home-portfolio-column">
+        <div class="home-column-head">
+          <h3 id="home-certificates-title">Certificati recenti</h3>
+          <a class="text-link" id="home-certificates-link" href="./percorsi.html">Apri percorsi</a>
+        </div>
+        <div class="home-evidence-list" id="featured-certificates"></div>
+      </section>
     </div>
   </section>
 </main>

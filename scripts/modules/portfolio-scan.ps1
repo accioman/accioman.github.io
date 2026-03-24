@@ -81,6 +81,46 @@ function Get-FileKindInfo {
                 PreviewType = "office"
             }
         }
+        ".png" {
+            return [PSCustomObject]@{
+                Kind = "image"
+                Label = "Immagine"
+                Previewable = $true
+                PreviewType = "image"
+            }
+        }
+        ".jpg" {
+            return [PSCustomObject]@{
+                Kind = "image"
+                Label = "Immagine"
+                Previewable = $true
+                PreviewType = "image"
+            }
+        }
+        ".jpeg" {
+            return [PSCustomObject]@{
+                Kind = "image"
+                Label = "Immagine"
+                Previewable = $true
+                PreviewType = "image"
+            }
+        }
+        ".webp" {
+            return [PSCustomObject]@{
+                Kind = "image"
+                Label = "Immagine"
+                Previewable = $true
+                PreviewType = "image"
+            }
+        }
+        ".gif" {
+            return [PSCustomObject]@{
+                Kind = "image"
+                Label = "Immagine"
+                Previewable = $true
+                PreviewType = "image"
+            }
+        }
         default {
             return [PSCustomObject]@{
                 Kind = "file"
@@ -136,6 +176,16 @@ function Get-CourseInfos {
         $courseTags = Get-MetadataStringList -Values (Get-ObjectPropertyValue -InputObject $courseMetadata -Name "Tags")
         $coursePriority = Get-MetadataInt -Value (Get-ObjectPropertyValue -InputObject $courseMetadata -Name "Priority")
         $courseFeatured = Get-MetadataBool -Value (Get-ObjectPropertyValue -InputObject $courseMetadata -Name "Featured")
+        $caseStudyMetadata = Get-ObjectPropertyValue -InputObject $courseMetadata -Name "CaseStudy"
+        $caseStudyTitle = Get-MetadataString -Value (Get-ObjectPropertyValue -InputObject $caseStudyMetadata -Name "Title")
+        $caseStudyLead = Get-MetadataString -Value (Get-ObjectPropertyValue -InputObject $caseStudyMetadata -Name "Lead")
+        $caseStudyContext = Get-MetadataString -Value (Get-ObjectPropertyValue -InputObject $caseStudyMetadata -Name "Context")
+        $caseStudyObjective = Get-MetadataString -Value (Get-ObjectPropertyValue -InputObject $caseStudyMetadata -Name "Objective")
+        $caseStudyRole = Get-MetadataString -Value (Get-ObjectPropertyValue -InputObject $caseStudyMetadata -Name "Role")
+        $caseStudyOutcome = Get-MetadataString -Value (Get-ObjectPropertyValue -InputObject $caseStudyMetadata -Name "Outcome")
+        $caseStudySkills = Get-MetadataStringList -Values (Get-ObjectPropertyValue -InputObject $caseStudyMetadata -Name "Skills")
+        $caseStudyDeliverables = Get-MetadataStringList -Values (Get-ObjectPropertyValue -InputObject $caseStudyMetadata -Name "Deliverables")
+        $caseStudyPrimaryFile = Get-MetadataString -Value (Get-ObjectPropertyValue -InputObject $caseStudyMetadata -Name "PrimaryFile")
         $featuredCertificateRank = Get-MetadataRank -Map $ContentMetadata.FeaturedCertificateRanks -Key $courseRelativePath
         $featuredProjectRank = Get-MetadataRank -Map $ContentMetadata.FeaturedProjectRanks -Key $courseRelativePath
         $allFiles = @(Get-ChildItem -LiteralPath $courseRoot.FullName -File -Recurse | Sort-Object FullName)
@@ -226,6 +276,17 @@ function Get-CourseInfos {
             TotalFiles = $allFiles.Count
             Evidence = $evidenceParts -join " + "
             MaterialPreview = $materialPreview
+            CaseStudy = [PSCustomObject]@{
+                Title = $caseStudyTitle
+                Lead = $caseStudyLead
+                Context = $caseStudyContext
+                Objective = $caseStudyObjective
+                Role = $caseStudyRole
+                Outcome = $caseStudyOutcome
+                Skills = $caseStudySkills
+                Deliverables = $caseStudyDeliverables
+                PrimaryFile = $caseStudyPrimaryFile
+            }
             Files = $fileEntries
         }
     }

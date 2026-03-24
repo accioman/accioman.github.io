@@ -37,6 +37,22 @@ export function uniqueValues(items) {
   return [...new Set(items)].sort((left, right) => left.localeCompare(right));
 }
 
+export function asArray(value) {
+  if (Array.isArray(value)) {
+    return value;
+  }
+
+  if (value == null) {
+    return [];
+  }
+
+  if (typeof value === "object") {
+    return Object.keys(value).length === 0 ? [] : [value];
+  }
+
+  return [value];
+}
+
 export function formatTemplate(template, values = {}) {
   return String(template ?? "").replace(/\{([a-zA-Z0-9_]+)\}/g, (_, key) => String(values[key] ?? ""));
 }

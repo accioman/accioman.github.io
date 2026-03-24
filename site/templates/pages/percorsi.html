@@ -14,8 +14,36 @@
   <section class="panel page-collection-panel">
     <div class="section-head">
       <h2 id="paths-section-title">Programmi e corsi</h2>
-      <a class="text-link" id="paths-section-link" href="./certificati.html">Vai ai certificati</a>
     </div>
     <div class="program-list" id="program-list"></div>
   </section>
+
+  <dialog class="path-course-dialog" id="path-course-dialog">
+    <div class="path-course-dialog-shell">
+      <div class="path-course-dialog-top">
+        <div class="path-course-dialog-head">
+          <div class="path-course-dialog-copy">
+            <p class="panel-label" id="path-course-dialog-program">Percorso</p>
+            <h2 id="path-course-dialog-title">Corso</h2>
+            <p class="section-copy path-course-dialog-summary" id="path-course-dialog-summary"></p>
+          </div>
+          <button class="button button-secondary button-compact" type="button" id="path-course-dialog-close">Chiudi</button>
+        </div>
+        <div class="detail-list path-course-dialog-meta" id="path-course-dialog-meta"></div>
+      </div>
+      <div class="path-course-dialog-layout">
+        <aside class="path-course-dialog-side">
+          <section class="path-course-dialog-block">
+            <p class="panel-label" id="path-course-dialog-certificate-label">Certificato</p>
+            <div id="path-course-dialog-certificate"></div>
+          </section>
+          <section class="path-course-dialog-block">
+            <p class="panel-label" id="path-course-dialog-files-label">File del corso</p>
+            <div class="file-list path-course-dialog-file-list" id="path-course-dialog-files"></div>
+          </section>
+        </aside>
+        <section class="panel page-preview-panel path-course-dialog-preview" id="path-course-dialog-preview"></section>
+      </div>
+    </div>
+  </dialog>
 </main>

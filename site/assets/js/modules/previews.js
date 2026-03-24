@@ -78,6 +78,15 @@ function enhanceDocxHtml(html) {
   return template.innerHTML;
 }
 
+function renderUnsupportedPreview(file) {
+  return `
+    <div class="office-preview-error">
+      <p class="muted">Questo formato non supporta anteprima incorporata nel browser.</p>
+      <p><a class="button button-secondary button-compact" href="${file.webPath}" target="_blank" rel="noreferrer">Apri file originale</a></p>
+    </div>
+  `;
+}
+
 export async function mountPreviewContent(file, root = document) {
   if (!file) {
     return;
@@ -89,13 +98,26 @@ export async function mountPreviewContent(file, root = document) {
   }
 
   if (!file.previewable) {
-    surface.innerHTML = `<p class="muted">Questo formato non supporta anteprima incorporata. Aprilo nel viewer dedicato o scaricalo.</p>`;
+    surface.innerHTML = renderUnsupportedPreview(file);
     return;
   }
 
   if (file.previewType === "pdf") {
     const embedUrl = getEmbedUrl(file);
     surface.innerHTML = `<iframe title="Preview ${escapeHtml(file.name)}" src="${embedUrl}"></iframe>`;
+    return;
+  }
+
+  if (file.previewType === "image") {
+    surface.innerHTML = `
+      <figure class="image-preview">
+        <img
+          src="${file.webPath}"
+          alt="${escapeHtml(file.displayName || file.name)}"
+          loading="lazy"
+        />
+      </figure>
+    `;
     return;
   }
 
@@ -209,5 +231,5 @@ export async function mountPreviewContent(file, root = document) {
     return;
   }
 
-  surface.innerHTML = `<p class="muted">Questo formato non supporta anteprima incorporata. Aprilo nel viewer dedicato o scaricalo.</p>`;
+  surface.innerHTML = renderUnsupportedPreview(file);
 }

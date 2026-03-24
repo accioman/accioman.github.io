@@ -1,4 +1,11 @@
-import { loadPayload, initShell, metricCard, escapeHtml, setElementText, setElementLink } from "./common.js";
+import {
+  loadPayload,
+  initShell,
+  metricCard,
+  escapeHtml,
+  setElementText,
+  setElementLink
+} from "./common.js";
 
 function renderPortalCard(card, index) {
   const variant = card.buttonVariant === "primary" ? "button-primary" : "button-secondary";
@@ -59,5 +66,5 @@ async function main() {
 
 main().catch((error) => {
   console.error(error);
-  document.body.innerHTML = `<main class="page-shell"><section class="panel"><h1>Errore di caricamento</h1><p>${error.message}</p></section></main>`;
+  document.body.innerHTML = `<main class="page-shell"><section class="panel"><h1>Errore di caricamento</h1><p>${escapeHtml(error.message)}</p></section></main>`;
 });

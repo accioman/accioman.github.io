@@ -31,8 +31,6 @@ jobs:
 
       - name: Build static site
         shell: pwsh
-        env:
-          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
         run: ./scripts/build-pages.ps1
 
       - name: Upload artifact

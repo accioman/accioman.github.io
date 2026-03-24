@@ -212,7 +212,14 @@ function Get-FileKindInfo {
                 PreviewType = "pdf"
             }
         }
-        ".doc" { break }
+        ".doc" {
+            return [PSCustomObject]@{
+                Kind = "document"
+                Label = "Documento"
+                Previewable = $true
+                PreviewType = "office"
+            }
+        }
         ".docx" {
             return [PSCustomObject]@{
                 Kind = "document"
@@ -221,7 +228,14 @@ function Get-FileKindInfo {
                 PreviewType = "office"
             }
         }
-        ".xls" { break }
+        ".xls" {
+            return [PSCustomObject]@{
+                Kind = "spreadsheet"
+                Label = "Foglio"
+                Previewable = $true
+                PreviewType = "office"
+            }
+        }
         ".xlsx" {
             return [PSCustomObject]@{
                 Kind = "spreadsheet"
@@ -325,7 +339,7 @@ function Get-CourseInfos {
                 SizeBytes = [long]$file.Length
                 SizeLabel = Format-FileSize -Bytes ([long]$file.Length)
                 UpdatedAt = $file.LastWriteTimeUtc.ToString("o")
-                UpdatedAtLocal = $file.LastWriteTime.ToString("yyyy-MM-dd HH:mm")
+                UpdatedAtLocal = $file.LastWriteTime.ToString("dd/MM/yyyy")
             }
         }
 
@@ -458,6 +472,57 @@ function Get-PortfolioSnapshot {
         }
     }
 
+    $certificateGroups = @($documents | Where-Object { $_.IsCertificate } | Group-Object Name)
+    foreach ($group in $certificateGroups) {
+        $entries = @($group.Group | Sort-Object ProgramName, CourseName, RelativePath)
+        $programIds = @($entries | Select-Object -ExpandProperty ProgramId -Unique | Sort-Object)
+        $programNames = @($entries | Select-Object -ExpandProperty ProgramName -Unique | Sort-Object)
+        $courseIds = @($entries | Select-Object -ExpandProperty CourseId -Unique | Sort-Object)
+        $courseNames = @($entries | Select-Object -ExpandProperty CourseName -Unique | Sort-Object)
+        $displayName = if ($courseNames.Count -eq 1) { $courseNames[0] } else { $courseNames -join " / " }
+
+        foreach ($entry in $entries) {
+            Add-Member -InputObject $entry -NotePropertyName "DisplayName" -NotePropertyValue $displayName -Force
+            Add-Member -InputObject $entry -NotePropertyName "ProgramIds" -NotePropertyValue $programIds -Force
+            Add-Member -InputObject $entry -NotePropertyName "ProgramNames" -NotePropertyValue $programNames -Force
+            Add-Member -InputObject $entry -NotePropertyName "CourseIds" -NotePropertyValue $courseIds -Force
+            Add-Member -InputObject $entry -NotePropertyName "CourseNames" -NotePropertyValue $courseNames -Force
+            Add-Member -InputObject $entry -NotePropertyName "CertificateOccurrences" -NotePropertyValue $entries.Count -Force
+        }
+    }
+
+    $certificates = foreach ($group in $certificateGroups) {
+        $entries = @($group.Group | Sort-Object ProgramName, CourseName, RelativePath)
+        $primary = $entries[0]
+
+        [PSCustomObject]@{
+            Id = ConvertTo-Slug -Value ("certificate-" + $primary.Name)
+            Name = $primary.Name
+            DisplayName = $primary.DisplayName
+            RelativePath = $primary.RelativePath
+            WebPath = $primary.WebPath
+            Extension = $primary.Extension
+            Kind = $primary.Kind
+            KindLabel = $primary.KindLabel
+            IsCertificate = $true
+            Previewable = $primary.Previewable
+            PreviewType = $primary.PreviewType
+            SizeBytes = $primary.SizeBytes
+            SizeLabel = $primary.SizeLabel
+            UpdatedAt = $primary.UpdatedAt
+            UpdatedAtLocal = $primary.UpdatedAtLocal
+            ProgramId = $primary.ProgramId
+            ProgramName = $primary.ProgramName
+            ProgramIds = $primary.ProgramIds
+            ProgramNames = $primary.ProgramNames
+            CourseId = $primary.CourseId
+            CourseName = $primary.CourseName
+            CourseIds = $primary.CourseIds
+            CourseNames = $primary.CourseNames
+            CertificateOccurrences = $primary.CertificateOccurrences
+        }
+    }
+
     $projects = foreach ($program in $programs) {
         foreach ($course in $program.Courses | Where-Object { $_.WorkFileCount -gt 0 }) {
             [PSCustomObject]@{
@@ -479,7 +544,7 @@ function Get-PortfolioSnapshot {
 
     return [PSCustomObject]@{
         GeneratedAt = $generatedAtUtc.ToString("o")
-        GeneratedAtLocal = (Get-Date).ToString("yyyy-MM-dd HH:mm")
+        GeneratedAtLocal = (Get-Date).ToString("dd/MM/yyyy")
         Config = $config
         Stats = [PSCustomObject]@{
             TotalPrograms = [int]$totalPrograms
@@ -496,7 +561,7 @@ function Get-PortfolioSnapshot {
         Library = [PSCustomObject]@{
             Documents = @($documents | Sort-Object ProgramName, CourseName, Name)
             Pdfs = @($documents | Where-Object { $_.PreviewType -eq "pdf" } | Sort-Object ProgramName, CourseName, Name)
-            Certificates = @($documents | Where-Object { $_.IsCertificate } | Sort-Object ProgramName, CourseName, Name)
+            Certificates = @($certificates | Sort-Object DisplayName, ProgramName, Name)
             Projects = @($projects | Sort-Object ProgramName, Name)
         }
     }

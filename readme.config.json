@@ -44,11 +44,54 @@
   ],
   "site": {
     "ownerName": "Marco Accinno",
-    "role": "Project Management e profilo tecnico in crescita",
+    "role": "Software Development Engineer",
     "tagline": "Portfolio Coursera con certificati, elaborati pratici e avanzamento reale dei percorsi IBM.",
     "heroSummary": "Una raccolta consultabile online dei corsi completati, dei PDF e dei materiali di progetto, pensata per essere pubblicata su GitHub Pages."
   },
   "linkedin": {
-    "profileUrl": "https://www.linkedin.com/in/marco-accinno-214978276/"
+    "profileUrl": "https://www.linkedin.com/in/marco-accinno-214978276/",
+    "photoPath": "./assets/images/linkedin-profile.jpg",
+    "fullName": "Marco Accinno",
+    "headline": "Software Development Engineer",
+    "location": "Monsummano Terme, Toscana, Italia",
+    "education": "Universita degli Studi di Firenze",
+    "availability": "Disponibile per lavorare",
+    "profileLanguage": "Italiano",
+    "summary": "Sviluppatore software motivato dalla crescita continua, con approccio pratico e forte interesse per il miglioramento delle competenze tecniche e professionali.",
+    "experience": [
+      {
+        "title": "Software Development Engineer",
+        "company": "SIS INFORMATICA S.R.L. - SERVIZI INFORMATICI E SISTEMI",
+        "employmentType": "Full-time",
+        "period": "Nov 2023 - Presente",
+        "duration": "2 anni e 5 mesi",
+        "skills": [
+          "Git",
+          "Flutter"
+        ]
+      }
+    ],
+    "educationHistory": [
+      {
+        "institution": "Universita degli Studi di Firenze",
+        "period": "2021 - 2026",
+        "skills": [
+          "Git",
+          "Lingua inglese"
+        ]
+      },
+      {
+        "institution": "ITCS Filippo Pacini",
+        "degree": "Diploma, Scienze Applicate",
+        "period": "Set 2017 - Presente"
+      }
+    ],
+    "featuredSkills": [
+      "Sviluppo di software",
+      "Scrum",
+      "Python",
+      "JavaScript",
+      "Web Services API"
+    ]
   }
 }

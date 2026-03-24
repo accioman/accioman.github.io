@@ -40,14 +40,14 @@ async function main() {
   ).join("");
 
   document.getElementById("featured-projects").innerHTML = portfolio.library.projects.slice(0, 4).map((project) => `
-    <article class="project-card">
-      <h3>${escapeHtml(project.name)}</h3>
+    <article class="project-card project-card-home">
+      <h3 class="project-card-title">${escapeHtml(project.name)}</h3>
       <p class="muted">${escapeHtml(project.programName)}</p>
       <div class="meta-line">
         ${renderStatus(project.status)}
         <span class="info-chip">${escapeHtml(project.workFileCount)} file</span>
       </div>
-      <p class="muted">${escapeHtml(project.materialPreview || project.evidence)}</p>
+      <p class="muted project-card-preview">${escapeHtml(project.materialPreview || project.evidence)}</p>
       <div class="meta-row">
         <a class="text-link" href="./progetti.html">Apri progetto</a>
       </div>

@@ -1,4 +1,4 @@
-import { loadPayload, initShell, renderStatus, renderPreview, uniqueValues, escapeHtml } from "./common.js";
+import { loadPayload, initShell, renderStatus, renderPreview, mountPreviewContent, uniqueValues, escapeHtml } from "./common.js";
 
 let state = {
   portfolio: null,
@@ -63,9 +63,15 @@ function projectMatchesFilter(project, filters) {
   return true;
 }
 
-function updatePreview(file) {
+async function updatePreview(file) {
   state.selectedFile = file;
   document.getElementById("preview-panel").innerHTML = renderPreview(file);
+  await mountPreviewContent(file, document.getElementById("preview-panel"));
+
+  const layout = document.querySelector(".archive-layout");
+  if (layout) {
+    layout.classList.toggle("has-wide-preview", file?.kind === "spreadsheet");
+  }
 
   document.querySelectorAll(".file-button").forEach((button) => {
     button.classList.toggle("is-active", button.dataset.path === file?.relativePath);
@@ -106,13 +112,13 @@ function bindInteractions() {
     button.addEventListener("click", () => {
       const file = state.portfolio.library.documents.find((entry) => entry.relativePath === button.dataset.path);
       if (file) {
-        updatePreview(file);
+        void updatePreview(file);
       }
     });
   });
 }
 
-function refresh() {
+async function refresh() {
   const filters = currentFilters();
   const filteredProjects = state.portfolio.library.projects.filter((project) => projectMatchesFilter(project, filters));
   renderProjects(filteredProjects);
@@ -123,9 +129,9 @@ function refresh() {
     const fallback = fallbackFile
       ? state.portfolio.library.documents.find((entry) => entry.relativePath === fallbackFile.relativePath) ?? fallbackFile
       : null;
-    updatePreview(fallback);
+    await updatePreview(fallback);
   } else {
-    updatePreview(state.selectedFile);
+    await updatePreview(state.selectedFile);
   }
 }
 
@@ -160,11 +166,11 @@ async function main() {
     document.getElementById("type-filter"),
     document.getElementById("status-filter")
   ]) {
-    element.addEventListener("input", refresh);
-    element.addEventListener("change", refresh);
+    element.addEventListener("input", () => void refresh());
+    element.addEventListener("change", () => void refresh());
   }
 
-  refresh();
+  await refresh();
 }
 
 main().catch((error) => {

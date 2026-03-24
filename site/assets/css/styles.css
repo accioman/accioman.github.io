@@ -53,9 +53,9 @@ a {
 
 .page-shell {
   position: relative;
-  max-width: 1240px;
+  max-width: 1680px;
   margin: 0 auto;
-  padding: 24px;
+  padding: 14px 12px 24px;
 }
 
 .site-header {
@@ -131,6 +131,10 @@ a {
   font-weight: 700;
   color: var(--ink);
   background: var(--panel-soft);
+}
+
+.header-link.has-avatar {
+  gap: 10px;
 }
 
 .header-link:hover,
@@ -316,6 +320,14 @@ a {
   align-items: start;
 }
 
+.archive-layout.archive-layout-preview-right.has-wide-preview {
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.28fr);
+}
+
+.archive-layout.archive-layout-preview-left.has-wide-preview {
+  grid-template-columns: minmax(0, 1.38fr) minmax(280px, 0.62fr);
+}
+
 .panel-sticky {
   position: sticky;
   top: 108px;
@@ -343,6 +355,7 @@ a {
 .project-card,
 .related-card,
 .document-card {
+  min-width: 0;
   padding: 18px;
 }
 
@@ -402,6 +415,18 @@ a {
 .portal-card h2 {
   margin: 0 0 8px;
   font-size: 1.02rem;
+  line-height: 1.3;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.document-card h3,
+.project-card h3,
+.related-card h3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
 }
 
 .document-card p,
@@ -411,6 +436,46 @@ a {
 .program-summary p,
 .portal-card p {
   margin: 0;
+}
+
+.hero-copy .page-file-title {
+  max-width: none;
+  font-size: clamp(1.55rem, 1.1rem + 2vw, 2.7rem);
+  line-height: 1.06;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+#viewer-summary,
+.preview-file-meta,
+.related-card p {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.project-card-home .project-card-title,
+.project-card-home .project-card-preview,
+.related-card .related-file-title {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.project-card-home .project-card-title {
+  font-size: 0.96rem;
+  line-height: 1.28;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.project-card-home .project-card-preview {
+  font-size: 0.93rem;
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
 }
 
 .canvas-shell {
@@ -569,9 +634,24 @@ a {
   gap: 14px;
 }
 
+.linkedin-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
 .linkedin-card h2 {
   margin: 0;
   font-family: "Sora", sans-serif;
+}
+
+.linkedin-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.linkedin-copy p {
+  margin: 0;
 }
 
 .linkedin-meta {
@@ -580,9 +660,107 @@ a {
   gap: 10px;
 }
 
+.linkedin-summary {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+.linkedin-section {
+  display: grid;
+  gap: 12px;
+}
+
+.linkedin-section-priority {
+  padding: 18px;
+  border: 1px solid var(--line-strong);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(52, 211, 189, 0.12), transparent 38%),
+    rgba(255, 255, 255, 0.04);
+}
+
+.linkedin-entry-list {
+  display: grid;
+  gap: 12px;
+}
+
+.linkedin-entry {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.linkedin-entry-primary {
+  background: rgba(52, 211, 189, 0.08);
+  border-color: rgba(52, 211, 189, 0.24);
+}
+
+.linkedin-entry-secondary {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.linkedin-entry h3 {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  font-size: 1rem;
+}
+
+.linkedin-entry p {
+  margin: 0;
+}
+
+.linkedin-entry-company {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.profile-avatar {
+  display: block;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.profile-avatar-header {
+  width: 28px;
+  height: 28px;
+}
+
+.profile-avatar-card {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 auto;
+}
+
 .preview-card {
   display: grid;
   gap: 16px;
+  min-width: 0;
+}
+
+.preview-card h2 {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.3rem, 1.1rem + 1vw, 1.9rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.preview-card .preview-file-title {
+  font-size: clamp(1.15rem, 1rem + 0.8vw, 1.55rem);
+  line-height: 1.14;
+  letter-spacing: -0.02em;
+}
+
+.preview-surface {
+  min-height: 240px;
 }
 
 .preview-card iframe,
@@ -592,6 +770,167 @@ a {
   border: 1px solid var(--line);
   border-radius: 20px;
   background: #0a1520;
+}
+
+.preview-loading,
+.office-preview-error {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.office-preview {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.office-preview-body {
+  color: var(--ink);
+  line-height: 1.75;
+}
+
+.office-preview-body :first-child {
+  margin-top: 0;
+}
+
+.office-preview-body :last-child {
+  margin-bottom: 0;
+}
+
+.office-preview-body h1,
+.office-preview-body h2,
+.office-preview-body h3,
+.office-preview-body h4,
+.office-preview-body h5,
+.office-preview-body h6 {
+  color: var(--ink);
+}
+
+.office-preview-body p,
+.office-preview-body li {
+  color: var(--ink);
+}
+
+.docx-preview-body {
+  display: grid;
+  gap: 14px;
+}
+
+.docx-preview-body table {
+  width: 100%;
+  min-width: 560px;
+  border-collapse: collapse;
+  background: rgba(6, 15, 22, 0.9);
+}
+
+.docx-table-shell {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.docx-table-cell {
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  vertical-align: top;
+  color: var(--ink);
+  background: transparent;
+}
+
+.docx-table-header-row .docx-table-cell {
+  background: rgba(52, 211, 189, 0.12);
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.docx-table-cell p {
+  margin: 0;
+}
+
+.docx-table-cell p + p {
+  margin-top: 8px;
+}
+
+.office-preview-note {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.sheet-preview {
+  display: grid;
+  gap: 12px;
+}
+
+.sheet-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.sheet-tab {
+  padding: 10px 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.sheet-tab.is-active {
+  border-color: rgba(52, 211, 189, 0.42);
+  background: rgba(52, 211, 189, 0.14);
+  color: var(--ink);
+}
+
+.sheet-preview h3 {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  font-size: 1rem;
+}
+
+.sheet-preview-table {
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  max-height: 60vh;
+}
+
+.sheet-preview-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(7, 19, 27, 0.88);
+}
+
+.sheet-preview-table th,
+.sheet-preview-table td {
+  padding: 10px 12px;
+  border: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  color: var(--ink);
+}
+
+.sheet-preview-table th {
+  position: sticky;
+  top: 0;
+  background: rgba(15, 29, 40, 0.98);
+}
+
+.archive-layout.has-wide-preview .preview-surface {
+  min-height: 72vh;
+}
+
+.archive-layout.has-wide-preview .sheet-preview-table {
+  max-height: 72vh;
 }
 
 .viewer-panel {
@@ -638,7 +977,7 @@ a {
 
 @media (max-width: 760px) {
   .page-shell {
-    padding: 16px;
+    padding: 12px 10px 18px;
   }
 
   .site-header {

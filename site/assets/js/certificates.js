@@ -1,5 +1,5 @@
 import * as pdfjsLib from "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.min.mjs";
-import { loadPayload, initShell, renderPreview, escapeHtml } from "./common.js";
+import { loadPayload, initShell, renderPreview, mountPreviewContent, getDocumentDisplayTitle, getDocumentProgramNames, getDocumentCourseNames, escapeHtml } from "./common.js";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdn.jsdelivr.net/npm/pdfjs-dist@4.4.168/build/pdf.worker.min.mjs";
 
@@ -47,21 +47,30 @@ function currentFilters() {
 }
 
 function matchesFilter(file, filters) {
-  const haystack = [file.name, file.programName, file.courseName].join(" ").toLowerCase();
+  const haystack = [
+    getDocumentDisplayTitle(file),
+    getDocumentProgramNames(file).join(" "),
+    getDocumentCourseNames(file).join(" "),
+    file.name
+  ].join(" ").toLowerCase();
+  const programIds = Array.isArray(file.programIds) && file.programIds.length
+    ? file.programIds
+    : (file.programId ? [file.programId] : []);
 
   if (filters.query && !haystack.includes(filters.query)) {
     return false;
   }
-  if (filters.program && file.programId !== filters.program) {
+  if (filters.program && !programIds.includes(filters.program)) {
     return false;
   }
 
   return true;
 }
 
-function updatePreview(file) {
+async function updatePreview(file) {
   state.selectedFile = file;
   document.getElementById("preview-panel").innerHTML = renderPreview(file);
+  await mountPreviewContent(file, document.getElementById("preview-panel"));
 }
 
 function bindInteractions() {
@@ -69,7 +78,7 @@ function bindInteractions() {
     button.addEventListener("click", () => {
       const file = state.portfolio.library.certificates.find((entry) => entry.relativePath === button.dataset.path);
       if (file) {
-        updatePreview(file);
+        void updatePreview(file);
       }
     });
   });
@@ -86,8 +95,10 @@ function renderCertificates(certificates) {
         <canvas data-pdf="${file.webPath}"></canvas>
         <div class="thumb-loading">Carico miniatura...</div>
       </div>
-      <h3>${escapeHtml(file.name)}</h3>
-      <p class="muted">${escapeHtml(file.programName)} / ${escapeHtml(file.courseName)}</p>
+      <h3>${escapeHtml(getDocumentDisplayTitle(file))}</h3>
+      <div class="meta-line">
+        ${getDocumentProgramNames(file).map((programName) => `<span class="info-chip">${escapeHtml(programName)}</span>`).join("")}
+      </div>
       <div class="file-actions">
         <button class="button button-primary preview-trigger" type="button" data-path="${escapeHtml(file.relativePath)}">Anteprima</button>
         <a class="button button-secondary" href="./viewer.html?file=${encodeURIComponent(file.relativePath)}">Viewer</a>
@@ -98,16 +109,16 @@ function renderCertificates(certificates) {
   grid.querySelectorAll("canvas").forEach((canvas) => thumbObserver.observe(canvas));
 }
 
-function refresh() {
+async function refresh() {
   const filters = currentFilters();
   const certificates = state.portfolio.library.certificates.filter((file) => matchesFilter(file, filters));
   renderCertificates(certificates);
   bindInteractions();
 
   if (!state.selectedFile || !matchesFilter(state.selectedFile, filters)) {
-    updatePreview(certificates[0] ?? null);
+    await updatePreview(certificates[0] ?? null);
   } else {
-    updatePreview(state.selectedFile);
+    await updatePreview(state.selectedFile);
   }
 }
 
@@ -124,10 +135,10 @@ async function main() {
     ...portfolio.programs.map((program) => `<option value="${program.id}">${escapeHtml(program.name)}</option>`)
   ].join("");
 
-  document.getElementById("search-input").addEventListener("input", refresh);
-  document.getElementById("program-filter").addEventListener("change", refresh);
+  document.getElementById("search-input").addEventListener("input", () => void refresh());
+  document.getElementById("program-filter").addEventListener("change", () => void refresh());
 
-  refresh();
+  await refresh();
 }
 
 main().catch((error) => {

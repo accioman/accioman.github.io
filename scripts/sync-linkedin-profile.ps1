@@ -13,60 +13,110 @@ if (-not (Test-Path -LiteralPath $ConfigPath)) {
 $config = Get-Content -LiteralPath $ConfigPath -Raw | ConvertFrom-Json
 $siteConfig = $config.site
 $linkedinConfig = $config.linkedin
+$repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
+
+$configuredPhotoUrl = ""
+if ($linkedinConfig.PSObject.Properties.Name -contains "photoPath" -and -not [string]::IsNullOrWhiteSpace($linkedinConfig.photoPath)) {
+    if ($linkedinConfig.photoPath -match "^https?://") {
+        $configuredPhotoUrl = $linkedinConfig.photoPath
+    }
+    else {
+        $relativePhotoPath = $linkedinConfig.photoPath -replace "^[.][/\\]", ""
+        $localPhotoPath = Join-Path (Join-Path $repoRoot "site") ($relativePhotoPath -replace "/", "\")
+        if (Test-Path -LiteralPath $localPhotoPath) {
+            $configuredPhotoUrl = $linkedinConfig.photoPath
+        }
+    }
+}
+
+$featuredSkills = @()
+if ($linkedinConfig.PSObject.Properties.Name -contains "featuredSkills" -and $null -ne $linkedinConfig.featuredSkills) {
+    $featuredSkills = @($linkedinConfig.featuredSkills)
+}
+
+$experience = @()
+if ($linkedinConfig.PSObject.Properties.Name -contains "experience" -and $null -ne $linkedinConfig.experience) {
+    $experience = @(
+        $linkedinConfig.experience | ForEach-Object {
+            $entry = [ordered]@{}
+
+            if ($_.PSObject.Properties.Name -contains "title" -and -not [string]::IsNullOrWhiteSpace($_.title)) {
+                $entry.title = $_.title
+            }
+            if ($_.PSObject.Properties.Name -contains "company" -and -not [string]::IsNullOrWhiteSpace($_.company)) {
+                $entry.company = $_.company
+            }
+            if ($_.PSObject.Properties.Name -contains "employmentType" -and -not [string]::IsNullOrWhiteSpace($_.employmentType)) {
+                $entry.employmentType = $_.employmentType
+            }
+            if ($_.PSObject.Properties.Name -contains "period" -and -not [string]::IsNullOrWhiteSpace($_.period)) {
+                $entry.period = $_.period
+            }
+            if ($_.PSObject.Properties.Name -contains "duration" -and -not [string]::IsNullOrWhiteSpace($_.duration)) {
+                $entry.duration = $_.duration
+            }
+
+            $skills = if ($_.PSObject.Properties.Name -contains "skills" -and $null -ne $_.skills) { @($_.skills) } else { @() }
+            if (@($skills).Length -gt 0) {
+                $entry.skills = $skills
+            }
+
+            $entry
+        }
+    )
+}
+
+$educationHistory = @()
+if ($linkedinConfig.PSObject.Properties.Name -contains "educationHistory" -and $null -ne $linkedinConfig.educationHistory) {
+    $educationHistory = @(
+        $linkedinConfig.educationHistory | ForEach-Object {
+            $entry = [ordered]@{}
+
+            if ($_.PSObject.Properties.Name -contains "institution" -and -not [string]::IsNullOrWhiteSpace($_.institution)) {
+                $entry.institution = $_.institution
+            }
+            if ($_.PSObject.Properties.Name -contains "degree" -and -not [string]::IsNullOrWhiteSpace($_.degree)) {
+                $entry.degree = $_.degree
+            }
+            if ($_.PSObject.Properties.Name -contains "period" -and -not [string]::IsNullOrWhiteSpace($_.period)) {
+                $entry.period = $_.period
+            }
+
+            $skills = if ($_.PSObject.Properties.Name -contains "skills" -and $null -ne $_.skills) { @($_.skills) } else { @() }
+            if (@($skills).Length -gt 0) {
+                $entry.skills = $skills
+            }
+
+            $entry
+        }
+    )
+}
+
+$education = ""
+if ($linkedinConfig.PSObject.Properties.Name -contains "education" -and -not [string]::IsNullOrWhiteSpace($linkedinConfig.education)) {
+    $education = $linkedinConfig.education
+}
+elseif ($educationHistory.Count -gt 0 -and -not [string]::IsNullOrWhiteSpace($educationHistory[0].institution)) {
+    $education = $educationHistory[0].institution
+}
 
 $profileData = [ordered]@{
-    status = "cached"
-    source = "config"
+    status = "static"
+    source = "manual-profile"
     profileUrl = $linkedinConfig.profileUrl
-    fullName = $siteConfig.ownerName
-    headline = ""
-    photoUrl = ""
-    location = ""
-    summary = ""
+    fullName = if ($linkedinConfig.PSObject.Properties.Name -contains "fullName" -and -not [string]::IsNullOrWhiteSpace($linkedinConfig.fullName)) { $linkedinConfig.fullName } else { $siteConfig.ownerName }
+    headline = if ($linkedinConfig.PSObject.Properties.Name -contains "headline") { $linkedinConfig.headline } else { "" }
+    photoUrl = $configuredPhotoUrl
+    location = if ($linkedinConfig.PSObject.Properties.Name -contains "location") { $linkedinConfig.location } else { "" }
+    education = $education
+    availability = if ($linkedinConfig.PSObject.Properties.Name -contains "availability") { $linkedinConfig.availability } else { "" }
+    profileLanguage = if ($linkedinConfig.PSObject.Properties.Name -contains "profileLanguage") { $linkedinConfig.profileLanguage } else { "" }
+    summary = if ($linkedinConfig.PSObject.Properties.Name -contains "summary") { $linkedinConfig.summary } else { "" }
+    experience = $experience
+    educationHistory = $educationHistory
+    featuredSkills = $featuredSkills
     updatedAt = (Get-Date).ToUniversalTime().ToString("o")
-    note = "Profilo LinkedIn collegato. Per sincronizzare automaticamente nome, headline e foto via API ufficiale imposta la variabile LINKEDIN_ACCESS_TOKEN nel workflow GitHub Actions."
-}
-
-if ($env:LINKEDIN_ACCESS_TOKEN) {
-    try {
-        $headers = @{
-            "Authorization" = "Bearer $($env:LINKEDIN_ACCESS_TOKEN)"
-            "X-Restli-Protocol-Version" = "2.0.0"
-        }
-
-        $profileResponse = Invoke-RestMethod -Method Get -Uri "https://api.linkedin.com/v2/me" -Headers $headers
-        $fullName = @($profileResponse.localizedFirstName, $profileResponse.localizedLastName) -join " "
-        $headline = $profileResponse.localizedHeadline
-        $profileData.status = "synced"
-        $profileData.source = "linkedin-api"
-        if (-not [string]::IsNullOrWhiteSpace($fullName)) {
-            $profileData.fullName = $fullName.Trim()
-        }
-        if (-not [string]::IsNullOrWhiteSpace($headline)) {
-            $profileData.headline = $headline
-        }
-        if ($profileResponse.profilePicture.displayImage) {
-            $profileData.note = "Profilo sincronizzato da LinkedIn tramite token OAuth."
-        }
-    }
-    catch {
-        $profileData.status = "sync_failed"
-        $profileData.source = "config"
-        $profileData.note = "La sincronizzazione API e fallita. Rimane il fallback statico con collegamento al profilo."
-        $profileData.error = $_.Exception.Message
-    }
-}
-else {
-    try {
-        $null = Invoke-WebRequest -Uri $linkedinConfig.profileUrl -Headers @{ "User-Agent" = "Mozilla/5.0" } -MaximumRedirection 5 -ErrorAction Stop
-        $profileData.status = "public_profile_available"
-        $profileData.note = "Il profilo pubblico sembra raggiungibile, ma la sincronizzazione automatica affidabile su GitHub Pages richiede comunque un token OAuth o una cache build-time."
-    }
-    catch {
-        $profileData.status = "public_profile_blocked"
-        $profileData.note = "Il profilo pubblico LinkedIn rifiuta richieste automatiche non autenticate. GitHub Pages non puo fare scraping diretto in modo affidabile."
-        $profileData.error = $_.Exception.Message
-    }
+    note = "Profilo LinkedIn gestito in modo statico nel repository."
 }
 
 $outputDirectory = Split-Path -Path $OutputPath -Parent
@@ -75,4 +125,4 @@ if (-not (Test-Path -LiteralPath $outputDirectory)) {
 }
 
 $profileData | ConvertTo-Json -Depth 5 | Set-Content -LiteralPath $OutputPath -Encoding utf8
-Write-Host "LinkedIn profile cache written to $OutputPath"
+Write-Host "LinkedIn profile data written to $OutputPath"

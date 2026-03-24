@@ -4,7 +4,7 @@ function Get-ProgramDirectories {
         [string]$BasePath
     )
 
-    $excluded = @(".git", ".github", ".site", "docs", "scripts", "site")
+    $excluded = @(".git", ".github", ".site", "docs", "scripts", "site", "node_modules")
 
     return Get-ChildItem -LiteralPath $BasePath -Directory |
         Where-Object {
@@ -142,24 +142,66 @@ function Get-CourseInfos {
         [psobject]$ContentMetadata
     )
 
-    $courseRoots = Get-ChildItem -LiteralPath $ProgramDirectory.FullName -Directory | Sort-Object Name
+    $programDirectoryExists = Test-Path -LiteralPath $ProgramDirectory.FullName -PathType Container
+    $courseRoots = if ($programDirectoryExists) {
+        @(Get-ChildItem -LiteralPath $ProgramDirectory.FullName -Directory | Sort-Object Name)
+    }
+    else {
+        @()
+    }
     $statusRank = @{
         "Completato" = 0
         "In corso" = 1
         "Cartella pronta" = 2
     }
-    $programRelativePath = (Get-RelativePath -BasePath $RootPath -TargetPath $ProgramDirectory.FullName) -replace "\\", "/"
+    $programRelativePath = if ($programDirectoryExists) {
+        (Get-RelativePath -BasePath $RootPath -TargetPath $ProgramDirectory.FullName) -replace "\\", "/"
+    }
+    else {
+        $ProgramDirectory.Name
+    }
 
-    $courses = foreach ($courseRoot in $courseRoots) {
+    $courseRootsByPath = @{}
+    foreach ($courseRoot in $courseRoots) {
+        $existingCourseRelativePath = (Get-RelativePath -BasePath $RootPath -TargetPath $courseRoot.FullName) -replace "\\", "/"
+        $courseRootsByPath[$existingCourseRelativePath] = $courseRoot
+    }
+
+    $metadataCoursePaths = @(
+        $ContentMetadata.Courses |
+            ForEach-Object { Get-MetadataString -Value (Get-ObjectPropertyValue -InputObject $_ -Name "Path") } |
+            Where-Object { -not [string]::IsNullOrWhiteSpace($_) -and $_ -like "$programRelativePath/*" }
+    )
+
+    $courseRelativePaths = [System.Collections.Generic.List[string]]::new()
+    foreach ($existingCourseRelativePath in @($courseRootsByPath.Keys | Sort-Object)) {
+        $courseRelativePaths.Add($existingCourseRelativePath)
+    }
+    foreach ($metadataCoursePath in @($metadataCoursePaths | Sort-Object)) {
+        if (-not $courseRelativePaths.Contains($metadataCoursePath)) {
+            $courseRelativePaths.Add($metadataCoursePath)
+        }
+    }
+
+    $courses = foreach ($courseRelativePath in $courseRelativePaths) {
+        $courseRoot = if ($courseRootsByPath.ContainsKey($courseRelativePath)) {
+            $courseRootsByPath[$courseRelativePath]
+        }
+        else {
+            [System.IO.DirectoryInfo]::new((Join-Path $RootPath ($courseRelativePath -replace "/", [System.IO.Path]::DirectorySeparatorChar)))
+        }
+
+        $courseDirectoryExists = Test-Path -LiteralPath $courseRoot.FullName -PathType Container
+        $defaultCourseName = Split-Path -Path $courseRelativePath -Leaf
         $displayParts = [System.Collections.Generic.List[string]]::new()
-        $displayParts.Add($courseRoot.Name)
+        $displayParts.Add($defaultCourseName)
         $effectiveDirectory = $courseRoot
 
-        while ($true) {
+        while ($courseDirectoryExists) {
             $childDirectories = @(Get-ChildItem -LiteralPath $effectiveDirectory.FullName -Directory)
             $directFiles = @(Get-ChildItem -LiteralPath $effectiveDirectory.FullName -File)
 
-            if ($directFiles.Count -eq 0 -and $childDirectories.Count -eq 1) {
+            if (@($directFiles).Count -eq 0 -and @($childDirectories).Count -eq 1) {
                 $effectiveDirectory = $childDirectories[0]
                 $displayParts.Add($effectiveDirectory.Name)
                 continue
@@ -168,7 +210,6 @@ function Get-CourseInfos {
             break
         }
 
-        $courseRelativePath = (Get-RelativePath -BasePath $RootPath -TargetPath $courseRoot.FullName) -replace "\\", "/"
         $courseMetadata = Get-MetadataEntry -Map $ContentMetadata.CoursesByPath -Key $courseRelativePath
         $displayName = Get-MetadataString -Value (Get-ObjectPropertyValue -InputObject $courseMetadata -Name "DisplayName") -Default ($displayParts -join " / ")
         $courseSummary = Get-MetadataString -Value (Get-ObjectPropertyValue -InputObject $courseMetadata -Name "Summary")
@@ -188,14 +229,19 @@ function Get-CourseInfos {
         $caseStudyPrimaryFile = Get-MetadataString -Value (Get-ObjectPropertyValue -InputObject $caseStudyMetadata -Name "PrimaryFile")
         $featuredCertificateRank = Get-MetadataRank -Map $ContentMetadata.FeaturedCertificateRanks -Key $courseRelativePath
         $featuredProjectRank = Get-MetadataRank -Map $ContentMetadata.FeaturedProjectRanks -Key $courseRelativePath
-        $allFiles = @(Get-ChildItem -LiteralPath $courseRoot.FullName -File -Recurse | Sort-Object FullName)
+        $allFiles = if ($courseDirectoryExists) {
+            @(Get-ChildItem -LiteralPath $courseRoot.FullName -File -Recurse | Sort-Object FullName)
+        }
+        else {
+            @()
+        }
         $certificateFiles = @($allFiles | Where-Object { $_.Name -like "Coursera*.pdf" })
         $workFiles = @($allFiles | Where-Object { $_.Name -notlike "Coursera*.pdf" })
 
-        $status = if ($certificateFiles.Count -gt 0) {
+        $status = if (@($certificateFiles).Count -gt 0) {
             "Completato"
         }
-        elseif ($workFiles.Count -gt 0) {
+        elseif (@($workFiles).Count -gt 0) {
             "In corso"
         }
         else {
@@ -204,7 +250,7 @@ function Get-CourseInfos {
 
         $fileEntries = foreach ($file in $allFiles) {
             $relativePath = (Get-RelativePath -BasePath $RootPath -TargetPath $file.FullName) -replace "\\", "/"
-            $courseRelativePath = (Get-RelativePath -BasePath $courseRoot.FullName -TargetPath $file.FullName) -replace "\\", "/"
+            $fileCourseRelativePath = (Get-RelativePath -BasePath $courseRoot.FullName -TargetPath $file.FullName) -replace "\\", "/"
             $isCertificate = $file.Name -like "Coursera*.pdf"
             $kindInfo = Get-FileKindInfo -File $file -IsCertificate $isCertificate
 
@@ -212,7 +258,7 @@ function Get-CourseInfos {
                 Id = ConvertTo-Slug -Value $relativePath
                 Name = $file.Name
                 RelativePath = $relativePath
-                CourseRelativePath = $courseRelativePath
+                CourseRelativePath = $fileCourseRelativePath
                 WebPath = ConvertTo-WebPath -RelativePath $relativePath
                 Extension = $file.Extension.ToLowerInvariant()
                 Kind = $kindInfo.Kind
@@ -236,22 +282,22 @@ function Get-CourseInfos {
         }
 
         $evidenceParts = [System.Collections.Generic.List[string]]::new()
-        if ($certificateFiles.Count -gt 0) {
-            $evidenceParts.Add((Format-CountLabel -Count $certificateFiles.Count -Singular "certificato" -Plural "certificati"))
+        if (@($certificateFiles).Count -gt 0) {
+            $evidenceParts.Add((Format-CountLabel -Count (@($certificateFiles).Count) -Singular "certificato" -Plural "certificati"))
         }
-        if ($workFiles.Count -gt 0) {
-            $evidenceParts.Add((Format-CountLabel -Count $workFiles.Count -Singular "file di lavoro" -Plural "file di lavoro"))
+        if (@($workFiles).Count -gt 0) {
+            $evidenceParts.Add((Format-CountLabel -Count (@($workFiles).Count) -Singular "file di lavoro" -Plural "file di lavoro"))
         }
-        if ($evidenceParts.Count -eq 0) {
+        if (@($evidenceParts).Count -eq 0) {
             $evidenceParts.Add("nessun file")
         }
 
         $materialPreview = ""
-        if ($workFiles.Count -gt 0) {
+        if (@($workFiles).Count -gt 0) {
             $topNames = $workFiles | Sort-Object Name | Select-Object -First 3 -ExpandProperty Name
             $materialPreview = $topNames -join ", "
-            if ($workFiles.Count -gt 3) {
-                $materialPreview += " + $($workFiles.Count - 3) altri"
+            if (@($workFiles).Count -gt 3) {
+                $materialPreview += " + $(@($workFiles).Count - 3) altri"
             }
         }
 
@@ -271,9 +317,9 @@ function Get-CourseInfos {
             Featured = $courseFeatured
             FeaturedCertificateRank = $featuredCertificateRank
             FeaturedProjectRank = $featuredProjectRank
-            CertificateCount = $certificateFiles.Count
-            WorkFileCount = $workFiles.Count
-            TotalFiles = $allFiles.Count
+            CertificateCount = @($certificateFiles).Count
+            WorkFileCount = @($workFiles).Count
+            TotalFiles = @($allFiles).Count
             Evidence = $evidenceParts -join " + "
             MaterialPreview = $materialPreview
             CaseStudy = [PSCustomObject]@{

@@ -8,7 +8,8 @@ const state = {
   activeProgram: null,
   activeCourse: null,
   activeFile: null,
-  fullscreenBound: false
+  fullscreenBound: false,
+  mobilePreviewBound: false
 };
 
 function getCompletionPercent(program) {
@@ -123,13 +124,60 @@ function getPreviewPanel() {
   return document.getElementById("path-course-dialog-preview");
 }
 
+function useMobilePreviewOverlay() {
+  return window.matchMedia("(max-width: 760px)").matches;
+}
+
+function getMobilePreviewOverlay() {
+  return document.getElementById("path-mobile-preview-overlay");
+}
+
+function getMobilePreviewFrame() {
+  return document.getElementById("path-mobile-preview-frame");
+}
+
+function renderMobilePreview(file) {
+  if (!file) {
+    return `
+      <div class="path-mobile-preview-top">
+        <div class="path-mobile-preview-copy">
+          <p class="panel-label">Anteprima</p>
+          <h2>Nessun file selezionato</h2>
+        </div>
+        <button class="button button-secondary button-compact" type="button" id="path-mobile-preview-close">Chiudi</button>
+      </div>
+      <div class="preview-card path-mobile-preview-card">
+        <p class="muted">Questo corso non ha ancora materiali consultabili.</p>
+      </div>
+    `;
+  }
+
+  return `
+    <div class="path-mobile-preview-top">
+      <div class="path-mobile-preview-copy">
+        <p class="panel-label">Anteprima</p>
+        <h2>${escapeHtml(getDocumentDisplayTitle(file))}</h2>
+      </div>
+      <button class="button button-secondary button-compact" type="button" id="path-mobile-preview-close">Chiudi</button>
+    </div>
+    <div class="preview-card path-mobile-preview-card">
+      <div class="preview-surface path-mobile-preview-surface" data-preview-surface></div>
+    </div>
+  `;
+}
+
 function isPreviewFullscreen() {
   return document.fullscreenElement === getPreviewPanel();
 }
 
 function canUsePreviewFullscreen() {
   const panel = getPreviewPanel();
-  return Boolean(state.activeFile?.previewable && panel && typeof panel.requestFullscreen === "function");
+  return Boolean(
+    !useMobilePreviewOverlay() &&
+    state.activeFile?.previewable &&
+    panel &&
+    typeof panel.requestFullscreen === "function"
+  );
 }
 
 function updatePreviewFullscreenButton() {
@@ -198,6 +246,65 @@ function exitPreviewFullscreenIfNeeded() {
   }
 }
 
+function closeMobilePreviewOverlay() {
+  const overlay = getMobilePreviewOverlay();
+  const frame = getMobilePreviewFrame();
+  if (!overlay || overlay.hidden) {
+    return;
+  }
+
+  overlay.hidden = true;
+  document.body.classList.remove("path-mobile-preview-open");
+  if (frame) {
+    frame.innerHTML = "";
+  }
+}
+
+async function openMobilePreviewOverlay(file) {
+  const overlay = getMobilePreviewOverlay();
+  const frame = getMobilePreviewFrame();
+  if (!overlay || !frame) {
+    return;
+  }
+
+  frame.innerHTML = renderMobilePreview(file);
+  overlay.hidden = false;
+  document.body.classList.add("path-mobile-preview-open");
+  frame.querySelector("#path-mobile-preview-close")?.addEventListener("click", closeMobilePreviewOverlay);
+  await mountPreviewContent(file, frame);
+}
+
+function bindMobilePreviewOverlay() {
+  if (state.mobilePreviewBound) {
+    return;
+  }
+
+  const overlay = getMobilePreviewOverlay();
+  if (!overlay) {
+    return;
+  }
+
+  overlay.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+      closeMobilePreviewOverlay();
+    }
+  });
+
+  window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMobilePreviewOverlay();
+    }
+  });
+
+  window.addEventListener("resize", () => {
+    if (!useMobilePreviewOverlay()) {
+      closeMobilePreviewOverlay();
+    }
+  });
+
+  state.mobilePreviewBound = true;
+}
+
 function syncCourseDialogUrl({ replace = false } = {}) {
   if (!state.activeProgram || !state.activeCourse) {
     return;
@@ -258,11 +365,23 @@ function bindDialogFileButtons(allFiles) {
   dialog.querySelectorAll("[data-dialog-file]").forEach((button) => {
     button.addEventListener("click", async () => {
       const nextFile = allFiles.find((file) => file.relativePath === button.getAttribute("data-dialog-file")) || null;
-      if (!nextFile || nextFile.relativePath === state.activeFile?.relativePath) {
+      if (!nextFile) {
         return;
       }
 
+      const isSameFile = nextFile.relativePath === state.activeFile?.relativePath;
       state.activeFile = nextFile;
+
+      if (useMobilePreviewOverlay()) {
+        updateDialogFileSelection();
+        await openMobilePreviewOverlay(nextFile);
+        return;
+      }
+
+      if (isSameFile) {
+        return;
+      }
+
       await refreshCourseDialogPreview();
     });
   });
@@ -271,6 +390,16 @@ function bindDialogFileButtons(allFiles) {
 async function refreshCourseDialogPreview() {
   const previewRoot = document.getElementById("path-course-dialog-preview");
   if (!previewRoot) {
+    return;
+  }
+
+  if (useMobilePreviewOverlay()) {
+    previewRoot.innerHTML = `
+      <div class="path-course-dialog-mobile-note">
+        <p class="muted">Su mobile tocca certificato o file per aprire l'anteprima a schermo intero.</p>
+      </div>
+    `;
+    updateDialogFileSelection();
     return;
   }
 
@@ -361,6 +490,7 @@ function bindDialog() {
   }
 
   bindFullscreenState();
+  bindMobilePreviewOverlay();
   document.getElementById("path-course-dialog-close")?.addEventListener("click", () => dialog.close());
   dialog.addEventListener("click", (event) => {
     if (event.target === dialog) {
@@ -369,6 +499,7 @@ function bindDialog() {
   });
   dialog.addEventListener("close", () => {
     exitPreviewFullscreenIfNeeded();
+    closeMobilePreviewOverlay();
     clearCourseDialogUrl({ replace: true });
   });
 }

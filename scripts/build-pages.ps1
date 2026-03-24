@@ -29,7 +29,7 @@ Get-ChildItem -LiteralPath $SiteSource |
     }
 
 $programDirectories = Get-ChildItem -LiteralPath $Root -Directory |
-    Where-Object { $_.Name -notin @(".git", ".github", ".site", "docs", "scripts", "site") -and $_.Name -notlike ".*" }
+    Where-Object { $_.Name -notin @(".git", ".github", ".site", "docs", "scripts", "site", "node_modules") -and $_.Name -notlike ".*" }
 
 foreach ($directory in $programDirectories) {
     Copy-Item -LiteralPath $directory.FullName -Destination (Join-Path $OutputDir $directory.Name) -Recurse -Force

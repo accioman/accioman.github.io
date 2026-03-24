@@ -1609,6 +1609,86 @@ select:focus-visible {
   background: rgba(255, 255, 255, 0.02);
 }
 
+.path-course-dialog-mobile-note {
+  padding: 16px 18px;
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.path-course-dialog-mobile-note .muted {
+  margin: 0;
+}
+
+.path-mobile-preview-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 90;
+  display: grid;
+  background: rgba(3, 8, 15, 0.8);
+  backdrop-filter: blur(12px);
+}
+
+.path-mobile-preview-shell {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  gap: 12px;
+  min-height: 100dvh;
+  padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom));
+  background:
+    linear-gradient(180deg, rgba(247, 250, 255, 0.98), rgba(240, 245, 251, 0.98));
+}
+
+.path-mobile-preview-top {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.path-mobile-preview-copy {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+}
+
+.path-mobile-preview-copy .panel-label {
+  margin: 0;
+  color: #4969aa;
+}
+
+.path-mobile-preview-copy h2 {
+  margin: 0;
+  color: var(--ink-dark);
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1rem, 0.94rem + 1vw, 1.22rem);
+  line-height: 1.18;
+  overflow-wrap: anywhere;
+}
+
+.path-mobile-preview-card,
+.path-mobile-preview-surface {
+  min-height: 0;
+  height: 100%;
+}
+
+.path-mobile-preview-shell .preview-card {
+  color: var(--ink-dark);
+}
+
+.path-mobile-preview-shell .preview-card iframe,
+.path-mobile-preview-shell .viewer-frame,
+.path-mobile-preview-shell .image-preview,
+.path-mobile-preview-shell .office-preview,
+.path-mobile-preview-shell .preview-loading,
+.path-mobile-preview-shell .office-preview-error {
+  min-height: calc(100dvh - 116px);
+}
+
+.path-mobile-preview-shell .sheet-preview-table {
+  max-height: calc(100dvh - 180px);
+}
+
 .viewer-main {
   gap: 22px;
 }
@@ -2653,6 +2733,12 @@ body.viewer-focus-mode #viewer-frame-panel {
     max-height: min(38dvh, 300px);
   }
 
+}
+
+@media (min-width: 761px) {
+  .path-mobile-preview-overlay {
+    display: none !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -1,5 +1,5 @@
 ﻿{
-    "GeneratedAt":  "2026-03-24T16:29:29.0404219Z",
+    "GeneratedAt":  "2026-03-24T16:45:40.5237233Z",
     "GeneratedAtLocal":  "24/03/2026",
     "Config":  {
                    "title":  "Portfolio Formativo",
@@ -398,19 +398,19 @@
                },
     "ContentMetadata":  {
                             "ProgramCount":  2,
-                            "CourseCount":  18,
+                            "CourseCount":  26,
                             "FeaturedCertificateCount":  6,
                             "FeaturedProjectCount":  3
                         },
     "Stats":  {
                   "TotalPrograms":  2,
-                  "TotalCourses":  26,
+                  "TotalCourses":  27,
                   "TotalCompleted":  9,
                   "TotalInProgress":  0,
-                  "TotalReady":  17,
+                  "TotalReady":  18,
                   "TotalWorkFiles":  27,
                   "TotalCertificates":  9,
-                  "CompletionPercent":  35,
+                  "CompletionPercent":  33,
                   "ProgressBar":  "[####--------]"
               },
     "Programs":  [
@@ -430,12 +430,12 @@
                          "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering",
                          "Courses":  [
                                          {
-                                             "Id":  "coursera-4u440ya2tw8r-pdf",
+                                             "Id":  "ibm-devops-and-software-engineering-introduction-to-software-engineering",
                                              "Name":  "Introduction to Software Engineering",
                                              "OriginalName":  "Introduction to Software Engineering",
                                              "Slug":  "introduction-to-software-engineering",
-                                             "RelativePath":  "Coursera 4U440YA2TW8R.pdf",
-                                             "WebPath":  "Coursera%204U440YA2TW8R.pdf",
+                                             "RelativePath":  "IBM DevOps and Software Engineering/Introduction to Software Engineering",
+                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Introduction%20to%20Software%20Engineering",
                                              "Status":  "Completato",
                                              "StatusRank":  0,
                                              "Summary":  "Fondamenti di ciclo di vita software, ruoli tecnici e pratiche di engineering.",
@@ -580,6 +580,48 @@
                                                        }
                                          },
                                          {
+                                             "Id":  "ibm-devops-and-software-engineering-integrazione-continua-e-consegna-continua-ci",
+                                             "Name":  "Integrazione continua e consegna continua (CI/CD)",
+                                             "OriginalName":  "Integrazione continua e consegna continua (CI / CD)",
+                                             "Slug":  "integrazione-continua-e-consegna-continua-ci-cd",
+                                             "RelativePath":  "IBM DevOps and Software Engineering/Integrazione continua e consegna continua (CI",
+                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Integrazione%20continua%20e%20consegna%20continua%20(CI",
+                                             "Status":  "Cartella pronta",
+                                             "StatusRank":  2,
+                                             "Summary":  "Pipeline di integrazione e consegna continua per workflow DevOps.",
+                                             "Category":  "CI/CD",
+                                             "Tags":  {
+
+                                                      },
+                                             "Priority":  35,
+                                             "Featured":  false,
+                                             "FeaturedCertificateRank":  9999,
+                                             "FeaturedProjectRank":  9999,
+                                             "CertificateCount":  0,
+                                             "WorkFileCount":  0,
+                                             "TotalFiles":  0,
+                                             "Evidence":  "nessun file",
+                                             "MaterialPreview":  "",
+                                             "CaseStudy":  {
+                                                               "Title":  "",
+                                                               "Lead":  "",
+                                                               "Context":  "",
+                                                               "Objective":  "",
+                                                               "Role":  "",
+                                                               "Outcome":  "",
+                                                               "Skills":  {
+
+                                                                          },
+                                                               "Deliverables":  {
+
+                                                                                },
+                                                               "PrimaryFile":  ""
+                                                           },
+                                             "Files":  {
+
+                                                       }
+                                         },
+                                         {
                                              "Id":  "ibm-devops-and-software-engineering-introduzione-pratica-ai-comandi-linux-e-allo-shell-scripting",
                                              "Name":  "Introduzione pratica ai comandi Linux e allo Shell Scripting",
                                              "OriginalName":  "Introduzione pratica ai comandi Linux e allo Shell Scripting",
@@ -594,6 +636,48 @@
 
                                                       },
                                              "Priority":  40,
+                                             "Featured":  false,
+                                             "FeaturedCertificateRank":  9999,
+                                             "FeaturedProjectRank":  9999,
+                                             "CertificateCount":  0,
+                                             "WorkFileCount":  0,
+                                             "TotalFiles":  0,
+                                             "Evidence":  "nessun file",
+                                             "MaterialPreview":  "",
+                                             "CaseStudy":  {
+                                                               "Title":  "",
+                                                               "Lead":  "",
+                                                               "Context":  "",
+                                                               "Objective":  "",
+                                                               "Role":  "",
+                                                               "Outcome":  "",
+                                                               "Skills":  {
+
+                                                                          },
+                                                               "Deliverables":  {
+
+                                                                                },
+                                                               "PrimaryFile":  ""
+                                                           },
+                                             "Files":  {
+
+                                                       }
+                                         },
+                                         {
+                                             "Id":  "ibm-devops-and-software-engineering-introduzione-ai-test-e-allo-sviluppo-guidato-dal-comportamento",
+                                             "Name":  "Introduzione ai test e allo sviluppo guidato dal comportamento",
+                                             "OriginalName":  "Introduzione ai test e allo sviluppo guidato dal comportamento",
+                                             "Slug":  "introduzione-ai-test-e-allo-sviluppo-guidato-dal-comportamento",
+                                             "RelativePath":  "IBM DevOps and Software Engineering/Introduzione ai test e allo sviluppo guidato dal comportamento",
+                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Introduzione%20ai%20test%20e%20allo%20sviluppo%20guidato%20dal%20comportamento",
+                                             "Status":  "Cartella pronta",
+                                             "StatusRank":  2,
+                                             "Summary":  "Testing e behavior-driven development come base di qualitÃ  applicativa.",
+                                             "Category":  "Quality Engineering",
+                                             "Tags":  {
+
+                                                      },
+                                             "Priority":  45,
                                              "Featured":  false,
                                              "FeaturedCertificateRank":  9999,
                                              "FeaturedProjectRank":  9999,
@@ -664,12 +748,12 @@
                                                        }
                                          },
                                          {
-                                             "Id":  "coursera-bff5ulbn2acl-pdf",
+                                             "Id":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                              "Name":  "Introduzione allo sviluppo Agile e a Scrum",
                                              "OriginalName":  "Introduzione allo sviluppo Agile e a Scrum",
                                              "Slug":  "introduzione-allo-sviluppo-agile-e-a-scrum",
-                                             "RelativePath":  "Coursera BFF5ULBN2ACL.pdf",
-                                             "WebPath":  "Coursera%20BFF5ULBN2ACL.pdf",
+                                             "RelativePath":  "IBM DevOps and Software Engineering/Introduzione allo sviluppo Agile e a Scrum",
+                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Introduzione%20allo%20sviluppo%20Agile%20e%20a%20Scrum",
                                              "Status":  "Completato",
                                              "StatusRank":  0,
                                              "Summary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -990,6 +1074,174 @@
                                                        }
                                          },
                                          {
+                                             "Id":  "ibm-devops-and-software-engineering-monitoraggio-e-osservabilita-per-lo-sviluppo-e-devops",
+                                             "Name":  "Monitoraggio e osservabilitÃ  per lo sviluppo e DevOps",
+                                             "OriginalName":  "Monitoraggio e osservabilitÃ  per lo sviluppo e DevOps",
+                                             "Slug":  "monitoraggio-e-osservabilita-per-lo-sviluppo-e-devops",
+                                             "RelativePath":  "IBM DevOps and Software Engineering/Monitoraggio e osservabilitÃ  per lo sviluppo e DevOps",
+                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Monitoraggio%20e%20osservabilit%C3%83%C2%A0%20per%20lo%20sviluppo%20e%20DevOps",
+                                             "Status":  "Cartella pronta",
+                                             "StatusRank":  2,
+                                             "Summary":  "Metriche, log e osservabilitÃ  per affidabilitÃ  applicativa.",
+                                             "Category":  "Observability",
+                                             "Tags":  {
+
+                                                      },
+                                             "Priority":  70,
+                                             "Featured":  false,
+                                             "FeaturedCertificateRank":  9999,
+                                             "FeaturedProjectRank":  9999,
+                                             "CertificateCount":  0,
+                                             "WorkFileCount":  0,
+                                             "TotalFiles":  0,
+                                             "Evidence":  "nessun file",
+                                             "MaterialPreview":  "",
+                                             "CaseStudy":  {
+                                                               "Title":  "",
+                                                               "Lead":  "",
+                                                               "Context":  "",
+                                                               "Objective":  "",
+                                                               "Role":  "",
+                                                               "Outcome":  "",
+                                                               "Skills":  {
+
+                                                                          },
+                                                               "Deliverables":  {
+
+                                                                                },
+                                                               "PrimaryFile":  ""
+                                                           },
+                                             "Files":  {
+
+                                                       }
+                                         },
+                                         {
+                                             "Id":  "ibm-devops-and-software-engineering-python-per-la-scienza-dei-dati-l-intelligenza-artificiale-e-lo-sviluppo",
+                                             "Name":  "Python per la scienza dei dati, l\u0027intelligenza artificiale e lo sviluppo",
+                                             "OriginalName":  "Python per la scienza dei dati, l\u0027intelligenza artificiale e lo sviluppo",
+                                             "Slug":  "python-per-la-scienza-dei-dati-l-intelligenza-artificiale-e-lo-sviluppo",
+                                             "RelativePath":  "IBM DevOps and Software Engineering/Python per la scienza dei dati, l\u0027intelligenza artificiale e lo sviluppo",
+                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Python%20per%20la%20scienza%20dei%20dati%2C%20l\u0027intelligenza%20artificiale%20e%20lo%20sviluppo",
+                                             "Status":  "Cartella pronta",
+                                             "StatusRank":  2,
+                                             "Summary":  "Python per automazione, basi data e sviluppo orientato all\u0027AI.",
+                                             "Category":  "Python Foundations",
+                                             "Tags":  {
+
+                                                      },
+                                             "Priority":  72,
+                                             "Featured":  false,
+                                             "FeaturedCertificateRank":  9999,
+                                             "FeaturedProjectRank":  9999,
+                                             "CertificateCount":  0,
+                                             "WorkFileCount":  0,
+                                             "TotalFiles":  0,
+                                             "Evidence":  "nessun file",
+                                             "MaterialPreview":  "",
+                                             "CaseStudy":  {
+                                                               "Title":  "",
+                                                               "Lead":  "",
+                                                               "Context":  "",
+                                                               "Objective":  "",
+                                                               "Role":  "",
+                                                               "Outcome":  "",
+                                                               "Skills":  {
+
+                                                                          },
+                                                               "Deliverables":  {
+
+                                                                                },
+                                                               "PrimaryFile":  ""
+                                                           },
+                                             "Files":  {
+
+                                                       }
+                                         },
+                                         {
+                                             "Id":  "ibm-devops-and-software-engineering-sviluppo-di-applicazioni-ai-con-python-e-flask",
+                                             "Name":  "Sviluppo di applicazioni AI con Python e Flask",
+                                             "OriginalName":  "Sviluppo di applicazioni AI con Python e Flask",
+                                             "Slug":  "sviluppo-di-applicazioni-ai-con-python-e-flask",
+                                             "RelativePath":  "IBM DevOps and Software Engineering/Sviluppo di applicazioni AI con Python e Flask",
+                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Sviluppo%20di%20applicazioni%20AI%20con%20Python%20e%20Flask",
+                                             "Status":  "Cartella pronta",
+                                             "StatusRank":  2,
+                                             "Summary":  "Applicazioni web Python e Flask con integrazione di componenti AI.",
+                                             "Category":  "Python \u0026 AI",
+                                             "Tags":  {
+
+                                                      },
+                                             "Priority":  76,
+                                             "Featured":  false,
+                                             "FeaturedCertificateRank":  9999,
+                                             "FeaturedProjectRank":  9999,
+                                             "CertificateCount":  0,
+                                             "WorkFileCount":  0,
+                                             "TotalFiles":  0,
+                                             "Evidence":  "nessun file",
+                                             "MaterialPreview":  "",
+                                             "CaseStudy":  {
+                                                               "Title":  "",
+                                                               "Lead":  "",
+                                                               "Context":  "",
+                                                               "Objective":  "",
+                                                               "Role":  "",
+                                                               "Outcome":  "",
+                                                               "Skills":  {
+
+                                                                          },
+                                                               "Deliverables":  {
+
+                                                                                },
+                                                               "PrimaryFile":  ""
+                                                           },
+                                             "Files":  {
+
+                                                       }
+                                         },
+                                         {
+                                             "Id":  "ibm-devops-and-software-engineering-sicurezza-delle-applicazioni-per-sviluppatori-e-professionisti-devops",
+                                             "Name":  "Sicurezza delle applicazioni per sviluppatori e professionisti DevOps",
+                                             "OriginalName":  "Sicurezza delle applicazioni per sviluppatori e professionisti DevOps",
+                                             "Slug":  "sicurezza-delle-applicazioni-per-sviluppatori-e-professionisti-devops",
+                                             "RelativePath":  "IBM DevOps and Software Engineering/Sicurezza delle applicazioni per sviluppatori e professionisti DevOps",
+                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Sicurezza%20delle%20applicazioni%20per%20sviluppatori%20e%20professionisti%20DevOps",
+                                             "Status":  "Cartella pronta",
+                                             "StatusRank":  2,
+                                             "Summary":  "Sicurezza applicativa e pratiche secure-by-design per team DevOps.",
+                                             "Category":  "Security",
+                                             "Tags":  {
+
+                                                      },
+                                             "Priority":  78,
+                                             "Featured":  false,
+                                             "FeaturedCertificateRank":  9999,
+                                             "FeaturedProjectRank":  9999,
+                                             "CertificateCount":  0,
+                                             "WorkFileCount":  0,
+                                             "TotalFiles":  0,
+                                             "Evidence":  "nessun file",
+                                             "MaterialPreview":  "",
+                                             "CaseStudy":  {
+                                                               "Title":  "",
+                                                               "Lead":  "",
+                                                               "Context":  "",
+                                                               "Objective":  "",
+                                                               "Role":  "",
+                                                               "Outcome":  "",
+                                                               "Skills":  {
+
+                                                                          },
+                                                               "Deliverables":  {
+
+                                                                                },
+                                                               "PrimaryFile":  ""
+                                                           },
+                                             "Files":  {
+
+                                                       }
+                                         },
+                                         {
                                              "Id":  "ibm-devops-and-software-engineering-sviluppo-di-applicazioni-con-microservizi-e-serverless",
                                              "Name":  "Sviluppo di applicazioni con Microservizi e Serverless",
                                              "OriginalName":  "Sviluppo di applicazioni con Microservizi e Serverless",
@@ -1074,90 +1326,6 @@
                                                        }
                                          },
                                          {
-                                             "Id":  "ibm-devops-and-software-engineering-integrazione-continua-e-consegna-continua-ci",
-                                             "Name":  "Integrazione continua e consegna continua (CI / CD)",
-                                             "OriginalName":  "Integrazione continua e consegna continua (CI / CD)",
-                                             "Slug":  "integrazione-continua-e-consegna-continua-ci-cd",
-                                             "RelativePath":  "IBM DevOps and Software Engineering/Integrazione continua e consegna continua (CI",
-                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Integrazione%20continua%20e%20consegna%20continua%20(CI",
-                                             "Status":  "Cartella pronta",
-                                             "StatusRank":  2,
-                                             "Summary":  "",
-                                             "Category":  "",
-                                             "Tags":  {
-
-                                                      },
-                                             "Priority":  999,
-                                             "Featured":  false,
-                                             "FeaturedCertificateRank":  9999,
-                                             "FeaturedProjectRank":  9999,
-                                             "CertificateCount":  0,
-                                             "WorkFileCount":  0,
-                                             "TotalFiles":  0,
-                                             "Evidence":  "nessun file",
-                                             "MaterialPreview":  "",
-                                             "CaseStudy":  {
-                                                               "Title":  "",
-                                                               "Lead":  "",
-                                                               "Context":  "",
-                                                               "Objective":  "",
-                                                               "Role":  "",
-                                                               "Outcome":  "",
-                                                               "Skills":  {
-
-                                                                          },
-                                                               "Deliverables":  {
-
-                                                                                },
-                                                               "PrimaryFile":  ""
-                                                           },
-                                             "Files":  {
-
-                                                       }
-                                         },
-                                         {
-                                             "Id":  "ibm-devops-and-software-engineering-introduzione-ai-test-e-allo-sviluppo-guidato-dal-comportamento",
-                                             "Name":  "Introduzione ai test e allo sviluppo guidato dal comportamento",
-                                             "OriginalName":  "Introduzione ai test e allo sviluppo guidato dal comportamento",
-                                             "Slug":  "introduzione-ai-test-e-allo-sviluppo-guidato-dal-comportamento",
-                                             "RelativePath":  "IBM DevOps and Software Engineering/Introduzione ai test e allo sviluppo guidato dal comportamento",
-                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Introduzione%20ai%20test%20e%20allo%20sviluppo%20guidato%20dal%20comportamento",
-                                             "Status":  "Cartella pronta",
-                                             "StatusRank":  2,
-                                             "Summary":  "",
-                                             "Category":  "",
-                                             "Tags":  {
-
-                                                      },
-                                             "Priority":  999,
-                                             "Featured":  false,
-                                             "FeaturedCertificateRank":  9999,
-                                             "FeaturedProjectRank":  9999,
-                                             "CertificateCount":  0,
-                                             "WorkFileCount":  0,
-                                             "TotalFiles":  0,
-                                             "Evidence":  "nessun file",
-                                             "MaterialPreview":  "",
-                                             "CaseStudy":  {
-                                                               "Title":  "",
-                                                               "Lead":  "",
-                                                               "Context":  "",
-                                                               "Objective":  "",
-                                                               "Role":  "",
-                                                               "Outcome":  "",
-                                                               "Skills":  {
-
-                                                                          },
-                                                               "Deliverables":  {
-
-                                                                                },
-                                                               "PrimaryFile":  ""
-                                                           },
-                                             "Files":  {
-
-                                                       }
-                                         },
-                                         {
                                              "Id":  "ibm-devops-and-software-engineering-monitoraggio-e-osservabilita-per-lo-sviluppo-e-devops",
                                              "Name":  "Monitoraggio e osservabilità per lo sviluppo e DevOps",
                                              "OriginalName":  "Monitoraggio e osservabilità per lo sviluppo e DevOps",
@@ -1198,138 +1366,12 @@
                                              "Files":  {
 
                                                        }
-                                         },
-                                         {
-                                             "Id":  "ibm-devops-and-software-engineering-python-per-la-scienza-dei-dati-l-intelligenza-artificiale-e-lo-sviluppo",
-                                             "Name":  "Python per la scienza dei dati, l\u0027intelligenza artificiale e lo sviluppo",
-                                             "OriginalName":  "Python per la scienza dei dati, l\u0027intelligenza artificiale e lo sviluppo",
-                                             "Slug":  "python-per-la-scienza-dei-dati-l-intelligenza-artificiale-e-lo-sviluppo",
-                                             "RelativePath":  "IBM DevOps and Software Engineering/Python per la scienza dei dati, l\u0027intelligenza artificiale e lo sviluppo",
-                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Python%20per%20la%20scienza%20dei%20dati%2C%20l\u0027intelligenza%20artificiale%20e%20lo%20sviluppo",
-                                             "Status":  "Cartella pronta",
-                                             "StatusRank":  2,
-                                             "Summary":  "",
-                                             "Category":  "",
-                                             "Tags":  {
-
-                                                      },
-                                             "Priority":  999,
-                                             "Featured":  false,
-                                             "FeaturedCertificateRank":  9999,
-                                             "FeaturedProjectRank":  9999,
-                                             "CertificateCount":  0,
-                                             "WorkFileCount":  0,
-                                             "TotalFiles":  0,
-                                             "Evidence":  "nessun file",
-                                             "MaterialPreview":  "",
-                                             "CaseStudy":  {
-                                                               "Title":  "",
-                                                               "Lead":  "",
-                                                               "Context":  "",
-                                                               "Objective":  "",
-                                                               "Role":  "",
-                                                               "Outcome":  "",
-                                                               "Skills":  {
-
-                                                                          },
-                                                               "Deliverables":  {
-
-                                                                                },
-                                                               "PrimaryFile":  ""
-                                                           },
-                                             "Files":  {
-
-                                                       }
-                                         },
-                                         {
-                                             "Id":  "ibm-devops-and-software-engineering-sicurezza-delle-applicazioni-per-sviluppatori-e-professionisti-devops",
-                                             "Name":  "Sicurezza delle applicazioni per sviluppatori e professionisti DevOps",
-                                             "OriginalName":  "Sicurezza delle applicazioni per sviluppatori e professionisti DevOps",
-                                             "Slug":  "sicurezza-delle-applicazioni-per-sviluppatori-e-professionisti-devops",
-                                             "RelativePath":  "IBM DevOps and Software Engineering/Sicurezza delle applicazioni per sviluppatori e professionisti DevOps",
-                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Sicurezza%20delle%20applicazioni%20per%20sviluppatori%20e%20professionisti%20DevOps",
-                                             "Status":  "Cartella pronta",
-                                             "StatusRank":  2,
-                                             "Summary":  "",
-                                             "Category":  "",
-                                             "Tags":  {
-
-                                                      },
-                                             "Priority":  999,
-                                             "Featured":  false,
-                                             "FeaturedCertificateRank":  9999,
-                                             "FeaturedProjectRank":  9999,
-                                             "CertificateCount":  0,
-                                             "WorkFileCount":  0,
-                                             "TotalFiles":  0,
-                                             "Evidence":  "nessun file",
-                                             "MaterialPreview":  "",
-                                             "CaseStudy":  {
-                                                               "Title":  "",
-                                                               "Lead":  "",
-                                                               "Context":  "",
-                                                               "Objective":  "",
-                                                               "Role":  "",
-                                                               "Outcome":  "",
-                                                               "Skills":  {
-
-                                                                          },
-                                                               "Deliverables":  {
-
-                                                                                },
-                                                               "PrimaryFile":  ""
-                                                           },
-                                             "Files":  {
-
-                                                       }
-                                         },
-                                         {
-                                             "Id":  "ibm-devops-and-software-engineering-sviluppo-di-applicazioni-ai-con-python-e-flask",
-                                             "Name":  "Sviluppo di applicazioni AI con Python e Flask",
-                                             "OriginalName":  "Sviluppo di applicazioni AI con Python e Flask",
-                                             "Slug":  "sviluppo-di-applicazioni-ai-con-python-e-flask",
-                                             "RelativePath":  "IBM DevOps and Software Engineering/Sviluppo di applicazioni AI con Python e Flask",
-                                             "WebPath":  "IBM%20DevOps%20and%20Software%20Engineering/Sviluppo%20di%20applicazioni%20AI%20con%20Python%20e%20Flask",
-                                             "Status":  "Cartella pronta",
-                                             "StatusRank":  2,
-                                             "Summary":  "",
-                                             "Category":  "",
-                                             "Tags":  {
-
-                                                      },
-                                             "Priority":  999,
-                                             "Featured":  false,
-                                             "FeaturedCertificateRank":  9999,
-                                             "FeaturedProjectRank":  9999,
-                                             "CertificateCount":  0,
-                                             "WorkFileCount":  0,
-                                             "TotalFiles":  0,
-                                             "Evidence":  "nessun file",
-                                             "MaterialPreview":  "",
-                                             "CaseStudy":  {
-                                                               "Title":  "",
-                                                               "Lead":  "",
-                                                               "Context":  "",
-                                                               "Objective":  "",
-                                                               "Role":  "",
-                                                               "Outcome":  "",
-                                                               "Skills":  {
-
-                                                                          },
-                                                               "Deliverables":  {
-
-                                                                                },
-                                                               "PrimaryFile":  ""
-                                                           },
-                                             "Files":  {
-
-                                                       }
                                          }
                                      ],
-                         "TotalCourses":  15,
+                         "TotalCourses":  16,
                          "CompletedCourses":  2,
                          "InProgressCourses":  0,
-                         "ReadyCourses":  13,
+                         "ReadyCourses":  14,
                          "WorkFiles":  8,
                          "CertificateFiles":  2,
                          "CompletionPercent":  13,
@@ -1351,12 +1393,12 @@
                          "WebPath":  "IBM%20IT%20Project%20Manager",
                          "Courses":  [
                                          {
-                                             "Id":  "coursera-3zmcleqjtmjm-pdf",
+                                             "Id":  "ibm-it-project-manager-introduzione-alla-gestione-dei-progetti",
                                              "Name":  "Introduzione alla gestione dei progetti",
                                              "OriginalName":  "Introduzione alla gestione dei progetti",
                                              "Slug":  "introduzione-alla-gestione-dei-progetti",
-                                             "RelativePath":  "Coursera 3ZMCLEQJTMJM.pdf",
-                                             "WebPath":  "Coursera%203ZMCLEQJTMJM.pdf",
+                                             "RelativePath":  "IBM IT Project Manager/Introduzione alla gestione dei progetti",
+                                             "WebPath":  "IBM%20IT%20Project%20Manager/Introduzione%20alla%20gestione%20dei%20progetti",
                                              "Status":  "Completato",
                                              "StatusRank":  0,
                                              "Summary":  "Fondamenti di processi, ruoli e terminologia di progetto.",
@@ -1417,12 +1459,12 @@
                                                        }
                                          },
                                          {
-                                             "Id":  "wbs-urbanpulse-xlsx",
+                                             "Id":  "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto",
                                              "Name":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                              "OriginalName":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                              "Slug":  "fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto",
-                                             "RelativePath":  "WBS_UrbanPulse.xlsx",
-                                             "WebPath":  "WBS_UrbanPulse.xlsx",
+                                             "RelativePath":  "IBM IT Project Manager/Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
+                                             "WebPath":  "IBM%20IT%20Project%20Manager/Fondamenti%20di%20gestione%20del%20progetto%2C%20avvio%20e%20pianificazione%20(progetto)",
                                              "Status":  "Completato",
                                              "StatusRank":  0,
                                              "Summary":  "Obiettivi, scope e pianificazione nelle fasi iniziali.",
@@ -1628,12 +1670,12 @@
                                                        ]
                                          },
                                          {
-                                             "Id":  "stato-progetto-workshop-pdf",
+                                             "Id":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                              "Name":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                              "OriginalName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                              "Slug":  "gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
-                                             "RelativePath":  "Stato_Progetto_Workshop.pdf",
-                                             "WebPath":  "Stato_Progetto_Workshop.pdf",
+                                             "RelativePath":  "IBM IT Project Manager/Gestione del progetto Comunicazione, parti interessate e leadership",
+                                             "WebPath":  "IBM%20IT%20Project%20Manager/Gestione%20del%20progetto%20Comunicazione%2C%20parti%20interessate%20e%20leadership",
                                              "Status":  "Completato",
                                              "StatusRank":  0,
                                              "Summary":  "Stakeholder, comunicazione e leadership operativa di team.",
@@ -1811,12 +1853,12 @@
                                                        ]
                                          },
                                          {
-                                             "Id":  "valutazione-rischi-off-site-completa-pdf",
+                                             "Id":  "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management",
                                              "Name":  "Project Lifecycle, Information Sharing, and Risk Management",
                                              "OriginalName":  "Project Lifecycle, Information Sharing, and Risk Management",
                                              "Slug":  "project-lifecycle-information-sharing-and-risk-management",
-                                             "RelativePath":  "Valutazione_rischi_Off_Site_completa.pdf",
-                                             "WebPath":  "Valutazione_rischi_Off_Site_completa.pdf",
+                                             "RelativePath":  "IBM IT Project Manager/Project Lifecycle, Information Sharing, and Risk Management",
+                                             "WebPath":  "IBM%20IT%20Project%20Manager/Project%20Lifecycle%2C%20Information%20Sharing%2C%20and%20Risk%20Management",
                                              "Status":  "Completato",
                                              "StatusRank":  0,
                                              "Summary":  "Lifecycle, rischio e controllo operativo del progetto.",
@@ -1980,12 +2022,12 @@
                                                        }
                                          },
                                          {
-                                             "Id":  "coursera-bff5ulbn2acl-pdf",
+                                             "Id":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum",
                                              "Name":  "Introduzione allo sviluppo Agile e a Scrum",
                                              "OriginalName":  "Introduzione allo sviluppo Agile e a Scrum",
                                              "Slug":  "introduzione-allo-sviluppo-agile-e-a-scrum",
-                                             "RelativePath":  "Coursera BFF5ULBN2ACL.pdf",
-                                             "WebPath":  "Coursera%20BFF5ULBN2ACL.pdf",
+                                             "RelativePath":  "IBM IT Project Manager/Introduzione allo sviluppo Agile e a Scrum",
+                                             "WebPath":  "IBM%20IT%20Project%20Manager/Introduzione%20allo%20sviluppo%20Agile%20e%20a%20Scrum",
                                              "Status":  "Completato",
                                              "StatusRank":  0,
                                              "Summary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -2264,12 +2306,78 @@
                                                        ]
                                          },
                                          {
-                                             "Id":  "coursera-4u440ya2tw8r-pdf",
+                                             "Id":  "ibm-it-project-manager-fondamenti-di-tecnologia-dell-informazione-it",
+                                             "Name":  "Fondamenti di tecnologia dell\u0027informazione (IT)",
+                                             "OriginalName":  "Fondamenti di tecnologia dell\u0027informazione (IT)",
+                                             "Slug":  "fondamenti-di-tecnologia-dell-informazione-it",
+                                             "RelativePath":  "IBM IT Project Manager/Fondamenti di tecnologia dell\u0027informazione (IT)",
+                                             "WebPath":  "IBM%20IT%20Project%20Manager/Fondamenti%20di%20tecnologia%20dell\u0027informazione%20(IT)",
+                                             "Status":  "Completato",
+                                             "StatusRank":  0,
+                                             "Summary":  "Base IT per dialogare con team tecnici, sistemi e infrastruttura.",
+                                             "Category":  "IT Foundations",
+                                             "Tags":  {
+
+                                                      },
+                                             "Priority":  65,
+                                             "Featured":  false,
+                                             "FeaturedCertificateRank":  9999,
+                                             "FeaturedProjectRank":  9999,
+                                             "CertificateCount":  1,
+                                             "WorkFileCount":  0,
+                                             "TotalFiles":  1,
+                                             "Evidence":  "1 certificato",
+                                             "MaterialPreview":  "",
+                                             "CaseStudy":  {
+                                                               "Title":  "",
+                                                               "Lead":  "",
+                                                               "Context":  "",
+                                                               "Objective":  "",
+                                                               "Role":  "",
+                                                               "Outcome":  "",
+                                                               "Skills":  {
+
+                                                                          },
+                                                               "Deliverables":  {
+
+                                                                                },
+                                                               "PrimaryFile":  ""
+                                                           },
+                                             "Files":  {
+                                                           "Id":  "ibm-it-project-manager-fondamenti-di-tecnologia-dell-informazione-it-coursera-09nszojm7fnc-pdf",
+                                                           "Name":  "Coursera 09NSZOJM7FNC.pdf",
+                                                           "RelativePath":  "IBM IT Project Manager/Fondamenti di tecnologia dell\u0027informazione (IT)/Coursera 09NSZOJM7FNC.pdf",
+                                                           "CourseRelativePath":  "Coursera 09NSZOJM7FNC.pdf",
+                                                           "WebPath":  "IBM%20IT%20Project%20Manager/Fondamenti%20di%20tecnologia%20dell\u0027informazione%20(IT)/Coursera%2009NSZOJM7FNC.pdf",
+                                                           "Extension":  ".pdf",
+                                                           "Kind":  "certificate",
+                                                           "KindLabel":  "Certificato",
+                                                           "IsCertificate":  true,
+                                                           "Previewable":  true,
+                                                           "PreviewType":  "pdf",
+                                                           "SizeBytes":  309355,
+                                                           "SizeLabel":  "302,1 KB",
+                                                           "UpdatedAt":  "2026-03-17T14:03:13.1476500Z",
+                                                           "UpdatedAtLocal":  "17/03/2026",
+                                                           "DisplayName":  "Fondamenti di tecnologia dell\u0027informazione (IT)",
+                                                           "ProgramRelativePath":  "IBM IT Project Manager",
+                                                           "CourseCategory":  "IT Foundations",
+                                                           "CourseSummary":  "Base IT per dialogare con team tecnici, sistemi e infrastruttura.",
+                                                           "CourseTags":  {
+
+                                                                          },
+                                                           "CoursePriority":  65,
+                                                           "FeaturedCertificateRank":  9999,
+                                                           "FeaturedProjectRank":  9999
+                                                       }
+                                         },
+                                         {
+                                             "Id":  "ibm-it-project-manager-introduction-to-software-engineering",
                                              "Name":  "Introduction to Software Engineering",
                                              "OriginalName":  "Introduction to Software Engineering",
                                              "Slug":  "introduction-to-software-engineering",
-                                             "RelativePath":  "Coursera 4U440YA2TW8R.pdf",
-                                             "WebPath":  "Coursera%204U440YA2TW8R.pdf",
+                                             "RelativePath":  "IBM IT Project Manager/Introduction to Software Engineering",
+                                             "WebPath":  "IBM%20IT%20Project%20Manager/Introduction%20to%20Software%20Engineering",
                                              "Status":  "Completato",
                                              "StatusRank":  0,
                                              "Summary":  "Ponte tra area manageriale e processo di sviluppo software.",
@@ -2372,72 +2480,6 @@
                                                        }
                                          },
                                          {
-                                             "Id":  "coursera-09nszojm7fnc-pdf",
-                                             "Name":  "Fondamenti di tecnologia dell\u0027informazione (IT)",
-                                             "OriginalName":  "Fondamenti di tecnologia dell\u0027informazione (IT)",
-                                             "Slug":  "fondamenti-di-tecnologia-dell-informazione-it",
-                                             "RelativePath":  "Coursera 09NSZOJM7FNC.pdf",
-                                             "WebPath":  "Coursera%2009NSZOJM7FNC.pdf",
-                                             "Status":  "Completato",
-                                             "StatusRank":  0,
-                                             "Summary":  "",
-                                             "Category":  "",
-                                             "Tags":  {
-
-                                                      },
-                                             "Priority":  999,
-                                             "Featured":  false,
-                                             "FeaturedCertificateRank":  9999,
-                                             "FeaturedProjectRank":  9999,
-                                             "CertificateCount":  1,
-                                             "WorkFileCount":  0,
-                                             "TotalFiles":  1,
-                                             "Evidence":  "1 certificato",
-                                             "MaterialPreview":  "",
-                                             "CaseStudy":  {
-                                                               "Title":  "",
-                                                               "Lead":  "",
-                                                               "Context":  "",
-                                                               "Objective":  "",
-                                                               "Role":  "",
-                                                               "Outcome":  "",
-                                                               "Skills":  {
-
-                                                                          },
-                                                               "Deliverables":  {
-
-                                                                                },
-                                                               "PrimaryFile":  ""
-                                                           },
-                                             "Files":  {
-                                                           "Id":  "ibm-it-project-manager-fondamenti-di-tecnologia-dell-informazione-it-coursera-09nszojm7fnc-pdf",
-                                                           "Name":  "Coursera 09NSZOJM7FNC.pdf",
-                                                           "RelativePath":  "IBM IT Project Manager/Fondamenti di tecnologia dell\u0027informazione (IT)/Coursera 09NSZOJM7FNC.pdf",
-                                                           "CourseRelativePath":  "Coursera 09NSZOJM7FNC.pdf",
-                                                           "WebPath":  "IBM%20IT%20Project%20Manager/Fondamenti%20di%20tecnologia%20dell\u0027informazione%20(IT)/Coursera%2009NSZOJM7FNC.pdf",
-                                                           "Extension":  ".pdf",
-                                                           "Kind":  "certificate",
-                                                           "KindLabel":  "Certificato",
-                                                           "IsCertificate":  true,
-                                                           "Previewable":  true,
-                                                           "PreviewType":  "pdf",
-                                                           "SizeBytes":  309355,
-                                                           "SizeLabel":  "302,1 KB",
-                                                           "UpdatedAt":  "2026-03-17T14:03:13.1476500Z",
-                                                           "UpdatedAtLocal":  "17/03/2026",
-                                                           "DisplayName":  "Fondamenti di tecnologia dell\u0027informazione (IT)",
-                                                           "ProgramRelativePath":  "IBM IT Project Manager",
-                                                           "CourseCategory":  "",
-                                                           "CourseSummary":  "",
-                                                           "CourseTags":  {
-
-                                                                          },
-                                                           "CoursePriority":  999,
-                                                           "FeaturedCertificateRank":  9999,
-                                                           "FeaturedProjectRank":  9999
-                                                       }
-                                         },
-                                         {
                                              "Id":  "ibm-it-project-manager-esame-pratico-per-la-certificazione-capm",
                                              "Name":  "Esame pratico per la certificazione CAPM",
                                              "OriginalName":  "Esame pratico per la certificazione CAPM",
@@ -2446,12 +2488,12 @@
                                              "WebPath":  "IBM%20IT%20Project%20Manager/Esame%20pratico%20per%20la%20certificazione%20CAPM",
                                              "Status":  "Cartella pronta",
                                              "StatusRank":  2,
-                                             "Summary":  "",
-                                             "Category":  "",
+                                             "Summary":  "Preparazione pratica all\u0027esame CAPM con esercitazioni e ripasso dei concetti chiave.",
+                                             "Category":  "Certification Prep",
                                              "Tags":  {
 
                                                       },
-                                             "Priority":  999,
+                                             "Priority":  85,
                                              "Featured":  false,
                                              "FeaturedCertificateRank":  9999,
                                              "FeaturedProjectRank":  9999,
@@ -2488,12 +2530,12 @@
                                              "WebPath":  "IBM%20IT%20Project%20Manager/Ricerca%20di%20lavoro%20nel%20Project%20Management%2C%20preparazione%20del%20curriculum%20e%20dei%20colloqui",
                                              "Status":  "Cartella pronta",
                                              "StatusRank":  2,
-                                             "Summary":  "",
-                                             "Category":  "",
+                                             "Summary":  "Ricerca lavoro, curriculum e preparazione ai colloqui in ambito project management.",
+                                             "Category":  "Career Development",
                                              "Tags":  {
 
                                                       },
-                                             "Priority":  999,
+                                             "Priority":  90,
                                              "Featured":  false,
                                              "FeaturedCertificateRank":  9999,
                                              "FeaturedProjectRank":  9999,
@@ -2557,7 +2599,7 @@
                                                               "Cloud",
                                                               "Backend"
                                                           ],
-                                          "CourseId":  "coursera-4u440ya2tw8r-pdf",
+                                          "CourseId":  "ibm-devops-and-software-engineering-introduction-to-software-engineering",
                                           "CourseName":  "Introduction to Software Engineering",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Fondamenti di ciclo di vita software, ruoli tecnici e pratiche di engineering.",
@@ -2578,7 +2620,8 @@
                                                                "IBM IT Project Manager"
                                                            ],
                                           "CourseIds":  [
-                                                            "coursera-4u440ya2tw8r-pdf"
+                                                            "ibm-devops-and-software-engineering-introduction-to-software-engineering",
+                                                            "ibm-it-project-manager-introduction-to-software-engineering"
                                                         ],
                                           "CourseNames":  [
                                                               "Introduction to Software Engineering"
@@ -2615,7 +2658,7 @@
                                                               "Cloud",
                                                               "Backend"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -2651,7 +2694,7 @@
                                                               "Cloud",
                                                               "Backend"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -2687,7 +2730,7 @@
                                                               "Cloud",
                                                               "Backend"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -2723,7 +2766,7 @@
                                                               "Cloud",
                                                               "Backend"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -2759,7 +2802,7 @@
                                                               "Cloud",
                                                               "Backend"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -2795,7 +2838,7 @@
                                                               "Cloud",
                                                               "Backend"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -2831,7 +2874,7 @@
                                                               "Cloud",
                                                               "Backend"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -2867,7 +2910,7 @@
                                                               "Cloud",
                                                               "Backend"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -2902,7 +2945,7 @@
                                                               "Cloud",
                                                               "Backend"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -2923,7 +2966,8 @@
                                                                "IBM IT Project Manager"
                                                            ],
                                           "CourseIds":  [
-                                                            "coursera-bff5ulbn2acl-pdf"
+                                                            "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
+                                                            "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum"
                                                         ],
                                           "CourseNames":  [
                                                               "Introduzione allo sviluppo Agile e a Scrum"
@@ -2959,7 +3003,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "wbs-urbanpulse-xlsx",
+                                          "CourseId":  "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto",
                                           "CourseName":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Obiettivi, scope e pianificazione nelle fasi iniziali.",
@@ -2994,7 +3038,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "wbs-urbanpulse-xlsx",
+                                          "CourseId":  "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto",
                                           "CourseName":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Obiettivi, scope e pianificazione nelle fasi iniziali.",
@@ -3013,7 +3057,7 @@
                                                                "IBM IT Project Manager"
                                                            ],
                                           "CourseIds":  [
-                                                            "wbs-urbanpulse-xlsx"
+                                                            "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto"
                                                         ],
                                           "CourseNames":  [
                                                               "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)"
@@ -3049,7 +3093,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "wbs-urbanpulse-xlsx",
+                                          "CourseId":  "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto",
                                           "CourseName":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Obiettivi, scope e pianificazione nelle fasi iniziali.",
@@ -3085,7 +3129,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "wbs-urbanpulse-xlsx",
+                                          "CourseId":  "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto",
                                           "CourseName":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Obiettivi, scope e pianificazione nelle fasi iniziali.",
@@ -3121,7 +3165,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "wbs-urbanpulse-xlsx",
+                                          "CourseId":  "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto",
                                           "CourseName":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Obiettivi, scope e pianificazione nelle fasi iniziali.",
@@ -3157,7 +3201,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "wbs-urbanpulse-xlsx",
+                                          "CourseId":  "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto",
                                           "CourseName":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Obiettivi, scope e pianificazione nelle fasi iniziali.",
@@ -3192,15 +3236,15 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "coursera-09nszojm7fnc-pdf",
+                                          "CourseId":  "ibm-it-project-manager-fondamenti-di-tecnologia-dell-informazione-it",
                                           "CourseName":  "Fondamenti di tecnologia dell\u0027informazione (IT)",
                                           "CourseStatus":  "Completato",
-                                          "CourseSummary":  "",
-                                          "CourseCategory":  "",
+                                          "CourseSummary":  "Base IT per dialogare con team tecnici, sistemi e infrastruttura.",
+                                          "CourseCategory":  "IT Foundations",
                                           "CourseTags":  {
 
                                                          },
-                                          "CoursePriority":  999,
+                                          "CoursePriority":  65,
                                           "FeaturedCertificateRank":  9999,
                                           "FeaturedProjectRank":  9999,
                                           "DisplayName":  "Fondamenti di tecnologia dell\u0027informazione (IT)",
@@ -3211,13 +3255,13 @@
                                                                "IBM IT Project Manager"
                                                            ],
                                           "CourseIds":  [
-                                                            "coursera-09nszojm7fnc-pdf"
+                                                            "ibm-it-project-manager-fondamenti-di-tecnologia-dell-informazione-it"
                                                         ],
                                           "CourseNames":  [
                                                               "Fondamenti di tecnologia dell\u0027informazione (IT)"
                                                           ],
                                           "Categories":  [
-
+                                                             "IT Foundations"
                                                          ],
                                           "CertificateOccurrences":  1,
                                           "Featured":  false,
@@ -3246,7 +3290,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "stato-progetto-workshop-pdf",
+                                          "CourseId":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                           "CourseName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Stakeholder, comunicazione e leadership operativa di team.",
@@ -3265,7 +3309,7 @@
                                                                "IBM IT Project Manager"
                                                            ],
                                           "CourseIds":  [
-                                                            "stato-progetto-workshop-pdf"
+                                                            "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership"
                                                         ],
                                           "CourseNames":  [
                                                               "Gestione del progetto Comunicazione, parti interessate e leadership"
@@ -3301,7 +3345,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "stato-progetto-workshop-pdf",
+                                          "CourseId":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                           "CourseName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Stakeholder, comunicazione e leadership operativa di team.",
@@ -3337,7 +3381,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "stato-progetto-workshop-pdf",
+                                          "CourseId":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                           "CourseName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Stakeholder, comunicazione e leadership operativa di team.",
@@ -3373,7 +3417,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "stato-progetto-workshop-pdf",
+                                          "CourseId":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                           "CourseName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Stakeholder, comunicazione e leadership operativa di team.",
@@ -3409,7 +3453,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "stato-progetto-workshop-pdf",
+                                          "CourseId":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                           "CourseName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Stakeholder, comunicazione e leadership operativa di team.",
@@ -3444,7 +3488,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "coursera-4u440ya2tw8r-pdf",
+                                          "CourseId":  "ibm-it-project-manager-introduction-to-software-engineering",
                                           "CourseName":  "Introduction to Software Engineering",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Ponte tra area manageriale e processo di sviluppo software.",
@@ -3465,7 +3509,8 @@
                                                                "IBM IT Project Manager"
                                                            ],
                                           "CourseIds":  [
-                                                            "coursera-4u440ya2tw8r-pdf"
+                                                            "ibm-devops-and-software-engineering-introduction-to-software-engineering",
+                                                            "ibm-it-project-manager-introduction-to-software-engineering"
                                                         ],
                                           "CourseNames":  [
                                                               "Introduction to Software Engineering"
@@ -3501,7 +3546,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "coursera-3zmcleqjtmjm-pdf",
+                                          "CourseId":  "ibm-it-project-manager-introduzione-alla-gestione-dei-progetti",
                                           "CourseName":  "Introduzione alla gestione dei progetti",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Fondamenti di processi, ruoli e terminologia di progetto.",
@@ -3520,7 +3565,7 @@
                                                                "IBM IT Project Manager"
                                                            ],
                                           "CourseIds":  [
-                                                            "coursera-3zmcleqjtmjm-pdf"
+                                                            "ibm-it-project-manager-introduzione-alla-gestione-dei-progetti"
                                                         ],
                                           "CourseNames":  [
                                                               "Introduzione alla gestione dei progetti"
@@ -3556,7 +3601,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -3592,7 +3637,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -3628,7 +3673,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -3664,7 +3709,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -3700,7 +3745,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -3736,7 +3781,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -3772,7 +3817,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -3808,7 +3853,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -3843,7 +3888,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                          "CourseId":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum",
                                           "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -3864,7 +3909,8 @@
                                                                "IBM IT Project Manager"
                                                            ],
                                           "CourseIds":  [
-                                                            "coursera-bff5ulbn2acl-pdf"
+                                                            "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
+                                                            "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum"
                                                         ],
                                           "CourseNames":  [
                                                               "Introduzione allo sviluppo Agile e a Scrum"
@@ -3899,7 +3945,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "valutazione-rischi-off-site-completa-pdf",
+                                          "CourseId":  "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management",
                                           "CourseName":  "Project Lifecycle, Information Sharing, and Risk Management",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Lifecycle, rischio e controllo operativo del progetto.",
@@ -3918,7 +3964,7 @@
                                                                "IBM IT Project Manager"
                                                            ],
                                           "CourseIds":  [
-                                                            "valutazione-rischi-off-site-completa-pdf"
+                                                            "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management"
                                                         ],
                                           "CourseNames":  [
                                                               "Project Lifecycle, Information Sharing, and Risk Management"
@@ -3954,7 +4000,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "valutazione-rischi-off-site-completa-pdf",
+                                          "CourseId":  "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management",
                                           "CourseName":  "Project Lifecycle, Information Sharing, and Risk Management",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Lifecycle, rischio e controllo operativo del progetto.",
@@ -3990,7 +4036,7 @@
                                                               "Agile",
                                                               "Leadership"
                                                           ],
-                                          "CourseId":  "valutazione-rischi-off-site-completa-pdf",
+                                          "CourseId":  "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management",
                                           "CourseName":  "Project Lifecycle, Information Sharing, and Risk Management",
                                           "CourseStatus":  "Completato",
                                           "CourseSummary":  "Lifecycle, rischio e controllo operativo del progetto.",
@@ -4027,7 +4073,7 @@
                                                          "Cloud",
                                                          "Backend"
                                                      ],
-                                     "CourseId":  "coursera-4u440ya2tw8r-pdf",
+                                     "CourseId":  "ibm-devops-and-software-engineering-introduction-to-software-engineering",
                                      "CourseName":  "Introduction to Software Engineering",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Fondamenti di ciclo di vita software, ruoli tecnici e pratiche di engineering.",
@@ -4048,7 +4094,8 @@
                                                           "IBM IT Project Manager"
                                                       ],
                                      "CourseIds":  [
-                                                       "coursera-4u440ya2tw8r-pdf"
+                                                       "ibm-devops-and-software-engineering-introduction-to-software-engineering",
+                                                       "ibm-it-project-manager-introduction-to-software-engineering"
                                                    ],
                                      "CourseNames":  [
                                                          "Introduction to Software Engineering"
@@ -4084,7 +4131,7 @@
                                                          "Cloud",
                                                          "Backend"
                                                      ],
-                                     "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                     "CourseId":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                      "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -4105,7 +4152,8 @@
                                                           "IBM IT Project Manager"
                                                       ],
                                      "CourseIds":  [
-                                                       "coursera-bff5ulbn2acl-pdf"
+                                                       "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
+                                                       "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum"
                                                    ],
                                      "CourseNames":  [
                                                          "Introduzione allo sviluppo Agile e a Scrum"
@@ -4140,7 +4188,7 @@
                                                          "Agile",
                                                          "Leadership"
                                                      ],
-                                     "CourseId":  "wbs-urbanpulse-xlsx",
+                                     "CourseId":  "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto",
                                      "CourseName":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Obiettivi, scope e pianificazione nelle fasi iniziali.",
@@ -4159,7 +4207,7 @@
                                                           "IBM IT Project Manager"
                                                       ],
                                      "CourseIds":  [
-                                                       "wbs-urbanpulse-xlsx"
+                                                       "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto"
                                                    ],
                                      "CourseNames":  [
                                                          "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)"
@@ -4194,15 +4242,15 @@
                                                          "Agile",
                                                          "Leadership"
                                                      ],
-                                     "CourseId":  "coursera-09nszojm7fnc-pdf",
+                                     "CourseId":  "ibm-it-project-manager-fondamenti-di-tecnologia-dell-informazione-it",
                                      "CourseName":  "Fondamenti di tecnologia dell\u0027informazione (IT)",
                                      "CourseStatus":  "Completato",
-                                     "CourseSummary":  "",
-                                     "CourseCategory":  "",
+                                     "CourseSummary":  "Base IT per dialogare con team tecnici, sistemi e infrastruttura.",
+                                     "CourseCategory":  "IT Foundations",
                                      "CourseTags":  {
 
                                                     },
-                                     "CoursePriority":  999,
+                                     "CoursePriority":  65,
                                      "FeaturedCertificateRank":  9999,
                                      "FeaturedProjectRank":  9999,
                                      "DisplayName":  "Fondamenti di tecnologia dell\u0027informazione (IT)",
@@ -4213,13 +4261,13 @@
                                                           "IBM IT Project Manager"
                                                       ],
                                      "CourseIds":  [
-                                                       "coursera-09nszojm7fnc-pdf"
+                                                       "ibm-it-project-manager-fondamenti-di-tecnologia-dell-informazione-it"
                                                    ],
                                      "CourseNames":  [
                                                          "Fondamenti di tecnologia dell\u0027informazione (IT)"
                                                      ],
                                      "Categories":  [
-
+                                                        "IT Foundations"
                                                     ],
                                      "CertificateOccurrences":  1,
                                      "Featured":  false,
@@ -4248,7 +4296,7 @@
                                                          "Agile",
                                                          "Leadership"
                                                      ],
-                                     "CourseId":  "stato-progetto-workshop-pdf",
+                                     "CourseId":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                      "CourseName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Stakeholder, comunicazione e leadership operativa di team.",
@@ -4267,7 +4315,7 @@
                                                           "IBM IT Project Manager"
                                                       ],
                                      "CourseIds":  [
-                                                       "stato-progetto-workshop-pdf"
+                                                       "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership"
                                                    ],
                                      "CourseNames":  [
                                                          "Gestione del progetto Comunicazione, parti interessate e leadership"
@@ -4303,7 +4351,7 @@
                                                          "Agile",
                                                          "Leadership"
                                                      ],
-                                     "CourseId":  "stato-progetto-workshop-pdf",
+                                     "CourseId":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                      "CourseName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Stakeholder, comunicazione e leadership operativa di team.",
@@ -4339,7 +4387,7 @@
                                                          "Agile",
                                                          "Leadership"
                                                      ],
-                                     "CourseId":  "stato-progetto-workshop-pdf",
+                                     "CourseId":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                      "CourseName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Stakeholder, comunicazione e leadership operativa di team.",
@@ -4375,7 +4423,7 @@
                                                          "Agile",
                                                          "Leadership"
                                                      ],
-                                     "CourseId":  "stato-progetto-workshop-pdf",
+                                     "CourseId":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                      "CourseName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Stakeholder, comunicazione e leadership operativa di team.",
@@ -4411,7 +4459,7 @@
                                                          "Agile",
                                                          "Leadership"
                                                      ],
-                                     "CourseId":  "stato-progetto-workshop-pdf",
+                                     "CourseId":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                      "CourseName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Stakeholder, comunicazione e leadership operativa di team.",
@@ -4446,7 +4494,7 @@
                                                          "Agile",
                                                          "Leadership"
                                                      ],
-                                     "CourseId":  "coursera-4u440ya2tw8r-pdf",
+                                     "CourseId":  "ibm-it-project-manager-introduction-to-software-engineering",
                                      "CourseName":  "Introduction to Software Engineering",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Ponte tra area manageriale e processo di sviluppo software.",
@@ -4467,7 +4515,8 @@
                                                           "IBM IT Project Manager"
                                                       ],
                                      "CourseIds":  [
-                                                       "coursera-4u440ya2tw8r-pdf"
+                                                       "ibm-devops-and-software-engineering-introduction-to-software-engineering",
+                                                       "ibm-it-project-manager-introduction-to-software-engineering"
                                                    ],
                                      "CourseNames":  [
                                                          "Introduction to Software Engineering"
@@ -4503,7 +4552,7 @@
                                                          "Agile",
                                                          "Leadership"
                                                      ],
-                                     "CourseId":  "coursera-3zmcleqjtmjm-pdf",
+                                     "CourseId":  "ibm-it-project-manager-introduzione-alla-gestione-dei-progetti",
                                      "CourseName":  "Introduzione alla gestione dei progetti",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Fondamenti di processi, ruoli e terminologia di progetto.",
@@ -4522,7 +4571,7 @@
                                                           "IBM IT Project Manager"
                                                       ],
                                      "CourseIds":  [
-                                                       "coursera-3zmcleqjtmjm-pdf"
+                                                       "ibm-it-project-manager-introduzione-alla-gestione-dei-progetti"
                                                    ],
                                      "CourseNames":  [
                                                          "Introduzione alla gestione dei progetti"
@@ -4557,7 +4606,7 @@
                                                          "Agile",
                                                          "Leadership"
                                                      ],
-                                     "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                     "CourseId":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum",
                                      "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Principi agile, Scrum e gestione iterativa del lavoro.",
@@ -4578,7 +4627,8 @@
                                                           "IBM IT Project Manager"
                                                       ],
                                      "CourseIds":  [
-                                                       "coursera-bff5ulbn2acl-pdf"
+                                                       "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
+                                                       "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum"
                                                    ],
                                      "CourseNames":  [
                                                          "Introduzione allo sviluppo Agile e a Scrum"
@@ -4613,7 +4663,7 @@
                                                          "Agile",
                                                          "Leadership"
                                                      ],
-                                     "CourseId":  "valutazione-rischi-off-site-completa-pdf",
+                                     "CourseId":  "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management",
                                      "CourseName":  "Project Lifecycle, Information Sharing, and Risk Management",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Lifecycle, rischio e controllo operativo del progetto.",
@@ -4632,7 +4682,7 @@
                                                           "IBM IT Project Manager"
                                                       ],
                                      "CourseIds":  [
-                                                       "valutazione-rischi-off-site-completa-pdf"
+                                                       "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management"
                                                    ],
                                      "CourseNames":  [
                                                          "Project Lifecycle, Information Sharing, and Risk Management"
@@ -4668,7 +4718,7 @@
                                                          "Agile",
                                                          "Leadership"
                                                      ],
-                                     "CourseId":  "valutazione-rischi-off-site-completa-pdf",
+                                     "CourseId":  "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management",
                                      "CourseName":  "Project Lifecycle, Information Sharing, and Risk Management",
                                      "CourseStatus":  "Completato",
                                      "CourseSummary":  "Lifecycle, rischio e controllo operativo del progetto.",
@@ -4708,10 +4758,11 @@
                                                                   "IBM DevOps \u0026 Software Engineering",
                                                                   "IBM IT Project Manager"
                                                               ],
-                                             "CourseId":  "coursera-4u440ya2tw8r-pdf",
+                                             "CourseId":  "ibm-devops-and-software-engineering-introduction-to-software-engineering",
                                              "CourseName":  "Introduction to Software Engineering",
                                              "CourseIds":  [
-                                                               "coursera-4u440ya2tw8r-pdf"
+                                                               "ibm-devops-and-software-engineering-introduction-to-software-engineering",
+                                                               "ibm-it-project-manager-introduction-to-software-engineering"
                                                            ],
                                              "CourseNames":  [
                                                                  "Introduction to Software Engineering"
@@ -4748,10 +4799,10 @@
                                              "ProgramNames":  [
                                                                   "IBM IT Project Manager"
                                                               ],
-                                             "CourseId":  "coursera-3zmcleqjtmjm-pdf",
+                                             "CourseId":  "ibm-it-project-manager-introduzione-alla-gestione-dei-progetti",
                                              "CourseName":  "Introduzione alla gestione dei progetti",
                                              "CourseIds":  [
-                                                               "coursera-3zmcleqjtmjm-pdf"
+                                                               "ibm-it-project-manager-introduzione-alla-gestione-dei-progetti"
                                                            ],
                                              "CourseNames":  [
                                                                  "Introduzione alla gestione dei progetti"
@@ -4787,10 +4838,10 @@
                                              "ProgramNames":  [
                                                                   "IBM IT Project Manager"
                                                               ],
-                                             "CourseId":  "valutazione-rischi-off-site-completa-pdf",
+                                             "CourseId":  "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management",
                                              "CourseName":  "Project Lifecycle, Information Sharing, and Risk Management",
                                              "CourseIds":  [
-                                                               "valutazione-rischi-off-site-completa-pdf"
+                                                               "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management"
                                                            ],
                                              "CourseNames":  [
                                                                  "Project Lifecycle, Information Sharing, and Risk Management"
@@ -4826,10 +4877,10 @@
                                              "ProgramNames":  [
                                                                   "IBM IT Project Manager"
                                                               ],
-                                             "CourseId":  "wbs-urbanpulse-xlsx",
+                                             "CourseId":  "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto",
                                              "CourseName":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                              "CourseIds":  [
-                                                               "wbs-urbanpulse-xlsx"
+                                                               "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto"
                                                            ],
                                              "CourseNames":  [
                                                                  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)"
@@ -4865,16 +4916,16 @@
                                              "ProgramNames":  [
                                                                   "IBM IT Project Manager"
                                                               ],
-                                             "CourseId":  "coursera-09nszojm7fnc-pdf",
+                                             "CourseId":  "ibm-it-project-manager-fondamenti-di-tecnologia-dell-informazione-it",
                                              "CourseName":  "Fondamenti di tecnologia dell\u0027informazione (IT)",
                                              "CourseIds":  [
-                                                               "coursera-09nszojm7fnc-pdf"
+                                                               "ibm-it-project-manager-fondamenti-di-tecnologia-dell-informazione-it"
                                                            ],
                                              "CourseNames":  [
                                                                  "Fondamenti di tecnologia dell\u0027informazione (IT)"
                                                              ],
                                              "Categories":  [
-
+                                                                "IT Foundations"
                                                             ],
                                              "CertificateOccurrences":  1,
                                              "Featured":  false,
@@ -4904,10 +4955,10 @@
                                              "ProgramNames":  [
                                                                   "IBM IT Project Manager"
                                                               ],
-                                             "CourseId":  "stato-progetto-workshop-pdf",
+                                             "CourseId":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                              "CourseName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                              "CourseIds":  [
-                                                               "stato-progetto-workshop-pdf"
+                                                               "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership"
                                                            ],
                                              "CourseNames":  [
                                                                  "Gestione del progetto Comunicazione, parti interessate e leadership"
@@ -4945,10 +4996,11 @@
                                                                   "IBM DevOps \u0026 Software Engineering",
                                                                   "IBM IT Project Manager"
                                                               ],
-                                             "CourseId":  "coursera-bff5ulbn2acl-pdf",
+                                             "CourseId":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                              "CourseName":  "Introduzione allo sviluppo Agile e a Scrum",
                                              "CourseIds":  [
-                                                               "coursera-bff5ulbn2acl-pdf"
+                                                               "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
+                                                               "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum"
                                                            ],
                                              "CourseNames":  [
                                                                  "Introduzione allo sviluppo Agile e a Scrum"
@@ -4988,10 +5040,11 @@
                                                                           "IBM DevOps \u0026 Software Engineering",
                                                                           "IBM IT Project Manager"
                                                                       ],
-                                                     "CourseId":  "coursera-4u440ya2tw8r-pdf",
+                                                     "CourseId":  "ibm-devops-and-software-engineering-introduction-to-software-engineering",
                                                      "CourseName":  "Introduction to Software Engineering",
                                                      "CourseIds":  [
-                                                                       "coursera-4u440ya2tw8r-pdf"
+                                                                       "ibm-devops-and-software-engineering-introduction-to-software-engineering",
+                                                                       "ibm-it-project-manager-introduction-to-software-engineering"
                                                                    ],
                                                      "CourseNames":  [
                                                                          "Introduction to Software Engineering"
@@ -5028,10 +5081,10 @@
                                                      "ProgramNames":  [
                                                                           "IBM IT Project Manager"
                                                                       ],
-                                                     "CourseId":  "coursera-3zmcleqjtmjm-pdf",
+                                                     "CourseId":  "ibm-it-project-manager-introduzione-alla-gestione-dei-progetti",
                                                      "CourseName":  "Introduzione alla gestione dei progetti",
                                                      "CourseIds":  [
-                                                                       "coursera-3zmcleqjtmjm-pdf"
+                                                                       "ibm-it-project-manager-introduzione-alla-gestione-dei-progetti"
                                                                    ],
                                                      "CourseNames":  [
                                                                          "Introduzione alla gestione dei progetti"
@@ -5067,10 +5120,10 @@
                                                      "ProgramNames":  [
                                                                           "IBM IT Project Manager"
                                                                       ],
-                                                     "CourseId":  "valutazione-rischi-off-site-completa-pdf",
+                                                     "CourseId":  "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management",
                                                      "CourseName":  "Project Lifecycle, Information Sharing, and Risk Management",
                                                      "CourseIds":  [
-                                                                       "valutazione-rischi-off-site-completa-pdf"
+                                                                       "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management"
                                                                    ],
                                                      "CourseNames":  [
                                                                          "Project Lifecycle, Information Sharing, and Risk Management"
@@ -5085,7 +5138,7 @@
                                              ],
                     "Projects":  [
                                      {
-                                         "Id":  "wbs-urbanpulse-xlsx",
+                                         "Id":  "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto",
                                          "Name":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                          "OriginalName":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                          "Status":  "Completato",
@@ -5270,7 +5323,7 @@
                                                    ]
                                      },
                                      {
-                                         "Id":  "stato-progetto-workshop-pdf",
+                                         "Id":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                          "Name":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                          "OriginalName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                          "Status":  "Completato",
@@ -5427,7 +5480,7 @@
                                                    ]
                                      },
                                      {
-                                         "Id":  "valutazione-rischi-off-site-completa-pdf",
+                                         "Id":  "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management",
                                          "Name":  "Project Lifecycle, Information Sharing, and Risk Management",
                                          "OriginalName":  "Project Lifecycle, Information Sharing, and Risk Management",
                                          "Status":  "Completato",
@@ -5528,7 +5581,7 @@
                                                    ]
                                      },
                                      {
-                                         "Id":  "coursera-bff5ulbn2acl-pdf",
+                                         "Id":  "ibm-devops-and-software-engineering-introduzione-allo-sviluppo-agile-e-a-scrum",
                                          "Name":  "Introduzione allo sviluppo Agile e a Scrum",
                                          "OriginalName":  "Introduzione allo sviluppo Agile e a Scrum",
                                          "Status":  "Completato",
@@ -5786,7 +5839,7 @@
                                                    ]
                                      },
                                      {
-                                         "Id":  "coursera-bff5ulbn2acl-pdf",
+                                         "Id":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum",
                                          "Name":  "Introduzione allo sviluppo Agile e a Scrum",
                                          "OriginalName":  "Introduzione allo sviluppo Agile e a Scrum",
                                          "Status":  "Completato",
@@ -6046,7 +6099,7 @@
                                  ],
                     "FeaturedProjects":  [
                                              {
-                                                 "Id":  "wbs-urbanpulse-xlsx",
+                                                 "Id":  "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto",
                                                  "Name":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                                  "OriginalName":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
                                                  "Status":  "Completato",
@@ -6231,7 +6284,7 @@
                                                            ]
                                              },
                                              {
-                                                 "Id":  "stato-progetto-workshop-pdf",
+                                                 "Id":  "ibm-it-project-manager-gestione-del-progetto-comunicazione-parti-interessate-e-leadership",
                                                  "Name":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                                  "OriginalName":  "Gestione del progetto Comunicazione, parti interessate e leadership",
                                                  "Status":  "Completato",
@@ -6388,7 +6441,7 @@
                                                            ]
                                              },
                                              {
-                                                 "Id":  "valutazione-rischi-off-site-completa-pdf",
+                                                 "Id":  "ibm-it-project-manager-project-lifecycle-information-sharing-and-risk-management",
                                                  "Name":  "Project Lifecycle, Information Sharing, and Risk Management",
                                                  "OriginalName":  "Project Lifecycle, Information Sharing, and Risk Management",
                                                  "Status":  "Completato",

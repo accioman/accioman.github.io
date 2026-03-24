@@ -46,10 +46,23 @@
       "featured": true
     },
     {
+      "path": "IBM DevOps and Software Engineering/Integrazione continua e consegna continua (CI",
+      "displayName": "Integrazione continua e consegna continua (CI/CD)",
+      "summary": "Pipeline di integrazione e consegna continua per workflow DevOps.",
+      "category": "CI/CD",
+      "priority": 35
+    },
+    {
       "path": "IBM DevOps and Software Engineering/Introduzione pratica ai comandi Linux e allo Shell Scripting",
       "summary": "Shell Linux e scripting per automazione operativa.",
       "category": "Platform Foundations",
       "priority": 40
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Introduzione ai test e allo sviluppo guidato dal comportamento",
+      "summary": "Testing e behavior-driven development come base di qualità applicativa.",
+      "category": "Quality Engineering",
+      "priority": 45
     },
     {
       "path": "IBM DevOps and Software Engineering/Introduzione ai container con Docker, Kubernetes e OpenShift",
@@ -69,6 +82,24 @@
       "summary": "Metriche, log e osservabilità per affidabilità applicativa.",
       "category": "Observability",
       "priority": 70
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Python per la scienza dei dati, l'intelligenza artificiale e lo sviluppo",
+      "summary": "Python per automazione, basi data e sviluppo orientato all'AI.",
+      "category": "Python Foundations",
+      "priority": 72
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Sviluppo di applicazioni AI con Python e Flask",
+      "summary": "Applicazioni web Python e Flask con integrazione di componenti AI.",
+      "category": "Python & AI",
+      "priority": 76
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Sicurezza delle applicazioni per sviluppatori e professionisti DevOps",
+      "summary": "Sicurezza applicativa e pratiche secure-by-design per team DevOps.",
+      "category": "Security",
+      "priority": 78
     },
     {
       "path": "IBM DevOps and Software Engineering/Sviluppo di applicazioni con Microservizi e Serverless",
@@ -195,6 +226,12 @@
       "priority": 60
     },
     {
+      "path": "IBM IT Project Manager/Fondamenti di tecnologia dell'informazione (IT)",
+      "summary": "Base IT per dialogare con team tecnici, sistemi e infrastruttura.",
+      "category": "IT Foundations",
+      "priority": 65
+    },
+    {
       "path": "IBM IT Project Manager/Introduction to Software Engineering",
       "summary": "Ponte tra area manageriale e processo di sviluppo software.",
       "category": "Technical Bridge",
@@ -207,6 +244,18 @@
       "category": "Capstone",
       "priority": 80,
       "featured": true
+    },
+    {
+      "path": "IBM IT Project Manager/Esame pratico per la certificazione CAPM",
+      "summary": "Preparazione pratica all'esame CAPM con esercitazioni e ripasso dei concetti chiave.",
+      "category": "Certification Prep",
+      "priority": 85
+    },
+    {
+      "path": "IBM IT Project Manager/Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui",
+      "summary": "Ricerca lavoro, curriculum e preparazione ai colloqui in ambito project management.",
+      "category": "Career Development",
+      "priority": 90
     }
   ],
   "featuredCertificates": [

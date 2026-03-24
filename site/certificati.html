@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Certificati</title>
+  <meta name="description" content="Galleria certificati con miniature PDF e preview inline.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand-mark" href="./index.html" aria-label="Home">MA</a>
+      <nav class="site-nav" aria-label="Navigazione principale">
+        <a href="./index.html" data-nav="home">Home</a>
+        <a href="./percorsi.html" data-nav="percorsi">Percorsi</a>
+        <a href="./certificati.html" data-nav="certificati">Certificati</a>
+        <a href="./progetti.html" data-nav="progetti">Progetti</a>
+        <a href="./viewer.html" data-nav="viewer">Viewer</a>
+      </nav>
+      <a class="header-link" id="header-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </header>
+
+    <main>
+      <section class="hero hero-simple">
+        <div class="hero-copy">
+          <p class="eyebrow">Certificati completati</p>
+          <h1>Galleria certificati</h1>
+          <p class="hero-lead" id="certificates-summary"></p>
+        </div>
+        <aside class="hero-panel">
+          <p class="panel-label">Filtri</p>
+          <div class="filter-grid">
+            <label>
+              <span>Cerca</span>
+              <input id="search-input" type="search" placeholder="Corso o certificato">
+            </label>
+            <label>
+              <span>Percorso</span>
+              <select id="program-filter"></select>
+            </label>
+          </div>
+        </aside>
+      </section>
+
+      <section class="section-grid archive-layout">
+        <div class="panel">
+          <div class="section-head">
+            <h2>Miniature PDF</h2>
+            <p class="section-copy">Ogni certificato puo essere aperto subito nel viewer o in anteprima laterale.</p>
+          </div>
+          <div class="pdf-grid" id="certificate-grid"></div>
+          <p class="empty-state hidden" id="certificate-empty">Nessun certificato corrisponde ai filtri correnti.</p>
+        </div>
+
+        <aside class="panel panel-sticky" id="preview-panel"></aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Pagina dedicata ai certificati completati.</p>
+      <p id="footer-meta"></p>
+    </footer>
+  </div>
+
+  <script type="module" src="./assets/js/certificates.js"></script>
+</body>
+</html>

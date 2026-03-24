@@ -7,88 +7,7 @@ param(
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
-function Get-Config {
-    param(
-        [Parameter(Mandatory = $true)]
-        [string]$Path
-    )
-
-    if (-not (Test-Path -LiteralPath $Path)) {
-        throw "Config file not found: $Path"
-    }
-
-    return Get-Content -LiteralPath $Path -Raw | ConvertFrom-Json
-}
-
-function Get-RepeatString {
-    param(
-        [Parameter(Mandatory = $true)]
-        [char]$Character,
-        [Parameter(Mandatory = $true)]
-        [int]$Count
-    )
-
-    if ($Count -le 0) {
-        return ""
-    }
-
-    return [string]::new($Character, $Count)
-}
-
-function New-ProgressBar {
-    param(
-        [Parameter(Mandatory = $true)]
-        [int]$Completed,
-        [Parameter(Mandatory = $true)]
-        [int]$Total,
-        [int]$Width = 12
-    )
-
-    if ($Total -le 0) {
-        return "[" + (Get-RepeatString -Character '-' -Count $Width) + "]"
-    }
-
-    $filled = [int][Math]::Round(($Completed / [double]$Total) * $Width, 0, [System.MidpointRounding]::AwayFromZero)
-    if ($filled -gt $Width) {
-        $filled = $Width
-    }
-
-    $empty = $Width - $filled
-    return "[" + (Get-RepeatString -Character '#' -Count $filled) + (Get-RepeatString -Character '-' -Count $empty) + "]"
-}
-
-function Format-Percent {
-    param(
-        [Parameter(Mandatory = $true)]
-        [int]$Completed,
-        [Parameter(Mandatory = $true)]
-        [int]$Total
-    )
-
-    if ($Total -le 0) {
-        return "0%"
-    }
-
-    $value = [int][Math]::Round(($Completed / [double]$Total) * 100, 0, [System.MidpointRounding]::AwayFromZero)
-    return "$value%"
-}
-
-function Format-CountLabel {
-    param(
-        [Parameter(Mandatory = $true)]
-        [int]$Count,
-        [Parameter(Mandatory = $true)]
-        [string]$Singular,
-        [Parameter(Mandatory = $true)]
-        [string]$Plural
-    )
-
-    if ($Count -eq 1) {
-        return "1 $Singular"
-    }
-
-    return "$Count $Plural"
-}
+. (Join-Path $PSScriptRoot "portfolio-data.ps1")
 
 function New-Badge {
     param(
@@ -114,103 +33,6 @@ function Escape-MarkdownCell {
     return $Text.Replace("|", "\|")
 }
 
-function Get-ProgramDirectories {
-    param(
-        [Parameter(Mandatory = $true)]
-        [string]$BasePath
-    )
-
-    $excluded = @(".git", "scripts")
-
-    return Get-ChildItem -LiteralPath $BasePath -Directory |
-        Where-Object {
-            $_.Name -notin $excluded -and
-            $_.Name -notlike ".*" -and
-            (Get-ChildItem -LiteralPath $_.FullName -Directory | Measure-Object).Count -gt 0
-        } |
-        Sort-Object Name
-}
-
-function Get-CourseInfos {
-    param(
-        [Parameter(Mandatory = $true)]
-        [string]$ProgramPath
-    )
-
-    $courseRoots = Get-ChildItem -LiteralPath $ProgramPath -Directory | Sort-Object Name
-    $statusRank = @{
-        "Completato" = 0
-        "In corso" = 1
-        "Cartella pronta" = 2
-    }
-
-    $courses = foreach ($courseRoot in $courseRoots) {
-        $displayParts = [System.Collections.Generic.List[string]]::new()
-        $displayParts.Add($courseRoot.Name)
-        $effectiveDirectory = $courseRoot
-
-        while ($true) {
-            $childDirs = @(Get-ChildItem -LiteralPath $effectiveDirectory.FullName -Directory)
-            $directFiles = @(Get-ChildItem -LiteralPath $effectiveDirectory.FullName -File)
-
-            if ($directFiles.Count -eq 0 -and $childDirs.Count -eq 1) {
-                $effectiveDirectory = $childDirs[0]
-                $displayParts.Add($effectiveDirectory.Name)
-                continue
-            }
-
-            break
-        }
-
-        $allFiles = @(Get-ChildItem -LiteralPath $courseRoot.FullName -File -Recurse)
-        $certificateFiles = @($allFiles | Where-Object { $_.Name -like "Coursera*.pdf" })
-        $workFiles = @($allFiles | Where-Object { $_.Name -notlike "Coursera*.pdf" })
-
-        if ($certificateFiles.Count -gt 0) {
-            $status = "Completato"
-        }
-        elseif ($workFiles.Count -gt 0) {
-            $status = "In corso"
-        }
-        else {
-            $status = "Cartella pronta"
-        }
-
-        $evidenceParts = [System.Collections.Generic.List[string]]::new()
-        if ($certificateFiles.Count -gt 0) {
-            $evidenceParts.Add((Format-CountLabel -Count $certificateFiles.Count -Singular "certificato" -Plural "certificati"))
-        }
-        if ($workFiles.Count -gt 0) {
-            $evidenceParts.Add((Format-CountLabel -Count $workFiles.Count -Singular "file di lavoro" -Plural "file di lavoro"))
-        }
-        if ($evidenceParts.Count -eq 0) {
-            $evidenceParts.Add("nessun file")
-        }
-
-        $materialPreview = ""
-        if ($workFiles.Count -gt 0) {
-            $topNames = $workFiles | Sort-Object Name | Select-Object -First 3 -ExpandProperty Name
-            $materialPreview = $topNames -join ", "
-            if ($workFiles.Count -gt 3) {
-                $remaining = $workFiles.Count - 3
-                $materialPreview += " + $remaining altri"
-            }
-        }
-
-        [PSCustomObject]@{
-            Name = ($displayParts -join "/")
-            Status = $status
-            StatusRank = $statusRank[$status]
-            CertificateCount = $certificateFiles.Count
-            WorkFileCount = $workFiles.Count
-            Evidence = ($evidenceParts -join " + ")
-            MaterialPreview = $materialPreview
-        }
-    }
-
-    return $courses | Sort-Object StatusRank, Name
-}
-
 function Add-Bullets {
     param(
         [Parameter(Mandatory = $true)]
@@ -224,64 +46,29 @@ function Add-Bullets {
     }
 }
 
-$config = Get-Config -Path $ConfigPath
-$programDirectories = @(Get-ProgramDirectories -BasePath $Root)
-
-$programs = foreach ($programDirectory in $programDirectories) {
-    $courses = @(Get-CourseInfos -ProgramPath $programDirectory.FullName)
-    $completed = @($courses | Where-Object { $_.Status -eq "Completato" }).Count
-    $inProgress = @($courses | Where-Object { $_.Status -eq "In corso" }).Count
-    $ready = @($courses | Where-Object { $_.Status -eq "Cartella pronta" }).Count
-    $workFiles = ($courses | Measure-Object -Property WorkFileCount -Sum).Sum
-    if ($null -eq $workFiles) {
-        $workFiles = 0
-    }
-
-    [PSCustomObject]@{
-        Name = $programDirectory.Name
-        Courses = $courses
-        TotalCourses = $courses.Count
-        CompletedCourses = $completed
-        InProgressCourses = $inProgress
-        ReadyCourses = $ready
-        WorkFiles = [int]$workFiles
-    }
-}
-
-$totalPrograms = $programs.Count
-$totalCourses = ($programs | Measure-Object -Property TotalCourses -Sum).Sum
-$totalCompleted = ($programs | Measure-Object -Property CompletedCourses -Sum).Sum
-$totalInProgress = ($programs | Measure-Object -Property InProgressCourses -Sum).Sum
-$totalReady = ($programs | Measure-Object -Property ReadyCourses -Sum).Sum
-$totalWorkFiles = ($programs | Measure-Object -Property WorkFiles -Sum).Sum
-
-foreach ($totalVariable in @("totalCourses", "totalCompleted", "totalInProgress", "totalReady", "totalWorkFiles")) {
-    if ($null -eq (Get-Variable -Name $totalVariable -ValueOnly)) {
-        Set-Variable -Name $totalVariable -Value 0
-    }
-}
-
-$lastUpdated = Get-Date -Format "yyyy-MM-dd HH:mm"
-$overallPercent = Format-Percent -Completed $totalCompleted -Total $totalCourses
-$overallProgress = New-ProgressBar -Completed $totalCompleted -Total $totalCourses
+$snapshot = Get-PortfolioSnapshot -RootPath $Root -ConfigPath $ConfigPath
+$config = $snapshot.Config
+$stats = $snapshot.Stats
+$programs = $snapshot.Programs
+$coursesWithMaterials = $snapshot.Library.Projects
 
 $lines = [System.Collections.Generic.List[string]]::new()
 $lines.Add("<!-- File generated automatically by scripts/generate-readme.ps1. -->")
 $lines.Add("# $($config.title)")
 $lines.Add("")
-$lines.Add((New-Badge -Label "Percorsi" -Value "$totalPrograms" -Color "0b7285"))
-$lines.Add((New-Badge -Label "Corsi" -Value "$totalCourses" -Color "1c7ed6"))
-$lines.Add((New-Badge -Label "Completati" -Value "$totalCompleted" -Color "2b8a3e"))
-$lines.Add((New-Badge -Label "In corso" -Value "$totalInProgress" -Color "f08c00"))
-$lines.Add((New-Badge -Label "Pronti" -Value "$totalReady" -Color "868e96"))
+$lines.Add((New-Badge -Label "Percorsi" -Value "$($stats.TotalPrograms)" -Color "0b7285"))
+$lines.Add((New-Badge -Label "Corsi" -Value "$($stats.TotalCourses)" -Color "1c7ed6"))
+$lines.Add((New-Badge -Label "Completati" -Value "$($stats.TotalCompleted)" -Color "2b8a3e"))
+$lines.Add((New-Badge -Label "In corso" -Value "$($stats.TotalInProgress)" -Color "f08c00"))
+$lines.Add((New-Badge -Label "Pronti" -Value "$($stats.TotalReady)" -Color "868e96"))
 $lines.Add("")
 $lines.Add("$($config.intro)")
 $lines.Add("")
 $lines.Add("## Snapshot")
 $lines.Add("")
-$lines.Add("- Ultimo aggiornamento: $lastUpdated")
-$lines.Add("- Avanzamento complessivo: $totalCompleted/$totalCourses completati ($overallPercent) $overallProgress")
-$lines.Add("- Elaborati pratici rilevati: $totalWorkFiles")
+$lines.Add("- Ultimo aggiornamento: $($snapshot.GeneratedAtLocal)")
+$lines.Add("- Avanzamento complessivo: $($stats.TotalCompleted)/$($stats.TotalCourses) completati ($($stats.CompletionPercent)%) $($stats.ProgressBar)")
+$lines.Add("- Elaborati pratici rilevati: $($stats.TotalWorkFiles)")
 $lines.Add("")
 $lines.Add("## Profilo")
 $lines.Add("")
@@ -301,12 +88,9 @@ $lines.Add("## Percorsi")
 $lines.Add("")
 
 foreach ($program in $programs) {
-    $programPercent = Format-Percent -Completed $program.CompletedCourses -Total $program.TotalCourses
-    $programBar = New-ProgressBar -Completed $program.CompletedCourses -Total $program.TotalCourses
-
     $lines.Add("### $($program.Name)")
     $lines.Add("")
-    $lines.Add("- Progresso: $($program.CompletedCourses)/$($program.TotalCourses) completati ($programPercent) $programBar")
+    $lines.Add("- Progresso: $($program.CompletedCourses)/$($program.TotalCourses) completati ($($program.CompletionPercent)%) $($program.ProgressBar)")
     $lines.Add("- Stato corsi: $($program.InProgressCourses) in corso, $($program.ReadyCourses) cartelle pronte")
     $lines.Add("")
     $lines.Add("| Corso | Stato | Evidenze |")
@@ -319,30 +103,19 @@ foreach ($program in $programs) {
     $lines.Add("")
 }
 
-$coursesWithMaterials = foreach ($program in $programs) {
-    foreach ($course in $program.Courses | Where-Object { $_.WorkFileCount -gt 0 }) {
-        [PSCustomObject]@{
-            Program = $program.Name
-            Course = $course.Name
-            WorkFileCount = $course.WorkFileCount
-            Preview = $course.MaterialPreview
-        }
-    }
-}
-
 if (@($coursesWithMaterials).Count -gt 0) {
     $lines.Add("## Elaborati pratici")
     $lines.Add("")
     $lines.Add("| Percorso | Corso | Materiali rilevati |")
     $lines.Add("| --- | --- | --- |")
 
-    foreach ($entry in $coursesWithMaterials | Sort-Object Program, Course) {
+    foreach ($entry in $coursesWithMaterials) {
         $previewText = "$($entry.WorkFileCount) file"
-        if ([string]::IsNullOrWhiteSpace($entry.Preview) -eq $false) {
-            $previewText += ": $($entry.Preview)"
+        if ([string]::IsNullOrWhiteSpace($entry.MaterialPreview) -eq $false) {
+            $previewText += ": $($entry.MaterialPreview)"
         }
 
-        $lines.Add("| $(Escape-MarkdownCell -Text $entry.Program) | $(Escape-MarkdownCell -Text $entry.Course) | $(Escape-MarkdownCell -Text $previewText) |")
+        $lines.Add("| $(Escape-MarkdownCell -Text $entry.ProgramName) | $(Escape-MarkdownCell -Text $entry.Name) | $(Escape-MarkdownCell -Text $previewText) |")
     }
 
     $lines.Add("")

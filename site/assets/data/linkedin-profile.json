@@ -1,0 +1,13 @@
+﻿{
+    "status":  "public_profile_blocked",
+    "source":  "config",
+    "profileUrl":  "https://www.linkedin.com/in/marco-accinno-214978276/",
+    "fullName":  "Marco Accinno",
+    "headline":  "",
+    "photoUrl":  "",
+    "location":  "",
+    "summary":  "",
+    "updatedAt":  "2026-03-24T08:50:16.0899903Z",
+    "note":  "Il profilo pubblico LinkedIn rifiuta richieste automatiche non autenticate. GitHub Pages non puo fare scraping diretto in modo affidabile.",
+    "error":  "Errore del server remoto: (999) Request denied."
+}

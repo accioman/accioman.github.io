@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Viewer Documento</title>
+  <meta name="description" content="Viewer dedicato per PDF e materiali di progetto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand-mark" href="./index.html" aria-label="Home">MA</a>
+      <nav class="site-nav" aria-label="Navigazione principale">
+        <a href="./index.html" data-nav="home">Home</a>
+        <a href="./percorsi.html" data-nav="percorsi">Percorsi</a>
+        <a href="./certificati.html" data-nav="certificati">Certificati</a>
+        <a href="./progetti.html" data-nav="progetti">Progetti</a>
+        <a href="./viewer.html" data-nav="viewer">Viewer</a>
+      </nav>
+      <a class="header-link" id="header-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </header>
+
+    <main>
+      <section class="hero hero-simple">
+        <div class="hero-copy">
+          <p class="eyebrow">Preview dedicata</p>
+          <h1 id="viewer-title">Viewer documento</h1>
+          <p class="hero-lead" id="viewer-summary"></p>
+        </div>
+        <aside class="hero-panel">
+          <p class="panel-label">Dettagli</p>
+          <div class="stack-list" id="viewer-meta"></div>
+        </aside>
+      </section>
+
+      <section class="section-grid archive-layout">
+        <div class="panel viewer-panel" id="viewer-frame-panel"></div>
+        <aside class="panel">
+          <div class="section-head">
+            <h2>Documenti correlati</h2>
+          </div>
+          <div class="stack-list" id="related-files"></div>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Quando il formato lo supporta, la preview e incorporata direttamente nella pagina.</p>
+      <p id="footer-meta"></p>
+    </footer>
+  </div>
+
+  <script type="module" src="./assets/js/viewer.js"></script>
+</body>
+</html>

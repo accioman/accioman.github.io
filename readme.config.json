@@ -41,5 +41,14 @@
     "Project Coordinator / Junior Project Manager",
     "Scrum e Agile team support",
     "DevOps e software engineering entry-level"
-  ]
+  ],
+  "site": {
+    "ownerName": "Marco Accinno",
+    "role": "Project Management e profilo tecnico in crescita",
+    "tagline": "Portfolio Coursera con certificati, elaborati pratici e avanzamento reale dei percorsi IBM.",
+    "heroSummary": "Una raccolta consultabile online dei corsi completati, dei PDF e dei materiali di progetto, pensata per essere pubblicata su GitHub Pages."
+  },
+  "linkedin": {
+    "profileUrl": "https://www.linkedin.com/in/marco-accinno-214978276/"
+  }
 }

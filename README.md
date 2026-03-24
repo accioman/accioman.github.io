@@ -11,7 +11,7 @@ Questa repository raccoglie il mio percorso Coursera con focus su IT Project Man
 
 ## Snapshot
 
-- Ultimo aggiornamento: 2026-03-23 15:36
+- Ultimo aggiornamento: 2026-03-24 09:38
 - Avanzamento complessivo: 7/26 completati (27%) [###---------]
 - Elaborati pratici rilevati: 11
 
@@ -56,7 +56,7 @@ Questa repository raccoglie il mio percorso Coursera con focus su IT Project Man
 | --- | --- | --- |
 | Introduction to Software Engineering | **Completato** | 1 certificato |
 | Come iniziare con Git e GitHub | **Cartella pronta** | nessun file |
-| Integrazione continua e consegna continua (CI/CD) | **Cartella pronta** | nessun file |
+| Integrazione continua e consegna continua (CI / CD) | **Cartella pronta** | nessun file |
 | Introduzione a DevOps | **Cartella pronta** | nessun file |
 | Introduzione ai container con Docker, Kubernetes e OpenShift | **Cartella pronta** | nessun file |
 | Introduzione ai test e allo sviluppo guidato dal comportamento | **Cartella pronta** | nessun file |

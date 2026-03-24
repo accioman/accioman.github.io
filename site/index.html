@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio Formativo</title>
+  <meta name="description" content="Portfolio multipagina con certificati Coursera, PDF, materiali di progetto e avanzamento reale dei percorsi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand-mark" href="./index.html" aria-label="Home">MA</a>
+      <nav class="site-nav" aria-label="Navigazione principale">
+        <a href="./index.html" data-nav="home">Home</a>
+        <a href="./percorsi.html" data-nav="percorsi">Percorsi</a>
+        <a href="./certificati.html" data-nav="certificati">Certificati</a>
+        <a href="./progetti.html" data-nav="progetti">Progetti</a>
+        <a href="./viewer.html" data-nav="viewer">Viewer</a>
+      </nav>
+      <a class="header-link" id="header-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+    </header>
+
+    <main>
+      <section class="hero hero-home">
+        <div class="hero-copy">
+          <p class="eyebrow">GitHub Pages portfolio</p>
+          <h1 id="hero-title">Portfolio formativo e materiali di progetto</h1>
+          <p class="hero-lead" id="hero-summary"></p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="./certificati.html">Apri i certificati</a>
+            <a class="button button-secondary" href="./progetti.html">Esplora i progetti</a>
+          </div>
+        </div>
+        <aside class="hero-panel">
+          <p class="panel-label">Snapshot</p>
+          <div class="metric-grid compact" id="hero-metrics"></div>
+        </aside>
+      </section>
+
+      <section class="section-grid section-split">
+        <div class="panel">
+          <div class="section-head">
+            <h2>Percorso</h2>
+            <a class="text-link" href="./percorsi.html">Dettaglio completo</a>
+          </div>
+          <div class="stack-list" id="program-overview"></div>
+        </div>
+
+        <div class="panel panel-accent" id="linkedin-panel"></div>
+      </section>
+
+      <section class="section-grid section-split">
+        <div class="panel">
+          <div class="section-head">
+            <h2>Certificati in evidenza</h2>
+            <a class="text-link" href="./certificati.html">Apri certificati</a>
+          </div>
+          <div class="card-grid" id="featured-certificates"></div>
+        </div>
+
+        <div class="panel">
+          <div class="section-head">
+            <h2>Progetti esplorabili</h2>
+            <a class="text-link" href="./progetti.html">Vai ai progetti</a>
+          </div>
+          <div class="card-grid" id="featured-projects"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="section-head">
+          <h2>Competenze e obiettivi</h2>
+        </div>
+        <div class="skills-layout">
+          <div class="skills-columns" id="skills-sections"></div>
+          <div class="target-box">
+            <p class="panel-label">Focus</p>
+            <ul class="chip-list" id="target-roles"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Portfolio statico generato dai contenuti reali della repository.</p>
+      <p id="footer-meta"></p>
+    </footer>
+  </div>
+
+  <script type="module" src="./assets/js/index.js"></script>
+</body>
+</html>

@@ -2373,11 +2373,70 @@ body.viewer-focus-mode #viewer-frame-panel {
 
   .path-course-dialog-layout {
     grid-template-columns: 1fr;
+    gap: 14px;
     min-height: 0;
   }
 
+  .path-course-dialog {
+    width: calc(100vw - 10px);
+    max-width: none;
+    height: calc(100dvh - 10px);
+    max-height: calc(100dvh - 10px);
+    margin: 5px;
+    border-radius: 22px;
+  }
+
+  .path-course-dialog-shell {
+    padding: 16px;
+    max-height: 100%;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+
+  .path-course-dialog-layout {
+    grid-template-areas:
+      "preview"
+      "side";
+  }
+
+  .path-course-dialog-preview {
+    grid-area: preview;
+    order: 1;
+    padding: 14px;
+  }
+
+  .path-course-dialog-side {
+    grid-area: side;
+    order: 2;
+    grid-template-columns: minmax(120px, 28vw) minmax(0, 1fr);
+    gap: 14px;
+    padding: 14px;
+  }
+
+  .path-course-dialog-block {
+    align-content: start;
+  }
+
   .path-course-dialog-file-list {
-    max-height: none;
+    max-height: 240px;
+    padding-right: 2px;
+  }
+
+  .path-course-dialog-preview-surface {
+    min-height: min(48dvh, 560px);
+  }
+
+  .path-course-dialog-preview .preview-card iframe,
+  .path-course-dialog-preview .viewer-frame,
+  .path-course-dialog-preview .image-preview,
+  .path-course-dialog-preview .office-preview,
+  .path-course-dialog-preview .preview-loading,
+  .path-course-dialog-preview .office-preview-error {
+    min-height: min(48dvh, 560px);
+  }
+
+  .path-course-dialog-preview .sheet-preview-table {
+    max-height: min(42dvh, 420px);
   }
 }
 
@@ -2387,14 +2446,58 @@ body.viewer-focus-mode #viewer-frame-panel {
   }
 
   .site-header {
-    top: 10px;
-    border-radius: 26px;
-    flex-direction: column;
-    align-items: stretch;
+    top: 8px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-areas:
+      "brand linkedin"
+      "nav nav";
+    align-items: center;
+    gap: 10px 12px;
+    padding: 10px 12px;
+    border-radius: 20px;
+  }
+
+  .brand-mark {
+    grid-area: brand;
+    width: 42px;
+    height: 42px;
+    border-radius: 14px;
+    font-size: 0.9rem;
   }
 
   .site-nav {
+    grid-area: nav;
+    flex-wrap: nowrap;
     justify-content: flex-start;
+    gap: 8px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .site-nav a {
+    flex: 0 0 auto;
+    white-space: nowrap;
+    padding: 8px 12px;
+    font-size: 0.88rem;
+  }
+
+  .header-link {
+    grid-area: linkedin;
+    justify-self: end;
+    align-self: start;
+    padding: 8px 12px;
+    font-size: 0.84rem;
+  }
+
+  .header-link.has-avatar {
+    gap: 8px;
   }
 
   .hero-copy {
@@ -2446,25 +2549,108 @@ body.viewer-focus-mode #viewer-frame-panel {
   }
 
   .path-course-dialog {
-    width: calc(100vw - 12px);
-    max-height: calc(100vh - 12px);
-    border-radius: 22px;
+    width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
   }
 
   .path-course-dialog-shell {
-    padding: 16px;
+    padding: max(12px, env(safe-area-inset-top)) 12px max(12px, env(safe-area-inset-bottom));
   }
 
   .path-course-dialog-head {
     flex-direction: column;
+    gap: 10px;
   }
 
   .path-course-dialog-head .button {
     width: 100%;
   }
 
+  .path-course-dialog-top {
+    gap: 8px;
+    padding-bottom: 10px;
+  }
+
+  .path-course-dialog-copy h2 {
+    font-size: clamp(1.05rem, 0.98rem + 1.4vw, 1.28rem);
+    line-height: 1.14;
+  }
+
+  .path-course-dialog-summary {
+    font-size: 0.84rem;
+    line-height: 1.45;
+  }
+
+  .path-course-dialog-meta {
+    gap: 6px;
+  }
+
+  .path-course-dialog-top .info-chip,
+  .path-course-dialog-top .status-pill {
+    padding: 4px 7px;
+    font-size: 0.66rem;
+  }
+
+  .path-course-dialog-side {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 12px;
+  }
+
+  .path-course-dialog-cert-button {
+    width: min(180px, 100%);
+  }
+
+  .path-course-dialog-cert {
+    max-width: 180px;
+  }
+
+  .path-course-dialog-file-list {
+    max-height: none;
+    gap: 8px;
+  }
+
+  .path-course-dialog-file-button {
+    min-height: 78px;
+    padding: 10px 11px;
+  }
+
+  .path-course-dialog-file-button strong {
+    font-size: 0.84rem;
+    -webkit-line-clamp: 3;
+  }
+
   .path-course-dialog-preview {
-    padding: 16px;
+    padding: 12px;
+  }
+
+  .path-course-dialog-preview-toolbar {
+    justify-content: stretch;
+  }
+
+  .path-course-dialog-preview-toolbar .button {
+    width: 100%;
+  }
+
+  .path-course-dialog-preview-surface {
+    min-height: min(44dvh, 460px);
+  }
+
+  .path-course-dialog-preview .preview-card iframe,
+  .path-course-dialog-preview .viewer-frame,
+  .path-course-dialog-preview .image-preview,
+  .path-course-dialog-preview .office-preview,
+  .path-course-dialog-preview .preview-loading,
+  .path-course-dialog-preview .office-preview-error {
+    min-height: min(44dvh, 460px);
+  }
+
+  .path-course-dialog-preview .sheet-preview-table {
+    max-height: min(38dvh, 300px);
   }
 
 }

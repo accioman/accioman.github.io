@@ -1,0 +1,35 @@
+<main class="catalog-main">
+  <section class="hero hero-simple page-hero page-hero-catalog">
+    <div class="hero-copy page-hero-copy">
+      <p class="eyebrow" id="certificates-eyebrow">Certificati completati</p>
+      <h1 id="certificates-title">Galleria certificati</h1>
+      <p class="hero-lead" id="certificates-summary"></p>
+    </div>
+    <aside class="hero-panel page-filter-panel">
+      <p class="panel-label" id="certificates-filters-label">Filtri</p>
+      <div class="filter-grid page-filter-grid">
+        <label>
+          <span id="certificates-search-label">Cerca</span>
+          <input id="search-input" type="search" placeholder="Corso o certificato">
+        </label>
+        <label>
+          <span id="certificates-program-label">Percorso</span>
+          <select id="program-filter"></select>
+        </label>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section-grid archive-layout catalog-layout">
+    <div class="panel page-collection-panel">
+      <div class="section-head">
+        <h2 id="certificates-section-title">Miniature PDF</h2>
+        <p class="section-copy" id="certificates-section-copy">Ogni certificato puo essere aperto subito nel viewer o in anteprima laterale.</p>
+      </div>
+      <div class="pdf-grid" id="certificate-grid"></div>
+      <p class="empty-state hidden" id="certificate-empty">Nessun certificato corrisponde ai filtri correnti.</p>
+    </div>
+
+    <aside class="panel panel-sticky page-preview-panel" id="preview-panel"></aside>
+  </section>
+</main>

@@ -1,9 +1,9 @@
 {
-  "title": "Percorso Formativo e Competenze",
-  "intro": "Questa repository raccoglie il mio percorso Coursera con focus su IT Project Management, Software Engineering e DevOps. Il README viene generato automaticamente a partire dalle cartelle e dai file presenti nel repository.",
+  "title": "Portfolio Formativo",
+  "intro": "Portfolio formativo con focus su software engineering, DevOps e project management, costruito a partire dai contenuti reali della repository.",
   "profileHighlights": [
-    "Sto costruendo un profilo trasversale tra area gestionale e area tecnica.",
-    "I certificati mostrano i moduli conclusi, mentre cartelle ed elaborati aiutano a tracciare lo stato reale del percorso."
+    "Profilo in crescita tra software engineering, DevOps e project management.",
+    "Certificati, deliverable e avanzamento reale dei percorsi IBM in un unico archivio consultabile."
   ],
   "skillSections": [
     {
@@ -37,16 +37,261 @@
     }
   ],
   "targetRoles": [
-    "IT Project Management",
-    "Project Coordinator / Junior Project Manager",
-    "Scrum e Agile team support",
-    "DevOps e software engineering entry-level"
+    "Software Development Engineer",
+    "DevOps / Platform Junior",
+    "IT Project Coordinator",
+    "Agile Delivery Support"
   ],
+  "resume": {
+    "summary": "Software Development Engineer con esperienza in contesto aziendale e percorso in consolidamento tra software engineering, DevOps e IT project management.",
+    "contact": {
+      "emails": [
+        "accinno31@gmail.com",
+        "m.accinno@sisinformatica.it"
+      ]
+    },
+    "personalDetails": [
+      {
+        "label": "Data di nascita",
+        "value": "29/06/2002"
+      },
+      {
+        "label": "Luogo di nascita",
+        "value": "Pescia (PT)"
+      },
+      {
+        "label": "Residenza",
+        "value": "Monsummano Terme (PT)"
+      },
+      {
+        "label": "Patenti",
+        "value": "A1, B"
+      }
+    ],
+    "languages": [
+      {
+        "name": "Italiano",
+        "dots": 5,
+        "label": "Madrelingua"
+      },
+      {
+        "name": "Inglese",
+        "dots": 4,
+        "label": "Buona autonomia scritta e orale",
+        "referenceLevel": "B2"
+      },
+      {
+        "name": "Spagnolo",
+        "dots": 2,
+        "label": "Conoscenza generale"
+      }
+    ],
+    "universityCourses": [
+      {
+        "title": "Algoritmi e strutture dati",
+        "description": "Implementazione e ottimizzazione di strutture dati dinamiche e statiche."
+      },
+      {
+        "title": "Architettura degli elaboratori",
+        "description": "Analisi delle memorie cache e delle gerarchie di memoria; confronto tra architetture RISC e CISC."
+      },
+      {
+        "title": "Programmazione concorrente",
+        "description": "Analisi e risoluzione di problemi di competizione, deadlock e starvation in ambienti concorrenti."
+      },
+      {
+        "title": "Programmazione Java",
+        "description": "Sviluppo di applicazioni Java utilizzando il paradigma orientato agli oggetti."
+      },
+      {
+        "title": "Algebra lineare",
+        "description": "Studio e risoluzione di sistemi di equazioni lineari utilizzando matrici."
+      },
+      {
+        "title": "Analisi I"
+      }
+    ]
+  },
   "site": {
     "ownerName": "Marco Accinno",
+    "brandMonogram": "MA",
     "role": "Software Development Engineer",
-    "tagline": "Portfolio Coursera con certificati, elaborati pratici e avanzamento reale dei percorsi IBM.",
-    "heroSummary": "Una raccolta consultabile online dei corsi completati, dei PDF e dei materiali di progetto, pensata per essere pubblicata su GitHub Pages."
+    "tagline": "Portfolio tecnico con certificati IBM, materiali di progetto e avanzamento reale dei percorsi.",
+    "heroSummary": "Una raccolta ordinata di certificati, progetti e materiali pratici consultabili online.",
+    "homePage": {
+      "eyebrow": "Portfolio professionale",
+      "primaryCta": {
+        "label": "Apri i certificati",
+        "href": "./certificati.html"
+      },
+      "secondaryCta": {
+        "label": "Esplora i progetti",
+        "href": "./progetti.html"
+      },
+      "programSection": {
+        "title": "Programmi IBM",
+        "linkLabel": "Vedi tutti",
+        "href": "./percorsi.html"
+      },
+      "certificatesSection": {
+        "title": "Certificati selezionati",
+        "linkLabel": "Vedi tutti",
+        "href": "./certificati.html"
+      },
+      "projectsSection": {
+        "title": "Lavori selezionati",
+        "linkLabel": "Vedi tutti",
+        "href": "./progetti.html"
+      },
+      "skillsSection": {
+        "title": "Competenze e direzione",
+        "focusLabel": "Direzione"
+      }
+    },
+    "archivePage": {
+      "eyebrow": "Archivio contenuti",
+      "title": "Certificati e materiali",
+      "primaryCta": {
+        "label": "Apri certificati",
+        "href": "./certificati.html"
+      },
+      "secondaryCta": {
+        "label": "Apri progetti",
+        "href": "./progetti.html"
+      },
+      "portalCards": [
+        {
+          "eyebrow": "Certificati",
+          "title": "Certificati consultabili",
+          "description": "Raccolta dei certificati completati con anteprima immediata e accesso diretto al viewer.",
+          "buttonLabel": "Vai ai certificati",
+          "buttonHref": "./certificati.html",
+          "buttonVariant": "primary"
+        },
+        {
+          "eyebrow": "Progetti",
+          "title": "Deliverable e file di lavoro",
+          "description": "Documenti, PDF e fogli di progetto esplorabili senza passare dal download manuale.",
+          "buttonLabel": "Vai ai progetti",
+          "buttonHref": "./progetti.html",
+          "buttonVariant": "secondary"
+        }
+      ]
+    },
+    "pathsPage": {
+      "eyebrow": "Panoramica programmi",
+      "title": "Programmi e corsi",
+      "metricsLabel": "Stato generale",
+      "sectionTitle": "Programmi e corsi",
+      "sectionLinkLabel": "Vai ai certificati",
+      "sectionLinkHref": "./certificati.html",
+      "summaryTemplate": "{completed} corsi completati su {total}, con {workFiles} materiali pratici gia consultabili.",
+      "metrics": {
+        "completed": "Completati",
+        "ready": "Pronti",
+        "inProgress": "In corso",
+        "certificates": "Certificati"
+      },
+      "programCompletedSuffix": "completati",
+      "progressLabelTemplate": "{percent}%",
+      "workFilesLabelTemplate": "{count} materiali",
+      "certificateFilesLabelTemplate": "{count} certificati",
+      "noExtraMaterialsText": "Nessun materiale aggiuntivo rilevato.",
+      "fallbackLinkLabel": "Certificati e progetti"
+    },
+    "certificatesPage": {
+      "eyebrow": "Certificazioni",
+      "title": "Certificati",
+      "filtersLabel": "Filtri",
+      "searchLabel": "Cerca",
+      "searchPlaceholder": "Corso o certificato",
+      "programLabel": "Percorso",
+      "allProgramsLabel": "Tutti",
+      "sectionTitle": "Certificati disponibili",
+      "sectionCopy": "Apri subito ogni certificato in anteprima o nel viewer dedicato.",
+      "summaryTemplate": "{count} certificati completati, consultabili direttamente online.",
+      "emptyState": "Nessun certificato corrisponde ai filtri correnti.",
+      "badgeLabel": "Certificato",
+      "thumbnailLoadingLabel": "Carico miniatura...",
+      "thumbnailErrorLabel": "Miniatura non disponibile",
+      "previewButtonLabel": "Anteprima",
+      "viewerButtonLabel": "Viewer"
+    },
+    "projectsPage": {
+      "eyebrow": "Materiali pratici",
+      "title": "Progetti",
+      "filtersLabel": "Filtri",
+      "searchLabel": "Cerca",
+      "searchPlaceholder": "Corso, file o programma",
+      "programLabel": "Percorso",
+      "typeLabel": "Tipo file",
+      "statusLabel": "Stato corso",
+      "allProgramsLabel": "Tutti",
+      "allTypesLabel": "Tutti",
+      "allStatusesLabel": "Tutti",
+      "sectionTitle": "Progetti e deliverable",
+      "sectionCopy": "Sfoglia i materiali di lavoro e apri l'anteprima senza uscire dalla pagina.",
+      "summaryTemplate": "{count} aree progetto con PDF, documenti e fogli di lavoro consultabili.",
+      "emptyState": "Nessun progetto corrisponde ai filtri correnti.",
+      "fileCountLabelTemplate": "{count} file",
+      "typeLabels": {
+        "pdf": "PDF",
+        "document": "Documento",
+        "spreadsheet": "Foglio",
+        "presentation": "Presentazione",
+        "file": "File"
+      }
+    },
+    "cvPage": {
+      "eyebrow": "Curriculum vitae",
+      "title": "Curriculum Vitae",
+      "summary": "Versione documento del profilo professionale, pronta per stampa e salvataggio in PDF.",
+      "downloadLabel": "Scarica PDF",
+      "portfolioLabel": "Apri portfolio",
+      "linkedinLabel": "Profilo LinkedIn",
+      "printHint": "Usa Salva come PDF dal dialogo di stampa.",
+      "headerKicker": "Curriculum vitae",
+      "contactTitle": "Dati personali",
+      "personalTitle": "Anagrafica",
+      "languagesTitle": "Lingue",
+      "keySkillsTitle": "Competenze chiave",
+      "targetRolesTitle": "Ruoli di riferimento",
+      "profileTitle": "Profilo",
+      "experienceTitle": "Esperienze lavorative",
+      "educationTitle": "Formazione",
+      "universityCoursesTitle": "Corsi universitari",
+      "certificationsTitle": "Certificati e percorsi",
+      "projectsTitle": "Progetti e materiali",
+      "technicalTitle": "Competenze tecniche",
+      "programSummaryTemplate": "{completed}/{total} corsi completati",
+      "certificateSummaryTemplate": "{count} certificati completati",
+      "workSummaryTemplate": "{count} materiali pratici",
+      "metrics": {
+        "programs": "Percorsi",
+        "courses": "Corsi",
+        "certificates": "Certificati",
+        "projects": "Progetti"
+      },
+      "emptyProjectsText": "I deliverable principali sono disponibili nella sezione progetti del portfolio.",
+      "privacyNote": "Autorizzo il trattamento dei miei dati personali ai sensi del D.lgs. 196 del 30 giugno 2003."
+    },
+    "viewerPage": {
+      "eyebrow": "Visualizzazione dedicata",
+      "defaultTitle": "Documento",
+      "detailsLabel": "Dettagli",
+      "frameLabel": "Viewer",
+      "relatedTitle": "Documenti correlati",
+      "documentTitleTemplate": "{title} | Viewer",
+      "standardSummaryTemplate": "{program} / {course}",
+      "certificateSummaryTemplate": "{programs}",
+      "noDocumentError": "Nessun documento disponibile.",
+      "noRelatedDocumentsText": "Nessun altro file nello stesso corso.",
+      "openRelatedLabel": "Apri"
+    },
+    "documentActions": {
+      "openViewerLabel": "Apri viewer",
+      "openFileLabel": "Apri file"
+    }
   },
   "linkedin": {
     "profileUrl": "https://www.linkedin.com/in/marco-accinno-214978276/",
@@ -57,7 +302,7 @@
     "education": "Universita degli Studi di Firenze",
     "availability": "Disponibile per lavorare",
     "profileLanguage": "Italiano",
-    "summary": "Sviluppatore software motivato dalla crescita continua, con approccio pratico e forte interesse per il miglioramento delle competenze tecniche e professionali.",
+    "summary": "Sviluppatore software con approccio pratico, orientato alla crescita tecnica e alla costruzione di competenze spendibili su progetti reali.",
     "experience": [
       {
         "title": "Software Development Engineer",

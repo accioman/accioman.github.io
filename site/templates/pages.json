@@ -1,0 +1,81 @@
+{
+  "pages": [
+    {
+      "navId": "home",
+      "navLabel": "Home",
+      "showInNav": true,
+      "output": "index.html",
+      "title": "Portfolio Formativo",
+      "description": "Portfolio multipagina con certificati Coursera, PDF, materiali di progetto e avanzamento reale dei percorsi.",
+      "footerText": "Portfolio statico generato dai contenuti reali della repository.",
+      "scriptPath": "./assets/js/index.js",
+      "contentTemplate": "pages/index.html"
+    },
+    {
+      "navId": "percorsi",
+      "navLabel": "Percorsi",
+      "showInNav": true,
+      "output": "percorsi.html",
+      "title": "Percorsi",
+      "description": "Panoramica dei percorsi, dei corsi completati e dello stato dei materiali.",
+      "footerText": "Pagine statiche compatibili con GitHub Pages.",
+      "scriptPath": "./assets/js/paths.js",
+      "contentTemplate": "pages/percorsi.html"
+    },
+    {
+      "navId": "cv",
+      "navLabel": "CV",
+      "showInNav": true,
+      "output": "cv.html",
+      "title": "Curriculum Vitae",
+      "description": "Curriculum vitae in formato documento, generato dai dati del profilo, della formazione e dei materiali reali del portfolio.",
+      "footerText": "Curriculum vitae generato automaticamente dai dati del portfolio.",
+      "scriptPath": "./assets/js/cv.js",
+      "contentTemplate": "pages/cv.html"
+    },
+    {
+      "navId": "certificati",
+      "navLabel": "Certificati",
+      "showInNav": true,
+      "output": "certificati.html",
+      "title": "Certificati",
+      "description": "Galleria certificati con miniature PDF e preview inline.",
+      "footerText": "Pagina dedicata ai certificati completati.",
+      "scriptPath": "./assets/js/certificates.js",
+      "contentTemplate": "pages/certificati.html"
+    },
+    {
+      "navId": "progetti",
+      "navLabel": "Progetti",
+      "showInNav": true,
+      "output": "progetti.html",
+      "title": "Progetti",
+      "description": "Esplorazione progetti e materiali di lavoro senza download obbligatorio.",
+      "footerText": "Pagina dedicata ai materiali di progetto e ai deliverable pratici.",
+      "scriptPath": "./assets/js/projects.js",
+      "contentTemplate": "pages/progetti.html"
+    },
+    {
+      "navId": "viewer",
+      "navLabel": "Viewer",
+      "showInNav": true,
+      "output": "viewer.html",
+      "title": "Viewer Documento",
+      "description": "Viewer dedicato per PDF e materiali di progetto.",
+      "footerText": "Quando il formato lo supporta, la preview e incorporata direttamente nella pagina.",
+      "scriptPath": "./assets/js/viewer.js",
+      "contentTemplate": "pages/viewer.html"
+    },
+    {
+      "navId": "archivio",
+      "navLabel": "Archivio",
+      "showInNav": false,
+      "output": "archivio.html",
+      "title": "Archivio",
+      "description": "Hub archivio con accesso separato a certificati e progetti.",
+      "footerText": "Questa pagina resta come hub compatibile per i link esistenti.",
+      "scriptPath": "./assets/js/archive-hub.js",
+      "contentTemplate": "pages/archivio.html"
+    }
+  ]
+}

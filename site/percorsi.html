@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="it">
 <head>
   <meta charset="utf-8">
@@ -14,45 +14,48 @@
 <body>
   <div class="page-shell">
     <header class="site-header">
-      <a class="brand-mark" href="./index.html" aria-label="Home">MA</a>
-      <nav class="site-nav" aria-label="Navigazione principale">
+  <a class="brand-mark" href="./index.html" aria-label="Home di Marco Accinno">MA</a>
+  <nav class="site-nav" aria-label="Navigazione principale">
         <a href="./index.html" data-nav="home">Home</a>
-        <a href="./percorsi.html" data-nav="percorsi">Percorsi</a>
-        <a href="./certificati.html" data-nav="certificati">Certificati</a>
-        <a href="./progetti.html" data-nav="progetti">Progetti</a>
-        <a href="./viewer.html" data-nav="viewer">Viewer</a>
-      </nav>
-      <a class="header-link" id="header-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
-    </header>
+    <a href="./percorsi.html" data-nav="percorsi">Percorsi</a>
+    <a href="./cv.html" data-nav="cv">CV</a>
+    <a href="./certificati.html" data-nav="certificati">Certificati</a>
+    <a href="./progetti.html" data-nav="progetti">Progetti</a>
+    <a href="./viewer.html" data-nav="viewer">Viewer</a>
+  </nav>
+  <a class="header-link" id="header-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+</header>
 
-    <main>
-      <section class="hero hero-simple">
-        <div class="hero-copy">
-          <p class="eyebrow">Mappa del portfolio</p>
-          <h1>Tutti i percorsi</h1>
-          <p class="hero-lead" id="paths-summary"></p>
-        </div>
-        <aside class="hero-panel">
-          <p class="panel-label">Stato generale</p>
-          <div class="metric-grid compact" id="paths-metrics"></div>
-        </aside>
-      </section>
+    <main class="catalog-main">
+  <section class="hero hero-simple page-hero page-hero-catalog">
+    <div class="hero-copy page-hero-copy">
+      <p class="eyebrow" id="paths-eyebrow">Mappa del portfolio</p>
+      <h1 id="paths-title">Tutti i percorsi</h1>
+      <p class="hero-lead" id="paths-summary"></p>
+    </div>
+    <aside class="hero-panel page-metric-panel">
+      <p class="panel-label" id="paths-metrics-label">Stato generale</p>
+      <div class="metric-grid compact" id="paths-metrics"></div>
+    </aside>
+  </section>
 
-      <section class="panel">
-        <div class="section-head">
-          <h2>Programmi e corsi</h2>
-          <a class="text-link" href="./certificati.html">Vai ai certificati</a>
-        </div>
-        <div class="program-list" id="program-list"></div>
-      </section>
-    </main>
+  <section class="panel page-collection-panel">
+    <div class="section-head">
+      <h2 id="paths-section-title">Programmi e corsi</h2>
+      <a class="text-link" id="paths-section-link" href="./certificati.html">Vai ai certificati</a>
+    </div>
+    <div class="program-list" id="program-list"></div>
+  </section>
+</main>
 
     <footer class="site-footer">
-      <p>Pagine statiche compatibili con GitHub Pages.</p>
-      <p id="footer-meta"></p>
-    </footer>
+  <p>Pagine statiche compatibili con GitHub Pages.</p>
+  <p id="footer-meta"></p>
+</footer>
+
   </div>
 
   <script type="module" src="./assets/js/paths.js"></script>
 </body>
 </html>
+

@@ -13,6 +13,7 @@ if (-not (Test-Path -LiteralPath $ConfigPath)) {
 $config = Get-Content -LiteralPath $ConfigPath -Raw | ConvertFrom-Json
 $siteConfig = $config.site
 $linkedinConfig = $config.linkedin
+$resumeConfig = if ($config.PSObject.Properties.Name -contains "resume") { $config.resume } else { $null }
 $repoRoot = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path
 
 $configuredPhotoUrl = ""
@@ -100,6 +101,86 @@ elseif ($educationHistory.Count -gt 0 -and -not [string]::IsNullOrWhiteSpace($ed
     $education = $educationHistory[0].institution
 }
 
+$contact = [ordered]@{}
+if ($null -ne $resumeConfig -and $resumeConfig.PSObject.Properties.Name -contains "contact" -and $null -ne $resumeConfig.contact) {
+    $emails = if ($resumeConfig.contact.PSObject.Properties.Name -contains "emails" -and $null -ne $resumeConfig.contact.emails) {
+        @($resumeConfig.contact.emails | Where-Object { -not [string]::IsNullOrWhiteSpace([string]$_) })
+    }
+    else {
+        @()
+    }
+
+    if (@($emails).Length -gt 0) {
+        $contact.emails = $emails
+    }
+}
+
+$personalDetails = @()
+if ($null -ne $resumeConfig -and $resumeConfig.PSObject.Properties.Name -contains "personalDetails" -and $null -ne $resumeConfig.personalDetails) {
+    $personalDetails = @(
+        $resumeConfig.personalDetails | ForEach-Object {
+            $entry = [ordered]@{}
+
+            if ($_.PSObject.Properties.Name -contains "label" -and -not [string]::IsNullOrWhiteSpace($_.label)) {
+                $entry.label = $_.label
+            }
+            if ($_.PSObject.Properties.Name -contains "value" -and -not [string]::IsNullOrWhiteSpace($_.value)) {
+                $entry.value = $_.value
+            }
+
+            if ($entry.Count -gt 0) {
+                $entry
+            }
+        }
+    )
+}
+
+$languages = @()
+if ($null -ne $resumeConfig -and $resumeConfig.PSObject.Properties.Name -contains "languages" -and $null -ne $resumeConfig.languages) {
+    $languages = @(
+        $resumeConfig.languages | ForEach-Object {
+            $entry = [ordered]@{}
+
+            if ($_.PSObject.Properties.Name -contains "name" -and -not [string]::IsNullOrWhiteSpace($_.name)) {
+                $entry.name = $_.name
+            }
+            if ($_.PSObject.Properties.Name -contains "dots" -and $null -ne $_.dots) {
+                $entry.dots = $_.dots
+            }
+            if ($_.PSObject.Properties.Name -contains "label" -and -not [string]::IsNullOrWhiteSpace($_.label)) {
+                $entry.label = $_.label
+            }
+            if ($_.PSObject.Properties.Name -contains "referenceLevel" -and -not [string]::IsNullOrWhiteSpace($_.referenceLevel)) {
+                $entry.referenceLevel = $_.referenceLevel
+            }
+
+            if ($entry.Count -gt 0) {
+                $entry
+            }
+        }
+    )
+}
+
+$universityCourses = @()
+if ($null -ne $resumeConfig -and $resumeConfig.PSObject.Properties.Name -contains "universityCourses" -and $null -ne $resumeConfig.universityCourses) {
+    $universityCourses = @(
+        $resumeConfig.universityCourses | ForEach-Object {
+            $entry = [ordered]@{}
+
+            if ($_.PSObject.Properties.Name -contains "title" -and -not [string]::IsNullOrWhiteSpace($_.title)) {
+                $entry.title = $_.title
+            }
+            if ($_.PSObject.Properties.Name -contains "description" -and -not [string]::IsNullOrWhiteSpace($_.description)) {
+                $entry.description = $_.description
+            }
+
+            if ($entry.Count -gt 0) {
+                $entry
+            }
+        }
+    )
+}
+
 $profileData = [ordered]@{
     status = "static"
     source = "manual-profile"
@@ -115,8 +196,12 @@ $profileData = [ordered]@{
     experience = $experience
     educationHistory = $educationHistory
     featuredSkills = $featuredSkills
+    resumeSummary = if ($null -ne $resumeConfig -and $resumeConfig.PSObject.Properties.Name -contains "summary") { $resumeConfig.summary } else { "" }
+    contact = $contact
+    personalDetails = $personalDetails
+    languages = $languages
+    universityCourses = $universityCourses
     updatedAt = (Get-Date).ToUniversalTime().ToString("o")
-    note = "Profilo LinkedIn gestito in modo statico nel repository."
 }
 
 $outputDirectory = Split-Path -Path $OutputPath -Parent

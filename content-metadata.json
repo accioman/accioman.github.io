@@ -1,0 +1,154 @@
+{
+  "programs": [
+    {
+      "path": "IBM DevOps and Software Engineering",
+      "displayName": "IBM DevOps & Software Engineering",
+      "summary": "Percorso tecnico su sviluppo software, DevOps e cloud.",
+      "priority": 10,
+      "tags": [
+        "DevOps",
+        "Cloud",
+        "Backend"
+      ]
+    },
+    {
+      "path": "IBM IT Project Manager",
+      "displayName": "IBM IT Project Manager",
+      "summary": "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+      "priority": 20,
+      "tags": [
+        "Project Management",
+        "Agile",
+        "Leadership"
+      ]
+    }
+  ],
+  "courses": [
+    {
+      "path": "IBM DevOps and Software Engineering/Introduction to Software Engineering",
+      "summary": "Fondamenti di ciclo di vita software, ruoli tecnici e pratiche di engineering.",
+      "category": "Software Engineering",
+      "priority": 10,
+      "featured": true
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Introduzione a DevOps",
+      "summary": "Principi DevOps, collaborazione tra team e continuous delivery.",
+      "category": "DevOps Foundations",
+      "priority": 20,
+      "featured": true
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Come iniziare con Git e GitHub",
+      "summary": "Git, branching e workflow GitHub per sviluppo collaborativo.",
+      "category": "Collaboration",
+      "priority": 30,
+      "featured": true
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Introduzione pratica ai comandi Linux e allo Shell Scripting",
+      "summary": "Shell Linux e scripting per automazione operativa.",
+      "category": "Platform Foundations",
+      "priority": 40
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Introduzione ai container con Docker, Kubernetes e OpenShift",
+      "summary": "Docker, Kubernetes e OpenShift come base di containerizzazione.",
+      "category": "Containers",
+      "priority": 50,
+      "featured": true
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Introduzione al cloud computing",
+      "summary": "Fondamenti cloud e modelli di servizio.",
+      "category": "Cloud",
+      "priority": 60
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Monitoraggio e osservabilità per lo sviluppo e DevOps",
+      "summary": "Metriche, log e osservabilità per affidabilità applicativa.",
+      "category": "Observability",
+      "priority": 70
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Sviluppo di applicazioni con Microservizi e Serverless",
+      "summary": "Microservizi e serverless per architetture modulari.",
+      "category": "Architecture",
+      "priority": 80
+    },
+    {
+      "path": "IBM DevOps and Software Engineering/Progetto DevOps Capstone",
+      "summary": "Capstone finale che integra strumenti e flussi DevOps.",
+      "category": "Capstone",
+      "priority": 90,
+      "featured": true
+    },
+    {
+      "path": "IBM IT Project Manager/Introduzione alla gestione dei progetti",
+      "summary": "Fondamenti di processi, ruoli e terminologia di progetto.",
+      "category": "Project Foundations",
+      "priority": 10,
+      "featured": true
+    },
+    {
+      "path": "IBM IT Project Manager/Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
+      "summary": "Obiettivi, scope e pianificazione nelle fasi iniziali.",
+      "category": "Planning",
+      "priority": 20
+    },
+    {
+      "path": "IBM IT Project Manager/Gestione del progetto Comunicazione, parti interessate e leadership",
+      "summary": "Stakeholder, comunicazione e leadership operativa di team.",
+      "category": "Stakeholders",
+      "priority": 30
+    },
+    {
+      "path": "IBM IT Project Manager/Project Lifecycle, Information Sharing, and Risk Management",
+      "summary": "Lifecycle, rischio e controllo operativo del progetto.",
+      "category": "Risk Management",
+      "priority": 40,
+      "featured": true
+    },
+    {
+      "path": "IBM IT Project Manager/Introduzione alla professione di Scrum Master",
+      "summary": "Ruolo dello Scrum Master e facilitazione agile del team.",
+      "category": "Agile",
+      "priority": 50
+    },
+    {
+      "path": "IBM IT Project Manager/Introduzione allo sviluppo Agile e a Scrum",
+      "summary": "Principi agile, Scrum e gestione iterativa del lavoro.",
+      "category": "Agile",
+      "priority": 60
+    },
+    {
+      "path": "IBM IT Project Manager/Introduction to Software Engineering",
+      "summary": "Ponte tra area manageriale e processo di sviluppo software.",
+      "category": "Technical Bridge",
+      "priority": 70,
+      "featured": true
+    },
+    {
+      "path": "IBM IT Project Manager/Capstone di gestione del progetto",
+      "summary": "Capstone finale su pianificazione, controllo e comunicazione.",
+      "category": "Capstone",
+      "priority": 80,
+      "featured": true
+    }
+  ],
+  "featuredCertificates": [
+    "IBM DevOps and Software Engineering/Introduction to Software Engineering",
+    "IBM DevOps and Software Engineering/Introduzione a DevOps",
+    "IBM DevOps and Software Engineering/Come iniziare con Git e GitHub",
+    "IBM IT Project Manager/Introduzione alla gestione dei progetti",
+    "IBM IT Project Manager/Project Lifecycle, Information Sharing, and Risk Management",
+    "IBM IT Project Manager/Introduction to Software Engineering"
+  ],
+  "featuredProjects": [
+    "IBM DevOps and Software Engineering/Progetto DevOps Capstone",
+    "IBM DevOps and Software Engineering/Introduzione pratica ai comandi Linux e allo Shell Scripting",
+    "IBM DevOps and Software Engineering/Sviluppo di applicazioni con Microservizi e Serverless",
+    "IBM IT Project Manager/Capstone di gestione del progetto",
+    "IBM IT Project Manager/Fondamenti di gestione del progetto, avvio e pianificazione (progetto)"
+  ]
+}

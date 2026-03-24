@@ -11,6 +11,7 @@ if (-not (Test-Path -LiteralPath $SiteSource)) {
     throw "Site source directory not found: $SiteSource"
 }
 
+& (Join-Path $PSScriptRoot "render-site-pages.ps1")
 & (Join-Path $PSScriptRoot "generate-site-data.ps1")
 & (Join-Path $PSScriptRoot "sync-linkedin-profile.ps1")
 
@@ -20,10 +21,14 @@ if (Test-Path -LiteralPath $OutputDir) {
 
 New-Item -ItemType Directory -Path $OutputDir -Force | Out-Null
 
-Copy-Item -Path (Join-Path $SiteSource "*") -Destination $OutputDir -Recurse -Force
+Get-ChildItem -LiteralPath $SiteSource |
+    Where-Object { $_.Name -ne "templates" } |
+    ForEach-Object {
+        Copy-Item -LiteralPath $_.FullName -Destination (Join-Path $OutputDir $_.Name) -Recurse -Force
+    }
 
 $programDirectories = Get-ChildItem -LiteralPath $Root -Directory |
-    Where-Object { $_.Name -notin @(".git", ".github", ".site", "scripts", "site") -and $_.Name -notlike ".*" }
+    Where-Object { $_.Name -notin @(".git", ".github", ".site", "docs", "scripts", "site") -and $_.Name -notlike ".*" }
 
 foreach ($directory in $programDirectories) {
     Copy-Item -LiteralPath $directory.FullName -Destination (Join-Path $OutputDir $directory.Name) -Recurse -Force

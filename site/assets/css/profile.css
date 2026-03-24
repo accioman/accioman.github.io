@@ -1,0 +1,116 @@
+.linkedin-card {
+  display: grid;
+  gap: 14px;
+}
+
+.linkedin-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.linkedin-card h2 {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+}
+
+.linkedin-copy {
+  display: grid;
+  gap: 8px;
+}
+
+.linkedin-copy p {
+  margin: 0;
+}
+
+.linkedin-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.linkedin-summary {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.7;
+}
+
+.linkedin-section {
+  display: grid;
+  gap: 12px;
+}
+
+.linkedin-section-priority {
+  padding: 18px;
+  border: 1px solid var(--line-strong);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 100% 0, rgba(189, 208, 241, 0.08), transparent 38%),
+    rgba(255, 255, 255, 0.025);
+}
+
+.linkedin-entry-list {
+  display: grid;
+  gap: 12px;
+}
+
+.linkedin-entry {
+  display: grid;
+  gap: 8px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.025);
+  transition:
+    transform var(--easing-premium),
+    border-color var(--easing-premium),
+    background var(--easing-premium),
+    box-shadow var(--easing-premium);
+}
+
+.linkedin-entry-primary {
+  background: rgba(189, 208, 241, 0.07);
+  border-color: rgba(189, 208, 241, 0.2);
+}
+
+.linkedin-entry-secondary {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.linkedin-entry h3 {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  font-size: 1rem;
+}
+
+.linkedin-entry p {
+  margin: 0;
+}
+
+.linkedin-entry-company {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+.profile-avatar {
+  display: block;
+  object-fit: cover;
+  border-radius: 999px;
+  border: 1px solid var(--line-strong);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.profile-avatar-header {
+  width: 28px;
+  height: 28px;
+}
+
+.profile-avatar-card {
+  width: 80px;
+  height: 80px;
+  flex: 0 0 auto;
+}
+
+.linkedin-card .button {
+  justify-self: start;
+}

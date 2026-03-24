@@ -1,17 +1,25 @@
-import { loadPayload, initShell, renderStatus, renderPreview, mountPreviewContent, uniqueValues, escapeHtml } from "./common.js";
+import { loadPayload, initShell, renderStatus, renderPreview, mountPreviewContent, uniqueValues, escapeHtml, formatTemplate, setElementText, setElementPlaceholder } from "./common.js";
 
 let state = {
   portfolio: null,
-  selectedFile: null
+  selectedFile: null,
+  page: {}
 };
 
-const typeLabels = {
+const fallbackTypeLabels = {
   pdf: "PDF",
   document: "Documento",
   spreadsheet: "Foglio",
   presentation: "Presentazione",
   file: "File"
 };
+
+function getTypeLabels() {
+  return {
+    ...fallbackTypeLabels,
+    ...(state.page.typeLabels || {})
+  };
+}
 
 function currentFilters() {
   return {
@@ -23,7 +31,15 @@ function currentFilters() {
 }
 
 function matchesFilter(item, filters) {
-  const haystack = [item.name, item.programName, item.courseName, item.kindLabel, item.courseStatus].join(" ").toLowerCase();
+  const haystack = [
+    item.name,
+    item.programName,
+    item.courseName,
+    item.courseCategory,
+    item.courseSummary,
+    item.kindLabel,
+    item.courseStatus
+  ].join(" ").toLowerCase();
 
   if (filters.query && !haystack.includes(filters.query)) {
     return false;
@@ -43,7 +59,7 @@ function matchesFilter(item, filters) {
 
 function projectMatchesFilter(project, filters) {
   if (filters.query) {
-    const projectText = [project.name, project.programName, project.materialPreview, project.evidence].join(" ").toLowerCase();
+    const projectText = [project.name, project.programName, project.category, project.summary, project.materialPreview, project.evidence].join(" ").toLowerCase();
     const hasMatchingFile = project.files.some((file) => matchesFilter(file, filters));
     if (!projectText.includes(filters.query) && !hasMatchingFile) {
       return false;
@@ -83,17 +99,19 @@ function renderProjects(projects) {
   document.getElementById("project-empty").classList.toggle("hidden", projects.length > 0);
 
   container.innerHTML = projects.map((project) => `
-    <article class="project-card">
+    <article class="project-card project-explorer-card">
       <h3>${escapeHtml(project.name)}</h3>
       <p class="muted">${escapeHtml(project.programName)}</p>
       <div class="meta-line">
+        ${project.category ? `<span class="info-chip">${escapeHtml(project.category)}</span>` : ""}
         ${renderStatus(project.status)}
-        <span class="info-chip">${escapeHtml(project.workFileCount)} file</span>
+        <span class="info-chip">${escapeHtml(formatTemplate(state.page.fileCountLabelTemplate || "{count} file", { count: project.workFileCount }))}</span>
       </div>
+      ${project.summary ? `<p class="card-summary">${escapeHtml(project.summary)}</p>` : ""}
       <p class="muted">${escapeHtml(project.materialPreview || project.evidence)}</p>
       <div class="file-list">
         ${project.files.map((file) => `
-          <button class="file-button" type="button" data-path="${escapeHtml(file.relativePath)}">
+          <button class="file-button project-file-button" type="button" data-path="${escapeHtml(file.relativePath)}">
             <div class="file-kicker">
               <span class="info-chip">${escapeHtml(file.kindLabel)}</span>
               <span class="info-chip">${escapeHtml(file.sizeLabel)}</span>
@@ -138,24 +156,40 @@ async function refresh() {
 async function main() {
   const { portfolio, linkedin } = await loadPayload();
   state.portfolio = portfolio;
+  state.page = portfolio.config.site.projectsPage || {};
   initShell("progetti", portfolio, linkedin);
 
-  document.title = "Progetti | Portfolio formativo";
-  document.getElementById("projects-summary").textContent = `Esplora ${portfolio.library.projects.length} aree progetto e passa tra PDF, documenti e fogli di lavoro da una pagina dedicata.`;
+  setElementText("projects-eyebrow", state.page.eyebrow, "Materiali pratici");
+  setElementText("projects-title", state.page.title, "Progetti e deliverable");
+  setElementText("projects-filters-label", state.page.filtersLabel, "Filtri");
+  setElementText("projects-search-label", state.page.searchLabel, "Cerca");
+  setElementText("projects-program-label", state.page.programLabel, "Percorso");
+  setElementText("projects-type-label", state.page.typeLabel, "Tipo file");
+  setElementText("projects-status-label", state.page.statusLabel, "Stato corso");
+  setElementText("projects-section-title", state.page.sectionTitle, "Esplora i progetti");
+  setElementText("projects-section-copy", state.page.sectionCopy, "Naviga i materiali di lavoro, seleziona un file e apri l'anteprima senza uscire dalla pagina.");
+  setElementPlaceholder("search-input", state.page.searchPlaceholder, "Corso, file o programma");
+  document.title = `${state.page.title || "Progetti"} | Portfolio formativo`;
+  document.getElementById("projects-summary").textContent = formatTemplate(
+    state.page.summaryTemplate || "Esplora {count} aree progetto e passa tra PDF, documenti e fogli di lavoro da una pagina dedicata.",
+    { count: portfolio.library.projects.length }
+  );
+  setElementText("project-empty", state.page.emptyState, "Nessun progetto corrisponde ai filtri correnti.");
 
   document.getElementById("program-filter").innerHTML = [
-    `<option value="">Tutti</option>`,
+    `<option value="">${escapeHtml(state.page.allProgramsLabel || "Tutti")}</option>`,
     ...portfolio.programs.map((program) => `<option value="${program.id}">${escapeHtml(program.name)}</option>`)
   ].join("");
 
+  const typeLabels = getTypeLabels();
   document.getElementById("type-filter").innerHTML = [
-    `<option value="">Tutti</option>`,
+    `<option value="">${escapeHtml(state.page.allTypesLabel || "Tutti")}</option>`,
     ...uniqueValues(portfolio.library.documents.filter((file) => !file.isCertificate).map((file) => file.kind))
       .map((kind) => `<option value="${kind}">${escapeHtml(typeLabels[kind] || kind)}</option>`)
   ].join("");
 
   document.getElementById("status-filter").innerHTML = [
-    `<option value="">Tutti</option>`,
+    `<option value="">${escapeHtml(state.page.allStatusesLabel || "Tutti")}</option>`,
     ...uniqueValues(portfolio.library.projects.map((project) => project.status))
       .map((status) => `<option value="${status}">${escapeHtml(status)}</option>`)
   ].join("");

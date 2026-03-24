@@ -1,50 +1,117 @@
-{
-  "status": "static",
-  "source": "manual-profile",
-  "profileUrl": "https://www.linkedin.com/in/marco-accinno-214978276/",
-  "fullName": "Marco Accinno",
-  "headline": "Software Development Engineer",
-  "photoUrl": "./assets/images/linkedin-profile.jpg",
-  "location": "Monsummano Terme, Toscana, Italia",
-  "education": "Universita degli Studi di Firenze",
-  "availability": "Disponibile per lavorare",
-  "profileLanguage": "Italiano",
-  "summary": "Sviluppatore software motivato dalla crescita continua, con approccio pratico e forte interesse per il miglioramento delle competenze tecniche e professionali.",
-  "experience": [
-    {
-      "title": "Software Development Engineer",
-      "company": "SIS INFORMATICA S.R.L. - SERVIZI INFORMATICI E SISTEMI",
-      "employmentType": "Full-time",
-      "period": "Nov 2023 - Presente",
-      "duration": "2 anni e 5 mesi",
-      "skills": [
-        "Git",
-        "Flutter"
-      ]
-    }
-  ],
-  "educationHistory": [
-    {
-      "institution": "Universita degli Studi di Firenze",
-      "period": "2021 - 2026",
-      "skills": [
-        "Git",
-        "Lingua inglese"
-      ]
-    },
-    {
-      "institution": "ITCS Filippo Pacini",
-      "degree": "Diploma, Scienze Applicate",
-      "period": "Set 2017 - Presente"
-    }
-  ],
-  "featuredSkills": [
-    "Sviluppo di software",
-    "Scrum",
-    "Python",
-    "JavaScript",
-    "Web Services API"
-  ],
-  "updatedAt": "2026-03-24T09:42:29.9559801Z",
-  "note": "Profilo LinkedIn gestito in modo statico nel repository."
+﻿{
+    "status":  "static",
+    "source":  "manual-profile",
+    "profileUrl":  "https://www.linkedin.com/in/marco-accinno-214978276/",
+    "fullName":  "Marco Accinno",
+    "headline":  "Software Development Engineer",
+    "photoUrl":  "./assets/images/linkedin-profile.jpg",
+    "location":  "Monsummano Terme, Toscana, Italia",
+    "education":  "Universita degli Studi di Firenze",
+    "availability":  "Disponibile per lavorare",
+    "profileLanguage":  "Italiano",
+    "summary":  "Sviluppatore software con approccio pratico, orientato alla crescita tecnica e alla costruzione di competenze spendibili su progetti reali.",
+    "experience":  [
+                       {
+                           "title":  "Software Development Engineer",
+                           "company":  "SIS INFORMATICA S.R.L. - SERVIZI INFORMATICI E SISTEMI",
+                           "employmentType":  "Full-time",
+                           "period":  "Nov 2023 - Presente",
+                           "duration":  "2 anni e 5 mesi",
+                           "skills":  [
+                                          "Git",
+                                          "Flutter"
+                                      ]
+                       }
+                   ],
+    "educationHistory":  [
+                             {
+                                 "institution":  "Universita degli Studi di Firenze",
+                                 "period":  "2021 - 2026",
+                                 "skills":  [
+                                                "Git",
+                                                "Lingua inglese"
+                                            ]
+                             },
+                             {
+                                 "institution":  "ITCS Filippo Pacini",
+                                 "degree":  "Diploma, Scienze Applicate",
+                                 "period":  "Set 2017 - Presente"
+                             }
+                         ],
+    "featuredSkills":  [
+                           "Sviluppo di software",
+                           "Scrum",
+                           "Python",
+                           "JavaScript",
+                           "Web Services API"
+                       ],
+    "resumeSummary":  "Software Development Engineer con esperienza in contesto aziendale e percorso in consolidamento tra software engineering, DevOps e IT project management.",
+    "contact":  {
+                    "emails":  [
+                                   "accinno31@gmail.com",
+                                   "m.accinno@sisinformatica.it"
+                               ]
+                },
+    "personalDetails":  [
+                            {
+                                "label":  "Data di nascita",
+                                "value":  "29/06/2002"
+                            },
+                            {
+                                "label":  "Luogo di nascita",
+                                "value":  "Pescia (PT)"
+                            },
+                            {
+                                "label":  "Residenza",
+                                "value":  "Monsummano Terme (PT)"
+                            },
+                            {
+                                "label":  "Patenti",
+                                "value":  "A1, B"
+                            }
+                        ],
+    "languages":  [
+                      {
+                          "name":  "Italiano",
+                          "dots":  5,
+                          "label":  "Madrelingua"
+                      },
+                      {
+                          "name":  "Inglese",
+                          "dots":  4,
+                          "label":  "Buona autonomia scritta e orale",
+                          "referenceLevel":  "B2"
+                      },
+                      {
+                          "name":  "Spagnolo",
+                          "dots":  2,
+                          "label":  "Conoscenza generale"
+                      }
+                  ],
+    "universityCourses":  [
+                              {
+                                  "title":  "Algoritmi e strutture dati",
+                                  "description":  "Implementazione e ottimizzazione di strutture dati dinamiche e statiche."
+                              },
+                              {
+                                  "title":  "Architettura degli elaboratori",
+                                  "description":  "Analisi delle memorie cache e delle gerarchie di memoria; confronto tra architetture RISC e CISC."
+                              },
+                              {
+                                  "title":  "Programmazione concorrente",
+                                  "description":  "Analisi e risoluzione di problemi di competizione, deadlock e starvation in ambienti concorrenti."
+                              },
+                              {
+                                  "title":  "Programmazione Java",
+                                  "description":  "Sviluppo di applicazioni Java utilizzando il paradigma orientato agli oggetti."
+                              },
+                              {
+                                  "title":  "Algebra lineare",
+                                  "description":  "Studio e risoluzione di sistemi di equazioni lineari utilizzando matrici."
+                              },
+                              {
+                                  "title":  "Analisi I"
+                              }
+                          ],
+    "updatedAt":  "2026-03-24T12:32:42.4605180Z"
 }

@@ -1,6 +1,7 @@
 param(
     [string]$Root = (Resolve-Path (Join-Path $PSScriptRoot "..")).Path,
     [string]$ConfigPath = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..")).Path "readme.config.json"),
+    [string]$ContentMetadataPath = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..")).Path "content-metadata.json"),
     [string]$OutputPath = (Join-Path (Resolve-Path (Join-Path $PSScriptRoot "..")).Path "site\assets\data\site-data.json")
 )
 
@@ -9,7 +10,7 @@ $ErrorActionPreference = "Stop"
 
 . (Join-Path $PSScriptRoot "portfolio-data.ps1")
 
-$snapshot = Get-PortfolioSnapshot -RootPath $Root -ConfigPath $ConfigPath
+$snapshot = Get-PortfolioSnapshot -RootPath $Root -ConfigPath $ConfigPath -ContentMetadataPath $ContentMetadataPath
 $outputDirectory = Split-Path -Path $OutputPath -Parent
 
 if (-not (Test-Path -LiteralPath $outputDirectory)) {

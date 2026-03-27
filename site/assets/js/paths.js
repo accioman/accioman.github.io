@@ -1,16 +1,29 @@
-import { loadPayload, initShell, metricCard, renderStatus, mountPreviewContent, escapeHtml, asArray, formatTemplate, setElementText, getDocumentDisplayTitle } from "./common.js";
+import {
+  loadPayload,
+  initShell,
+  metricCard,
+  renderStatus,
+  mountPreviewContent,
+  escapeHtml,
+  asArray,
+  formatTemplate,
+  setElementPlaceholder,
+  setElementText
+} from "./common.js";
 import { observePdfThumbnails } from "./modules/pdf-thumbnails.js";
 
 const state = {
   page: {},
   certificatesPage: {},
+  portfolio: null,
   courseIndex: new Map(),
   activeProgram: null,
   activeCourse: null,
   activeFile: null,
   fullscreenBound: false,
   mobilePreviewBound: false,
-  lastCourseTrigger: null
+  lastCourseTrigger: null,
+  quickFilter: "all"
 };
 
 function getCompletionPercent(program) {
@@ -34,7 +47,9 @@ function getCourseCertificate(course) {
 }
 
 function getPrimaryCourseFile(course) {
-  return getCourseCertificate(course) || asArray(course.files)[0] || null;
+  const primaryName = course?.caseStudy?.primaryFile || "";
+  const files = getCourseWorkFiles(course);
+  return files.find((file) => file.name === primaryName) || getCourseCertificate(course) || files[0] || null;
 }
 
 function getCourseWorkFiles(course) {
@@ -51,12 +66,98 @@ function getSortedCourseFiles(course) {
   return certificate ? [certificate, ...workFiles] : workFiles;
 }
 
+function getCaseStudy(course) {
+  return course?.caseStudy || {};
+}
+
+function getCourseLead(course) {
+  const caseStudy = getCaseStudy(course);
+  return caseStudy.lead || course.summary || state.page.courseSummaryFallback || "Apri il dettaglio per consultare certificato, materiali e anteprima.";
+}
+
+function getCourseSearchText(program, course) {
+  const caseStudy = getCaseStudy(course);
+  return [
+    program.name,
+    ...asArray(program.tags),
+    course.name,
+    course.category,
+    course.status,
+    course.summary,
+    caseStudy.title,
+    caseStudy.lead,
+    caseStudy.context,
+    caseStudy.objective,
+    caseStudy.role,
+    caseStudy.outcome,
+    ...asArray(caseStudy.skills),
+    ...asArray(caseStudy.deliverables)
+  ].join(" ").toLowerCase();
+}
+
 function buildCourseDialogHref(programId, courseId) {
   const params = new URLSearchParams(window.location.search);
   params.set("program", programId);
   params.set("course", courseId);
   const query = params.toString();
   return `${window.location.pathname}${query ? `?${query}` : ""}`;
+}
+
+function normalizeValue(value) {
+  return String(value || "").trim().toLowerCase();
+}
+
+function getQuickFilterValue() {
+  return state.quickFilter;
+}
+
+function getActiveFilterValues() {
+  return {
+    search: normalizeValue(document.getElementById("paths-search")?.value),
+    programId: normalizeValue(document.getElementById("paths-program-filter")?.value),
+    category: normalizeValue(document.getElementById("paths-category-filter")?.value),
+    status: normalizeValue(document.getElementById("paths-status-filter")?.value),
+    quickFilter: getQuickFilterValue()
+  };
+}
+
+function matchesQuickFilter(program, course, quickFilter) {
+  const caseStudy = getCaseStudy(course);
+
+  switch (quickFilter) {
+    case "featured":
+      return Boolean(course.featured || course.workFileCount > 0 || course.certificateCount > 0);
+    case "evidence":
+      return Number(course.workFileCount) > 0 || Number(course.certificateCount) > 0;
+    case "completed":
+      return course.status === "Completato";
+    case "caseStudy":
+      return Boolean(caseStudy.title || caseStudy.lead || caseStudy.context || caseStudy.objective || caseStudy.outcome);
+    default:
+      return true;
+  }
+}
+
+function matchesCourseFilters(program, course) {
+  const filters = getActiveFilterValues();
+
+  if (filters.search && !getCourseSearchText(program, course).includes(filters.search)) {
+    return false;
+  }
+
+  if (filters.programId && normalizeValue(program.id) !== filters.programId) {
+    return false;
+  }
+
+  if (filters.category && normalizeValue(course.category) !== filters.category) {
+    return false;
+  }
+
+  if (filters.status && normalizeValue(course.status) !== filters.status) {
+    return false;
+  }
+
+  return matchesQuickFilter(program, course, filters.quickFilter);
 }
 
 function renderDialogCertificate(course) {
@@ -85,23 +186,82 @@ function renderDialogCertificate(course) {
 function renderDialogFileButton(file, isActive) {
   return `
     <button class="file-button path-course-dialog-file-button${isActive ? " is-active" : ""}" type="button" data-dialog-file="${escapeHtml(file.relativePath)}">
-      <strong>${escapeHtml(getDocumentDisplayTitle(file))}</strong>
+      <strong>${escapeHtml(file.displayName || file.name)}</strong>
       <div class="meta-line path-course-dialog-file-meta">
         <span class="info-chip">${escapeHtml(file.kindLabel)}</span>
+        <span class="info-chip">${escapeHtml(file.sizeLabel)}</span>
       </div>
     </button>
   `;
 }
 
-function renderDialogPreview(file) {
+function renderDialogNarrative(course) {
+  const caseStudy = getCaseStudy(course);
+  const facts = [
+    { label: "Contesto", value: caseStudy.context },
+    { label: "Obiettivo", value: caseStudy.objective },
+    { label: "Ruolo", value: caseStudy.role },
+    { label: "Risultato", value: caseStudy.outcome }
+  ].filter((fact) => fact.value);
+
+  return `
+    <section class="project-preview-context path-course-dialog-story">
+      <div class="project-preview-context-head">
+        <div>
+          <p class="panel-label">Sintesi recruiter</p>
+          <h2>${escapeHtml(caseStudy.title || course.name)}</h2>
+          <p class="project-case-study-lead">${escapeHtml(getCourseLead(course))}</p>
+        </div>
+        <div class="project-preview-context-meta">
+          ${course.category ? `<span class="info-chip">${escapeHtml(course.category)}</span>` : ""}
+          ${renderStatus(course.status)}
+        </div>
+      </div>
+      ${facts.length ? `
+        <div class="project-case-study-grid">
+          ${facts.map((fact) => `
+            <article class="project-case-study-fact">
+              <strong>${escapeHtml(fact.label)}</strong>
+              <p>${escapeHtml(fact.value)}</p>
+            </article>
+          `).join("")}
+        </div>
+      ` : ""}
+      <div class="project-case-study-aside">
+        ${asArray(caseStudy.skills).length ? `
+          <section class="project-case-study-supplement">
+            <p class="panel-label">Competenze</p>
+            <div class="detail-list">${asArray(caseStudy.skills).map((skill) => `<span class="info-chip">${escapeHtml(skill)}</span>`).join("")}</div>
+          </section>
+        ` : ""}
+        ${asArray(caseStudy.deliverables).length ? `
+          <section class="project-case-study-supplement">
+            <p class="panel-label">Deliverable</p>
+            <ul class="project-case-study-deliverables">
+              ${asArray(caseStudy.deliverables).map((item) => `<li>${escapeHtml(item)}</li>`).join("")}
+            </ul>
+          </section>
+        ` : ""}
+      </div>
+    </section>
+  `;
+}
+
+function renderDialogPreview(file, course) {
+  const actionHref = course ? buildCourseDialogHref(course.programId, course.id) : "./percorsi.html";
+
   if (!file) {
     return `
       <div class="path-course-dialog-preview-shell">
         <div class="path-course-dialog-preview-toolbar">
           <button class="button button-secondary button-compact path-course-dialog-preview-toggle hidden" type="button" id="path-course-dialog-preview-toggle">Schermo intero</button>
         </div>
+        ${course ? renderDialogNarrative(course) : ""}
         <div class="preview-card path-course-dialog-preview-card">
           <p class="muted">Questo corso non ha ancora materiali consultabili.</p>
+          <div class="file-actions">
+            <a class="button button-primary button-compact" href="${escapeHtml(actionHref)}">${escapeHtml(state.page.openDetailsLabel || "Apri dettagli")}</a>
+          </div>
         </div>
       </div>
     `;
@@ -114,7 +274,23 @@ function renderDialogPreview(file) {
           ${escapeHtml(state.page.previewFullscreenLabel || "Schermo intero")}
         </button>
       </div>
+      ${course ? renderDialogNarrative(course) : ""}
       <div class="preview-card path-course-dialog-preview-card">
+        <div class="project-section-minihead">
+          <div>
+            <p class="panel-label">Preview del file</p>
+            <h3>${escapeHtml(file.displayName || file.name)}</h3>
+          </div>
+          <div class="file-actions">
+            <a class="button button-primary button-compact" href="${escapeHtml(actionHref)}">${escapeHtml(state.page.openDetailsLabel || "Apri dettagli")}</a>
+            <a class="button button-secondary button-compact" href="${escapeHtml(file.webPath)}" target="_blank" rel="noreferrer">Apri file</a>
+          </div>
+        </div>
+        <div class="meta-line">
+          <span class="info-chip">${escapeHtml(file.kindLabel)}</span>
+          <span class="info-chip">${escapeHtml(file.sizeLabel)}</span>
+          ${file.updatedAtLocal ? `<span class="info-chip">${escapeHtml(file.updatedAtLocal)}</span>` : ""}
+        </div>
         <div class="preview-surface path-course-dialog-preview-surface" data-preview-surface></div>
       </div>
     </div>
@@ -157,7 +333,7 @@ function renderMobilePreview(file) {
     <div class="path-mobile-preview-top">
       <div class="path-mobile-preview-copy">
         <p class="panel-label">Anteprima</p>
-        <h2>${escapeHtml(getDocumentDisplayTitle(file))}</h2>
+        <h2>${escapeHtml(file.displayName || file.name)}</h2>
       </div>
       <button class="button button-secondary button-compact" type="button" id="path-mobile-preview-close">Chiudi</button>
     </div>
@@ -404,7 +580,7 @@ async function refreshCourseDialogPreview() {
     return;
   }
 
-  previewRoot.innerHTML = renderDialogPreview(state.activeFile);
+  previewRoot.innerHTML = renderDialogPreview(state.activeFile, state.activeCourse);
   bindPreviewFullscreenToggle();
   updateDialogFileSelection();
   await mountPreviewContent(state.activeFile, previewRoot);
@@ -419,11 +595,12 @@ async function syncCourseDialog() {
 
   const allFiles = getSortedCourseFiles(state.activeCourse);
   const workFiles = getCourseWorkFiles(state.activeCourse);
+  const caseStudy = getCaseStudy(state.activeCourse);
   state.activeFile = state.activeFile || getPrimaryCourseFile(state.activeCourse);
 
   document.getElementById("path-course-dialog-program").textContent = state.activeProgram.name;
-  document.getElementById("path-course-dialog-title").textContent = state.activeCourse.name;
-  document.getElementById("path-course-dialog-summary").textContent = state.activeCourse.summary || state.page.dialogSummaryFallback || "Certificato e materiali del corso consultabili direttamente nel dialog.";
+  document.getElementById("path-course-dialog-title").textContent = caseStudy.title || state.activeCourse.name;
+  document.getElementById("path-course-dialog-summary").textContent = getCourseLead(state.activeCourse);
   document.getElementById("path-course-dialog-meta").innerHTML = `
     ${state.activeCourse.category ? `<span class="info-chip">${escapeHtml(state.activeCourse.category)}</span>` : ""}
     ${renderStatus(state.activeCourse.status)}
@@ -433,7 +610,7 @@ async function syncCourseDialog() {
   document.getElementById("path-course-dialog-certificate").innerHTML = renderDialogCertificate(state.activeCourse);
   document.getElementById("path-course-dialog-files").innerHTML = workFiles.length
     ? workFiles.map((file) => renderDialogFileButton(file, file.relativePath === state.activeFile?.relativePath)).join("")
-    : `<p class="muted path-course-dialog-empty">Nessun materiale aggiuntivo per questo corso.</p>`;
+    : `<p class="muted path-course-dialog-empty">${escapeHtml(state.page.noExtraMaterialsText || "Nessun materiale aggiuntivo rilevato.")}</p>`;
 
   observePdfThumbnails(Array.from(dialog.querySelectorAll(".path-course-dialog-cert canvas")), {
     errorLabel: state.page.thumbnailErrorLabel || state.certificatesPage.thumbnailErrorLabel || "Miniatura non disponibile"
@@ -527,10 +704,207 @@ async function openCourseDialogFromLocation() {
   await openCourseDialog(courseKey, { updateHistory: false, replaceHistory: true });
 }
 
+function renderQuickFilters() {
+  const labels = state.page.quickFilters || {};
+  const quickFilters = [
+    { id: "all", label: labels.all || "Tutti" },
+    { id: "featured", label: labels.featured || "In evidenza" },
+    { id: "evidence", label: labels.evidence || "Con materiali" },
+    { id: "completed", label: labels.completed || "Completati" },
+    { id: "caseStudy", label: labels.caseStudy || "Case study" }
+  ];
+
+  document.getElementById("paths-quick-filters").innerHTML = quickFilters.map((filter) => `
+    <button
+      class="button button-secondary button-compact paths-quick-filter${state.quickFilter === filter.id ? " is-active" : ""}"
+      type="button"
+      data-quick-filter="${escapeHtml(filter.id)}"
+    >
+      ${escapeHtml(filter.label)}
+    </button>
+  `).join("");
+
+  document.querySelectorAll("[data-quick-filter]").forEach((button) => {
+    button.addEventListener("click", () => {
+      state.quickFilter = button.getAttribute("data-quick-filter") || "all";
+      renderQuickFilters();
+      void renderPrograms();
+    });
+  });
+}
+
+function populateFilters(portfolio) {
+  const programs = asArray(portfolio.programs);
+  const allCourses = programs.flatMap((program) => asArray(program.courses));
+  const programSelect = document.getElementById("paths-program-filter");
+  const categorySelect = document.getElementById("paths-category-filter");
+  const statusSelect = document.getElementById("paths-status-filter");
+
+  programSelect.innerHTML = [
+    `<option value="">${escapeHtml(state.page.allProgramsLabel || "Tutti i percorsi")}</option>`,
+    ...programs.map((program) => `<option value="${escapeHtml(program.id)}">${escapeHtml(program.name)}</option>`)
+  ].join("");
+
+  categorySelect.innerHTML = [
+    `<option value="">${escapeHtml(state.page.allCategoriesLabel || "Tutte le categorie")}</option>`,
+    ...Array.from(new Set(allCourses.map((course) => course.category).filter(Boolean)))
+      .sort((left, right) => left.localeCompare(right))
+      .map((category) => `<option value="${escapeHtml(normalizeValue(category))}">${escapeHtml(category)}</option>`)
+  ].join("");
+
+  statusSelect.innerHTML = [
+    `<option value="">${escapeHtml(state.page.allStatusesLabel || "Tutti gli stati")}</option>`,
+    ...Array.from(new Set(allCourses.map((course) => course.status).filter(Boolean)))
+      .sort((left, right) => left.localeCompare(right))
+      .map((status) => `<option value="${escapeHtml(normalizeValue(status))}">${escapeHtml(status)}</option>`)
+  ].join("");
+}
+
+function renderCourseCard(program, course) {
+  const courseKey = getCourseKey(program, course);
+  const certificateFile = getCourseCertificate(course);
+  const caseStudy = getCaseStudy(course);
+  const lead = getCourseLead(course);
+  const certificateThumb = certificateFile
+    ? `
+      <div class="path-course-thumb-link" aria-hidden="true">
+        <div class="canvas-shell path-course-thumb">
+          <span class="thumb-badge">${escapeHtml(state.page.certificateBadgeLabel || state.certificatesPage.badgeLabel || "Certificato")}</span>
+          <canvas data-pdf="${certificateFile.webPath}"></canvas>
+          <div class="thumb-loading">${escapeHtml(state.page.thumbnailLoadingLabel || state.certificatesPage.thumbnailLoadingLabel || "Carico miniatura...")}</div>
+        </div>
+      </div>
+    `
+    : `
+      <div class="canvas-shell path-course-thumb path-course-thumb-placeholder" aria-hidden="true">
+        <span class="thumb-badge">${escapeHtml(state.page.certificateBadgeLabel || state.certificatesPage.badgeLabel || "Certificato")}</span>
+        <div class="path-course-thumb-empty">${escapeHtml(state.page.certificateUnavailableLabel || "Non disponibile")}</div>
+      </div>
+    `;
+
+  state.courseIndex.set(courseKey, {
+    program,
+    course: {
+      ...course,
+      programId: program.id
+    }
+  });
+
+  return `
+    <article
+      class="course-card path-course-card${certificateFile ? " has-certificate-thumb" : ""}"
+      tabindex="0"
+      role="button"
+      aria-haspopup="dialog"
+      aria-label="${escapeHtml(`${course.name} — ${course.status}`)}"
+      data-course-dialog="${escapeHtml(courseKey)}"
+    >
+      <div class="path-course-head">
+        ${certificateThumb}
+      </div>
+      <div class="path-course-copy">
+        <div class="meta-line">
+          ${course.category ? `<span class="info-chip">${escapeHtml(course.category)}</span>` : ""}
+          ${caseStudy.title ? `<span class="info-chip">Case study</span>` : ""}
+        </div>
+        <h3>${escapeHtml(caseStudy.title || course.name)}</h3>
+        <p class="card-summary">${escapeHtml(lead)}</p>
+      </div>
+      <div class="meta-line">
+        ${renderStatus(course.status)}
+        ${course.certificateCount > 0 ? `<span class="info-chip">${escapeHtml(formatCountLabel(course.certificateCount, "certificato", "certificati"))}</span>` : ""}
+        ${course.workFileCount > 0 ? `<span class="info-chip">${escapeHtml(formatCountLabel(course.workFileCount, "materiale", "materiali"))}</span>` : ""}
+      </div>
+      <p class="path-course-footer-link">${escapeHtml(state.page.openDetailsLabel || "Apri dettagli")}</p>
+    </article>
+  `;
+}
+
+async function renderPrograms() {
+  const programList = document.getElementById("program-list");
+  const emptyState = document.getElementById("paths-empty-state");
+  const dialog = document.getElementById("path-course-dialog");
+  state.courseIndex = new Map();
+
+  const filteredPrograms = asArray(state.portfolio.programs).map((program) => {
+    const courses = asArray(program.courses).filter((course) => matchesCourseFilters(program, course));
+    return { program, courses };
+  }).filter((entry) => entry.courses.length > 0);
+
+  if (!filteredPrograms.length) {
+    programList.innerHTML = "";
+    emptyState.textContent = state.page.emptyState || "Nessun corso corrisponde ai filtri correnti.";
+    emptyState.classList.remove("hidden");
+    if (dialog?.open) {
+      dialog.close();
+    }
+    return;
+  }
+
+  const activeCourseKey = state.activeProgram && state.activeCourse
+    ? getCourseKey(state.activeProgram, state.activeCourse)
+    : "";
+  if (activeCourseKey && !state.courseIndex.has(activeCourseKey) && dialog?.open) {
+    dialog.close();
+  }
+
+  emptyState.classList.add("hidden");
+
+  programList.innerHTML = filteredPrograms.map(({ program, courses }) => `
+    <section class="panel path-program-panel" id="${program.slug}">
+      <div class="section-head">
+        <div>
+          <p class="panel-label">${escapeHtml(program.name)}</p>
+          <h2>${escapeHtml(program.completedCourses)}/${escapeHtml(program.totalCourses)} ${escapeHtml(state.page.programCompletedSuffix || "completati")}</h2>
+          ${program.summary ? `<p class="section-copy">${escapeHtml(program.summary)}</p>` : ""}
+        </div>
+        <div class="detail-list">
+          ${asArray(program.tags).map((tag) => `<span class="info-chip">${escapeHtml(tag)}</span>`).join("")}
+          <span class="info-chip">${escapeHtml(formatTemplate(state.page.progressLabelTemplate || "{percent}%", { percent: getCompletionPercent(program) }))}</span>
+          <span class="info-chip">${escapeHtml(formatTemplate(state.page.workFilesLabelTemplate || "{count} materiali", { count: program.workFiles }))}</span>
+          <span class="info-chip">${escapeHtml(formatTemplate(state.page.certificateFilesLabelTemplate || "{count} certificati", { count: program.certificateFiles }))}</span>
+        </div>
+      </div>
+      <div class="card-grid path-course-grid">
+        ${courses.map((course) => renderCourseCard(program, course)).join("")}
+      </div>
+    </section>
+  `).join("");
+
+  observePdfThumbnails(Array.from(document.querySelectorAll(".path-course-thumb canvas")), {
+    errorLabel: state.page.thumbnailErrorLabel || state.certificatesPage.thumbnailErrorLabel || "Miniatura non disponibile"
+  });
+
+  bindCourseCards();
+  await openCourseDialogFromLocation();
+}
+
+function bindFilters() {
+  [
+    "paths-search",
+    "paths-program-filter",
+    "paths-category-filter",
+    "paths-status-filter"
+  ].forEach((id) => {
+    const element = document.getElementById(id);
+    if (!element) {
+      return;
+    }
+
+    element.addEventListener("input", () => {
+      void renderPrograms();
+    });
+    element.addEventListener("change", () => {
+      void renderPrograms();
+    });
+  });
+}
+
 async function main() {
   const { portfolio, linkedin } = await loadPayload();
   initShell("percorsi", portfolio, linkedin);
 
+  state.portfolio = portfolio;
   state.page = portfolio.config.site.pathsPage || {};
   state.certificatesPage = portfolio.config.site.certificatesPage || {};
   const page = state.page;
@@ -541,6 +915,14 @@ async function main() {
   setElementText("paths-title", page.title, "Tutti i percorsi");
   setElementText("paths-metrics-label", page.metricsLabel, "Stato generale");
   setElementText("paths-section-title", page.sectionTitle, "Programmi e corsi");
+  setElementText("paths-filters-title", page.filtersTitle, "Trova rapidamente");
+  setElementText("paths-filters-summary", page.filtersSummary, "");
+  setElementText("paths-search-label", page.searchLabel, "Cerca corso");
+  setElementText("paths-program-filter-label", page.programFilterLabel, "Percorso");
+  setElementText("paths-category-filter-label", page.categoryFilterLabel, "Categoria");
+  setElementText("paths-status-filter-label", page.statusFilterLabel, "Stato");
+  setElementText("paths-quick-filters-label", page.quickFiltersLabel, "Scorciatoie");
+  setElementPlaceholder("paths-search", page.searchPlaceholder, "Nome corso, categoria o parola chiave");
   document.getElementById("paths-summary").textContent = formatTemplate(
     page.summaryTemplate || "{completed} corsi completati su {total}, con {workFiles} materiali pratici gia consultabili online.",
     {
@@ -557,77 +939,12 @@ async function main() {
     metricCard(page.metrics?.certificates || "Certificati", stats.totalCertificates)
   ].join("");
 
-  document.getElementById("program-list").innerHTML = asArray(portfolio.programs).map((program) => `
-    <section class="panel path-program-panel" id="${program.slug}">
-      <div class="section-head">
-        <div>
-          <p class="panel-label">${escapeHtml(program.name)}</p>
-          <h2>${escapeHtml(program.completedCourses)}/${escapeHtml(program.totalCourses)} ${escapeHtml(page.programCompletedSuffix || "completati")}</h2>
-          ${program.summary ? `<p class="section-copy">${escapeHtml(program.summary)}</p>` : ""}
-        </div>
-        <div class="detail-list">
-          ${asArray(program.tags).map((tag) => `<span class="info-chip">${escapeHtml(tag)}</span>`).join("")}
-          <span class="info-chip">${escapeHtml(formatTemplate(page.progressLabelTemplate || "{percent}%", { percent: getCompletionPercent(program) }))}</span>
-          <span class="info-chip">${escapeHtml(formatTemplate(page.workFilesLabelTemplate || "{count} materiali", { count: program.workFiles }))}</span>
-          <span class="info-chip">${escapeHtml(formatTemplate(page.certificateFilesLabelTemplate || "{count} certificati", { count: program.certificateFiles }))}</span>
-        </div>
-      </div>
-      <div class="card-grid path-course-grid">
-        ${asArray(program.courses).map((course) => {
-          const courseKey = getCourseKey(program, course);
-          state.courseIndex.set(courseKey, { program, course });
-          const certificateFile = getCourseCertificate(course);
-          const certificateThumb = certificateFile
-            ? `
-              <div class="path-course-thumb-link" aria-hidden="true">
-                <div class="canvas-shell path-course-thumb">
-                  <span class="thumb-badge">${escapeHtml(page.certificateBadgeLabel || certificatesPage.badgeLabel || "Certificato")}</span>
-                  <canvas data-pdf="${certificateFile.webPath}"></canvas>
-                  <div class="thumb-loading">${escapeHtml(page.thumbnailLoadingLabel || certificatesPage.thumbnailLoadingLabel || "Carico miniatura...")}</div>
-                </div>
-              </div>
-            `
-            : `
-              <div class="canvas-shell path-course-thumb path-course-thumb-placeholder" aria-hidden="true">
-                <span class="thumb-badge">${escapeHtml(page.certificateBadgeLabel || certificatesPage.badgeLabel || "Certificato")}</span>
-                <div class="path-course-thumb-empty">${escapeHtml(page.certificateUnavailableLabel || "Non disponibile")}</div>
-              </div>
-            `;
-
-          return `
-            <article
-              class="course-card path-course-card${certificateFile ? " has-certificate-thumb" : ""}"
-              tabindex="0"
-              role="button"
-              aria-haspopup="dialog"
-              aria-label="${escapeHtml(`${course.name} — ${course.status}`)}"
-              data-course-dialog="${escapeHtml(courseKey)}"
-            >
-              <div class="path-course-head">
-                ${certificateThumb}
-              </div>
-              <div class="path-course-copy">
-                <h3>${escapeHtml(course.name)}</h3>
-              </div>
-              <div class="meta-line">
-                ${course.category ? `<span class="info-chip">${escapeHtml(course.category)}</span>` : ""}
-                ${renderStatus(course.status)}
-                ${course.certificateCount > 0 ? `<span class="info-chip">${escapeHtml(formatCountLabel(course.certificateCount, "certificato", "certificati"))}</span>` : ""}
-                ${course.workFileCount > 0 ? `<span class="info-chip">${escapeHtml(formatCountLabel(course.workFileCount, "materiale", "materiali"))}</span>` : ""}
-              </div>
-            </article>
-          `;
-        }).join("")}
-      </div>
-    </section>
-  `).join("");
-
-  observePdfThumbnails(Array.from(document.querySelectorAll(".path-course-thumb canvas")), {
-    errorLabel: page.thumbnailErrorLabel || certificatesPage.thumbnailErrorLabel || "Miniatura non disponibile"
-  });
-  bindCourseCards();
+  populateFilters(portfolio);
+  bindFilters();
+  renderQuickFilters();
   bindDialog();
-  await openCourseDialogFromLocation();
+  await renderPrograms();
+
 }
 
 main().catch((error) => {

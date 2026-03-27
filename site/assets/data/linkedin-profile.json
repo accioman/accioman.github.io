@@ -9,7 +9,7 @@
   "education": "Universita degli Studi di Firenze",
   "availability": "Disponibile per lavorare",
   "profileLanguage": "Italiano",
-  "summary": "Sviluppatore software con approccio pratico, orientato alla crescita tecnica e alla costruzione di competenze spendibili su progetti reali.",
+  "summary": "Software Development Engineer con approccio pratico, esperienza attuale in azienda e focus sulla costruzione di competenze spendibili su progetti reali.",
   "experience": [
     {
       "title": "Software Development Engineer",
@@ -19,7 +19,13 @@
       "duration": "2 anni e 5 mesi",
       "skills": [
         "Git",
-        "Flutter"
+        "Flutter",
+        "Web Services API"
+      ],
+      "highlights": [
+        "Esperienza attuale in sviluppo software in contesto aziendale.",
+        "Collaborazione tecnica con workflow Git e attenzione alla delivery.",
+        "Crescita trasversale tra sviluppo applicativo, API e pratiche di lavoro strutturate."
       ]
     }
   ],
@@ -45,7 +51,7 @@
     "JavaScript",
     "Web Services API"
   ],
-  "resumeSummary": "Software Development Engineer con esperienza in contesto aziendale e percorso in consolidamento tra software engineering, DevOps e IT project management.",
+  "resumeSummary": "Software Development Engineer con esperienza in azienda e portfolio verificabile che combina sviluppo applicativo, formazione IBM e case study di project delivery.",
   "contact": {
     "emails": [
       "accinno31@gmail.com",
@@ -113,5 +119,5 @@
       "title": "Analisi I"
     }
   ],
-  "updatedAt": "2026-03-27T19:14:46.7729805Z"
+  "updatedAt": "2026-03-27T21:09:42.9915375Z"
 }

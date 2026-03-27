@@ -156,6 +156,14 @@ select:focus-visible {
   flex: 1;
 }
 
+.site-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 .site-nav a,
 .header-link,
 .button,
@@ -197,6 +205,13 @@ select:focus-visible {
   font-weight: 600;
   color: var(--ink);
   background: rgba(255, 255, 255, 0.03);
+}
+
+.header-link-cta {
+  color: #0d1520;
+  border-color: rgba(225, 233, 246, 0.7);
+  background: linear-gradient(180deg, #f3f7ff, #dde6f4);
+  box-shadow: 0 10px 22px rgba(219, 230, 247, 0.08);
 }
 
 .header-link.has-avatar {
@@ -434,6 +449,10 @@ select:focus-visible {
   gap: 20px;
 }
 
+.home-recruiter-grid {
+  align-items: start;
+}
+
 .page-shell main > * {
   animation: page-enter 520ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -611,8 +630,27 @@ select:focus-visible {
 .panel-home-overview,
 .panel-home-profile,
 .panel-home-curated,
-.panel-home-skills {
+.panel-home-skills,
+.panel-home-proof,
+.panel-home-focus {
   padding: 26px;
+}
+
+.panel-home-proof {
+  background:
+    radial-gradient(circle at 100% 0, rgba(189, 208, 241, 0.08), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.014), transparent 40%),
+    rgba(11, 17, 25, 0.95);
+}
+
+.home-proof-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.home-proof-card {
+  min-height: 0;
 }
 
 .home-program-list {
@@ -987,9 +1025,9 @@ select:focus-visible {
 
 .home-program-ratio {
   font-family: "Sora", sans-serif;
-  font-size: 1.45rem;
-  line-height: 1;
-  letter-spacing: -0.05em;
+  font-size: 1.08rem;
+  line-height: 1.25;
+  letter-spacing: -0.03em;
 }
 
 .home-program-side-note {
@@ -1004,6 +1042,24 @@ select:focus-visible {
     radial-gradient(circle at 100% 0, rgba(189, 208, 241, 0.06), transparent 28%),
     linear-gradient(180deg, rgba(255, 255, 255, 0.012), transparent 42%),
     rgba(11, 17, 25, 0.95);
+}
+
+.home-target-role-list {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-bottom: 18px;
+}
+
+.home-target-role-card {
+  display: grid;
+  gap: 6px;
+}
+
+.home-target-role-card strong {
+  font-family: "Sora", sans-serif;
+  font-size: 0.98rem;
+  line-height: 1.35;
 }
 
 .home-portfolio-head {
@@ -1235,6 +1291,69 @@ select:focus-visible {
     rgba(11, 17, 25, 0.94);
 }
 
+.projects-main {
+  display: grid;
+  gap: 24px;
+}
+
+.page-hero-projects {
+  grid-template-columns: minmax(0, 1.12fr) minmax(280px, 0.88fr);
+  align-items: start;
+}
+
+.page-filter-grid,
+.projects-filter-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.paths-quick-filter-row {
+  display: grid;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.paths-quick-filter-row .panel-label {
+  margin-bottom: 0;
+}
+
+.paths-quick-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.paths-quick-filter {
+  min-height: 42px;
+}
+
+.paths-quick-filter.is-active {
+  color: #0d1520;
+  border-color: rgba(225, 233, 246, 0.7);
+  background: linear-gradient(180deg, #f3f7ff, #dde6f4);
+  box-shadow: 0 10px 22px rgba(219, 230, 247, 0.08);
+}
+
+.projects-layout {
+  grid-template-columns: minmax(320px, 0.78fr) minmax(0, 1.22fr);
+  align-items: start;
+}
+
+.projects-list-panel,
+.projects-preview-panel {
+  padding: 24px;
+}
+
+.projects-list-panel .project-list {
+  align-content: start;
+}
+
+.projects-preview-panel {
+  position: sticky;
+  top: 108px;
+}
+
 .path-program-panel {
   padding: 26px;
   background:
@@ -1342,6 +1461,13 @@ select:focus-visible {
 .path-course-card .meta-line {
   gap: 8px;
   margin-top: 4px;
+}
+
+.path-course-footer-link {
+  margin: 0;
+  color: #dce6f5;
+  font-size: 0.86rem;
+  font-weight: 700;
 }
 
 .path-course-dialog {
@@ -2100,6 +2226,31 @@ body.viewer-focus-mode #viewer-frame-panel {
   gap: 18px;
 }
 
+.project-card-selector {
+  width: 100%;
+  padding: 20px;
+  text-align: left;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.project-card-selector.is-active {
+  border-color: rgba(126, 167, 255, 0.36);
+  background:
+    linear-gradient(180deg, rgba(126, 167, 255, 0.12), transparent 52%),
+    rgba(255, 255, 255, 0.03);
+  box-shadow: 0 16px 36px rgba(10, 18, 30, 0.22);
+}
+
+.project-card-selector .meta-line {
+  margin-top: 12px;
+}
+
+.project-card-selector .project-case-study-meta {
+  align-items: end;
+}
+
 .project-case-study-head {
   display: flex;
   align-items: start;
@@ -2395,6 +2546,21 @@ body.viewer-focus-mode #viewer-frame-panel {
     position: static;
   }
 
+  .projects-preview-panel {
+    position: static;
+    top: auto;
+  }
+
+  .page-filter-grid,
+  .projects-filter-grid,
+  .home-proof-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-target-role-list {
+    grid-template-columns: 1fr;
+  }
+
   .home-case-study-list,
   .home-proof-list,
   .home-program-list {
@@ -2538,7 +2704,7 @@ body.viewer-focus-mode #viewer-frame-panel {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-areas:
-      "brand linkedin"
+      "brand actions"
       "nav nav";
     align-items: center;
     gap: 10px 12px;
@@ -2576,10 +2742,15 @@ body.viewer-focus-mode #viewer-frame-panel {
     font-size: 0.88rem;
   }
 
-  .header-link {
-    grid-area: linkedin;
+  .site-header-actions {
+    grid-area: actions;
     justify-self: end;
     align-self: start;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+
+  .site-header-actions .header-link {
     padding: 8px 12px;
     font-size: 0.84rem;
   }
@@ -2602,6 +2773,24 @@ body.viewer-focus-mode #viewer-frame-panel {
 
   .home-support-actions .button {
     width: 100%;
+  }
+
+  .page-filter-grid,
+  .projects-filter-grid,
+  .home-proof-grid,
+  .home-target-role-list {
+    grid-template-columns: 1fr;
+  }
+
+  .paths-quick-filter-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding-bottom: 2px;
+    scrollbar-width: none;
+  }
+
+  .paths-quick-filter-list::-webkit-scrollbar {
+    display: none;
   }
 
   .hero-copy h1 {

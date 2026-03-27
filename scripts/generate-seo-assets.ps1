@@ -109,7 +109,22 @@ $manifestJson = [ordered]@{
     start_url = "./index.html"
     display = "standalone"
     background_color = "#0c131c"
+    description = "Portfolio professionale con case study, CV e certificazioni verificabili."
     theme_color = Get-StringValue -Value (Get-ObjectPropertyValue -InputObject $siteConfig -Name "themeColor") -Default "#0c131c"
+    icons = @(
+        [ordered]@{
+            src = "./assets/images/icon.svg"
+            sizes = "any"
+            type = "image/svg+xml"
+            purpose = "any"
+        },
+        [ordered]@{
+            src = "./assets/images/favicon.svg"
+            sizes = "any"
+            type = "image/svg+xml"
+            purpose = "any"
+        }
+    )
 }
 
 $manifestJson | ConvertTo-Json -Depth 4 | Set-Content -LiteralPath (Join-Path $OutputRoot "site.webmanifest") -Encoding utf8

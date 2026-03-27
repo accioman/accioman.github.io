@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Anteprima del portfolio professionale di Marco Accinno">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f1d2c"/>
+      <stop offset="100%" stop-color="#060b11"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f3f7ff"/>
+      <stop offset="100%" stop-color="#c6d4ea"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.10"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.03"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <g opacity="0.22" stroke="#dce6f5">
+    <path d="M0 90h1200"/>
+    <path d="M0 180h1200"/>
+    <path d="M0 270h1200"/>
+    <path d="M0 360h1200"/>
+    <path d="M0 450h1200"/>
+    <path d="M140 0v630"/>
+    <path d="M320 0v630"/>
+    <path d="M500 0v630"/>
+    <path d="M680 0v630"/>
+    <path d="M860 0v630"/>
+    <path d="M1040 0v630"/>
+  </g>
+  <circle cx="1030" cy="120" r="120" fill="#8ea9d4" opacity="0.10"/>
+  <circle cx="180" cy="520" r="150" fill="#d6e3f8" opacity="0.06"/>
+  <rect x="74" y="68" width="1052" height="494" rx="34" fill="url(#panel)" stroke="rgba(255,255,255,0.12)"/>
+  <text x="108" y="148" fill="#dce6f5" font-family="Arial, Helvetica, sans-serif" font-size="28" letter-spacing="4">PORTFOLIO PROFESSIONALE</text>
+  <text x="108" y="252" fill="url(#accent)" font-family="Arial, Helvetica, sans-serif" font-size="78" font-weight="700">Marco Accinno</text>
+  <text x="108" y="318" fill="#f3f7ff" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700">Software Development Engineer</text>
+  <text x="108" y="388" fill="#d5e0f0" font-family="Arial, Helvetica, sans-serif" font-size="28">Case study verificabili, CV recruiter-first e deliverable consultabili online.</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-size="26" fill="#d5e0f0">
+    <rect x="108" y="440" width="250" height="64" rx="20" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="144" y="481">Case Study</text>
+    <rect x="382" y="440" width="188" height="64" rx="20" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="430" y="481">CV</text>
+    <rect x="594" y="440" width="250" height="64" rx="20" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.12)"/>
+    <text x="634" y="481">Percorsi</text>
+  </g>
+  <g transform="translate(902 214)">
+    <rect width="160" height="160" rx="38" fill="rgba(255,255,255,0.09)" stroke="rgba(255,255,255,0.16)"/>
+    <path d="M42 116V44h19l34 53 33-53h20v72h-18V73l-35 55-35-55v43H42z" fill="#f4f8ff"/>
+  </g>
+</svg>

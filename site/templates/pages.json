@@ -23,6 +23,17 @@
       "contentTemplate": "pages/percorsi.html"
     },
     {
+      "navId": "progetti",
+      "navLabel": "Case Study",
+      "showInNav": true,
+      "output": "progetti.html",
+      "title": "Case Study | Marco Accinno",
+      "description": "Case study verificabili con contesto, ruolo, risultato e deliverable consultabili online.",
+      "footerText": "Case study e deliverable verificabili del portfolio professionale.",
+      "scriptPath": "./assets/js/progetti.js",
+      "contentTemplate": "pages/progetti.html"
+    },
+    {
       "navId": "cv",
       "navLabel": "CV",
       "showInNav": true,

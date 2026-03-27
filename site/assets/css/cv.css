@@ -325,6 +325,52 @@
   color: #2f5e94;
 }
 
+.cv-strength-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cv-strength-card {
+  padding: 12px 14px;
+  border: 1px solid #dde4ec;
+  border-radius: 14px;
+  background: #f7f9fc;
+}
+
+.cv-strength-card p {
+  margin: 0;
+  line-height: 1.58;
+}
+
+.cv-role-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.cv-role-chip {
+  padding: 10px 14px;
+  border: 1px solid #dbe3ec;
+  border-radius: 999px;
+  background: #f4f7fb;
+  color: #27415d;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.cv-highlight-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 6px;
+  color: #253445;
+}
+
+.cv-highlight-list li {
+  line-height: 1.54;
+}
+
 .cv-section p {
   margin: 0;
   line-height: 1.58;
@@ -471,6 +517,10 @@
 @media (max-width: 760px) {
   .cv-toolbar {
     padding: 16px;
+  }
+
+  .cv-strength-grid {
+    grid-template-columns: 1fr;
   }
 
   .cv-content {

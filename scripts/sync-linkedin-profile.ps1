@@ -62,6 +62,11 @@ if ($linkedinConfig.PSObject.Properties.Name -contains "experience" -and $null -
                 $entry.skills = $skills
             }
 
+            $highlights = if ($_.PSObject.Properties.Name -contains "highlights" -and $null -ne $_.highlights) { @($_.highlights) } else { @() }
+            if (@($highlights).Length -gt 0) {
+                $entry.highlights = $highlights
+            }
+
             $entry
         }
     )

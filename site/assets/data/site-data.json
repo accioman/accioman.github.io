@@ -1,13 +1,13 @@
 {
-  "GeneratedAt": "2026-03-27T19:14:46.4363415Z",
+  "GeneratedAt": "2026-03-27T21:09:42.8766618Z",
   "GeneratedAtLocal": "27/03/2026",
   "Config": {
-    "title": "Portfolio Formativo",
-    "intro": "Portfolio professionale che rende verificabili esperienza, certificazioni IBM e deliverable di project planning.",
+    "title": "Portfolio Professionale",
+    "intro": "Portfolio professionale con esperienza aziendale, case study verificabili, certificazioni IBM e deliverable consultabili online.",
     "profileHighlights": [
-      "Esperienza attuale come Software Development Engineer in SIS Informatica.",
-      "Portfolio verificabile con certificati, deliverable e progressione reale tra software engineering e IT project delivery.",
-      "Focus su pianificazione, stakeholder management, risk management e basi DevOps."
+      "Esperienza attuale come Software Development Engineer in contesto aziendale.",
+      "Portfolio verificabile con certificati IBM, case study e deliverable consultabili direttamente dal browser.",
+      "Profilo in crescita tra sviluppo software, DevOps foundations e IT project delivery."
     ],
     "skillSections": [
       {
@@ -47,7 +47,12 @@
       "Agile Delivery Support"
     ],
     "resume": {
-      "summary": "Software Development Engineer con esperienza in contesto aziendale e percorso in consolidamento tra software engineering, DevOps e IT project management.",
+      "summary": "Software Development Engineer con esperienza in azienda e portfolio verificabile che combina sviluppo applicativo, formazione IBM e case study di project delivery.",
+      "recruiterHighlights": [
+        "Esperienza attuale in sviluppo software in contesto aziendale.",
+        "Portfolio con certificazioni IBM e deliverable reali consultabili online.",
+        "Profilo ponte tra sviluppo software, DevOps foundations e IT project delivery."
+      ],
       "contact": {
         "emails": [
           "accinno31@gmail.com",
@@ -120,12 +125,13 @@
       "ownerName": "Marco Accinno",
       "brandMonogram": "MA",
       "role": "Software Development Engineer",
-      "baseUrl": "https://accioman.github.io/Corsi-coursera",
+      "baseUrl": "https://accioman.github.io",
       "themeColor": "#0c131c",
-      "socialImagePath": "/assets/images/linkedin-profile.jpg",
+      "socialImagePath": "/assets/images/og-card.svg",
       "seo": {
         "locale": "it_IT",
         "robots": "index,follow",
+        "socialImageAlt": "Anteprima del portfolio professionale di Marco Accinno",
         "keywords": [
           "Marco Accinno",
           "Software Development Engineer",
@@ -142,37 +148,46 @@
         "websiteId": "",
         "domain": ""
       },
-      "tagline": "Software Development Engineer con esperienza aziendale, formazione IBM e materiali consultabili.",
-      "heroSummary": "Esperienza aziendale, percorsi IBM e deliverable consultabili in un unico hub ordinato.",
+      "tagline": "Software Development Engineer con prove verificabili tra sviluppo, delivery e formazione IBM.",
+      "heroSummary": "Ruolo attuale in azienda, case study consultabili e certificazioni IBM in un portfolio pensato per recruiter e hiring manager.",
+      "headerPrimaryCta": {
+        "label": "Apri CV",
+        "href": "./cv.html"
+      },
       "homePage": {
-        "eyebrow": "Portfolio professionale",
+        "eyebrow": "Software engineering con prove verificabili",
         "heroTitle": "Marco Accinno",
-        "heroSummary": "Software Development Engineer con esperienza in contesto aziendale e un hub unico per consultare percorsi, certificati e materiali di lavoro.",
+        "heroSummary": "Software Development Engineer con esperienza attuale in azienda, portfolio verificabile e una traiettoria che connette sviluppo software, DevOps foundations e IT project delivery.",
         "primaryCta": {
-          "label": "Apri percorsi",
-          "href": "./percorsi.html"
+          "label": "Apri case study",
+          "href": "./progetti.html"
         },
         "secondaryCta": {
           "label": "Apri CV",
           "href": "./cv.html"
         },
         "experienceKicker": "Esperienza attuale",
-        "experienceSummary": "Ruolo in contesto aziendale con focus su sviluppo software, collaborazione tecnica e crescita sulla delivery IT.",
+        "experienceSummary": "Ruolo in contesto aziendale con focus su sviluppo software, collaborazione tecnica, workflow strutturati e crescita sulla delivery IT.",
         "experienceLinkLabel": "LinkedIn",
         "programSection": {
-          "title": "Percorsi principali",
+          "title": "Percorsi di crescita",
           "linkLabel": "Apri percorsi",
           "href": "./percorsi.html"
+        },
+        "caseStudiesSection": {
+          "title": "Case study in evidenza",
+          "linkLabel": "Apri case study",
+          "href": "./progetti.html"
         },
         "certificatesSection": {
-          "title": "Certificati recenti",
-          "linkLabel": "Apri percorsi",
-          "href": "./percorsi.html"
+          "title": "Certificazioni selezionate",
+          "linkLabel": "Apri case study",
+          "href": "./progetti.html"
         },
         "projectsSection": {
-          "title": "Corsi con deliverable",
-          "linkLabel": "Apri percorsi",
-          "href": "./percorsi.html"
+          "title": "Deliverable verificabili",
+          "linkLabel": "Apri case study",
+          "href": "./progetti.html"
         },
         "skillsSection": {
           "title": "Competenze e direzione",
@@ -210,23 +225,44 @@
         ]
       },
       "pathsPage": {
-        "eyebrow": "Panoramica programmi",
-        "title": "Programmi e corsi",
+        "eyebrow": "Percorsi, corsi e prove",
+        "title": "Percorsi e prove",
         "metricsLabel": "Stato generale",
         "sectionTitle": "Programmi e corsi",
-        "summaryTemplate": "{completed} corsi completati su {total}, con {workFiles} materiali pratici gia consultabili.",
+        "summaryTemplate": "{completed} corsi completati su {total}. Filtra per evidenze, stato o area per trovare rapidamente certificati e deliverable consultabili.",
         "metrics": {
           "completed": "Completati",
           "ready": "Pronti",
           "inProgress": "In corso",
           "certificates": "Certificati"
         },
+        "filtersTitle": "Trova rapidamente",
+        "filtersSummary": "Usa ricerca, scorciatoie e filtri per arrivare subito ai corsi piu rilevanti per un recruiter.",
+        "searchLabel": "Cerca corso",
+        "searchPlaceholder": "Nome corso, categoria o parola chiave",
+        "programFilterLabel": "Percorso",
+        "categoryFilterLabel": "Categoria",
+        "statusFilterLabel": "Stato",
+        "allProgramsLabel": "Tutti i percorsi",
+        "allCategoriesLabel": "Tutte le categorie",
+        "allStatusesLabel": "Tutti gli stati",
+        "quickFiltersLabel": "Scorciatoie",
+        "quickFilters": {
+          "all": "Tutti",
+          "featured": "In evidenza",
+          "evidence": "Con materiali",
+          "completed": "Completati",
+          "caseStudy": "Case study"
+        },
+        "emptyState": "Nessun corso corrisponde ai filtri correnti.",
         "programCompletedSuffix": "completati",
         "progressLabelTemplate": "{percent}%",
         "workFilesLabelTemplate": "{count} materiali",
         "certificateFilesLabelTemplate": "{count} certificati",
         "certificateUnavailableLabel": "Non disponibile",
         "dialogSummaryFallback": "Certificato e materiali del corso consultabili direttamente nel dialog.",
+        "courseSummaryFallback": "Apri il dettaglio per consultare certificato, materiali e anteprima.",
+        "openDetailsLabel": "Apri dettagli",
         "previewFullscreenLabel": "Schermo intero",
         "previewExitFullscreenLabel": "Esci dallo schermo intero",
         "materialsAvailableText": "Materiali consultabili nei dettagli del corso.",
@@ -252,22 +288,39 @@
         "viewerButtonLabel": "Viewer"
       },
       "projectsPage": {
-        "eyebrow": "Case study",
-        "title": "Progetti e case study",
+        "eyebrow": "Case study verificabili",
+        "title": "Case study e deliverable",
         "filtersLabel": "Filtri",
         "searchLabel": "Cerca",
         "searchPlaceholder": "Corso, file o programma",
         "programLabel": "Percorso",
-        "typeLabel": "Tipo file",
-        "statusLabel": "Stato corso",
+        "typeLabel": "Categoria",
+        "statusLabel": "Stato",
         "allProgramsLabel": "Tutti",
-        "allTypesLabel": "Tutti",
+        "allTypesLabel": "Tutte",
         "allStatusesLabel": "Tutti",
         "sectionTitle": "Case study consultabili",
-        "sectionCopy": "Ogni progetto raccoglie contesto, obiettivo, ruolo, risultato e deliverable apribili in preview.",
-        "summaryTemplate": "{count} case study con deliverable verificabili tra PDF, documenti e fogli di lavoro.",
+        "sectionCopy": "Ogni case study raccoglie contesto, obiettivo, ruolo, risultato e deliverable apribili in preview.",
+        "summaryTemplate": "{count} case study con deliverable verificabili tra PDF, documenti, fogli di lavoro e immagini.",
         "emptyState": "Nessun progetto corrisponde ai filtri correnti.",
         "fileCountLabelTemplate": "{count} file",
+        "metricsLabel": "Snapshot",
+        "metrics": {
+          "projects": "Case study",
+          "deliverables": "Deliverable",
+          "programs": "Percorsi",
+          "previewable": "Preview online"
+        },
+        "previewLabel": "Preview del deliverable",
+        "selectedLabel": "Case study selezionato",
+        "primaryCta": {
+          "label": "Apri CV",
+          "href": "./cv.html"
+        },
+        "secondaryCta": {
+          "label": "Apri percorsi",
+          "href": "./percorsi.html"
+        },
         "caseStudyLabels": {
           "context": "Contesto",
           "objective": "Obiettivo",
@@ -278,40 +331,43 @@
           "files": "File consultabili",
           "evidence": "Evidenze",
           "primaryFile": "File guida",
-          "openViewer": "Apri nel viewer"
+          "openViewer": "Apri percorso"
         },
         "typeLabels": {
-          "pdf": "PDF",
-          "image": "Immagine",
-          "document": "Documento",
-          "spreadsheet": "Foglio",
-          "presentation": "Presentazione",
-          "file": "File"
+          "planning": "Planning",
+          "stakeholders": "Stakeholder",
+          "risk management": "Risk Management",
+          "capstone": "Capstone",
+          "agile": "Agile",
+          "it foundations": "IT Foundations",
+          "technical bridge": "Technical Bridge",
+          "certification prep": "Certification Prep",
+          "career development": "Career Development"
         }
       },
       "cvPage": {
         "eyebrow": "Curriculum vitae",
         "title": "Curriculum Vitae",
-        "summary": "Versione documento del profilo professionale, pronta per stampa e salvataggio in PDF.",
+        "summary": "Versione recruiter-first del profilo professionale, con esperienza, punti di forza, certificazioni e link ai deliverable verificabili.",
         "downloadLabel": "Scarica PDF",
-        "pdfDownloadLabel": "Apri PDF diretto",
+        "pdfDownloadLabel": "Apri PDF",
         "pdfPath": "./assets/files/cv-marco-accinno.pdf",
         "portfolioLabel": "Apri portfolio",
         "linkedinLabel": "Profilo LinkedIn",
-        "printHint": "Usa Salva come PDF dal dialogo di stampa.",
+        "printHint": "Se il PDF non e disponibile, puoi usare anche Salva come PDF dal browser.",
         "headerKicker": "Curriculum vitae",
-        "contactTitle": "Dati personali",
+        "contactTitle": "Contatti",
         "personalTitle": "Anagrafica",
         "languagesTitle": "Lingue",
         "keySkillsTitle": "Competenze chiave",
         "targetRolesTitle": "Ruoli di riferimento",
-        "profileTitle": "Profilo",
-        "experienceTitle": "Esperienze lavorative",
+        "profileTitle": "Sintesi",
+        "experienceTitle": "Esperienza professionale",
         "educationTitle": "Formazione",
-        "universityCoursesTitle": "Corsi universitari",
-        "certificationsTitle": "Certificati e percorsi",
-        "projectsTitle": "Progetti e materiali",
-        "technicalTitle": "Competenze tecniche",
+        "universityCoursesTitle": "Fondamenti universitari",
+        "certificationsTitle": "Certificazioni e percorsi",
+        "projectsTitle": "Case study e deliverable",
+        "technicalTitle": "Competenze e strumenti",
         "programSummaryTemplate": "{completed}/{total} corsi completati",
         "certificateSummaryTemplate": "{count} certificati completati",
         "workSummaryTemplate": "{count} materiali pratici",
@@ -321,8 +377,8 @@
           "certificates": "Certificati",
           "projects": "Progetti"
         },
-        "emptyProjectsText": "I deliverable principali sono disponibili nella sezione progetti del portfolio.",
-        "privacyNote": "Autorizzo il trattamento dei miei dati personali ai sensi del D.lgs. 196 del 30 giugno 2003."
+        "emptyProjectsText": "I case study principali sono disponibili nella pagina dedicata e nella sezione Percorsi.",
+        "privacyNote": "Portfolio e deliverable verificabili disponibili online."
       },
       "viewerPage": {
         "eyebrow": "Visualizzazione dedicata",
@@ -345,7 +401,7 @@
         "openRelatedLabel": "Apri"
       },
       "documentActions": {
-        "openViewerLabel": "Apri percorsi",
+        "openViewerLabel": "Apri percorso",
         "openFileLabel": "Apri file"
       }
     },
@@ -358,7 +414,7 @@
       "education": "Universita degli Studi di Firenze",
       "availability": "Disponibile per lavorare",
       "profileLanguage": "Italiano",
-      "summary": "Sviluppatore software con approccio pratico, orientato alla crescita tecnica e alla costruzione di competenze spendibili su progetti reali.",
+      "summary": "Software Development Engineer con approccio pratico, esperienza attuale in azienda e focus sulla costruzione di competenze spendibili su progetti reali.",
       "experience": [
         {
           "title": "Software Development Engineer",
@@ -368,7 +424,13 @@
           "duration": "2 anni e 5 mesi",
           "skills": [
             "Git",
-            "Flutter"
+            "Flutter",
+            "Web Services API"
+          ],
+          "highlights": [
+            "Esperienza attuale in sviluppo software in contesto aziendale.",
+            "Collaborazione tecnica con workflow Git e attenzione alla delivery.",
+            "Crescita trasversale tra sviluppo applicativo, API e pratiche di lavoro strutturate."
           ]
         }
       ],

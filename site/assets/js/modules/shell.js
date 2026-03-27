@@ -10,10 +10,35 @@ export function initShell(activePage, portfolio, linkedin) {
   configureDocumentActions(portfolio?.config?.site?.documentActions || {});
 
   const linkedinLink = document.getElementById("header-linkedin");
+  const headerPrimaryCta = document.getElementById("header-primary-cta");
   if (linkedinLink && linkedin?.profileUrl) {
     linkedinLink.href = linkedin.profileUrl;
   } else if (linkedinLink && portfolio?.config?.linkedin?.profileUrl) {
     linkedinLink.href = portfolio.config.linkedin.profileUrl;
+  }
+
+  if (headerPrimaryCta) {
+    const siteConfig = portfolio?.config?.site || {};
+    const headerCtaConfig = siteConfig.headerPrimaryCta || {};
+    const cvPageConfig = siteConfig.cvPage || {};
+    const pdfPath = cvPageConfig.pdfPath || "./assets/files/cv-marco-accinno.pdf";
+
+    headerPrimaryCta.textContent = headerCtaConfig.label || "Apri CV";
+    headerPrimaryCta.href = headerCtaConfig.href || "./cv.html";
+
+    fetch(pdfPath, { method: "HEAD" })
+      .then((response) => {
+        if (!response.ok) {
+          return;
+        }
+
+        headerPrimaryCta.textContent = cvPageConfig.downloadLabel || "Scarica PDF";
+        headerPrimaryCta.href = pdfPath;
+        headerPrimaryCta.setAttribute("download", "");
+      })
+      .catch(() => {
+        // Fallback already configured to the CV page.
+      });
   }
 
   const headerPhotoUrl = linkedin?.photoUrl || "";
@@ -27,6 +52,6 @@ export function initShell(activePage, portfolio, linkedin) {
 
   const footerMeta = document.getElementById("footer-meta");
   if (footerMeta) {
-    footerMeta.textContent = `Ultimo aggiornamento: ${portfolio.generatedAtLocal}`;
+    footerMeta.textContent = `Aggiornato ${portfolio.generatedAtLocal}`;
   }
 }

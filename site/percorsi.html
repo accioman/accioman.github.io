@@ -9,25 +9,28 @@
   <meta name="author" content="Marco Accinno">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#0c131c">
-  <link rel="canonical" href="https://accioman.github.io/Corsi-coursera/percorsi.html">
+  <link rel="canonical" href="https://accioman.github.io/percorsi.html">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="it_IT">
   <meta property="og:site_name" content="Marco Accinno">
   <meta property="og:title" content="Percorsi | Marco Accinno">
   <meta property="og:description" content="Panoramica dei percorsi IBM, dei corsi completati e dei materiali pratici disponibili nel portfolio.">
-  <meta property="og:url" content="https://accioman.github.io/Corsi-coursera/percorsi.html">
-  <meta property="og:image" content="https://accioman.github.io/Corsi-coursera/assets/images/linkedin-profile.jpg">
+  <meta property="og:url" content="https://accioman.github.io/percorsi.html">
+  <meta property="og:image" content="https://accioman.github.io/assets/images/og-card.svg">
+  <meta property="og:image:alt" content="Anteprima del portfolio professionale di Marco Accinno">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Percorsi | Marco Accinno">
   <meta name="twitter:description" content="Panoramica dei percorsi IBM, dei corsi completati e dei materiali pratici disponibili nel portfolio.">
-  <meta name="twitter:image" content="https://accioman.github.io/Corsi-coursera/assets/images/linkedin-profile.jpg">
-  <link rel="icon" type="image/jpeg" href="./assets/images/linkedin-profile.jpg">
+  <meta name="twitter:image" content="https://accioman.github.io/assets/images/og-card.svg">
+  <meta name="twitter:image:alt" content="Anteprima del portfolio professionale di Marco Accinno">
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="./assets/images/icon.svg">
   <link rel="manifest" href="./site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/styles.css">
-  <script type="application/ld+json">{"isPartOf":{"name":"Marco Accinno","url":"https://accioman.github.io/Corsi-coursera/","@type":"WebSite"},"description":"Panoramica dei percorsi IBM, dei corsi completati e dei materiali pratici disponibili nel portfolio.","@context":"https://schema.org","url":"https://accioman.github.io/Corsi-coursera/percorsi.html","@type":"WebPage","name":"Percorsi | Marco Accinno","about":{"image":"https://accioman.github.io/Corsi-coursera/assets/images/linkedin-profile.jpg","name":"Marco Accinno","jobTitle":"Software Development Engineer","@type":"Person"}}</script>
+  <script type="application/ld+json">{"about":{"sameAs":["https://www.linkedin.com/in/marco-accinno-214978276/"],"jobTitle":"Software Development Engineer","image":"https://accioman.github.io/assets/images/og-card.svg","@type":"Person","name":"Marco Accinno"},"name":"Percorsi | Marco Accinno","url":"https://accioman.github.io/percorsi.html","description":"Panoramica dei percorsi IBM, dei corsi completati e dei materiali pratici disponibili nel portfolio.","@type":"WebPage","isPartOf":{"url":"https://accioman.github.io/","@type":"WebSite","name":"Marco Accinno"},"@context":"https://schema.org"}</script>
   
 </head>
 <body>
@@ -37,9 +40,13 @@
   <nav class="site-nav" aria-label="Navigazione principale">
         <a href="./index.html" data-nav="home">Home</a>
     <a href="./percorsi.html" data-nav="percorsi">Percorsi</a>
+    <a href="./progetti.html" data-nav="progetti">Case Study</a>
     <a href="./cv.html" data-nav="cv">CV</a>
   </nav>
-  <a class="header-link" id="header-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+  <div class="site-header-actions">
+    <a class="header-link header-link-cta" id="header-primary-cta" href="./cv.html">Apri CV</a>
+    <a class="header-link" id="header-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+  </div>
 </header>
 
     <main class="catalog-main">
@@ -55,11 +62,43 @@
     </aside>
   </section>
 
+  <section class="panel page-filter-panel">
+    <div class="section-head">
+      <div>
+        <h2 id="paths-filters-title">Trova rapidamente</h2>
+        <p class="section-copy" id="paths-filters-summary"></p>
+      </div>
+    </div>
+    <div class="filter-grid page-filter-grid paths-filter-grid">
+      <label>
+        <span id="paths-search-label">Cerca corso</span>
+        <input id="paths-search" type="search" placeholder="Nome corso, categoria o parola chiave">
+      </label>
+      <label>
+        <span id="paths-program-filter-label">Percorso</span>
+        <select id="paths-program-filter"></select>
+      </label>
+      <label>
+        <span id="paths-category-filter-label">Categoria</span>
+        <select id="paths-category-filter"></select>
+      </label>
+      <label>
+        <span id="paths-status-filter-label">Stato</span>
+        <select id="paths-status-filter"></select>
+      </label>
+    </div>
+    <div class="paths-quick-filter-row">
+      <p class="panel-label" id="paths-quick-filters-label">Scorciatoie</p>
+      <div class="paths-quick-filter-list" id="paths-quick-filters"></div>
+    </div>
+  </section>
+
   <section class="panel page-collection-panel">
     <div class="section-head">
       <h2 id="paths-section-title">Programmi e corsi</h2>
     </div>
     <div class="program-list" id="program-list"></div>
+    <p class="empty-state hidden" id="paths-empty-state"></p>
   </section>
 
   <dialog class="path-course-dialog" id="path-course-dialog">

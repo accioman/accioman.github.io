@@ -11,11 +11,43 @@
     </aside>
   </section>
 
+  <section class="panel page-filter-panel">
+    <div class="section-head">
+      <div>
+        <h2 id="paths-filters-title">Trova rapidamente</h2>
+        <p class="section-copy" id="paths-filters-summary"></p>
+      </div>
+    </div>
+    <div class="filter-grid page-filter-grid paths-filter-grid">
+      <label>
+        <span id="paths-search-label">Cerca corso</span>
+        <input id="paths-search" type="search" placeholder="Nome corso, categoria o parola chiave">
+      </label>
+      <label>
+        <span id="paths-program-filter-label">Percorso</span>
+        <select id="paths-program-filter"></select>
+      </label>
+      <label>
+        <span id="paths-category-filter-label">Categoria</span>
+        <select id="paths-category-filter"></select>
+      </label>
+      <label>
+        <span id="paths-status-filter-label">Stato</span>
+        <select id="paths-status-filter"></select>
+      </label>
+    </div>
+    <div class="paths-quick-filter-row">
+      <p class="panel-label" id="paths-quick-filters-label">Scorciatoie</p>
+      <div class="paths-quick-filter-list" id="paths-quick-filters"></div>
+    </div>
+  </section>
+
   <section class="panel page-collection-panel">
     <div class="section-head">
       <h2 id="paths-section-title">Programmi e corsi</h2>
     </div>
     <div class="program-list" id="program-list"></div>
+    <p class="empty-state hidden" id="paths-empty-state"></p>
   </section>
 
   <dialog class="path-course-dialog" id="path-course-dialog">

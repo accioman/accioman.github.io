@@ -36,6 +36,10 @@ function setTextForSelector(selector, value, fallback = "") {
 }
 
 function renderLinkList(items) {
+  if (!items.length) {
+    return "";
+  }
+
   return `
     <ul class="cv-sidebar-list">
       ${items.map((item) => `
@@ -50,6 +54,10 @@ function renderLinkList(items) {
 }
 
 function renderDetailList(items) {
+  if (!items.length) {
+    return "";
+  }
+
   return `
     <ul class="cv-sidebar-list">
       ${items.map((item) => `
@@ -81,6 +89,28 @@ function renderLanguageList(items) {
   `;
 }
 
+function renderStrengthsList(items) {
+  if (!items.length) {
+    return `<p class="muted">Nessun punto di forza disponibile.</p>`;
+  }
+
+  return items.map((item) => `
+    <article class="cv-strength-card">
+      <p>${escapeHtml(item)}</p>
+    </article>
+  `).join("");
+}
+
+function renderTargetRoles(items) {
+  if (!items.length) {
+    return `<p class="muted">Nessun ruolo di riferimento disponibile.</p>`;
+  }
+
+  return items.map((item) => `
+    <article class="cv-role-chip">${escapeHtml(item)}</article>
+  `).join("");
+}
+
 function renderTimeline(items, type) {
   const emptyText = type === "experience"
     ? "Nessuna esperienza disponibile."
@@ -103,7 +133,12 @@ function renderTimeline(items, type) {
           ${[entry.employmentType, entry.period, entry.duration].filter(Boolean).length
             ? `<p class="cv-inline-meta">${escapeHtml([entry.employmentType, entry.period, entry.duration].filter(Boolean).join(" • "))}</p>`
             : ""}
-          ${asArray(entry.skills).length ? `<p class="cv-inline-note">${escapeHtml(asArray(entry.skills).join(", "))}</p>` : ""}
+          ${asArray(entry.highlights).length ? `
+            <ul class="cv-highlight-list">
+              ${asArray(entry.highlights).map((highlight) => `<li>${escapeHtml(highlight)}</li>`).join("")}
+            </ul>
+          ` : ""}
+          ${asArray(entry.skills).length ? `<p class="cv-inline-note">Competenze: ${escapeHtml(asArray(entry.skills).join(", "))}</p>` : ""}
         </article>
       `).join("")}
     </div>
@@ -116,6 +151,10 @@ function renderProgramCards(programs, page) {
       <h4>${escapeHtml(program.name)}</h4>
       ${program.summary ? `<p>${escapeHtml(program.summary)}</p>` : ""}
       <p class="cv-inline-meta">${escapeHtml([
+        formatTemplate(page.programSummaryTemplate || "{completed}/{total} corsi completati", {
+          completed: program.completedCourses,
+          total: program.totalCourses
+        }),
         formatTemplate(page.certificateSummaryTemplate || "{count} certificati completati", {
           count: program.certificateFiles
         }),
@@ -154,15 +193,17 @@ function renderProjectList(projects, emptyText) {
   return `
     <div class="cv-project-list">
       ${projects.map((project) => {
+        const caseStudy = project.caseStudy || {};
         return `
           <article class="cv-project-card">
             <div class="cv-project-head">
               <div>
-                <h4>${escapeHtml(project.name)}</h4>
+                <h4>${escapeHtml(caseStudy.title || project.name)}</h4>
                 <p>${escapeHtml([project.programName, project.category, project.status].filter(Boolean).join(" • "))}</p>
               </div>
             </div>
-            <p>${escapeHtml(project.summary || project.materialPreview || project.evidence || "")}</p>
+            <p>${escapeHtml(caseStudy.lead || project.summary || project.materialPreview || project.evidence || "")}</p>
+            ${caseStudy.outcome ? `<p class="cv-inline-note">Risultato: ${escapeHtml(caseStudy.outcome)}</p>` : ""}
             <div class="cv-project-footer">
               <span class="cv-inline-note">${escapeHtml(project.evidence || "")}</span>
             </div>
@@ -213,6 +254,8 @@ async function main() {
   const personalDetails = asArray(resume.personalDetails || linkedin?.personalDetails);
   const languages = asArray(resume.languages || linkedin?.languages);
   const universityCourses = asArray(resume.universityCourses || linkedin?.universityCourses);
+  const recruiterHighlights = asArray(resume.recruiterHighlights);
+  const targetRoles = asArray(portfolio.config.targetRoles);
   const photoUrl = linkedin?.photoUrl || portfolio.config.linkedin?.photoPath || "";
   const summary = resume.summary || linkedin?.resumeSummary || linkedin?.summary || portfolio.config.intro || "";
   const portfolioUrl = "./index.html";
@@ -225,13 +268,15 @@ async function main() {
   const featuredProjects = (asArray(portfolio.library?.featuredProjects).length
     ? asArray(portfolio.library.featuredProjects)
     : asArray(portfolio.library?.projects)).slice(0, 4);
-  const certificates = asArray(portfolio.library?.certificates);
+  const featuredCertificates = (asArray(portfolio.library?.featuredCertificates).length
+    ? asArray(portfolio.library.featuredCertificates)
+    : asArray(portfolio.library?.certificates)).slice(0, 6);
 
   document.title = `${site.ownerName} | Curriculum vitae`;
   setElementText("cv-eyebrow", page.eyebrow, "Curriculum vitae");
   setElementText("cv-page-title", page.title, "Curriculum Vitae");
-  setElementText("cv-page-summary", page.summary, "Versione documento del profilo professionale, pronta per stampa e salvataggio in PDF.");
-  setElementText("cv-print-hint", page.printHint, "Il pulsante apre la stampa del browser, pronta per Salva come PDF.");
+  setElementText("cv-page-summary", page.summary, "Versione recruiter-first del profilo professionale.");
+  setElementText("cv-print-hint", page.printHint, "");
   setElementText("cv-header-kicker", page.headerKicker, "Curriculum vitae");
   setElementText("cv-name", linkedin?.fullName || site.ownerName, site.ownerName);
   setElementText("cv-headline", linkedin?.headline || site.role, site.role);
@@ -241,18 +286,19 @@ async function main() {
   setElementText("cv-lead", summary, portfolio.config.intro || "");
   setElementLink("cv-portfolio-link", { label: page.portfolioLabel, href: portfolioUrl }, "Apri portfolio", portfolioUrl);
   setElementLink("cv-linkedin-link", { label: page.linkedinLabel, href: linkedinUrl }, "Profilo LinkedIn", linkedinUrl);
-  setElementLink("cv-pdf-link", { label: page.pdfDownloadLabel, href: pdfPath }, "Apri PDF diretto", pdfPath);
 
-  setElementText("cv-contact-title", page.contactTitle, "Dati personali");
+  setElementText("cv-contact-title", page.contactTitle, "Contatti");
   setElementText("cv-languages-title", page.languagesTitle, "Lingue");
-  setElementText("cv-profile-title", page.profileTitle, "Profilo");
-  setElementText("cv-experience-title", page.experienceTitle, "Esperienze lavorative");
+  setElementText("cv-profile-title", page.profileTitle, "Sintesi");
+  setElementText("cv-strengths-title", page.keySkillsTitle, "Punti di forza");
+  setElementText("cv-experience-title", page.experienceTitle, "Esperienza professionale");
   setElementText("cv-education-title", page.educationTitle, "Formazione");
-  setElementText("cv-university-courses-title", page.universityCoursesTitle, "Corsi universitari");
-  setElementText("cv-certifications-title", page.certificationsTitle, "Certificati e percorsi");
-  setElementText("cv-projects-title", page.projectsTitle, "Progetti e materiali");
-  setElementText("cv-technical-title", page.technicalTitle, "Competenze tecniche");
-  setElementText("cv-privacy-note", page.privacyNote, "Autorizzo il trattamento dei miei dati personali ai sensi del D.lgs. 196 del 30 giugno 2003.");
+  setElementText("cv-target-roles-title", page.targetRolesTitle, "Ruoli di riferimento");
+  setElementText("cv-university-courses-title", page.universityCoursesTitle, "Fondamenti universitari");
+  setElementText("cv-certifications-title", page.certificationsTitle, "Certificazioni e percorsi");
+  setElementText("cv-projects-title", page.projectsTitle, "Case study e deliverable");
+  setElementText("cv-technical-title", page.technicalTitle, "Competenze e strumenti");
+  setElementText("cv-privacy-note", page.privacyNote, "");
 
   const photoElement = document.getElementById("cv-photo");
   if (photoUrl) {
@@ -267,47 +313,90 @@ async function main() {
     portfolio.generatedAtLocal ? `<span>Aggiornato ${escapeHtml(portfolio.generatedAtLocal)}</span>` : ""
   ].filter(Boolean).join("");
 
-  const emails = asArray(contactConfig.emails);
+  const primaryEmail = asArray(contactConfig.emails)[0];
   const contactItems = [
-    ...emails.map((email, index) => ({
-      label: index === 0 ? "Email" : "Email lavoro",
-      value: email,
-      href: `mailto:${email}`
-    })),
-    {
-      label: "LinkedIn",
-      value: linkedinUrl.replace("https://", "").replace(/\/$/, ""),
-      href: linkedinUrl,
-      external: true
-    }
-  ];
+    primaryEmail
+      ? {
+          label: "Email",
+          value: primaryEmail,
+          href: `mailto:${primaryEmail}`
+        }
+      : null,
+    linkedinUrl
+      ? {
+          label: "LinkedIn",
+          value: linkedinUrl.replace("https://", "").replace(/\/$/, ""),
+          href: linkedinUrl,
+          external: true
+        }
+      : null,
+    linkedin?.location
+      ? {
+          label: "Localita",
+          value: linkedin.location
+        }
+      : null
+  ].filter(Boolean);
+  const personalItems = personalDetails.filter((item) => ["Residenza", "Patenti"].includes(item.label));
+
   document.getElementById("cv-contact-list").innerHTML = renderLinkList(contactItems);
-  document.getElementById("cv-personal-list").innerHTML = renderDetailList(personalDetails);
+  document.getElementById("cv-personal-list").innerHTML = renderDetailList([
+    ...(linkedin?.availability ? [{ label: "Disponibilita", value: linkedin.availability }] : []),
+    ...personalItems
+  ]);
   document.getElementById("cv-language-list").innerHTML = renderLanguageList(languages);
 
   document.getElementById("cv-profile-body").innerHTML = `
     <p>${escapeHtml(summary)}</p>
-    <p class="cv-inline-note">Competenze in rilievo: ${escapeHtml(primarySkills.join(", "))}.</p>
+    <p class="cv-inline-note">Competenze in evidenza: ${escapeHtml(primarySkills.join(", "))}.</p>
   `;
+  document.getElementById("cv-strengths-list").innerHTML = renderStrengthsList(
+    recruiterHighlights.length ? recruiterHighlights : primarySkills.slice(0, 4)
+  );
   document.getElementById("cv-experience-list").innerHTML = renderTimeline(asArray(linkedin?.experience), "experience");
   document.getElementById("cv-education-list").innerHTML = renderTimeline(asArray(linkedin?.educationHistory), "education");
+  document.getElementById("cv-target-roles-list").innerHTML = renderTargetRoles(targetRoles);
   document.getElementById("cv-university-courses-list").innerHTML = renderUniversityCourses(universityCourses);
   document.getElementById("cv-program-list").innerHTML = renderProgramCards(asArray(portfolio.programs), page);
-  document.getElementById("cv-certification-list").innerHTML = renderCertificateList(certificates);
-  document.getElementById("cv-projects-list").innerHTML = renderProjectList(featuredProjects, page.emptyProjectsText || "I deliverable principali sono disponibili nella sezione progetti del portfolio.");
+  document.getElementById("cv-certification-list").innerHTML = renderCertificateList(featuredCertificates);
+  document.getElementById("cv-projects-list").innerHTML = renderProjectList(featuredProjects, page.emptyProjectsText || "I case study principali sono disponibili nel portfolio.");
   document.getElementById("cv-technical-list").innerHTML = renderTechnicalSections(asArray(portfolio.config.skillSections));
 
-  document.getElementById("cv-download-button").textContent = page.downloadLabel || "Scarica PDF";
-  document.getElementById("cv-download-button").addEventListener("click", () => window.print());
+  const downloadButton = document.getElementById("cv-download-button");
+  const printButton = document.getElementById("cv-print-button");
+  downloadButton.textContent = page.downloadLabel || "Scarica PDF";
+  downloadButton.href = pdfPath;
+  downloadButton.setAttribute("download", "");
+  printButton?.addEventListener("click", () => window.print());
 
-  const pdfLink = document.getElementById("cv-pdf-link");
-  if (pdfLink) {
-    try {
-      const response = await fetch(pdfPath, { method: "HEAD" });
-      pdfLink.classList.toggle("hidden", !response.ok);
-    } catch {
-      pdfLink.classList.add("hidden");
+  try {
+    const response = await fetch(pdfPath, { method: "HEAD" });
+    const pdfAvailable = response.ok;
+    printButton?.classList.toggle("hidden", !pdfAvailable);
+
+    if (!pdfAvailable) {
+      downloadButton.removeAttribute("download");
+      downloadButton.removeAttribute("target");
+      downloadButton.removeAttribute("rel");
+      downloadButton.textContent = "Apri stampa";
+      downloadButton.href = "#";
+      downloadButton.addEventListener("click", (event) => {
+        event.preventDefault();
+        window.print();
+      });
+      setElementText("cv-print-hint", "PDF diretto non disponibile: usa il dialogo di stampa del browser.", "");
     }
+  } catch {
+    printButton?.classList.add("hidden");
+    downloadButton.removeAttribute("download");
+    downloadButton.removeAttribute("target");
+    downloadButton.removeAttribute("rel");
+    downloadButton.textContent = "Apri stampa";
+    downloadButton.href = "#";
+    downloadButton.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.print();
+    });
   }
 }
 

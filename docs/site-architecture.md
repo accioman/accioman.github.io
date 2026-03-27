@@ -43,9 +43,8 @@ The final artifact is generated into `.site/` by `scripts/build-pages.ps1`.
 
 - `site/assets/js/index.js`
 - `site/assets/js/paths.js`
-- `site/assets/js/certificates.js`
-- `site/assets/js/projects.js`
-- `site/assets/js/viewer.js`
+- `site/assets/js/progetti.js`
+- `site/assets/js/cv.js`
 - `site/assets/js/archive-hub.js`
 
 ### Shared modules
@@ -91,5 +90,5 @@ Prefer `content-metadata.json` for program/course curation and `readme.config.js
 
 - navigation labels and visibility live in `site/templates/pages.json`
 - home and archive CTA/section copy live in `readme.config.json` under `site.homePage` and `site.archivePage`
-- internal page microcopy for `percorsi`, `certificati`, `progetti` and `viewer` lives in `readme.config.json` under `site.pathsPage`, `site.certificatesPage`, `site.projectsPage` and `site.viewerPage`
+- internal page microcopy for `percorsi`, `progetti`, `cv` and `viewer` lives in `readme.config.json` under `site.pathsPage`, `site.projectsPage`, `site.cvPage` and `site.viewerPage`
 - shared document action labels live in `readme.config.json` under `site.documentActions`

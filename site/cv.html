@@ -9,25 +9,28 @@
   <meta name="author" content="Marco Accinno">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#0c131c">
-  <link rel="canonical" href="https://accioman.github.io/Corsi-coursera/cv.html">
+  <link rel="canonical" href="https://accioman.github.io/cv.html">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="it_IT">
   <meta property="og:site_name" content="Marco Accinno">
   <meta property="og:title" content="Curriculum Vitae | Marco Accinno">
   <meta property="og:description" content="Curriculum vitae generato dai dati del portfolio, disponibile in pagina e come PDF scaricabile.">
-  <meta property="og:url" content="https://accioman.github.io/Corsi-coursera/cv.html">
-  <meta property="og:image" content="https://accioman.github.io/Corsi-coursera/assets/images/linkedin-profile.jpg">
+  <meta property="og:url" content="https://accioman.github.io/cv.html">
+  <meta property="og:image" content="https://accioman.github.io/assets/images/og-card.svg">
+  <meta property="og:image:alt" content="Anteprima del portfolio professionale di Marco Accinno">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Curriculum Vitae | Marco Accinno">
   <meta name="twitter:description" content="Curriculum vitae generato dai dati del portfolio, disponibile in pagina e come PDF scaricabile.">
-  <meta name="twitter:image" content="https://accioman.github.io/Corsi-coursera/assets/images/linkedin-profile.jpg">
-  <link rel="icon" type="image/jpeg" href="./assets/images/linkedin-profile.jpg">
+  <meta name="twitter:image" content="https://accioman.github.io/assets/images/og-card.svg">
+  <meta name="twitter:image:alt" content="Anteprima del portfolio professionale di Marco Accinno">
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="./assets/images/icon.svg">
   <link rel="manifest" href="./site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/styles.css">
-  <script type="application/ld+json">{"isPartOf":{"name":"Marco Accinno","url":"https://accioman.github.io/Corsi-coursera/","@type":"WebSite"},"description":"Curriculum vitae generato dai dati del portfolio, disponibile in pagina e come PDF scaricabile.","@context":"https://schema.org","url":"https://accioman.github.io/Corsi-coursera/cv.html","@type":"ProfilePage","name":"Curriculum Vitae | Marco Accinno","about":{"image":"https://accioman.github.io/Corsi-coursera/assets/images/linkedin-profile.jpg","name":"Marco Accinno","jobTitle":"Software Development Engineer","@type":"Person"}}</script>
+  <script type="application/ld+json">{"about":{"sameAs":["https://www.linkedin.com/in/marco-accinno-214978276/"],"jobTitle":"Software Development Engineer","image":"https://accioman.github.io/assets/images/og-card.svg","@type":"Person","name":"Marco Accinno"},"name":"Curriculum Vitae | Marco Accinno","url":"https://accioman.github.io/cv.html","description":"Curriculum vitae generato dai dati del portfolio, disponibile in pagina e come PDF scaricabile.","@type":"ProfilePage","isPartOf":{"url":"https://accioman.github.io/","@type":"WebSite","name":"Marco Accinno"},"@context":"https://schema.org"}</script>
   
 </head>
 <body>
@@ -37,9 +40,13 @@
   <nav class="site-nav" aria-label="Navigazione principale">
         <a href="./index.html" data-nav="home">Home</a>
     <a href="./percorsi.html" data-nav="percorsi">Percorsi</a>
+    <a href="./progetti.html" data-nav="progetti">Case Study</a>
     <a href="./cv.html" data-nav="cv">CV</a>
   </nav>
-  <a class="header-link" id="header-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+  <div class="site-header-actions">
+    <a class="header-link header-link-cta" id="header-primary-cta" href="./cv.html">Apri CV</a>
+    <a class="header-link" id="header-linkedin" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+  </div>
 </header>
 
     <main class="cv-main">
@@ -47,12 +54,12 @@
     <div class="cv-toolbar-copy">
       <p class="eyebrow" id="cv-eyebrow">Curriculum vitae</p>
       <h1 id="cv-page-title">Curriculum Vitae</h1>
-      <p class="muted" id="cv-page-summary">Versione documento del profilo professionale, pronta per stampa e salvataggio in PDF.</p>
+      <p class="muted" id="cv-page-summary">Versione recruiter-first del profilo professionale, pronta per stampa e con PDF dedicato.</p>
     </div>
     <div class="cv-toolbar-actions">
       <div class="cv-actions">
-        <button class="button button-primary" id="cv-download-button" type="button">Scarica PDF</button>
-        <a class="button button-secondary hidden" id="cv-pdf-link" href="./assets/files/cv-marco-accinno.pdf" target="_blank" rel="noreferrer">Apri PDF diretto</a>
+        <a class="button button-primary" id="cv-download-button" href="./assets/files/cv-marco-accinno.pdf" target="_blank" rel="noreferrer">Scarica PDF</a>
+        <button class="button button-secondary hidden" id="cv-print-button" type="button">Stampa / Salva browser</button>
         <a class="button button-secondary" id="cv-portfolio-link" href="./index.html">Apri portfolio</a>
         <a class="text-link" id="cv-linkedin-link" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">Profilo LinkedIn</a>
       </div>
@@ -71,7 +78,7 @@
           </section>
 
           <section class="cv-sidebar-group">
-            <h3 id="cv-contact-title">Dati personali</h3>
+            <h3 id="cv-contact-title">Contatti</h3>
             <div id="cv-contact-list"></div>
             <div id="cv-personal-list"></div>
           </section>
@@ -95,13 +102,18 @@
           </section>
 
           <section class="cv-section">
-            <h3 id="cv-education-title">Formazione</h3>
-            <div id="cv-education-list"></div>
+            <h3 id="cv-strengths-title">Punti di forza</h3>
+            <div class="cv-strength-grid" id="cv-strengths-list"></div>
           </section>
 
           <section class="cv-section">
             <h3 id="cv-experience-title">Esperienze lavorative</h3>
             <div id="cv-experience-list"></div>
+          </section>
+
+          <section class="cv-section">
+            <h3 id="cv-education-title">Formazione</h3>
+            <div id="cv-education-list"></div>
           </section>
         </div>
       </div>
@@ -118,16 +130,21 @@
         </header>
 
         <section class="cv-section">
-          <h3 id="cv-university-courses-title">Corsi universitari</h3>
-          <div id="cv-university-courses-list"></div>
+          <h3 id="cv-target-roles-title">Ruoli di riferimento</h3>
+          <div class="cv-role-list" id="cv-target-roles-list"></div>
         </section>
 
         <section class="cv-section">
-          <h3 id="cv-certifications-title">Certificati e percorsi</h3>
+          <h3 id="cv-certifications-title">Certificazioni e percorsi</h3>
           <div class="cv-section-stack">
             <div class="cv-program-grid" id="cv-program-list"></div>
             <div id="cv-certification-list"></div>
           </div>
+        </section>
+
+        <section class="cv-section">
+          <h3 id="cv-university-courses-title">Corsi universitari</h3>
+          <div id="cv-university-courses-list"></div>
         </section>
       </div>
     </article>

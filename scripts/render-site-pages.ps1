@@ -146,13 +146,16 @@ $ownerName = Get-StringValue -Value (Get-ObjectPropertyValue -InputObject $siteC
 $siteRole = Get-StringValue -Value (Get-ObjectPropertyValue -InputObject $siteConfig -Name "role")
 $baseUrl = Get-StringValue -Value (Get-ObjectPropertyValue -InputObject $siteConfig -Name "baseUrl")
 $themeColor = Get-StringValue -Value (Get-ObjectPropertyValue -InputObject $siteConfig -Name "themeColor") -Default "#0c131c"
+$linkedinConfig = Get-ObjectPropertyValue -InputObject $config -Name "linkedin" -Default $null
 $socialImagePath = Get-StringValue -Value (Get-ObjectPropertyValue -InputObject $siteConfig -Name "socialImagePath") -Default "/assets/images/linkedin-profile.jpg"
 $seoConfig = Get-ObjectPropertyValue -InputObject $siteConfig -Name "seo" -Default $null
 $analyticsConfig = Get-ObjectPropertyValue -InputObject $siteConfig -Name "analytics" -Default $null
 $ogLocale = Get-StringValue -Value (Get-ObjectPropertyValue -InputObject $seoConfig -Name "locale") -Default "it_IT"
+$socialImageAlt = Get-StringValue -Value (Get-ObjectPropertyValue -InputObject $seoConfig -Name "socialImageAlt") -Default "$ownerName - portfolio professionale"
 $robotsDirective = Get-StringValue -Value (Get-ObjectPropertyValue -InputObject $seoConfig -Name "robots") -Default "index,follow"
 $keywords = @((Get-ObjectPropertyValue -InputObject $seoConfig -Name "keywords" -Default @()))
 $analyticsSnippet = Get-AnalyticsSnippet -AnalyticsConfig $analyticsConfig
+$linkedinProfileUrl = Get-StringValue -Value (Get-ObjectPropertyValue -InputObject $linkedinConfig -Name "profileUrl")
 $brandAria = "Home di $ownerName"
 $manifestOutputs = @(
     foreach ($manifestPage in @($manifest.Pages)) {
@@ -214,7 +217,11 @@ foreach ($page in @($manifest.Pages)) {
             jobTitle = $siteRole
             image = $ogImageUrl
         }
-    } | ConvertTo-Json -Depth 8 -Compress
+    }
+    if (-not [string]::IsNullOrWhiteSpace($linkedinProfileUrl)) {
+        $pageJsonLd.about.sameAs = @($linkedinProfileUrl)
+    }
+    $pageJsonLd = $pageJsonLd | ConvertTo-Json -Depth 8 -Compress
 
     $pageHtml = Expand-TemplateTokens -Template $layoutTemplate -Tokens @{
         PAGE_TITLE = [string]$page.Title
@@ -230,6 +237,7 @@ foreach ($page in @($manifest.Pages)) {
         OG_TITLE = [string]$page.Title
         OG_DESCRIPTION = [string]$page.Description
         OG_IMAGE_URL = $ogImageUrl
+        OG_IMAGE_ALT = $socialImageAlt
         PAGE_JSON_LD = $pageJsonLd
         ANALYTICS_SNIPPET = $analyticsSnippet
         SITE_HEADER = $headerMarkup

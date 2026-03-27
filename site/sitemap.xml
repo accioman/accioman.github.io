@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://accioman.github.io/Corsi-coursera/</loc></url>
-  <url><loc>https://accioman.github.io/Corsi-coursera/percorsi.html</loc></url>
-  <url><loc>https://accioman.github.io/Corsi-coursera/cv.html</loc></url>
-  <url><loc>https://accioman.github.io/Corsi-coursera/archivio.html</loc></url>
+  <url><loc>https://accioman.github.io/</loc></url>
+  <url><loc>https://accioman.github.io/percorsi.html</loc></url>
+  <url><loc>https://accioman.github.io/progetti.html</loc></url>
+  <url><loc>https://accioman.github.io/cv.html</loc></url>
+  <url><loc>https://accioman.github.io/archivio.html</loc></url>
 </urlset>

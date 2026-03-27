@@ -1,5 +1,5 @@
 ﻿{
-    "GeneratedAt":  "2026-03-27T13:42:53.3253262Z",
+    "GeneratedAt":  "2026-03-27T14:27:48.0920766Z",
     "GeneratedAtLocal":  "27/03/2026",
     "Config":  {
                    "title":  "Portfolio Formativo",
@@ -405,13 +405,13 @@
     "Stats":  {
                   "TotalPrograms":  2,
                   "TotalCourses":  27,
-                  "TotalCompleted":  12,
+                  "TotalCompleted":  13,
                   "TotalInProgress":  0,
-                  "TotalReady":  15,
+                  "TotalReady":  14,
                   "TotalWorkFiles":  33,
-                  "TotalCertificates":  12,
-                  "CompletionPercent":  44,
-                  "ProgressBar":  "[#####-------]"
+                  "TotalCertificates":  13,
+                  "CompletionPercent":  48,
+                  "ProgressBar":  "[######------]"
               },
     "Programs":  [
                      {
@@ -2774,8 +2774,8 @@
                                              "Slug":  "ricerca-di-lavoro-nel-project-management-preparazione-del-curriculum-e-dei-colloqui",
                                              "RelativePath":  "IBM IT Project Manager/Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui",
                                              "WebPath":  "IBM%20IT%20Project%20Manager/Ricerca%20di%20lavoro%20nel%20Project%20Management%2C%20preparazione%20del%20curriculum%20e%20dei%20colloqui",
-                                             "Status":  "Cartella pronta",
-                                             "StatusRank":  2,
+                                             "Status":  "Completato",
+                                             "StatusRank":  0,
                                              "Summary":  "Ricerca lavoro, curriculum e preparazione ai colloqui in ambito project management.",
                                              "Category":  "Career Development",
                                              "Tags":  {
@@ -2785,10 +2785,10 @@
                                              "Featured":  false,
                                              "FeaturedCertificateRank":  9999,
                                              "FeaturedProjectRank":  9999,
-                                             "CertificateCount":  0,
+                                             "CertificateCount":  1,
                                              "WorkFileCount":  0,
-                                             "TotalFiles":  0,
-                                             "Evidence":  "nessun file",
+                                             "TotalFiles":  1,
+                                             "Evidence":  "1 certificato",
                                              "MaterialPreview":  "",
                                              "CaseStudy":  {
                                                                "Title":  "",
@@ -2806,18 +2806,42 @@
                                                                "PrimaryFile":  ""
                                                            },
                                              "Files":  {
+                                                           "Id":  "ibm-it-project-manager-ricerca-di-lavoro-nel-project-management-preparazione-del-curriculum-e-dei-colloqui-coursera-y02lfm29a4gm-pdf",
+                                                           "Name":  "Coursera Y02LFM29A4GM.pdf",
+                                                           "RelativePath":  "IBM IT Project Manager/Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui/Coursera Y02LFM29A4GM.pdf",
+                                                           "CourseRelativePath":  "Coursera Y02LFM29A4GM.pdf",
+                                                           "WebPath":  "IBM%20IT%20Project%20Manager/Ricerca%20di%20lavoro%20nel%20Project%20Management%2C%20preparazione%20del%20curriculum%20e%20dei%20colloqui/Coursera%20Y02LFM29A4GM.pdf",
+                                                           "Extension":  ".pdf",
+                                                           "Kind":  "certificate",
+                                                           "KindLabel":  "Certificato",
+                                                           "IsCertificate":  true,
+                                                           "Previewable":  true,
+                                                           "PreviewType":  "pdf",
+                                                           "SizeBytes":  321334,
+                                                           "SizeLabel":  "313,8 KB",
+                                                           "UpdatedAt":  "2026-03-27T14:21:51.0294087Z",
+                                                           "UpdatedAtLocal":  "27/03/2026",
+                                                           "DisplayName":  "Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui",
+                                                           "ProgramRelativePath":  "IBM IT Project Manager",
+                                                           "CourseCategory":  "Career Development",
+                                                           "CourseSummary":  "Ricerca lavoro, curriculum e preparazione ai colloqui in ambito project management.",
+                                                           "CourseTags":  {
 
+                                                                          },
+                                                           "CoursePriority":  90,
+                                                           "FeaturedCertificateRank":  9999,
+                                                           "FeaturedProjectRank":  9999
                                                        }
                                          }
                                      ],
                          "TotalCourses":  11,
-                         "CompletedCourses":  10,
+                         "CompletedCourses":  11,
                          "InProgressCourses":  0,
-                         "ReadyCourses":  1,
+                         "ReadyCourses":  0,
                          "WorkFiles":  25,
-                         "CertificateFiles":  10,
-                         "CompletionPercent":  91,
-                         "ProgressBar":  "[###########-]"
+                         "CertificateFiles":  11,
+                         "CompletionPercent":  100,
+                         "ProgressBar":  "[############]"
                      }
                  ],
     "Library":  {
@@ -4671,6 +4695,60 @@
                                           "CoursePriority":  40,
                                           "FeaturedCertificateRank":  4,
                                           "FeaturedProjectRank":  2
+                                      },
+                                      {
+                                          "Id":  "ibm-it-project-manager-ricerca-di-lavoro-nel-project-management-preparazione-del-curriculum-e-dei-colloqui-coursera-y02lfm29a4gm-pdf",
+                                          "Name":  "Coursera Y02LFM29A4GM.pdf",
+                                          "RelativePath":  "IBM IT Project Manager/Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui/Coursera Y02LFM29A4GM.pdf",
+                                          "WebPath":  "IBM%20IT%20Project%20Manager/Ricerca%20di%20lavoro%20nel%20Project%20Management%2C%20preparazione%20del%20curriculum%20e%20dei%20colloqui/Coursera%20Y02LFM29A4GM.pdf",
+                                          "Extension":  ".pdf",
+                                          "Kind":  "certificate",
+                                          "KindLabel":  "Certificato",
+                                          "IsCertificate":  true,
+                                          "Previewable":  true,
+                                          "PreviewType":  "pdf",
+                                          "SizeBytes":  321334,
+                                          "SizeLabel":  "313,8 KB",
+                                          "UpdatedAt":  "2026-03-27T14:21:51.0294087Z",
+                                          "UpdatedAtLocal":  "27/03/2026",
+                                          "ProgramId":  "ibm-it-project-manager",
+                                          "ProgramName":  "IBM IT Project Manager",
+                                          "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                          "ProgramTags":  [
+                                                              "Project Management",
+                                                              "Agile",
+                                                              "Leadership"
+                                                          ],
+                                          "CourseId":  "ibm-it-project-manager-ricerca-di-lavoro-nel-project-management-preparazione-del-curriculum-e-dei-colloqui",
+                                          "CourseName":  "Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui",
+                                          "CourseStatus":  "Completato",
+                                          "CourseSummary":  "Ricerca lavoro, curriculum e preparazione ai colloqui in ambito project management.",
+                                          "CourseCategory":  "Career Development",
+                                          "CourseTags":  {
+
+                                                         },
+                                          "CoursePriority":  90,
+                                          "FeaturedCertificateRank":  9999,
+                                          "FeaturedProjectRank":  9999,
+                                          "DisplayName":  "Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui",
+                                          "ProgramIds":  [
+                                                             "ibm-it-project-manager"
+                                                         ],
+                                          "ProgramNames":  [
+                                                               "IBM IT Project Manager"
+                                                           ],
+                                          "CourseIds":  [
+                                                            "ibm-it-project-manager-ricerca-di-lavoro-nel-project-management-preparazione-del-curriculum-e-dei-colloqui"
+                                                        ],
+                                          "CourseNames":  [
+                                                              "Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui"
+                                                          ],
+                                          "Categories":  [
+                                                             "Career Development"
+                                                         ],
+                                          "CertificateOccurrences":  1,
+                                          "Featured":  false,
+                                          "FeaturedRank":  9999
                                       }
                                   ],
                     "Pdfs":  [
@@ -5731,6 +5809,60 @@
                                      "CoursePriority":  40,
                                      "FeaturedCertificateRank":  4,
                                      "FeaturedProjectRank":  2
+                                 },
+                                 {
+                                     "Id":  "ibm-it-project-manager-ricerca-di-lavoro-nel-project-management-preparazione-del-curriculum-e-dei-colloqui-coursera-y02lfm29a4gm-pdf",
+                                     "Name":  "Coursera Y02LFM29A4GM.pdf",
+                                     "RelativePath":  "IBM IT Project Manager/Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui/Coursera Y02LFM29A4GM.pdf",
+                                     "WebPath":  "IBM%20IT%20Project%20Manager/Ricerca%20di%20lavoro%20nel%20Project%20Management%2C%20preparazione%20del%20curriculum%20e%20dei%20colloqui/Coursera%20Y02LFM29A4GM.pdf",
+                                     "Extension":  ".pdf",
+                                     "Kind":  "certificate",
+                                     "KindLabel":  "Certificato",
+                                     "IsCertificate":  true,
+                                     "Previewable":  true,
+                                     "PreviewType":  "pdf",
+                                     "SizeBytes":  321334,
+                                     "SizeLabel":  "313,8 KB",
+                                     "UpdatedAt":  "2026-03-27T14:21:51.0294087Z",
+                                     "UpdatedAtLocal":  "27/03/2026",
+                                     "ProgramId":  "ibm-it-project-manager",
+                                     "ProgramName":  "IBM IT Project Manager",
+                                     "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                     "ProgramTags":  [
+                                                         "Project Management",
+                                                         "Agile",
+                                                         "Leadership"
+                                                     ],
+                                     "CourseId":  "ibm-it-project-manager-ricerca-di-lavoro-nel-project-management-preparazione-del-curriculum-e-dei-colloqui",
+                                     "CourseName":  "Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui",
+                                     "CourseStatus":  "Completato",
+                                     "CourseSummary":  "Ricerca lavoro, curriculum e preparazione ai colloqui in ambito project management.",
+                                     "CourseCategory":  "Career Development",
+                                     "CourseTags":  {
+
+                                                    },
+                                     "CoursePriority":  90,
+                                     "FeaturedCertificateRank":  9999,
+                                     "FeaturedProjectRank":  9999,
+                                     "DisplayName":  "Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui",
+                                     "ProgramIds":  [
+                                                        "ibm-it-project-manager"
+                                                    ],
+                                     "ProgramNames":  [
+                                                          "IBM IT Project Manager"
+                                                      ],
+                                     "CourseIds":  [
+                                                       "ibm-it-project-manager-ricerca-di-lavoro-nel-project-management-preparazione-del-curriculum-e-dei-colloqui"
+                                                   ],
+                                     "CourseNames":  [
+                                                         "Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui"
+                                                     ],
+                                     "Categories":  [
+                                                        "Career Development"
+                                                    ],
+                                     "CertificateOccurrences":  1,
+                                     "Featured":  false,
+                                     "FeaturedRank":  9999
                                  }
                              ],
                     "Certificates":  [
@@ -6128,6 +6260,45 @@
                                                                 "Agile"
                                                             ],
                                              "CertificateOccurrences":  2,
+                                             "Featured":  false,
+                                             "FeaturedRank":  9999
+                                         },
+                                         {
+                                             "Id":  "certificate-coursera-y02lfm29a4gm-pdf",
+                                             "Name":  "Coursera Y02LFM29A4GM.pdf",
+                                             "DisplayName":  "Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui",
+                                             "RelativePath":  "IBM IT Project Manager/Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui/Coursera Y02LFM29A4GM.pdf",
+                                             "WebPath":  "IBM%20IT%20Project%20Manager/Ricerca%20di%20lavoro%20nel%20Project%20Management%2C%20preparazione%20del%20curriculum%20e%20dei%20colloqui/Coursera%20Y02LFM29A4GM.pdf",
+                                             "Extension":  ".pdf",
+                                             "Kind":  "certificate",
+                                             "KindLabel":  "Certificato",
+                                             "IsCertificate":  true,
+                                             "Previewable":  true,
+                                             "PreviewType":  "pdf",
+                                             "SizeBytes":  321334,
+                                             "SizeLabel":  "313,8 KB",
+                                             "UpdatedAt":  "2026-03-27T14:21:51.0294087Z",
+                                             "UpdatedAtLocal":  "27/03/2026",
+                                             "ProgramId":  "ibm-it-project-manager",
+                                             "ProgramName":  "IBM IT Project Manager",
+                                             "ProgramIds":  [
+                                                                "ibm-it-project-manager"
+                                                            ],
+                                             "ProgramNames":  [
+                                                                  "IBM IT Project Manager"
+                                                              ],
+                                             "CourseId":  "ibm-it-project-manager-ricerca-di-lavoro-nel-project-management-preparazione-del-curriculum-e-dei-colloqui",
+                                             "CourseName":  "Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui",
+                                             "CourseIds":  [
+                                                               "ibm-it-project-manager-ricerca-di-lavoro-nel-project-management-preparazione-del-curriculum-e-dei-colloqui"
+                                                           ],
+                                             "CourseNames":  [
+                                                                 "Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui"
+                                                             ],
+                                             "Categories":  [
+                                                                "Career Development"
+                                                            ],
+                                             "CertificateOccurrences":  1,
                                              "Featured":  false,
                                              "FeaturedRank":  9999
                                          }

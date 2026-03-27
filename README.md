@@ -3,16 +3,16 @@
 
 ![Percorsi](https://img.shields.io/badge/Percorsi-2-0b7285?style=for-the-badge&labelColor=1f2937)
 ![Corsi](https://img.shields.io/badge/Corsi-27-1c7ed6?style=for-the-badge&labelColor=1f2937)
-![Completati](https://img.shields.io/badge/Completati-12-2b8a3e?style=for-the-badge&labelColor=1f2937)
+![Completati](https://img.shields.io/badge/Completati-13-2b8a3e?style=for-the-badge&labelColor=1f2937)
 ![In corso](https://img.shields.io/badge/In%20corso-0-f08c00?style=for-the-badge&labelColor=1f2937)
-![Pronti](https://img.shields.io/badge/Pronti-15-868e96?style=for-the-badge&labelColor=1f2937)
+![Pronti](https://img.shields.io/badge/Pronti-14-868e96?style=for-the-badge&labelColor=1f2937)
 
 Portfolio professionale che rende verificabili esperienza, certificazioni IBM e deliverable di project planning.
 
 ## Snapshot
 
 - Ultimo aggiornamento: 27/03/2026
-- Avanzamento complessivo: 12/27 completati (44%) [#####-------]
+- Avanzamento complessivo: 13/27 completati (48%) [######------]
 - Elaborati pratici rilevati: 33
 
 ## Profilo
@@ -74,8 +74,8 @@ Portfolio professionale che rende verificabili esperienza, certificazioni IBM e 
 
 ### IBM IT Project Manager
 
-- Progresso: 10/11 completati (91%) [###########-]
-- Stato corsi: 0 in corso, 1 cartelle pronte
+- Progresso: 11/11 completati (100%) [############]
+- Stato corsi: 0 in corso, 0 cartelle pronte
 
 | Corso | Stato | Evidenze |
 | --- | --- | --- |
@@ -89,7 +89,7 @@ Portfolio professionale che rende verificabili esperienza, certificazioni IBM e 
 | Introduction to Software Engineering | **Completato** | 1 certificato |
 | Capstone di gestione del progetto | **Completato** | 1 certificato + 6 file di lavoro |
 | Esame pratico per la certificazione CAPM | **Completato** | 1 certificato |
-| Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui | **Cartella pronta** | nessun file |
+| Ricerca di lavoro nel Project Management, preparazione del curriculum e dei colloqui | **Completato** | 1 certificato |
 
 ## Elaborati pratici
 

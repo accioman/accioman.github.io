@@ -1,0 +1,34 @@
+{
+  "name": "accioman-portfolio-codespace",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "postCreateCommand": "node --version && python3 --version && pwsh --version",
+  "forwardPorts": [
+    8000,
+    5500
+  ],
+  "portsAttributes": {
+    "8000": {
+      "label": "Local web preview (python)",
+      "onAutoForward": "notify"
+    },
+    "5500": {
+      "label": "Alternative web preview",
+      "onAutoForward": "notify"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "files.eol": "\n",
+        "editor.formatOnSave": true
+      },
+      "extensions": [
+        "ms-python.python",
+        "ms-vscode.powershell",
+        "eamodio.gitlens",
+        "esbenp.prettier-vscode"
+      ]
+    }
+  },
+  "remoteUser": "codespace"
+}

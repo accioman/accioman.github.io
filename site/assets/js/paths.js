@@ -9,7 +9,8 @@ const state = {
   activeCourse: null,
   activeFile: null,
   fullscreenBound: false,
-  mobilePreviewBound: false
+  mobilePreviewBound: false,
+  lastCourseTrigger: null
 };
 
 function getCompletionPercent(program) {
@@ -459,6 +460,7 @@ async function openCourseDialog(courseKey, options = {}) {
 
   if (!dialog.open) {
     dialog.showModal();
+    document.getElementById("path-course-dialog-close")?.focus();
   }
 }
 
@@ -469,6 +471,7 @@ function bindCourseCards() {
         return;
       }
 
+      state.lastCourseTrigger = card;
       void openCourseDialog(card.getAttribute("data-course-dialog"));
     });
 
@@ -478,6 +481,7 @@ function bindCourseCards() {
       }
 
       event.preventDefault();
+      state.lastCourseTrigger = card;
       void openCourseDialog(card.getAttribute("data-course-dialog"));
     });
   });
@@ -501,6 +505,9 @@ function bindDialog() {
     exitPreviewFullscreenIfNeeded();
     closeMobilePreviewOverlay();
     clearCourseDialogUrl({ replace: true });
+    if (state.lastCourseTrigger instanceof HTMLElement) {
+      state.lastCourseTrigger.focus();
+    }
   });
 }
 
@@ -588,7 +595,14 @@ async function main() {
             `;
 
           return `
-            <article class="course-card path-course-card${certificateFile ? " has-certificate-thumb" : ""}" tabindex="0" role="button" aria-haspopup="dialog" data-course-dialog="${escapeHtml(courseKey)}">
+            <article
+              class="course-card path-course-card${certificateFile ? " has-certificate-thumb" : ""}"
+              tabindex="0"
+              role="button"
+              aria-haspopup="dialog"
+              aria-label="${escapeHtml(`${course.name} — ${course.status}`)}"
+              data-course-dialog="${escapeHtml(courseKey)}"
+            >
               <div class="path-course-head">
                 ${certificateThumb}
               </div>
@@ -618,5 +632,5 @@ async function main() {
 
 main().catch((error) => {
   console.error(error);
-  document.body.innerHTML = `<main class="page-shell"><section class="panel"><h1>Errore di caricamento</h1><p>${error.message}</p></section></main>`;
+  document.body.innerHTML = `<main class="page-shell"><section class="panel"><h1>Errore di caricamento</h1><p>${escapeHtml(error.message)}</p></section></main>`;
 });

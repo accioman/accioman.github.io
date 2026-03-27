@@ -1256,7 +1256,15 @@ select:focus-visible {
   gap: 12px;
   align-content: start;
   padding: 20px;
+  cursor: pointer;
   background: rgba(255, 255, 255, 0.022);
+}
+
+.path-course-card:focus-visible,
+.path-course-dialog-cert-button:focus-visible,
+.path-course-dialog-file-button:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
 }
 
 .path-course-card .meta-line {

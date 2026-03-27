@@ -240,10 +240,35 @@
     },
     {
       "path": "IBM IT Project Manager/Capstone di gestione del progetto",
-      "summary": "Capstone finale su pianificazione, controllo e comunicazione.",
+      "summary": "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
       "category": "Capstone",
       "priority": 80,
-      "featured": true
+      "featured": true,
+      "caseStudy": {
+        "title": "AHI: capstone di project delivery",
+        "lead": "Pacchetto finale con charter, WBS, product backlog, risk register, stato avanzamento e chiusura progetto.",
+        "context": "Capstone conclusivo dedicato alla gestione end-to-end di una iniziativa AHI, dalla pianificazione iniziale al reporting finale.",
+        "objective": "Consolidare in un unico caso pratico gli artefatti essenziali per avvio, monitoraggio, controllo rischi e chiusura del progetto.",
+        "role": "Impostazione del piano, gestione backlog, reporting di avanzamento, presidio dei rischi e formalizzazione della chiusura.",
+        "outcome": "Set completo di deliverable coerenti e riusabili per execution tracking, allineamento stakeholder e project closure.",
+        "skills": [
+          "Project charter",
+          "WBS",
+          "Backlog management",
+          "Risk management",
+          "Status reporting",
+          "Project closure"
+        ],
+        "deliverables": [
+          "Carta del progetto",
+          "WBS",
+          "Product backlog",
+          "Registro dei rischi",
+          "Rapporto stato avanzamento",
+          "Rapporto di chiusura"
+        ],
+        "primaryFile": "AHI_Carta_del_Progetto.pdf"
+      }
     },
     {
       "path": "IBM IT Project Manager/Esame pratico per la certificazione CAPM",

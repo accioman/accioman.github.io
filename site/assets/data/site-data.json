@@ -1,6 +1,6 @@
 ﻿{
-    "GeneratedAt":  "2026-03-24T16:45:40.5237233Z",
-    "GeneratedAtLocal":  "24/03/2026",
+    "GeneratedAt":  "2026-03-27T13:42:53.3253262Z",
+    "GeneratedAtLocal":  "27/03/2026",
     "Config":  {
                    "title":  "Portfolio Formativo",
                    "intro":  "Portfolio professionale che rende verificabili esperienza, certificazioni IBM e deliverable di project planning.",
@@ -405,13 +405,13 @@
     "Stats":  {
                   "TotalPrograms":  2,
                   "TotalCourses":  27,
-                  "TotalCompleted":  9,
+                  "TotalCompleted":  12,
                   "TotalInProgress":  0,
-                  "TotalReady":  18,
-                  "TotalWorkFiles":  27,
-                  "TotalCertificates":  9,
-                  "CompletionPercent":  33,
-                  "ProgressBar":  "[####--------]"
+                  "TotalReady":  15,
+                  "TotalWorkFiles":  33,
+                  "TotalCertificates":  12,
+                  "CompletionPercent":  44,
+                  "ProgressBar":  "[#####-------]"
               },
     "Programs":  [
                      {
@@ -1986,8 +1986,8 @@
                                              "Slug":  "introduzione-alla-professione-di-scrum-master",
                                              "RelativePath":  "IBM IT Project Manager/Introduzione alla professione di Scrum Master",
                                              "WebPath":  "IBM%20IT%20Project%20Manager/Introduzione%20alla%20professione%20di%20Scrum%20Master",
-                                             "Status":  "Cartella pronta",
-                                             "StatusRank":  2,
+                                             "Status":  "Completato",
+                                             "StatusRank":  0,
                                              "Summary":  "Ruolo dello Scrum Master e facilitazione agile del team.",
                                              "Category":  "Agile",
                                              "Tags":  {
@@ -1997,10 +1997,10 @@
                                              "Featured":  false,
                                              "FeaturedCertificateRank":  9999,
                                              "FeaturedProjectRank":  9999,
-                                             "CertificateCount":  0,
+                                             "CertificateCount":  1,
                                              "WorkFileCount":  0,
-                                             "TotalFiles":  0,
-                                             "Evidence":  "nessun file",
+                                             "TotalFiles":  1,
+                                             "Evidence":  "1 certificato",
                                              "MaterialPreview":  "",
                                              "CaseStudy":  {
                                                                "Title":  "",
@@ -2018,7 +2018,31 @@
                                                                "PrimaryFile":  ""
                                                            },
                                              "Files":  {
+                                                           "Id":  "ibm-it-project-manager-introduzione-alla-professione-di-scrum-master-coursera-uhvzo9glrh19-pdf",
+                                                           "Name":  "Coursera UHVZO9GLRH19.pdf",
+                                                           "RelativePath":  "IBM IT Project Manager/Introduzione alla professione di Scrum Master/Coursera UHVZO9GLRH19.pdf",
+                                                           "CourseRelativePath":  "Coursera UHVZO9GLRH19.pdf",
+                                                           "WebPath":  "IBM%20IT%20Project%20Manager/Introduzione%20alla%20professione%20di%20Scrum%20Master/Coursera%20UHVZO9GLRH19.pdf",
+                                                           "Extension":  ".pdf",
+                                                           "Kind":  "certificate",
+                                                           "KindLabel":  "Certificato",
+                                                           "IsCertificate":  true,
+                                                           "Previewable":  true,
+                                                           "PreviewType":  "pdf",
+                                                           "SizeBytes":  304200,
+                                                           "SizeLabel":  "297,1 KB",
+                                                           "UpdatedAt":  "2026-03-27T13:37:10.9021596Z",
+                                                           "UpdatedAtLocal":  "27/03/2026",
+                                                           "DisplayName":  "Introduzione alla professione di Scrum Master",
+                                                           "ProgramRelativePath":  "IBM IT Project Manager",
+                                                           "CourseCategory":  "Agile",
+                                                           "CourseSummary":  "Ruolo dello Scrum Master e facilitazione agile del team.",
+                                                           "CourseTags":  {
 
+                                                                          },
+                                                           "CoursePriority":  50,
+                                                           "FeaturedCertificateRank":  9999,
+                                                           "FeaturedProjectRank":  9999
                                                        }
                                          },
                                          {
@@ -2444,9 +2468,9 @@
                                              "Slug":  "capstone-di-gestione-del-progetto",
                                              "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto",
                                              "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto",
-                                             "Status":  "Cartella pronta",
-                                             "StatusRank":  2,
-                                             "Summary":  "Capstone finale su pianificazione, controllo e comunicazione.",
+                                             "Status":  "Completato",
+                                             "StatusRank":  0,
+                                             "Summary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
                                              "Category":  "Capstone",
                                              "Tags":  {
 
@@ -2455,29 +2479,227 @@
                                              "Featured":  true,
                                              "FeaturedCertificateRank":  9999,
                                              "FeaturedProjectRank":  9999,
-                                             "CertificateCount":  0,
-                                             "WorkFileCount":  0,
-                                             "TotalFiles":  0,
-                                             "Evidence":  "nessun file",
-                                             "MaterialPreview":  "",
+                                             "CertificateCount":  1,
+                                             "WorkFileCount":  6,
+                                             "TotalFiles":  7,
+                                             "Evidence":  "1 certificato + 6 file di lavoro",
+                                             "MaterialPreview":  "AHI_Carta_del_Progetto.pdf, AHI_Product_Backlog_Italiano.pdf, AHI_Rapporto_di_Chiusura_Progetto.pdf + 3 altri",
                                              "CaseStudy":  {
-                                                               "Title":  "",
-                                                               "Lead":  "",
-                                                               "Context":  "",
-                                                               "Objective":  "",
-                                                               "Role":  "",
-                                                               "Outcome":  "",
-                                                               "Skills":  {
-
-                                                                          },
-                                                               "Deliverables":  {
-
-                                                                                },
-                                                               "PrimaryFile":  ""
+                                                               "Title":  "AHI: capstone di project delivery",
+                                                               "Lead":  "Pacchetto finale con charter, WBS, product backlog, risk register, stato avanzamento e chiusura progetto.",
+                                                               "Context":  "Capstone conclusivo dedicato alla gestione end-to-end di una iniziativa AHI, dalla pianificazione iniziale al reporting finale.",
+                                                               "Objective":  "Consolidare in un unico caso pratico gli artefatti essenziali per avvio, monitoraggio, controllo rischi e chiusura del progetto.",
+                                                               "Role":  "Impostazione del piano, gestione backlog, reporting di avanzamento, presidio dei rischi e formalizzazione della chiusura.",
+                                                               "Outcome":  "Set completo di deliverable coerenti e riusabili per execution tracking, allineamento stakeholder e project closure.",
+                                                               "Skills":  [
+                                                                              "Project charter",
+                                                                              "WBS",
+                                                                              "Backlog management",
+                                                                              "Risk management",
+                                                                              "Status reporting",
+                                                                              "Project closure"
+                                                                          ],
+                                                               "Deliverables":  [
+                                                                                    "Carta del progetto",
+                                                                                    "WBS",
+                                                                                    "Product backlog",
+                                                                                    "Registro dei rischi",
+                                                                                    "Rapporto stato avanzamento",
+                                                                                    "Rapporto di chiusura"
+                                                                                ],
+                                                               "PrimaryFile":  "AHI_Carta_del_Progetto.pdf"
                                                            },
-                                             "Files":  {
+                                             "Files":  [
+                                                           {
+                                                               "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-carta-del-progetto-pdf",
+                                                               "Name":  "AHI_Carta_del_Progetto.pdf",
+                                                               "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Carta_del_Progetto.pdf",
+                                                               "CourseRelativePath":  "AHI_Carta_del_Progetto.pdf",
+                                                               "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Carta_del_Progetto.pdf",
+                                                               "Extension":  ".pdf",
+                                                               "Kind":  "pdf",
+                                                               "KindLabel":  "PDF",
+                                                               "IsCertificate":  false,
+                                                               "Previewable":  true,
+                                                               "PreviewType":  "pdf",
+                                                               "SizeBytes":  10955,
+                                                               "SizeLabel":  "10,7 KB",
+                                                               "UpdatedAt":  "2026-03-27T13:35:21.8637357Z",
+                                                               "UpdatedAtLocal":  "27/03/2026",
+                                                               "DisplayName":  "AHI_Carta_del_Progetto.pdf",
+                                                               "ProgramRelativePath":  "IBM IT Project Manager",
+                                                               "CourseCategory":  "Capstone",
+                                                               "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                               "CourseTags":  {
 
-                                                       }
+                                                                              },
+                                                               "CoursePriority":  80,
+                                                               "FeaturedCertificateRank":  9999,
+                                                               "FeaturedProjectRank":  9999
+                                                           },
+                                                           {
+                                                               "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-product-backlog-italiano-pdf",
+                                                               "Name":  "AHI_Product_Backlog_Italiano.pdf",
+                                                               "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Product_Backlog_Italiano.pdf",
+                                                               "CourseRelativePath":  "AHI_Product_Backlog_Italiano.pdf",
+                                                               "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Product_Backlog_Italiano.pdf",
+                                                               "Extension":  ".pdf",
+                                                               "Kind":  "pdf",
+                                                               "KindLabel":  "PDF",
+                                                               "IsCertificate":  false,
+                                                               "Previewable":  true,
+                                                               "PreviewType":  "pdf",
+                                                               "SizeBytes":  5580,
+                                                               "SizeLabel":  "5,4 KB",
+                                                               "UpdatedAt":  "2026-03-27T13:35:21.8136864Z",
+                                                               "UpdatedAtLocal":  "27/03/2026",
+                                                               "DisplayName":  "AHI_Product_Backlog_Italiano.pdf",
+                                                               "ProgramRelativePath":  "IBM IT Project Manager",
+                                                               "CourseCategory":  "Capstone",
+                                                               "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                               "CourseTags":  {
+
+                                                                              },
+                                                               "CoursePriority":  80,
+                                                               "FeaturedCertificateRank":  9999,
+                                                               "FeaturedProjectRank":  9999
+                                                           },
+                                                           {
+                                                               "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-rapporto-di-chiusura-progetto-pdf",
+                                                               "Name":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                               "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                               "CourseRelativePath":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                               "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                               "Extension":  ".pdf",
+                                                               "Kind":  "pdf",
+                                                               "KindLabel":  "PDF",
+                                                               "IsCertificate":  false,
+                                                               "Previewable":  true,
+                                                               "PreviewType":  "pdf",
+                                                               "SizeBytes":  7281,
+                                                               "SizeLabel":  "7,1 KB",
+                                                               "UpdatedAt":  "2026-03-27T13:35:21.7891872Z",
+                                                               "UpdatedAtLocal":  "27/03/2026",
+                                                               "DisplayName":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                               "ProgramRelativePath":  "IBM IT Project Manager",
+                                                               "CourseCategory":  "Capstone",
+                                                               "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                               "CourseTags":  {
+
+                                                                              },
+                                                               "CoursePriority":  80,
+                                                               "FeaturedCertificateRank":  9999,
+                                                               "FeaturedProjectRank":  9999
+                                                           },
+                                                           {
+                                                               "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-rapporto-stato-avanzamento-pdf",
+                                                               "Name":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                               "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                               "CourseRelativePath":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                               "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                               "Extension":  ".pdf",
+                                                               "Kind":  "pdf",
+                                                               "KindLabel":  "PDF",
+                                                               "IsCertificate":  false,
+                                                               "Previewable":  true,
+                                                               "PreviewType":  "pdf",
+                                                               "SizeBytes":  8531,
+                                                               "SizeLabel":  "8,3 KB",
+                                                               "UpdatedAt":  "2026-03-27T13:35:21.9078464Z",
+                                                               "UpdatedAtLocal":  "27/03/2026",
+                                                               "DisplayName":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                               "ProgramRelativePath":  "IBM IT Project Manager",
+                                                               "CourseCategory":  "Capstone",
+                                                               "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                               "CourseTags":  {
+
+                                                                              },
+                                                               "CoursePriority":  80,
+                                                               "FeaturedCertificateRank":  9999,
+                                                               "FeaturedProjectRank":  9999
+                                                           },
+                                                           {
+                                                               "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-registro-dei-rischi-pdf",
+                                                               "Name":  "AHI_Registro_dei_Rischi.pdf",
+                                                               "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Registro_dei_Rischi.pdf",
+                                                               "CourseRelativePath":  "AHI_Registro_dei_Rischi.pdf",
+                                                               "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Registro_dei_Rischi.pdf",
+                                                               "Extension":  ".pdf",
+                                                               "Kind":  "pdf",
+                                                               "KindLabel":  "PDF",
+                                                               "IsCertificate":  false,
+                                                               "Previewable":  true,
+                                                               "PreviewType":  "pdf",
+                                                               "SizeBytes":  6443,
+                                                               "SizeLabel":  "6,3 KB",
+                                                               "UpdatedAt":  "2026-03-27T13:35:21.7957110Z",
+                                                               "UpdatedAtLocal":  "27/03/2026",
+                                                               "DisplayName":  "AHI_Registro_dei_Rischi.pdf",
+                                                               "ProgramRelativePath":  "IBM IT Project Manager",
+                                                               "CourseCategory":  "Capstone",
+                                                               "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                               "CourseTags":  {
+
+                                                                              },
+                                                               "CoursePriority":  80,
+                                                               "FeaturedCertificateRank":  9999,
+                                                               "FeaturedProjectRank":  9999
+                                                           },
+                                                           {
+                                                               "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-wbs-italiano-pdf",
+                                                               "Name":  "AHI_WBS_Italiano.pdf",
+                                                               "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_WBS_Italiano.pdf",
+                                                               "CourseRelativePath":  "AHI_WBS_Italiano.pdf",
+                                                               "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_WBS_Italiano.pdf",
+                                                               "Extension":  ".pdf",
+                                                               "Kind":  "pdf",
+                                                               "KindLabel":  "PDF",
+                                                               "IsCertificate":  false,
+                                                               "Previewable":  true,
+                                                               "PreviewType":  "pdf",
+                                                               "SizeBytes":  10963,
+                                                               "SizeLabel":  "10,7 KB",
+                                                               "UpdatedAt":  "2026-03-27T13:35:21.8424251Z",
+                                                               "UpdatedAtLocal":  "27/03/2026",
+                                                               "DisplayName":  "AHI_WBS_Italiano.pdf",
+                                                               "ProgramRelativePath":  "IBM IT Project Manager",
+                                                               "CourseCategory":  "Capstone",
+                                                               "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                               "CourseTags":  {
+
+                                                                              },
+                                                               "CoursePriority":  80,
+                                                               "FeaturedCertificateRank":  9999,
+                                                               "FeaturedProjectRank":  9999
+                                                           },
+                                                           {
+                                                               "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-coursera-mjzvm1aqwz7h-pdf",
+                                                               "Name":  "Coursera MJZVM1AQWZ7H.pdf",
+                                                               "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/Coursera MJZVM1AQWZ7H.pdf",
+                                                               "CourseRelativePath":  "Coursera MJZVM1AQWZ7H.pdf",
+                                                               "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/Coursera%20MJZVM1AQWZ7H.pdf",
+                                                               "Extension":  ".pdf",
+                                                               "Kind":  "certificate",
+                                                               "KindLabel":  "Certificato",
+                                                               "IsCertificate":  true,
+                                                               "Previewable":  true,
+                                                               "PreviewType":  "pdf",
+                                                               "SizeBytes":  321017,
+                                                               "SizeLabel":  "313,5 KB",
+                                                               "UpdatedAt":  "2026-03-27T13:36:30.9282863Z",
+                                                               "UpdatedAtLocal":  "27/03/2026",
+                                                               "DisplayName":  "Capstone di gestione del progetto",
+                                                               "ProgramRelativePath":  "IBM IT Project Manager",
+                                                               "CourseCategory":  "Capstone",
+                                                               "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                               "CourseTags":  {
+
+                                                                              },
+                                                               "CoursePriority":  80,
+                                                               "FeaturedCertificateRank":  9999,
+                                                               "FeaturedProjectRank":  9999
+                                                           }
+                                                       ]
                                          },
                                          {
                                              "Id":  "ibm-it-project-manager-esame-pratico-per-la-certificazione-capm",
@@ -2486,8 +2708,8 @@
                                              "Slug":  "esame-pratico-per-la-certificazione-capm",
                                              "RelativePath":  "IBM IT Project Manager/Esame pratico per la certificazione CAPM",
                                              "WebPath":  "IBM%20IT%20Project%20Manager/Esame%20pratico%20per%20la%20certificazione%20CAPM",
-                                             "Status":  "Cartella pronta",
-                                             "StatusRank":  2,
+                                             "Status":  "Completato",
+                                             "StatusRank":  0,
                                              "Summary":  "Preparazione pratica all\u0027esame CAPM con esercitazioni e ripasso dei concetti chiave.",
                                              "Category":  "Certification Prep",
                                              "Tags":  {
@@ -2497,10 +2719,10 @@
                                              "Featured":  false,
                                              "FeaturedCertificateRank":  9999,
                                              "FeaturedProjectRank":  9999,
-                                             "CertificateCount":  0,
+                                             "CertificateCount":  1,
                                              "WorkFileCount":  0,
-                                             "TotalFiles":  0,
-                                             "Evidence":  "nessun file",
+                                             "TotalFiles":  1,
+                                             "Evidence":  "1 certificato",
                                              "MaterialPreview":  "",
                                              "CaseStudy":  {
                                                                "Title":  "",
@@ -2518,7 +2740,31 @@
                                                                "PrimaryFile":  ""
                                                            },
                                              "Files":  {
+                                                           "Id":  "ibm-it-project-manager-esame-pratico-per-la-certificazione-capm-coursera-xxl836e6nx7j-pdf",
+                                                           "Name":  "Coursera XXL836E6NX7J.pdf",
+                                                           "RelativePath":  "IBM IT Project Manager/Esame pratico per la certificazione CAPM/Coursera XXL836E6NX7J.pdf",
+                                                           "CourseRelativePath":  "Coursera XXL836E6NX7J.pdf",
+                                                           "WebPath":  "IBM%20IT%20Project%20Manager/Esame%20pratico%20per%20la%20certificazione%20CAPM/Coursera%20XXL836E6NX7J.pdf",
+                                                           "Extension":  ".pdf",
+                                                           "Kind":  "certificate",
+                                                           "KindLabel":  "Certificato",
+                                                           "IsCertificate":  true,
+                                                           "Previewable":  true,
+                                                           "PreviewType":  "pdf",
+                                                           "SizeBytes":  304171,
+                                                           "SizeLabel":  "297,0 KB",
+                                                           "UpdatedAt":  "2026-03-27T13:37:31.6020533Z",
+                                                           "UpdatedAtLocal":  "27/03/2026",
+                                                           "DisplayName":  "Esame pratico per la certificazione CAPM",
+                                                           "ProgramRelativePath":  "IBM IT Project Manager",
+                                                           "CourseCategory":  "Certification Prep",
+                                                           "CourseSummary":  "Preparazione pratica all\u0027esame CAPM con esercitazioni e ripasso dei concetti chiave.",
+                                                           "CourseTags":  {
 
+                                                                          },
+                                                           "CoursePriority":  85,
+                                                           "FeaturedCertificateRank":  9999,
+                                                           "FeaturedProjectRank":  9999
                                                        }
                                          },
                                          {
@@ -2565,13 +2811,13 @@
                                          }
                                      ],
                          "TotalCourses":  11,
-                         "CompletedCourses":  7,
+                         "CompletedCourses":  10,
                          "InProgressCourses":  0,
-                         "ReadyCourses":  4,
-                         "WorkFiles":  19,
-                         "CertificateFiles":  7,
-                         "CompletionPercent":  64,
-                         "ProgressBar":  "[########----]"
+                         "ReadyCourses":  1,
+                         "WorkFiles":  25,
+                         "CertificateFiles":  10,
+                         "CompletionPercent":  91,
+                         "ProgressBar":  "[###########-]"
                      }
                  ],
     "Library":  {
@@ -2976,6 +3222,330 @@
                                                              "Agile"
                                                          ],
                                           "CertificateOccurrences":  2,
+                                          "Featured":  false,
+                                          "FeaturedRank":  9999
+                                      },
+                                      {
+                                          "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-carta-del-progetto-pdf",
+                                          "Name":  "AHI_Carta_del_Progetto.pdf",
+                                          "DisplayName":  "AHI_Carta_del_Progetto.pdf",
+                                          "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Carta_del_Progetto.pdf",
+                                          "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Carta_del_Progetto.pdf",
+                                          "Extension":  ".pdf",
+                                          "Kind":  "pdf",
+                                          "KindLabel":  "PDF",
+                                          "IsCertificate":  false,
+                                          "Previewable":  true,
+                                          "PreviewType":  "pdf",
+                                          "SizeBytes":  10955,
+                                          "SizeLabel":  "10,7 KB",
+                                          "UpdatedAt":  "2026-03-27T13:35:21.8637357Z",
+                                          "UpdatedAtLocal":  "27/03/2026",
+                                          "ProgramId":  "ibm-it-project-manager",
+                                          "ProgramName":  "IBM IT Project Manager",
+                                          "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                          "ProgramTags":  [
+                                                              "Project Management",
+                                                              "Agile",
+                                                              "Leadership"
+                                                          ],
+                                          "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                          "CourseName":  "Capstone di gestione del progetto",
+                                          "CourseStatus":  "Completato",
+                                          "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                          "CourseCategory":  "Capstone",
+                                          "CourseTags":  {
+
+                                                         },
+                                          "CoursePriority":  80,
+                                          "FeaturedCertificateRank":  9999,
+                                          "FeaturedProjectRank":  9999
+                                      },
+                                      {
+                                          "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-product-backlog-italiano-pdf",
+                                          "Name":  "AHI_Product_Backlog_Italiano.pdf",
+                                          "DisplayName":  "AHI_Product_Backlog_Italiano.pdf",
+                                          "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Product_Backlog_Italiano.pdf",
+                                          "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Product_Backlog_Italiano.pdf",
+                                          "Extension":  ".pdf",
+                                          "Kind":  "pdf",
+                                          "KindLabel":  "PDF",
+                                          "IsCertificate":  false,
+                                          "Previewable":  true,
+                                          "PreviewType":  "pdf",
+                                          "SizeBytes":  5580,
+                                          "SizeLabel":  "5,4 KB",
+                                          "UpdatedAt":  "2026-03-27T13:35:21.8136864Z",
+                                          "UpdatedAtLocal":  "27/03/2026",
+                                          "ProgramId":  "ibm-it-project-manager",
+                                          "ProgramName":  "IBM IT Project Manager",
+                                          "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                          "ProgramTags":  [
+                                                              "Project Management",
+                                                              "Agile",
+                                                              "Leadership"
+                                                          ],
+                                          "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                          "CourseName":  "Capstone di gestione del progetto",
+                                          "CourseStatus":  "Completato",
+                                          "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                          "CourseCategory":  "Capstone",
+                                          "CourseTags":  {
+
+                                                         },
+                                          "CoursePriority":  80,
+                                          "FeaturedCertificateRank":  9999,
+                                          "FeaturedProjectRank":  9999
+                                      },
+                                      {
+                                          "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-rapporto-di-chiusura-progetto-pdf",
+                                          "Name":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                          "DisplayName":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                          "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                          "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                          "Extension":  ".pdf",
+                                          "Kind":  "pdf",
+                                          "KindLabel":  "PDF",
+                                          "IsCertificate":  false,
+                                          "Previewable":  true,
+                                          "PreviewType":  "pdf",
+                                          "SizeBytes":  7281,
+                                          "SizeLabel":  "7,1 KB",
+                                          "UpdatedAt":  "2026-03-27T13:35:21.7891872Z",
+                                          "UpdatedAtLocal":  "27/03/2026",
+                                          "ProgramId":  "ibm-it-project-manager",
+                                          "ProgramName":  "IBM IT Project Manager",
+                                          "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                          "ProgramTags":  [
+                                                              "Project Management",
+                                                              "Agile",
+                                                              "Leadership"
+                                                          ],
+                                          "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                          "CourseName":  "Capstone di gestione del progetto",
+                                          "CourseStatus":  "Completato",
+                                          "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                          "CourseCategory":  "Capstone",
+                                          "CourseTags":  {
+
+                                                         },
+                                          "CoursePriority":  80,
+                                          "FeaturedCertificateRank":  9999,
+                                          "FeaturedProjectRank":  9999
+                                      },
+                                      {
+                                          "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-rapporto-stato-avanzamento-pdf",
+                                          "Name":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                          "DisplayName":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                          "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Rapporto_Stato_Avanzamento.pdf",
+                                          "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Rapporto_Stato_Avanzamento.pdf",
+                                          "Extension":  ".pdf",
+                                          "Kind":  "pdf",
+                                          "KindLabel":  "PDF",
+                                          "IsCertificate":  false,
+                                          "Previewable":  true,
+                                          "PreviewType":  "pdf",
+                                          "SizeBytes":  8531,
+                                          "SizeLabel":  "8,3 KB",
+                                          "UpdatedAt":  "2026-03-27T13:35:21.9078464Z",
+                                          "UpdatedAtLocal":  "27/03/2026",
+                                          "ProgramId":  "ibm-it-project-manager",
+                                          "ProgramName":  "IBM IT Project Manager",
+                                          "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                          "ProgramTags":  [
+                                                              "Project Management",
+                                                              "Agile",
+                                                              "Leadership"
+                                                          ],
+                                          "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                          "CourseName":  "Capstone di gestione del progetto",
+                                          "CourseStatus":  "Completato",
+                                          "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                          "CourseCategory":  "Capstone",
+                                          "CourseTags":  {
+
+                                                         },
+                                          "CoursePriority":  80,
+                                          "FeaturedCertificateRank":  9999,
+                                          "FeaturedProjectRank":  9999
+                                      },
+                                      {
+                                          "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-registro-dei-rischi-pdf",
+                                          "Name":  "AHI_Registro_dei_Rischi.pdf",
+                                          "DisplayName":  "AHI_Registro_dei_Rischi.pdf",
+                                          "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Registro_dei_Rischi.pdf",
+                                          "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Registro_dei_Rischi.pdf",
+                                          "Extension":  ".pdf",
+                                          "Kind":  "pdf",
+                                          "KindLabel":  "PDF",
+                                          "IsCertificate":  false,
+                                          "Previewable":  true,
+                                          "PreviewType":  "pdf",
+                                          "SizeBytes":  6443,
+                                          "SizeLabel":  "6,3 KB",
+                                          "UpdatedAt":  "2026-03-27T13:35:21.7957110Z",
+                                          "UpdatedAtLocal":  "27/03/2026",
+                                          "ProgramId":  "ibm-it-project-manager",
+                                          "ProgramName":  "IBM IT Project Manager",
+                                          "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                          "ProgramTags":  [
+                                                              "Project Management",
+                                                              "Agile",
+                                                              "Leadership"
+                                                          ],
+                                          "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                          "CourseName":  "Capstone di gestione del progetto",
+                                          "CourseStatus":  "Completato",
+                                          "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                          "CourseCategory":  "Capstone",
+                                          "CourseTags":  {
+
+                                                         },
+                                          "CoursePriority":  80,
+                                          "FeaturedCertificateRank":  9999,
+                                          "FeaturedProjectRank":  9999
+                                      },
+                                      {
+                                          "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-wbs-italiano-pdf",
+                                          "Name":  "AHI_WBS_Italiano.pdf",
+                                          "DisplayName":  "AHI_WBS_Italiano.pdf",
+                                          "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_WBS_Italiano.pdf",
+                                          "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_WBS_Italiano.pdf",
+                                          "Extension":  ".pdf",
+                                          "Kind":  "pdf",
+                                          "KindLabel":  "PDF",
+                                          "IsCertificate":  false,
+                                          "Previewable":  true,
+                                          "PreviewType":  "pdf",
+                                          "SizeBytes":  10963,
+                                          "SizeLabel":  "10,7 KB",
+                                          "UpdatedAt":  "2026-03-27T13:35:21.8424251Z",
+                                          "UpdatedAtLocal":  "27/03/2026",
+                                          "ProgramId":  "ibm-it-project-manager",
+                                          "ProgramName":  "IBM IT Project Manager",
+                                          "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                          "ProgramTags":  [
+                                                              "Project Management",
+                                                              "Agile",
+                                                              "Leadership"
+                                                          ],
+                                          "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                          "CourseName":  "Capstone di gestione del progetto",
+                                          "CourseStatus":  "Completato",
+                                          "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                          "CourseCategory":  "Capstone",
+                                          "CourseTags":  {
+
+                                                         },
+                                          "CoursePriority":  80,
+                                          "FeaturedCertificateRank":  9999,
+                                          "FeaturedProjectRank":  9999
+                                      },
+                                      {
+                                          "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-coursera-mjzvm1aqwz7h-pdf",
+                                          "Name":  "Coursera MJZVM1AQWZ7H.pdf",
+                                          "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/Coursera MJZVM1AQWZ7H.pdf",
+                                          "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/Coursera%20MJZVM1AQWZ7H.pdf",
+                                          "Extension":  ".pdf",
+                                          "Kind":  "certificate",
+                                          "KindLabel":  "Certificato",
+                                          "IsCertificate":  true,
+                                          "Previewable":  true,
+                                          "PreviewType":  "pdf",
+                                          "SizeBytes":  321017,
+                                          "SizeLabel":  "313,5 KB",
+                                          "UpdatedAt":  "2026-03-27T13:36:30.9282863Z",
+                                          "UpdatedAtLocal":  "27/03/2026",
+                                          "ProgramId":  "ibm-it-project-manager",
+                                          "ProgramName":  "IBM IT Project Manager",
+                                          "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                          "ProgramTags":  [
+                                                              "Project Management",
+                                                              "Agile",
+                                                              "Leadership"
+                                                          ],
+                                          "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                          "CourseName":  "Capstone di gestione del progetto",
+                                          "CourseStatus":  "Completato",
+                                          "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                          "CourseCategory":  "Capstone",
+                                          "CourseTags":  {
+
+                                                         },
+                                          "CoursePriority":  80,
+                                          "FeaturedCertificateRank":  9999,
+                                          "FeaturedProjectRank":  9999,
+                                          "DisplayName":  "Capstone di gestione del progetto",
+                                          "ProgramIds":  [
+                                                             "ibm-it-project-manager"
+                                                         ],
+                                          "ProgramNames":  [
+                                                               "IBM IT Project Manager"
+                                                           ],
+                                          "CourseIds":  [
+                                                            "ibm-it-project-manager-capstone-di-gestione-del-progetto"
+                                                        ],
+                                          "CourseNames":  [
+                                                              "Capstone di gestione del progetto"
+                                                          ],
+                                          "Categories":  [
+                                                             "Capstone"
+                                                         ],
+                                          "CertificateOccurrences":  1,
+                                          "Featured":  false,
+                                          "FeaturedRank":  9999
+                                      },
+                                      {
+                                          "Id":  "ibm-it-project-manager-esame-pratico-per-la-certificazione-capm-coursera-xxl836e6nx7j-pdf",
+                                          "Name":  "Coursera XXL836E6NX7J.pdf",
+                                          "RelativePath":  "IBM IT Project Manager/Esame pratico per la certificazione CAPM/Coursera XXL836E6NX7J.pdf",
+                                          "WebPath":  "IBM%20IT%20Project%20Manager/Esame%20pratico%20per%20la%20certificazione%20CAPM/Coursera%20XXL836E6NX7J.pdf",
+                                          "Extension":  ".pdf",
+                                          "Kind":  "certificate",
+                                          "KindLabel":  "Certificato",
+                                          "IsCertificate":  true,
+                                          "Previewable":  true,
+                                          "PreviewType":  "pdf",
+                                          "SizeBytes":  304171,
+                                          "SizeLabel":  "297,0 KB",
+                                          "UpdatedAt":  "2026-03-27T13:37:31.6020533Z",
+                                          "UpdatedAtLocal":  "27/03/2026",
+                                          "ProgramId":  "ibm-it-project-manager",
+                                          "ProgramName":  "IBM IT Project Manager",
+                                          "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                          "ProgramTags":  [
+                                                              "Project Management",
+                                                              "Agile",
+                                                              "Leadership"
+                                                          ],
+                                          "CourseId":  "ibm-it-project-manager-esame-pratico-per-la-certificazione-capm",
+                                          "CourseName":  "Esame pratico per la certificazione CAPM",
+                                          "CourseStatus":  "Completato",
+                                          "CourseSummary":  "Preparazione pratica all\u0027esame CAPM con esercitazioni e ripasso dei concetti chiave.",
+                                          "CourseCategory":  "Certification Prep",
+                                          "CourseTags":  {
+
+                                                         },
+                                          "CoursePriority":  85,
+                                          "FeaturedCertificateRank":  9999,
+                                          "FeaturedProjectRank":  9999,
+                                          "DisplayName":  "Esame pratico per la certificazione CAPM",
+                                          "ProgramIds":  [
+                                                             "ibm-it-project-manager"
+                                                         ],
+                                          "ProgramNames":  [
+                                                               "IBM IT Project Manager"
+                                                           ],
+                                          "CourseIds":  [
+                                                            "ibm-it-project-manager-esame-pratico-per-la-certificazione-capm"
+                                                        ],
+                                          "CourseNames":  [
+                                                              "Esame pratico per la certificazione CAPM"
+                                                          ],
+                                          "Categories":  [
+                                                             "Certification Prep"
+                                                         ],
+                                          "CertificateOccurrences":  1,
                                           "Featured":  false,
                                           "FeaturedRank":  9999
                                       },
@@ -3578,6 +4148,60 @@
                                           "FeaturedRank":  3
                                       },
                                       {
+                                          "Id":  "ibm-it-project-manager-introduzione-alla-professione-di-scrum-master-coursera-uhvzo9glrh19-pdf",
+                                          "Name":  "Coursera UHVZO9GLRH19.pdf",
+                                          "RelativePath":  "IBM IT Project Manager/Introduzione alla professione di Scrum Master/Coursera UHVZO9GLRH19.pdf",
+                                          "WebPath":  "IBM%20IT%20Project%20Manager/Introduzione%20alla%20professione%20di%20Scrum%20Master/Coursera%20UHVZO9GLRH19.pdf",
+                                          "Extension":  ".pdf",
+                                          "Kind":  "certificate",
+                                          "KindLabel":  "Certificato",
+                                          "IsCertificate":  true,
+                                          "Previewable":  true,
+                                          "PreviewType":  "pdf",
+                                          "SizeBytes":  304200,
+                                          "SizeLabel":  "297,1 KB",
+                                          "UpdatedAt":  "2026-03-27T13:37:10.9021596Z",
+                                          "UpdatedAtLocal":  "27/03/2026",
+                                          "ProgramId":  "ibm-it-project-manager",
+                                          "ProgramName":  "IBM IT Project Manager",
+                                          "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                          "ProgramTags":  [
+                                                              "Project Management",
+                                                              "Agile",
+                                                              "Leadership"
+                                                          ],
+                                          "CourseId":  "ibm-it-project-manager-introduzione-alla-professione-di-scrum-master",
+                                          "CourseName":  "Introduzione alla professione di Scrum Master",
+                                          "CourseStatus":  "Completato",
+                                          "CourseSummary":  "Ruolo dello Scrum Master e facilitazione agile del team.",
+                                          "CourseCategory":  "Agile",
+                                          "CourseTags":  {
+
+                                                         },
+                                          "CoursePriority":  50,
+                                          "FeaturedCertificateRank":  9999,
+                                          "FeaturedProjectRank":  9999,
+                                          "DisplayName":  "Introduzione alla professione di Scrum Master",
+                                          "ProgramIds":  [
+                                                             "ibm-it-project-manager"
+                                                         ],
+                                          "ProgramNames":  [
+                                                               "IBM IT Project Manager"
+                                                           ],
+                                          "CourseIds":  [
+                                                            "ibm-it-project-manager-introduzione-alla-professione-di-scrum-master"
+                                                        ],
+                                          "CourseNames":  [
+                                                              "Introduzione alla professione di Scrum Master"
+                                                          ],
+                                          "Categories":  [
+                                                             "Agile"
+                                                         ],
+                                          "CertificateOccurrences":  1,
+                                          "Featured":  false,
+                                          "FeaturedRank":  9999
+                                      },
+                                      {
                                           "Id":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum-01-kanban-board-png",
                                           "Name":  "01-kanban-board.png",
                                           "DisplayName":  "01-kanban-board.png",
@@ -4166,6 +4790,330 @@
                                      "FeaturedRank":  9999
                                  },
                                  {
+                                     "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-carta-del-progetto-pdf",
+                                     "Name":  "AHI_Carta_del_Progetto.pdf",
+                                     "DisplayName":  "AHI_Carta_del_Progetto.pdf",
+                                     "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Carta_del_Progetto.pdf",
+                                     "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Carta_del_Progetto.pdf",
+                                     "Extension":  ".pdf",
+                                     "Kind":  "pdf",
+                                     "KindLabel":  "PDF",
+                                     "IsCertificate":  false,
+                                     "Previewable":  true,
+                                     "PreviewType":  "pdf",
+                                     "SizeBytes":  10955,
+                                     "SizeLabel":  "10,7 KB",
+                                     "UpdatedAt":  "2026-03-27T13:35:21.8637357Z",
+                                     "UpdatedAtLocal":  "27/03/2026",
+                                     "ProgramId":  "ibm-it-project-manager",
+                                     "ProgramName":  "IBM IT Project Manager",
+                                     "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                     "ProgramTags":  [
+                                                         "Project Management",
+                                                         "Agile",
+                                                         "Leadership"
+                                                     ],
+                                     "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                     "CourseName":  "Capstone di gestione del progetto",
+                                     "CourseStatus":  "Completato",
+                                     "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                     "CourseCategory":  "Capstone",
+                                     "CourseTags":  {
+
+                                                    },
+                                     "CoursePriority":  80,
+                                     "FeaturedCertificateRank":  9999,
+                                     "FeaturedProjectRank":  9999
+                                 },
+                                 {
+                                     "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-product-backlog-italiano-pdf",
+                                     "Name":  "AHI_Product_Backlog_Italiano.pdf",
+                                     "DisplayName":  "AHI_Product_Backlog_Italiano.pdf",
+                                     "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Product_Backlog_Italiano.pdf",
+                                     "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Product_Backlog_Italiano.pdf",
+                                     "Extension":  ".pdf",
+                                     "Kind":  "pdf",
+                                     "KindLabel":  "PDF",
+                                     "IsCertificate":  false,
+                                     "Previewable":  true,
+                                     "PreviewType":  "pdf",
+                                     "SizeBytes":  5580,
+                                     "SizeLabel":  "5,4 KB",
+                                     "UpdatedAt":  "2026-03-27T13:35:21.8136864Z",
+                                     "UpdatedAtLocal":  "27/03/2026",
+                                     "ProgramId":  "ibm-it-project-manager",
+                                     "ProgramName":  "IBM IT Project Manager",
+                                     "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                     "ProgramTags":  [
+                                                         "Project Management",
+                                                         "Agile",
+                                                         "Leadership"
+                                                     ],
+                                     "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                     "CourseName":  "Capstone di gestione del progetto",
+                                     "CourseStatus":  "Completato",
+                                     "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                     "CourseCategory":  "Capstone",
+                                     "CourseTags":  {
+
+                                                    },
+                                     "CoursePriority":  80,
+                                     "FeaturedCertificateRank":  9999,
+                                     "FeaturedProjectRank":  9999
+                                 },
+                                 {
+                                     "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-rapporto-di-chiusura-progetto-pdf",
+                                     "Name":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                     "DisplayName":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                     "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                     "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                     "Extension":  ".pdf",
+                                     "Kind":  "pdf",
+                                     "KindLabel":  "PDF",
+                                     "IsCertificate":  false,
+                                     "Previewable":  true,
+                                     "PreviewType":  "pdf",
+                                     "SizeBytes":  7281,
+                                     "SizeLabel":  "7,1 KB",
+                                     "UpdatedAt":  "2026-03-27T13:35:21.7891872Z",
+                                     "UpdatedAtLocal":  "27/03/2026",
+                                     "ProgramId":  "ibm-it-project-manager",
+                                     "ProgramName":  "IBM IT Project Manager",
+                                     "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                     "ProgramTags":  [
+                                                         "Project Management",
+                                                         "Agile",
+                                                         "Leadership"
+                                                     ],
+                                     "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                     "CourseName":  "Capstone di gestione del progetto",
+                                     "CourseStatus":  "Completato",
+                                     "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                     "CourseCategory":  "Capstone",
+                                     "CourseTags":  {
+
+                                                    },
+                                     "CoursePriority":  80,
+                                     "FeaturedCertificateRank":  9999,
+                                     "FeaturedProjectRank":  9999
+                                 },
+                                 {
+                                     "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-rapporto-stato-avanzamento-pdf",
+                                     "Name":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                     "DisplayName":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                     "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Rapporto_Stato_Avanzamento.pdf",
+                                     "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Rapporto_Stato_Avanzamento.pdf",
+                                     "Extension":  ".pdf",
+                                     "Kind":  "pdf",
+                                     "KindLabel":  "PDF",
+                                     "IsCertificate":  false,
+                                     "Previewable":  true,
+                                     "PreviewType":  "pdf",
+                                     "SizeBytes":  8531,
+                                     "SizeLabel":  "8,3 KB",
+                                     "UpdatedAt":  "2026-03-27T13:35:21.9078464Z",
+                                     "UpdatedAtLocal":  "27/03/2026",
+                                     "ProgramId":  "ibm-it-project-manager",
+                                     "ProgramName":  "IBM IT Project Manager",
+                                     "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                     "ProgramTags":  [
+                                                         "Project Management",
+                                                         "Agile",
+                                                         "Leadership"
+                                                     ],
+                                     "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                     "CourseName":  "Capstone di gestione del progetto",
+                                     "CourseStatus":  "Completato",
+                                     "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                     "CourseCategory":  "Capstone",
+                                     "CourseTags":  {
+
+                                                    },
+                                     "CoursePriority":  80,
+                                     "FeaturedCertificateRank":  9999,
+                                     "FeaturedProjectRank":  9999
+                                 },
+                                 {
+                                     "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-registro-dei-rischi-pdf",
+                                     "Name":  "AHI_Registro_dei_Rischi.pdf",
+                                     "DisplayName":  "AHI_Registro_dei_Rischi.pdf",
+                                     "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Registro_dei_Rischi.pdf",
+                                     "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Registro_dei_Rischi.pdf",
+                                     "Extension":  ".pdf",
+                                     "Kind":  "pdf",
+                                     "KindLabel":  "PDF",
+                                     "IsCertificate":  false,
+                                     "Previewable":  true,
+                                     "PreviewType":  "pdf",
+                                     "SizeBytes":  6443,
+                                     "SizeLabel":  "6,3 KB",
+                                     "UpdatedAt":  "2026-03-27T13:35:21.7957110Z",
+                                     "UpdatedAtLocal":  "27/03/2026",
+                                     "ProgramId":  "ibm-it-project-manager",
+                                     "ProgramName":  "IBM IT Project Manager",
+                                     "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                     "ProgramTags":  [
+                                                         "Project Management",
+                                                         "Agile",
+                                                         "Leadership"
+                                                     ],
+                                     "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                     "CourseName":  "Capstone di gestione del progetto",
+                                     "CourseStatus":  "Completato",
+                                     "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                     "CourseCategory":  "Capstone",
+                                     "CourseTags":  {
+
+                                                    },
+                                     "CoursePriority":  80,
+                                     "FeaturedCertificateRank":  9999,
+                                     "FeaturedProjectRank":  9999
+                                 },
+                                 {
+                                     "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-wbs-italiano-pdf",
+                                     "Name":  "AHI_WBS_Italiano.pdf",
+                                     "DisplayName":  "AHI_WBS_Italiano.pdf",
+                                     "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_WBS_Italiano.pdf",
+                                     "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_WBS_Italiano.pdf",
+                                     "Extension":  ".pdf",
+                                     "Kind":  "pdf",
+                                     "KindLabel":  "PDF",
+                                     "IsCertificate":  false,
+                                     "Previewable":  true,
+                                     "PreviewType":  "pdf",
+                                     "SizeBytes":  10963,
+                                     "SizeLabel":  "10,7 KB",
+                                     "UpdatedAt":  "2026-03-27T13:35:21.8424251Z",
+                                     "UpdatedAtLocal":  "27/03/2026",
+                                     "ProgramId":  "ibm-it-project-manager",
+                                     "ProgramName":  "IBM IT Project Manager",
+                                     "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                     "ProgramTags":  [
+                                                         "Project Management",
+                                                         "Agile",
+                                                         "Leadership"
+                                                     ],
+                                     "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                     "CourseName":  "Capstone di gestione del progetto",
+                                     "CourseStatus":  "Completato",
+                                     "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                     "CourseCategory":  "Capstone",
+                                     "CourseTags":  {
+
+                                                    },
+                                     "CoursePriority":  80,
+                                     "FeaturedCertificateRank":  9999,
+                                     "FeaturedProjectRank":  9999
+                                 },
+                                 {
+                                     "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-coursera-mjzvm1aqwz7h-pdf",
+                                     "Name":  "Coursera MJZVM1AQWZ7H.pdf",
+                                     "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/Coursera MJZVM1AQWZ7H.pdf",
+                                     "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/Coursera%20MJZVM1AQWZ7H.pdf",
+                                     "Extension":  ".pdf",
+                                     "Kind":  "certificate",
+                                     "KindLabel":  "Certificato",
+                                     "IsCertificate":  true,
+                                     "Previewable":  true,
+                                     "PreviewType":  "pdf",
+                                     "SizeBytes":  321017,
+                                     "SizeLabel":  "313,5 KB",
+                                     "UpdatedAt":  "2026-03-27T13:36:30.9282863Z",
+                                     "UpdatedAtLocal":  "27/03/2026",
+                                     "ProgramId":  "ibm-it-project-manager",
+                                     "ProgramName":  "IBM IT Project Manager",
+                                     "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                     "ProgramTags":  [
+                                                         "Project Management",
+                                                         "Agile",
+                                                         "Leadership"
+                                                     ],
+                                     "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                     "CourseName":  "Capstone di gestione del progetto",
+                                     "CourseStatus":  "Completato",
+                                     "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                     "CourseCategory":  "Capstone",
+                                     "CourseTags":  {
+
+                                                    },
+                                     "CoursePriority":  80,
+                                     "FeaturedCertificateRank":  9999,
+                                     "FeaturedProjectRank":  9999,
+                                     "DisplayName":  "Capstone di gestione del progetto",
+                                     "ProgramIds":  [
+                                                        "ibm-it-project-manager"
+                                                    ],
+                                     "ProgramNames":  [
+                                                          "IBM IT Project Manager"
+                                                      ],
+                                     "CourseIds":  [
+                                                       "ibm-it-project-manager-capstone-di-gestione-del-progetto"
+                                                   ],
+                                     "CourseNames":  [
+                                                         "Capstone di gestione del progetto"
+                                                     ],
+                                     "Categories":  [
+                                                        "Capstone"
+                                                    ],
+                                     "CertificateOccurrences":  1,
+                                     "Featured":  false,
+                                     "FeaturedRank":  9999
+                                 },
+                                 {
+                                     "Id":  "ibm-it-project-manager-esame-pratico-per-la-certificazione-capm-coursera-xxl836e6nx7j-pdf",
+                                     "Name":  "Coursera XXL836E6NX7J.pdf",
+                                     "RelativePath":  "IBM IT Project Manager/Esame pratico per la certificazione CAPM/Coursera XXL836E6NX7J.pdf",
+                                     "WebPath":  "IBM%20IT%20Project%20Manager/Esame%20pratico%20per%20la%20certificazione%20CAPM/Coursera%20XXL836E6NX7J.pdf",
+                                     "Extension":  ".pdf",
+                                     "Kind":  "certificate",
+                                     "KindLabel":  "Certificato",
+                                     "IsCertificate":  true,
+                                     "Previewable":  true,
+                                     "PreviewType":  "pdf",
+                                     "SizeBytes":  304171,
+                                     "SizeLabel":  "297,0 KB",
+                                     "UpdatedAt":  "2026-03-27T13:37:31.6020533Z",
+                                     "UpdatedAtLocal":  "27/03/2026",
+                                     "ProgramId":  "ibm-it-project-manager",
+                                     "ProgramName":  "IBM IT Project Manager",
+                                     "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                     "ProgramTags":  [
+                                                         "Project Management",
+                                                         "Agile",
+                                                         "Leadership"
+                                                     ],
+                                     "CourseId":  "ibm-it-project-manager-esame-pratico-per-la-certificazione-capm",
+                                     "CourseName":  "Esame pratico per la certificazione CAPM",
+                                     "CourseStatus":  "Completato",
+                                     "CourseSummary":  "Preparazione pratica all\u0027esame CAPM con esercitazioni e ripasso dei concetti chiave.",
+                                     "CourseCategory":  "Certification Prep",
+                                     "CourseTags":  {
+
+                                                    },
+                                     "CoursePriority":  85,
+                                     "FeaturedCertificateRank":  9999,
+                                     "FeaturedProjectRank":  9999,
+                                     "DisplayName":  "Esame pratico per la certificazione CAPM",
+                                     "ProgramIds":  [
+                                                        "ibm-it-project-manager"
+                                                    ],
+                                     "ProgramNames":  [
+                                                          "IBM IT Project Manager"
+                                                      ],
+                                     "CourseIds":  [
+                                                       "ibm-it-project-manager-esame-pratico-per-la-certificazione-capm"
+                                                   ],
+                                     "CourseNames":  [
+                                                         "Esame pratico per la certificazione CAPM"
+                                                     ],
+                                     "Categories":  [
+                                                        "Certification Prep"
+                                                    ],
+                                     "CertificateOccurrences":  1,
+                                     "Featured":  false,
+                                     "FeaturedRank":  9999
+                                 },
+                                 {
                                      "Id":  "ibm-it-project-manager-fondamenti-di-gestione-del-progetto-avvio-e-pianificazione-progetto-coursera-5msz6fj0ezl5-pdf",
                                      "Name":  "Coursera 5MSZ6FJ0EZL5.pdf",
                                      "RelativePath":  "IBM IT Project Manager/Fondamenti di gestione del progetto, avvio e pianificazione (progetto)/Coursera 5MSZ6FJ0EZL5.pdf",
@@ -4584,6 +5532,60 @@
                                      "FeaturedRank":  3
                                  },
                                  {
+                                     "Id":  "ibm-it-project-manager-introduzione-alla-professione-di-scrum-master-coursera-uhvzo9glrh19-pdf",
+                                     "Name":  "Coursera UHVZO9GLRH19.pdf",
+                                     "RelativePath":  "IBM IT Project Manager/Introduzione alla professione di Scrum Master/Coursera UHVZO9GLRH19.pdf",
+                                     "WebPath":  "IBM%20IT%20Project%20Manager/Introduzione%20alla%20professione%20di%20Scrum%20Master/Coursera%20UHVZO9GLRH19.pdf",
+                                     "Extension":  ".pdf",
+                                     "Kind":  "certificate",
+                                     "KindLabel":  "Certificato",
+                                     "IsCertificate":  true,
+                                     "Previewable":  true,
+                                     "PreviewType":  "pdf",
+                                     "SizeBytes":  304200,
+                                     "SizeLabel":  "297,1 KB",
+                                     "UpdatedAt":  "2026-03-27T13:37:10.9021596Z",
+                                     "UpdatedAtLocal":  "27/03/2026",
+                                     "ProgramId":  "ibm-it-project-manager",
+                                     "ProgramName":  "IBM IT Project Manager",
+                                     "ProgramSummary":  "Percorso su delivery IT, pianificazione, stakeholder e pratiche agile.",
+                                     "ProgramTags":  [
+                                                         "Project Management",
+                                                         "Agile",
+                                                         "Leadership"
+                                                     ],
+                                     "CourseId":  "ibm-it-project-manager-introduzione-alla-professione-di-scrum-master",
+                                     "CourseName":  "Introduzione alla professione di Scrum Master",
+                                     "CourseStatus":  "Completato",
+                                     "CourseSummary":  "Ruolo dello Scrum Master e facilitazione agile del team.",
+                                     "CourseCategory":  "Agile",
+                                     "CourseTags":  {
+
+                                                    },
+                                     "CoursePriority":  50,
+                                     "FeaturedCertificateRank":  9999,
+                                     "FeaturedProjectRank":  9999,
+                                     "DisplayName":  "Introduzione alla professione di Scrum Master",
+                                     "ProgramIds":  [
+                                                        "ibm-it-project-manager"
+                                                    ],
+                                     "ProgramNames":  [
+                                                          "IBM IT Project Manager"
+                                                      ],
+                                     "CourseIds":  [
+                                                       "ibm-it-project-manager-introduzione-alla-professione-di-scrum-master"
+                                                   ],
+                                     "CourseNames":  [
+                                                         "Introduzione alla professione di Scrum Master"
+                                                     ],
+                                     "Categories":  [
+                                                        "Agile"
+                                                    ],
+                                     "CertificateOccurrences":  1,
+                                     "Featured":  false,
+                                     "FeaturedRank":  9999
+                                 },
+                                 {
                                      "Id":  "ibm-it-project-manager-introduzione-allo-sviluppo-agile-e-a-scrum-coursera-bff5ulbn2acl-pdf",
                                      "Name":  "Coursera BFF5ULBN2ACL.pdf",
                                      "RelativePath":  "IBM IT Project Manager/Introduzione allo sviluppo Agile e a Scrum/Coursera BFF5ULBN2ACL.pdf",
@@ -4854,6 +5856,84 @@
                                              "FeaturedRank":  4
                                          },
                                          {
+                                             "Id":  "certificate-coursera-mjzvm1aqwz7h-pdf",
+                                             "Name":  "Coursera MJZVM1AQWZ7H.pdf",
+                                             "DisplayName":  "Capstone di gestione del progetto",
+                                             "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/Coursera MJZVM1AQWZ7H.pdf",
+                                             "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/Coursera%20MJZVM1AQWZ7H.pdf",
+                                             "Extension":  ".pdf",
+                                             "Kind":  "certificate",
+                                             "KindLabel":  "Certificato",
+                                             "IsCertificate":  true,
+                                             "Previewable":  true,
+                                             "PreviewType":  "pdf",
+                                             "SizeBytes":  321017,
+                                             "SizeLabel":  "313,5 KB",
+                                             "UpdatedAt":  "2026-03-27T13:36:30.9282863Z",
+                                             "UpdatedAtLocal":  "27/03/2026",
+                                             "ProgramId":  "ibm-it-project-manager",
+                                             "ProgramName":  "IBM IT Project Manager",
+                                             "ProgramIds":  [
+                                                                "ibm-it-project-manager"
+                                                            ],
+                                             "ProgramNames":  [
+                                                                  "IBM IT Project Manager"
+                                                              ],
+                                             "CourseId":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                             "CourseName":  "Capstone di gestione del progetto",
+                                             "CourseIds":  [
+                                                               "ibm-it-project-manager-capstone-di-gestione-del-progetto"
+                                                           ],
+                                             "CourseNames":  [
+                                                                 "Capstone di gestione del progetto"
+                                                             ],
+                                             "Categories":  [
+                                                                "Capstone"
+                                                            ],
+                                             "CertificateOccurrences":  1,
+                                             "Featured":  false,
+                                             "FeaturedRank":  9999
+                                         },
+                                         {
+                                             "Id":  "certificate-coursera-xxl836e6nx7j-pdf",
+                                             "Name":  "Coursera XXL836E6NX7J.pdf",
+                                             "DisplayName":  "Esame pratico per la certificazione CAPM",
+                                             "RelativePath":  "IBM IT Project Manager/Esame pratico per la certificazione CAPM/Coursera XXL836E6NX7J.pdf",
+                                             "WebPath":  "IBM%20IT%20Project%20Manager/Esame%20pratico%20per%20la%20certificazione%20CAPM/Coursera%20XXL836E6NX7J.pdf",
+                                             "Extension":  ".pdf",
+                                             "Kind":  "certificate",
+                                             "KindLabel":  "Certificato",
+                                             "IsCertificate":  true,
+                                             "Previewable":  true,
+                                             "PreviewType":  "pdf",
+                                             "SizeBytes":  304171,
+                                             "SizeLabel":  "297,0 KB",
+                                             "UpdatedAt":  "2026-03-27T13:37:31.6020533Z",
+                                             "UpdatedAtLocal":  "27/03/2026",
+                                             "ProgramId":  "ibm-it-project-manager",
+                                             "ProgramName":  "IBM IT Project Manager",
+                                             "ProgramIds":  [
+                                                                "ibm-it-project-manager"
+                                                            ],
+                                             "ProgramNames":  [
+                                                                  "IBM IT Project Manager"
+                                                              ],
+                                             "CourseId":  "ibm-it-project-manager-esame-pratico-per-la-certificazione-capm",
+                                             "CourseName":  "Esame pratico per la certificazione CAPM",
+                                             "CourseIds":  [
+                                                               "ibm-it-project-manager-esame-pratico-per-la-certificazione-capm"
+                                                           ],
+                                             "CourseNames":  [
+                                                                 "Esame pratico per la certificazione CAPM"
+                                                             ],
+                                             "Categories":  [
+                                                                "Certification Prep"
+                                                            ],
+                                             "CertificateOccurrences":  1,
+                                             "Featured":  false,
+                                             "FeaturedRank":  9999
+                                         },
+                                         {
                                              "Id":  "certificate-coursera-5msz6fj0ezl5-pdf",
                                              "Name":  "Coursera 5MSZ6FJ0EZL5.pdf",
                                              "DisplayName":  "Fondamenti di gestione del progetto, avvio e pianificazione (progetto)",
@@ -4965,6 +6045,45 @@
                                                              ],
                                              "Categories":  [
                                                                 "Stakeholders"
+                                                            ],
+                                             "CertificateOccurrences":  1,
+                                             "Featured":  false,
+                                             "FeaturedRank":  9999
+                                         },
+                                         {
+                                             "Id":  "certificate-coursera-uhvzo9glrh19-pdf",
+                                             "Name":  "Coursera UHVZO9GLRH19.pdf",
+                                             "DisplayName":  "Introduzione alla professione di Scrum Master",
+                                             "RelativePath":  "IBM IT Project Manager/Introduzione alla professione di Scrum Master/Coursera UHVZO9GLRH19.pdf",
+                                             "WebPath":  "IBM%20IT%20Project%20Manager/Introduzione%20alla%20professione%20di%20Scrum%20Master/Coursera%20UHVZO9GLRH19.pdf",
+                                             "Extension":  ".pdf",
+                                             "Kind":  "certificate",
+                                             "KindLabel":  "Certificato",
+                                             "IsCertificate":  true,
+                                             "Previewable":  true,
+                                             "PreviewType":  "pdf",
+                                             "SizeBytes":  304200,
+                                             "SizeLabel":  "297,1 KB",
+                                             "UpdatedAt":  "2026-03-27T13:37:10.9021596Z",
+                                             "UpdatedAtLocal":  "27/03/2026",
+                                             "ProgramId":  "ibm-it-project-manager",
+                                             "ProgramName":  "IBM IT Project Manager",
+                                             "ProgramIds":  [
+                                                                "ibm-it-project-manager"
+                                                            ],
+                                             "ProgramNames":  [
+                                                                  "IBM IT Project Manager"
+                                                              ],
+                                             "CourseId":  "ibm-it-project-manager-introduzione-alla-professione-di-scrum-master",
+                                             "CourseName":  "Introduzione alla professione di Scrum Master",
+                                             "CourseIds":  [
+                                                               "ibm-it-project-manager-introduzione-alla-professione-di-scrum-master"
+                                                           ],
+                                             "CourseNames":  [
+                                                                 "Introduzione alla professione di Scrum Master"
+                                                             ],
+                                             "Categories":  [
+                                                                "Agile"
                                                             ],
                                              "CertificateOccurrences":  1,
                                              "Featured":  false,
@@ -6095,6 +7214,220 @@
                                                            "FeaturedProjectRank":  9999
                                                        }
                                                    ]
+                                     },
+                                     {
+                                         "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                         "Name":  "Capstone di gestione del progetto",
+                                         "OriginalName":  "Capstone di gestione del progetto",
+                                         "Status":  "Completato",
+                                         "Summary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                         "Category":  "Capstone",
+                                         "Tags":  {
+
+                                                  },
+                                         "Priority":  80,
+                                         "Featured":  true,
+                                         "FeaturedRank":  9999,
+                                         "Evidence":  "1 certificato + 6 file di lavoro",
+                                         "MaterialPreview":  "AHI_Carta_del_Progetto.pdf, AHI_Product_Backlog_Italiano.pdf, AHI_Rapporto_di_Chiusura_Progetto.pdf + 3 altri",
+                                         "WorkFileCount":  6,
+                                         "ProgramId":  "ibm-it-project-manager",
+                                         "ProgramName":  "IBM IT Project Manager",
+                                         "ProgramTags":  [
+                                                             "Project Management",
+                                                             "Agile",
+                                                             "Leadership"
+                                                         ],
+                                         "CaseStudy":  {
+                                                           "Title":  "AHI: capstone di project delivery",
+                                                           "Lead":  "Pacchetto finale con charter, WBS, product backlog, risk register, stato avanzamento e chiusura progetto.",
+                                                           "Context":  "Capstone conclusivo dedicato alla gestione end-to-end di una iniziativa AHI, dalla pianificazione iniziale al reporting finale.",
+                                                           "Objective":  "Consolidare in un unico caso pratico gli artefatti essenziali per avvio, monitoraggio, controllo rischi e chiusura del progetto.",
+                                                           "Role":  "Impostazione del piano, gestione backlog, reporting di avanzamento, presidio dei rischi e formalizzazione della chiusura.",
+                                                           "Outcome":  "Set completo di deliverable coerenti e riusabili per execution tracking, allineamento stakeholder e project closure.",
+                                                           "Skills":  [
+                                                                          "Project charter",
+                                                                          "WBS",
+                                                                          "Backlog management",
+                                                                          "Risk management",
+                                                                          "Status reporting",
+                                                                          "Project closure"
+                                                                      ],
+                                                           "Deliverables":  [
+                                                                                "Carta del progetto",
+                                                                                "WBS",
+                                                                                "Product backlog",
+                                                                                "Registro dei rischi",
+                                                                                "Rapporto stato avanzamento",
+                                                                                "Rapporto di chiusura"
+                                                                            ],
+                                                           "PrimaryFile":  "AHI_Carta_del_Progetto.pdf"
+                                                       },
+                                         "PrimaryFileRelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Carta_del_Progetto.pdf",
+                                         "Files":  [
+                                                       {
+                                                           "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-carta-del-progetto-pdf",
+                                                           "Name":  "AHI_Carta_del_Progetto.pdf",
+                                                           "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Carta_del_Progetto.pdf",
+                                                           "CourseRelativePath":  "AHI_Carta_del_Progetto.pdf",
+                                                           "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Carta_del_Progetto.pdf",
+                                                           "Extension":  ".pdf",
+                                                           "Kind":  "pdf",
+                                                           "KindLabel":  "PDF",
+                                                           "IsCertificate":  false,
+                                                           "Previewable":  true,
+                                                           "PreviewType":  "pdf",
+                                                           "SizeBytes":  10955,
+                                                           "SizeLabel":  "10,7 KB",
+                                                           "UpdatedAt":  "2026-03-27T13:35:21.8637357Z",
+                                                           "UpdatedAtLocal":  "27/03/2026",
+                                                           "DisplayName":  "AHI_Carta_del_Progetto.pdf",
+                                                           "ProgramRelativePath":  "IBM IT Project Manager",
+                                                           "CourseCategory":  "Capstone",
+                                                           "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                           "CourseTags":  {
+
+                                                                          },
+                                                           "CoursePriority":  80,
+                                                           "FeaturedCertificateRank":  9999,
+                                                           "FeaturedProjectRank":  9999
+                                                       },
+                                                       {
+                                                           "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-product-backlog-italiano-pdf",
+                                                           "Name":  "AHI_Product_Backlog_Italiano.pdf",
+                                                           "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Product_Backlog_Italiano.pdf",
+                                                           "CourseRelativePath":  "AHI_Product_Backlog_Italiano.pdf",
+                                                           "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Product_Backlog_Italiano.pdf",
+                                                           "Extension":  ".pdf",
+                                                           "Kind":  "pdf",
+                                                           "KindLabel":  "PDF",
+                                                           "IsCertificate":  false,
+                                                           "Previewable":  true,
+                                                           "PreviewType":  "pdf",
+                                                           "SizeBytes":  5580,
+                                                           "SizeLabel":  "5,4 KB",
+                                                           "UpdatedAt":  "2026-03-27T13:35:21.8136864Z",
+                                                           "UpdatedAtLocal":  "27/03/2026",
+                                                           "DisplayName":  "AHI_Product_Backlog_Italiano.pdf",
+                                                           "ProgramRelativePath":  "IBM IT Project Manager",
+                                                           "CourseCategory":  "Capstone",
+                                                           "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                           "CourseTags":  {
+
+                                                                          },
+                                                           "CoursePriority":  80,
+                                                           "FeaturedCertificateRank":  9999,
+                                                           "FeaturedProjectRank":  9999
+                                                       },
+                                                       {
+                                                           "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-rapporto-di-chiusura-progetto-pdf",
+                                                           "Name":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                           "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                           "CourseRelativePath":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                           "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                           "Extension":  ".pdf",
+                                                           "Kind":  "pdf",
+                                                           "KindLabel":  "PDF",
+                                                           "IsCertificate":  false,
+                                                           "Previewable":  true,
+                                                           "PreviewType":  "pdf",
+                                                           "SizeBytes":  7281,
+                                                           "SizeLabel":  "7,1 KB",
+                                                           "UpdatedAt":  "2026-03-27T13:35:21.7891872Z",
+                                                           "UpdatedAtLocal":  "27/03/2026",
+                                                           "DisplayName":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                           "ProgramRelativePath":  "IBM IT Project Manager",
+                                                           "CourseCategory":  "Capstone",
+                                                           "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                           "CourseTags":  {
+
+                                                                          },
+                                                           "CoursePriority":  80,
+                                                           "FeaturedCertificateRank":  9999,
+                                                           "FeaturedProjectRank":  9999
+                                                       },
+                                                       {
+                                                           "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-rapporto-stato-avanzamento-pdf",
+                                                           "Name":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                           "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                           "CourseRelativePath":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                           "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                           "Extension":  ".pdf",
+                                                           "Kind":  "pdf",
+                                                           "KindLabel":  "PDF",
+                                                           "IsCertificate":  false,
+                                                           "Previewable":  true,
+                                                           "PreviewType":  "pdf",
+                                                           "SizeBytes":  8531,
+                                                           "SizeLabel":  "8,3 KB",
+                                                           "UpdatedAt":  "2026-03-27T13:35:21.9078464Z",
+                                                           "UpdatedAtLocal":  "27/03/2026",
+                                                           "DisplayName":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                           "ProgramRelativePath":  "IBM IT Project Manager",
+                                                           "CourseCategory":  "Capstone",
+                                                           "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                           "CourseTags":  {
+
+                                                                          },
+                                                           "CoursePriority":  80,
+                                                           "FeaturedCertificateRank":  9999,
+                                                           "FeaturedProjectRank":  9999
+                                                       },
+                                                       {
+                                                           "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-registro-dei-rischi-pdf",
+                                                           "Name":  "AHI_Registro_dei_Rischi.pdf",
+                                                           "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Registro_dei_Rischi.pdf",
+                                                           "CourseRelativePath":  "AHI_Registro_dei_Rischi.pdf",
+                                                           "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Registro_dei_Rischi.pdf",
+                                                           "Extension":  ".pdf",
+                                                           "Kind":  "pdf",
+                                                           "KindLabel":  "PDF",
+                                                           "IsCertificate":  false,
+                                                           "Previewable":  true,
+                                                           "PreviewType":  "pdf",
+                                                           "SizeBytes":  6443,
+                                                           "SizeLabel":  "6,3 KB",
+                                                           "UpdatedAt":  "2026-03-27T13:35:21.7957110Z",
+                                                           "UpdatedAtLocal":  "27/03/2026",
+                                                           "DisplayName":  "AHI_Registro_dei_Rischi.pdf",
+                                                           "ProgramRelativePath":  "IBM IT Project Manager",
+                                                           "CourseCategory":  "Capstone",
+                                                           "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                           "CourseTags":  {
+
+                                                                          },
+                                                           "CoursePriority":  80,
+                                                           "FeaturedCertificateRank":  9999,
+                                                           "FeaturedProjectRank":  9999
+                                                       },
+                                                       {
+                                                           "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-wbs-italiano-pdf",
+                                                           "Name":  "AHI_WBS_Italiano.pdf",
+                                                           "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_WBS_Italiano.pdf",
+                                                           "CourseRelativePath":  "AHI_WBS_Italiano.pdf",
+                                                           "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_WBS_Italiano.pdf",
+                                                           "Extension":  ".pdf",
+                                                           "Kind":  "pdf",
+                                                           "KindLabel":  "PDF",
+                                                           "IsCertificate":  false,
+                                                           "Previewable":  true,
+                                                           "PreviewType":  "pdf",
+                                                           "SizeBytes":  10963,
+                                                           "SizeLabel":  "10,7 KB",
+                                                           "UpdatedAt":  "2026-03-27T13:35:21.8424251Z",
+                                                           "UpdatedAtLocal":  "27/03/2026",
+                                                           "DisplayName":  "AHI_WBS_Italiano.pdf",
+                                                           "ProgramRelativePath":  "IBM IT Project Manager",
+                                                           "CourseCategory":  "Capstone",
+                                                           "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                           "CourseTags":  {
+
+                                                                          },
+                                                           "CoursePriority":  80,
+                                                           "FeaturedCertificateRank":  9999,
+                                                           "FeaturedProjectRank":  9999
+                                                       }
+                                                   ]
                                      }
                                  ],
                     "FeaturedProjects":  [
@@ -6538,6 +7871,220 @@
                                                                    "CoursePriority":  40,
                                                                    "FeaturedCertificateRank":  4,
                                                                    "FeaturedProjectRank":  2
+                                                               }
+                                                           ]
+                                             },
+                                             {
+                                                 "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto",
+                                                 "Name":  "Capstone di gestione del progetto",
+                                                 "OriginalName":  "Capstone di gestione del progetto",
+                                                 "Status":  "Completato",
+                                                 "Summary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                 "Category":  "Capstone",
+                                                 "Tags":  {
+
+                                                          },
+                                                 "Priority":  80,
+                                                 "Featured":  true,
+                                                 "FeaturedRank":  9999,
+                                                 "Evidence":  "1 certificato + 6 file di lavoro",
+                                                 "MaterialPreview":  "AHI_Carta_del_Progetto.pdf, AHI_Product_Backlog_Italiano.pdf, AHI_Rapporto_di_Chiusura_Progetto.pdf + 3 altri",
+                                                 "WorkFileCount":  6,
+                                                 "ProgramId":  "ibm-it-project-manager",
+                                                 "ProgramName":  "IBM IT Project Manager",
+                                                 "ProgramTags":  [
+                                                                     "Project Management",
+                                                                     "Agile",
+                                                                     "Leadership"
+                                                                 ],
+                                                 "CaseStudy":  {
+                                                                   "Title":  "AHI: capstone di project delivery",
+                                                                   "Lead":  "Pacchetto finale con charter, WBS, product backlog, risk register, stato avanzamento e chiusura progetto.",
+                                                                   "Context":  "Capstone conclusivo dedicato alla gestione end-to-end di una iniziativa AHI, dalla pianificazione iniziale al reporting finale.",
+                                                                   "Objective":  "Consolidare in un unico caso pratico gli artefatti essenziali per avvio, monitoraggio, controllo rischi e chiusura del progetto.",
+                                                                   "Role":  "Impostazione del piano, gestione backlog, reporting di avanzamento, presidio dei rischi e formalizzazione della chiusura.",
+                                                                   "Outcome":  "Set completo di deliverable coerenti e riusabili per execution tracking, allineamento stakeholder e project closure.",
+                                                                   "Skills":  [
+                                                                                  "Project charter",
+                                                                                  "WBS",
+                                                                                  "Backlog management",
+                                                                                  "Risk management",
+                                                                                  "Status reporting",
+                                                                                  "Project closure"
+                                                                              ],
+                                                                   "Deliverables":  [
+                                                                                        "Carta del progetto",
+                                                                                        "WBS",
+                                                                                        "Product backlog",
+                                                                                        "Registro dei rischi",
+                                                                                        "Rapporto stato avanzamento",
+                                                                                        "Rapporto di chiusura"
+                                                                                    ],
+                                                                   "PrimaryFile":  "AHI_Carta_del_Progetto.pdf"
+                                                               },
+                                                 "PrimaryFileRelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Carta_del_Progetto.pdf",
+                                                 "Files":  [
+                                                               {
+                                                                   "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-carta-del-progetto-pdf",
+                                                                   "Name":  "AHI_Carta_del_Progetto.pdf",
+                                                                   "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Carta_del_Progetto.pdf",
+                                                                   "CourseRelativePath":  "AHI_Carta_del_Progetto.pdf",
+                                                                   "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Carta_del_Progetto.pdf",
+                                                                   "Extension":  ".pdf",
+                                                                   "Kind":  "pdf",
+                                                                   "KindLabel":  "PDF",
+                                                                   "IsCertificate":  false,
+                                                                   "Previewable":  true,
+                                                                   "PreviewType":  "pdf",
+                                                                   "SizeBytes":  10955,
+                                                                   "SizeLabel":  "10,7 KB",
+                                                                   "UpdatedAt":  "2026-03-27T13:35:21.8637357Z",
+                                                                   "UpdatedAtLocal":  "27/03/2026",
+                                                                   "DisplayName":  "AHI_Carta_del_Progetto.pdf",
+                                                                   "ProgramRelativePath":  "IBM IT Project Manager",
+                                                                   "CourseCategory":  "Capstone",
+                                                                   "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                                   "CourseTags":  {
+
+                                                                                  },
+                                                                   "CoursePriority":  80,
+                                                                   "FeaturedCertificateRank":  9999,
+                                                                   "FeaturedProjectRank":  9999
+                                                               },
+                                                               {
+                                                                   "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-product-backlog-italiano-pdf",
+                                                                   "Name":  "AHI_Product_Backlog_Italiano.pdf",
+                                                                   "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Product_Backlog_Italiano.pdf",
+                                                                   "CourseRelativePath":  "AHI_Product_Backlog_Italiano.pdf",
+                                                                   "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Product_Backlog_Italiano.pdf",
+                                                                   "Extension":  ".pdf",
+                                                                   "Kind":  "pdf",
+                                                                   "KindLabel":  "PDF",
+                                                                   "IsCertificate":  false,
+                                                                   "Previewable":  true,
+                                                                   "PreviewType":  "pdf",
+                                                                   "SizeBytes":  5580,
+                                                                   "SizeLabel":  "5,4 KB",
+                                                                   "UpdatedAt":  "2026-03-27T13:35:21.8136864Z",
+                                                                   "UpdatedAtLocal":  "27/03/2026",
+                                                                   "DisplayName":  "AHI_Product_Backlog_Italiano.pdf",
+                                                                   "ProgramRelativePath":  "IBM IT Project Manager",
+                                                                   "CourseCategory":  "Capstone",
+                                                                   "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                                   "CourseTags":  {
+
+                                                                                  },
+                                                                   "CoursePriority":  80,
+                                                                   "FeaturedCertificateRank":  9999,
+                                                                   "FeaturedProjectRank":  9999
+                                                               },
+                                                               {
+                                                                   "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-rapporto-di-chiusura-progetto-pdf",
+                                                                   "Name":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                                   "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                                   "CourseRelativePath":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                                   "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                                   "Extension":  ".pdf",
+                                                                   "Kind":  "pdf",
+                                                                   "KindLabel":  "PDF",
+                                                                   "IsCertificate":  false,
+                                                                   "Previewable":  true,
+                                                                   "PreviewType":  "pdf",
+                                                                   "SizeBytes":  7281,
+                                                                   "SizeLabel":  "7,1 KB",
+                                                                   "UpdatedAt":  "2026-03-27T13:35:21.7891872Z",
+                                                                   "UpdatedAtLocal":  "27/03/2026",
+                                                                   "DisplayName":  "AHI_Rapporto_di_Chiusura_Progetto.pdf",
+                                                                   "ProgramRelativePath":  "IBM IT Project Manager",
+                                                                   "CourseCategory":  "Capstone",
+                                                                   "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                                   "CourseTags":  {
+
+                                                                                  },
+                                                                   "CoursePriority":  80,
+                                                                   "FeaturedCertificateRank":  9999,
+                                                                   "FeaturedProjectRank":  9999
+                                                               },
+                                                               {
+                                                                   "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-rapporto-stato-avanzamento-pdf",
+                                                                   "Name":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                                   "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                                   "CourseRelativePath":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                                   "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                                   "Extension":  ".pdf",
+                                                                   "Kind":  "pdf",
+                                                                   "KindLabel":  "PDF",
+                                                                   "IsCertificate":  false,
+                                                                   "Previewable":  true,
+                                                                   "PreviewType":  "pdf",
+                                                                   "SizeBytes":  8531,
+                                                                   "SizeLabel":  "8,3 KB",
+                                                                   "UpdatedAt":  "2026-03-27T13:35:21.9078464Z",
+                                                                   "UpdatedAtLocal":  "27/03/2026",
+                                                                   "DisplayName":  "AHI_Rapporto_Stato_Avanzamento.pdf",
+                                                                   "ProgramRelativePath":  "IBM IT Project Manager",
+                                                                   "CourseCategory":  "Capstone",
+                                                                   "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                                   "CourseTags":  {
+
+                                                                                  },
+                                                                   "CoursePriority":  80,
+                                                                   "FeaturedCertificateRank":  9999,
+                                                                   "FeaturedProjectRank":  9999
+                                                               },
+                                                               {
+                                                                   "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-registro-dei-rischi-pdf",
+                                                                   "Name":  "AHI_Registro_dei_Rischi.pdf",
+                                                                   "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_Registro_dei_Rischi.pdf",
+                                                                   "CourseRelativePath":  "AHI_Registro_dei_Rischi.pdf",
+                                                                   "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_Registro_dei_Rischi.pdf",
+                                                                   "Extension":  ".pdf",
+                                                                   "Kind":  "pdf",
+                                                                   "KindLabel":  "PDF",
+                                                                   "IsCertificate":  false,
+                                                                   "Previewable":  true,
+                                                                   "PreviewType":  "pdf",
+                                                                   "SizeBytes":  6443,
+                                                                   "SizeLabel":  "6,3 KB",
+                                                                   "UpdatedAt":  "2026-03-27T13:35:21.7957110Z",
+                                                                   "UpdatedAtLocal":  "27/03/2026",
+                                                                   "DisplayName":  "AHI_Registro_dei_Rischi.pdf",
+                                                                   "ProgramRelativePath":  "IBM IT Project Manager",
+                                                                   "CourseCategory":  "Capstone",
+                                                                   "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                                   "CourseTags":  {
+
+                                                                                  },
+                                                                   "CoursePriority":  80,
+                                                                   "FeaturedCertificateRank":  9999,
+                                                                   "FeaturedProjectRank":  9999
+                                                               },
+                                                               {
+                                                                   "Id":  "ibm-it-project-manager-capstone-di-gestione-del-progetto-ahi-wbs-italiano-pdf",
+                                                                   "Name":  "AHI_WBS_Italiano.pdf",
+                                                                   "RelativePath":  "IBM IT Project Manager/Capstone di gestione del progetto/AHI_WBS_Italiano.pdf",
+                                                                   "CourseRelativePath":  "AHI_WBS_Italiano.pdf",
+                                                                   "WebPath":  "IBM%20IT%20Project%20Manager/Capstone%20di%20gestione%20del%20progetto/AHI_WBS_Italiano.pdf",
+                                                                   "Extension":  ".pdf",
+                                                                   "Kind":  "pdf",
+                                                                   "KindLabel":  "PDF",
+                                                                   "IsCertificate":  false,
+                                                                   "Previewable":  true,
+                                                                   "PreviewType":  "pdf",
+                                                                   "SizeBytes":  10963,
+                                                                   "SizeLabel":  "10,7 KB",
+                                                                   "UpdatedAt":  "2026-03-27T13:35:21.8424251Z",
+                                                                   "UpdatedAtLocal":  "27/03/2026",
+                                                                   "DisplayName":  "AHI_WBS_Italiano.pdf",
+                                                                   "ProgramRelativePath":  "IBM IT Project Manager",
+                                                                   "CourseCategory":  "Capstone",
+                                                                   "CourseSummary":  "Capstone finale su pianificazione end-to-end, controllo, backlog e chiusura.",
+                                                                   "CourseTags":  {
+
+                                                                                  },
+                                                                   "CoursePriority":  80,
+                                                                   "FeaturedCertificateRank":  9999,
+                                                                   "FeaturedProjectRank":  9999
                                                                }
                                                            ]
                                              }

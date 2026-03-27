@@ -1,4 +1,4 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
 
 Sitemap: https://accioman.github.io/Corsi-coursera/sitemap.xml
